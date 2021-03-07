@@ -1,5 +1,5 @@
 const marked = require ('marked')
-const {readdir, readFile: rf, writeFile: wf} = require ('fs').promises
+const {readdir, readFile: rf, writeFile: wf} = require ('fs') .promises
 const makePath = require ('path')
 
 const readFile = (path) => rf (path, 'utf8')
