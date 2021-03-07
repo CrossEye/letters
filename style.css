@@ -87,6 +87,20 @@ nav {
   text-align: right;
 }
 
+.tags ul {
+  list-style: none;
+  text-align: right;
+}
+
+.tags li {
+  display: inline-block;
+}
+
+.tags li a {
+  border: 1px solid #5f2580;
+  border-radius: 10px;
+  padding: .25rem;
+}
 .signature {
   margin-left: 2rem;
 }
