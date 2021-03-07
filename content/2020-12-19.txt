@@ -1,6 +1,6 @@
 Title: How to Fact Check
 Date: 2020-12-19
-Tags: Fact checking
+Tags: Fact checking, Foo, Bar
 People: Sam Prentice, George Kitchin, Ed Kozlowski
 Content:
 --------------------------------------------------------------------------------

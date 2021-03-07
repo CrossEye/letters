@@ -5,11 +5,17 @@ const makePath = require ('path')
 const readFile = (path) => rf (path, 'utf8')
 const writeFile = (path) => (content) => wf (path, content, 'utf8')
 const combinePaths = (...paths) => (path) => makePath .join (...paths, path)
-const map = (fn) => (xs) => xs .map (x => fn (x))
 const allPromises = (ps) => Promise .all (ps)
 const stringify = (...args) => (o) => JSON. stringify (o, ...args)
+
+const map = (fn) => (xs) => xs .map (x => fn (x))
+const prop = (p) => (o) => o [p]
 const prepend = (s1) => (s2) => s1 + s2
 const success = () => console .log ('content.js written')
+const sort = (fn, dir = 'ascending') => (xs) => 
+  xs.sort ((a, b, aa = fn (a), bb = fn (b)) => 
+    (dir == 'descending' ? -1 : 1) * (aa < bb ? -1 : aa > bb ? 1 : 0))
+
 const warnOfError = (err) => console .warn (`Error: ${err}`)
 
 const parse = (file) =>
@@ -35,11 +41,11 @@ const parse = (file) =>
       , {pairs: [], state: 'meta'}
     ).pairs)
 
-const convert = ({Tags, People, Content, ...rest}) => ({
+const convert = ({Tags = '', People = '', Content, ...rest}) => ({
     ...rest,
     Tags: Tags .trim () .split (/\,\s*/),
-    People: People .trim () .split (/\,\s*/),
-    Content: marked(Content)
+    People: People .trim () .split (/\,\s*/) .filter (Boolean),
+    Content: marked (Content)
 })
 
 readdir ('./content') 
@@ -48,6 +54,8 @@ readdir ('./content')
   .then (allPromises)
   .then (map (parse))
   .then (map (convert))
+  .then (sort (prop ('Date'), 'descending'))
+//  .then (sort (prop ('Date')))
   .then (stringify (null, 4))
   // .then (stringify ())
   .then (prepend ('const content = '))
