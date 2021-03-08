@@ -1,6 +1,6 @@
 Title: Pound the Table
 Date: 2019-10-28
-Tags: Science, Environment, Global Warming
+Tags: Science, Environment, Global Warming, Denialism
 People: Dan Armstrong
 Content:
 --------------------------------------------------------------------------------
@@ -24,5 +24,18 @@ stand: it's the same reason that astronomical papers don't take an explicit
 stand on the Big Bang. Other studies with differing methodologies have
 concurred. Wikipedia is a good starting place for the research:
 http://bit.ly/science-consensus.
+
+He then misreads my recent letter. I argued that science is all about creating
+models, that even the law of gravity is simply a model. His attempted rebuttal
+is that I can't make an analogy between Newtonian physics models and climate
+models because... well, because he doesn't believe the climate models? Let me
+state it again simply: Newton's Law of Gravity is a model of how massive bodies
+accelerate when in proximity to one another. The key word here is "model". It's
+a way to forecast behaviors we have not already observed. Climate models are the
+same.
+
+I don't understand what motivates the climate skeptics. The facts are against
+them. The consensus is against them. Yet still they pound the table. Don't be
+distracted by their antics.
 
 --------------------------------------------------------------------------------
