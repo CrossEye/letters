@@ -65,15 +65,6 @@ const content = [
         "Content": "<p>How to pretend to win an argument: You say, &quot;X is true.&quot; Your opponent says,\n&quot;No, here&#39;s the evidence against X.&quot; You say, &quot;How can you possibly deny Y?&quot;</p>\n<p>When Sam Prentice says, &quot;We&#39;re not a democracy&quot; and I respond with arguments\ndemonstrating that we are in fact a democracy, what was his response? He says\nthat I am &quot;disputing that we are a republic&quot;. This is plain dishonesty.</p>\n<p>A republic is a government designed to benefit the people rather than its\nleaders. That&#39;s all it means. Most countries currently are republics. A\ndemocracy is a government in which the citizenry can, directly or through\nrepresentatives, choose the laws and leaders. There is no contradiction between\nthe two. The U.S. is both a republic (because we have no monarch) and a\nrepresentative democracy (because we elect our lawmakers and executives.)</p>\n<p>The rest of his letter contains unsubstantiated claims of voting irregularities\nand an unnecessary primer on federalism and the Electoral College. Yes, that&#39;s\nhow the Electoral College works. I&#39;m simply suggesting that, as we&#39;ve done\nnumerous times in the past, we should expand our democracy. Direct election of\nthe president would be a great way to\nstart.</p>\n"
     },
     {
-        "Title": "A Simple Description",
-        "Date": "2020-10-25",
-        "Tags": [
-            "Donald Trump"
-        ],
-        "People": [],
-        "Content": "<p>Narcissist, con artist, tax evader, pathological liar, cheat, bully, adulterer,\nfraud, egomaniac, hate-monger, misogynist, xenophobe.</p>\n<p>You don&#39;t need to know anything about me to know who I&#39;m describing.</p>\n<p>So why in the world would you consider voting for him?</p>\n"
-    },
-    {
         "Title": "Our Neighbor",
         "Date": "2020-10-25",
         "Tags": [
@@ -84,6 +75,15 @@ const content = [
             "John Collins"
         ],
         "Content": "<p>After the dueling presidential town halls, one Trump aide referred to Joe Biden\nas Mr. Rogers. It was clearly meant as an insult. But America knows better. We\nknew Fred Rogers; he invited us into his home. He projected kindness, warmth,\ncompetence, wisdom, and above all, empathy... traits sorely lacking in the White\nHouse for the past four years.</p>\n<p>We have our own Mr. Rogers running for Connecticut&#39;s 55th Assembly District.\nJohn Collins will invite you into his home (or these days come visit yours!) He\nwill treat you with dignity and respect and never talk down to you. He will\nlisten to your problems, probing kindly and gently until he discovers the root\nof the issue and then find a way to fix it.</p>\n<p>John Collins will serve our small towns with grace and dignity. He knows the\nissues we face. He has experience solving real problems. One thing is for\ncertain: no one will ever need to ask him, &quot;Won&#39;t you be my neighbor?&quot; We\nalready know it. John Collins is our neighbor.</p>\n"
+    },
+    {
+        "Title": "A Simple Description",
+        "Date": "2020-10-19",
+        "Tags": [
+            "Donald Trump"
+        ],
+        "People": [],
+        "Content": "<p>Narcissist, con artist, tax evader, pathological liar, cheat, bully, adulterer,\nfraud, egomaniac, hate-monger, misogynist, xenophobe.</p>\n<p>You don&#39;t need to know anything about me to know who I&#39;m describing.</p>\n<p>So why in the world would you consider voting for him?</p>\n"
     },
     {
         "Title": "Collins over Green",
