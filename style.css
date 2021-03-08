@@ -80,7 +80,7 @@ nav {
 }
 
 .main a, .main a:visited {
-  background-color: #f0f065;
+  background-color: #e5e557;
   color: #5f2580;
   text-decoration: none;
 }
@@ -124,6 +124,10 @@ nav {
   text-decoration: underline;
   background-color: #ffff73;
   color: #000;
+}
+
+.sidebar span {
+  opacity: 60%;
 }
 
 .main.box {

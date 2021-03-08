@@ -23,9 +23,9 @@ const gather = (name, content) =>
     .sort (([a], [b]) => a < b ? -1 : a > b ? 1 :0)
     .sort (([, a], [, b]) => b - a)
 const makeLink = (type) => ([t, c]) => 
-  `<li><a href="#/${type}/${t.replace(/ /g, '+')}">${t} (${c} letter${c > 1 ? 's' : ''})</a></li>`
+  `<li><a href="#/${type}/${t.replace(/ /g, '+')}">${t} <span>(${c} letter${c > 1 ? 's' : ''})</span></a></li>`
 const letterLink = ({Date, Title}) =>
-  `<li><a href="#/${Date}">${Title} (${shortDate(Date)})</a></li>`
+  `<li><a href="#/${Date}">${Title} <span>(${shortDate(Date)})</span></a></li>`
 
 const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4) => {
     const tags = gather ('Tags', content)
@@ -156,5 +156,5 @@ const makePerson = (content, person) => {
     }
     window.addEventListener ('popstate', () => setTimeout(route, 0))
     route()
-    document.getElementById ('root') .innerHTML += makeSidebar(content, 3, 2, 6, 5)
+    document.getElementById ('root') .innerHTML += makeSidebar(content, 6, 2, 5, 5)
 }) (content)

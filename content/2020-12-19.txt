@@ -4,6 +4,7 @@ Tags: Fact Checking
 People: Sam Prentice, George Kitchin, Ed Kozlowski
 Content:
 --------------------------------------------------------------------------------
+
 Fact-checking is straightforward. When something makes your blood boil, test
 whether it passes muster. Check your sources with
 https://mediabiasfactcheck.com/, which describes media sources' biases and
@@ -39,4 +40,5 @@ extraordinary proof. Where's his evidence?
 And then there's Ed Kozlowski, the poor dear, who must have been bullied by a
 progressive during his childhood. His letter presents no actual facts to
 dispute.
+
 --------------------------------------------------------------------------------
