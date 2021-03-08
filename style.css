@@ -10,7 +10,8 @@ body {
   margin: 30px auto;
   background-color: #f8f8f8;
   font-size: 1.2em;
-  font-family: Georgia, serif
+  font-family: Georgia, serif;
+  color: #5f2580;
 }
 
 h1, h2, h3, h4, summary {

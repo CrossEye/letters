@@ -4,10 +4,7 @@ const content = [
         "Date": "2021-01-18",
         "Tags": [
             "Capitol Hill Riots",
-            "Antifa",
-            "Foo",
-            "Bar",
-            "Baz"
+            "Antifa"
         ],
         "People": [
             "Don Denley"
@@ -18,9 +15,7 @@ const content = [
         "Title": "How to Fact Check",
         "Date": "2020-12-19",
         "Tags": [
-            "Fact checking",
-            "Foo",
-            "Bar"
+            "Fact Checking"
         ],
         "People": [
             "Sam Prentice",
@@ -35,8 +30,7 @@ const content = [
         "Tags": [
             "Elections",
             "Joe Biden",
-            "Donald Trump",
-            "Foo"
+            "Donald Trump"
         ],
         "People": [
             "Sam Prentice"
