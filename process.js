@@ -1,5 +1,6 @@
 const prop = (p) => (o) => o[p]
 const chain = (fn) => (xs) => xs .flatMap (fn)
+const last = (xs) => xs [xs .length - 1]
 const counts = (fn) => (xs) =>
   xs .reduce ((a, x) => (fn (x) || []) .reduce ((a, v) => ((a[v] = (a[v] || 0) + 1), a), a), {})
 const identity = (x) => x
@@ -11,25 +12,36 @@ const call = (fn, ...args) => fn (args)
 const getYear = ({Date}) => Date .slice (0, 4)
 const groupBy = (fn) => (xs) =>
   Object .entries (xs .reduce (
-    (a, x) => call (
-      (key) => ((a[key] = a[key] || []), (a [key] .push (x)), a), 
-      fn(x)
-    ),
+    (a, x) => call ((key) => ((a[key] = a[key] || []), (a [key] .push (x)), a), fn(x)),
     {}
   ))
+const oxfordJoin = (xs) =>
+  xs .length == 0
+    ? ''
+  : xs .length == 1
+    ? xs[0]
+  : xs.length == 2
+    ? xs .join (' and ')
+  : [xs.slice(0, -1).join(', '), last(xs)] .join(', and ')
 
-const gather = (name, content) =>
-  Object.entries (counts (prop (name)) (content))
-    .sort (([a], [b]) => a < b ? -1 : a > b ? 1 :0)
-    .sort (([, a], [, b]) => b - a)
+const tagSort = ([a, x], [b, y]) => 
+  y - x || (a < b ? -1 : a > b ? 1 :0)
+const personSort = ([aa, x], [bb, y], a = last(aa.split(' ')), b = last(bb.split())) => 
+  y - x || (a < b ? -1 : a > b ? 1 :0)
+
+const gather = (name, content, sorter=tagSort) =>
+  Object.entries (counts (prop (name)) (content)) .sort (sorter)
+
 const makeLink = (type) => ([t, c]) => 
   `<li><a href="#/${type}/${t.replace(/ /g, '+')}">${t} <span>(${c} letter${c > 1 ? 's' : ''})</span></a></li>`
 const letterLink = ({Date, Title}) =>
   `<li><a href="#/${Date}">${Title} <span>(${shortDate(Date)})</span></a></li>`
+const makeTagLink = (Tag) =>
+  `<a href="#/tag/${Tag.replace(/ /g, '+')}">${Tag}</a>`
 
 const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4) => {
-    const tags = gather ('Tags', content)
-    const people = gather ('People', content)
+    const tags = gather ('Tags', content, tagSort)
+    const people = gather ('People', content, personSort)
     const recentLetters = content .slice (0, ltrNbr)
     const years = groupBy (getYear) (content .slice (ltrNbr)) .sort (([a], [b]) => b - a)
     const initialYears = years .slice (0, moreYears)
@@ -62,6 +74,7 @@ const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4
              </ul>
          </details>`).join ('\n    ')}
         </details>` : ``}
+    </details>
     <h2>Tags</h2>
     <ul>
     ${tags .slice (0, tagNbr) .map (makeLink ('tag')) .join ('\n    ')}
@@ -132,10 +145,14 @@ const makePerson = (content, person) => {
     </ul>`
 }
 
-  
+const updateCurrent = ({Date, Tags, Title}) => {
+  document .getElementById ('currentLetter') .innerHTML = 
+      `The <a href="#/${Date}">most recent letter</a>, from ${longDate(Date)}, is titled "${Title}", and discusses the ${Tags.length == 1 ? 'subject' : 'subjects'} of ${oxfordJoin (Tags .map (makeTagLink))}.`
+}  
 
 ((content) => {
     const lookups = Object.fromEntries(content .map (letter => [letter.Date, letter]))
+    updateCurrent (content[0])
     const base = document .getElementById ('main') .innerHTML
     const route = () => {
       const hash = document.location.hash

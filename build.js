@@ -41,11 +41,16 @@ const parse = (file) =>
       , {pairs: [], state: 'meta'}
     ).pairs)
 
-const convert = ({Tags = '', People = '', Content, ...rest}) => ({
+const linkPeople = (People, Content) => 
+  People .reduce ((c, p) => c.replace(p, `[${p}](#/person/${p.replace(/ /g, '+')})`), Content)
+
+const convert = ({Tags = '', People: ps = '', Content, ...rest}, 
+    People = ps .trim () .split (/\,\s*/) .filter (Boolean)
+) => ({
     ...rest,
     Tags: Tags .trim () .split (/\,\s*/),
-    People: People .trim () .split (/\,\s*/) .filter (Boolean),
-    Content: marked (Content)
+    People,
+    Content: marked (linkPeople (People, Content))
 })
 
 readdir ('./content') 

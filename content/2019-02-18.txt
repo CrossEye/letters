@@ -1,0 +1,46 @@
+Title: Partisan Economies
+Date: 2019-02-18
+Tags: Economy, Democrats, Republicans
+Content:
+--------------------------------------------------------------------------------
+
+I recently mentioned that the economy does better under Democratic
+presidents than Republican ones, under almost any measure.  This is a
+somewhat boring follow-up to that, backing it up with numbers showing
+these partisan differences from 1948 through 2012.  This information
+is in Blinder and Watson's 2014 paper. (http://bit.ly/blinder-watson)
+
+GDP growth averaged 2.54% under Republicans, 4.35% under Democrats.
+Growth per capita is similar, as is growth across most industries.
+The economy was in recession an average of 1.1 quarters during
+Democratic terms and 4.6 quarters during Republican ones.
+
+Employment growth under Democrats averaged 2.59% and under
+Republicans, 1.17%.  The unemployment rate for the Democrats averaged
+5.64% and for the Republicans 6.01%. (This was not statistically
+significant.)
+
+The S & P 500 Index grew at an annual 2.70% rate under the GOP and at
+8.08% when a Democrat was in the White House.  Corporate profits grew
+5.62% during Democratic administrations and 4.74% during Republican
+ones.
+
+Worker hourly productivity grew 2.55% and compensation at 1.81% during
+Democratic years, but by 2.08% and 1.43%, respectively. during
+Republican ones.  Budget deficit averaged 1.5% of GDP for Democrats
+and 2.2% for Republicans.
+
+The inflation rate was 2.97% for Democrats and 3.2% for Republicans;
+it rose an average of 1.05 percentage points over a Democratic term
+and fell an average of 0.83 points during a Republican one.  This is
+less hopeful to Republicans than it sounds, though, since rising
+inflation is a sign of high growth, falling inflation of low growth.
+
+There is little to explain these facts.  My point is not that
+Democratic presidents are much better for the economy than are
+Republicans.  I actually believe the president has little to do with
+year-to-year economic performance.  But some seem to think that
+Republican are much better for the economy.  They are wrong, pure and
+simple.
+
+--------------------------------------------------------------------------------
