@@ -161,7 +161,12 @@ const updateCurrent = ({Date, Tags, Title}) => {
         if (hash == '#/') {
             document .getElementById ('main') .innerHTML = base
         } else if (/#\/\d{4}-\d{2}-\d{2}/ .test (hash)) {
-            document .getElementById ('main') .innerHTML = makeLetter (content, lookups [hash .slice (2)])
+            const letter = lookups [hash .slice (2)];
+            if (letter) {
+              document .getElementById ('main') .innerHTML = makeLetter (content, letter)
+            } else {
+              document.location.hash = '#/'
+            }
         } else if (hash.startsWith('#/tag/')) {
             document .getElementById ('main') .innerHTML = makeTag (content, hash .slice (6) .replaceAll('+', ' '))
         } else if (hash.startsWith('#/person/')) {
