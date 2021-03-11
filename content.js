@@ -665,5 +665,44 @@ const content = [
             "Sam Prentice"
         ],
         "Content": "<p>It&#39;s amusing watching <a href=\"#/person/Sam+Prentice\">Sam Prentice</a> attempt fact-checking when his own\n&quot;facts&quot; are misinformed right-wing propaganda.</p>\n<p>He talks about the definition of &quot;mass shootings&quot;, claiming the FBI\nset, and Congress altered, this definition.  He&#39;s mistaken.  There is\nno consensus definition.  Perhaps he&#39;s confused by the FBI&#39;s &quot;mass\nkillings&quot;.  Our NRA-funded Congress would never admit that firearms\nwere related to killings.  There statistics conflict due to this lack\nof consensus.  Incontrovertibly, though, the US has far-and-away the\nhighest per-capita firearm death-rate in the developed world.</p>\n<p>Mr. Prentice challenges the Consumer Financial Protection Bureau,\nclaiming it was &quot;established to be beyond the control of any\nconstitutional authority.&quot;  Hogwash!  Congress created the CFPB and\ngave it a long leash, but they can alter or abolish it.  It&#39;s subject\nto GAO audit, Congressional oversight, and Senate confirmations.  The\npresident can remove the chair for cause.  It&#39;s like any number of\nfederal agencies such as the SEC, FCC, and NLRB.  Courts affirmed\nthese in 1935.</p>\n<p>There is controversy, and a DC Circuit Court panel -- in a case now\nunder review by that full court -- did say that this structure without\na board of commissioners is unconstitutional.  (That decision is long,\nbut readable and interesting: <a href=\"http://bit.ly/phh-vs-cfpb\">http://bit.ly/phh-vs-cfpb</a>.) Even if this\nis sustained, it doesn&#39;t invalidate the overall CFPB.  It&#39;s also worth\nnoting that Senator Warren&#39;s proposal included a board of\ncommissioners.  I&#39;m not sure how that changed.  (I agree about their\nabsurd building cost.)</p>\n<p>Finally, Mr. Prentice uses a racist, insulting nickname for the\nSenator, riffing on her &quot;you didn&#39;t build this&quot; speech.  That\ntwo-minute speech (<a href=\"http://bit.ly/warren-fair-taxes\">http://bit.ly/warren-fair-taxes</a>) is perhaps the\nbest explanation of progressive thoughts on government&#39;s role in\nsociety.  Sam Prentice&#39;s best explanation seems to be, &quot;The rich are\nrich because they&#39;re better than others: just leave them alone, okay?&quot;\nI&#39;ll choose Elizabeth Warren, thanks.</p>\n"
+    },
+    {
+        "Title": "Time to Return",
+        "Date": "2017-10-01",
+        "Tags": [
+            "Global Warming",
+            "Progressivism",
+            "Dannel Malloy",
+            "Donald Trump"
+        ],
+        "People": [
+            "Sam Prentice",
+            "Victor Carli",
+            "Dan Armstrong",
+            "Don Denley",
+            "Dan Devin",
+            "Richard Barningham",
+            "Lambros Lambrinides",
+            "Joe Stevens",
+            "Ed Smith",
+            "Colleen Shaddox",
+            "James Monahan"
+        ],
+        "Content": "<p>s it time to return from my hiatus?  What&#39;s been discussed?</p>\n<p><a href=\"#/person/Sam+Prentice\">Sam Prentice</a> makes the usual attacks on climate scientists, bemoans\nprogressivism, claiming that America&#39;s problem is hatred directed\nAGAINST Trump and his supporters (entirely backward!).  He correctly\nnotes that the Democrats were once the racist party.  Of course it was\nthe liberals that got things right, regardless of party.</p>\n<p><a href=\"#/person/Victor+Carli\">Victor Carli</a> continues to misrepresent others.  It&#39;s hard to know if\nhe&#39;s a real person or an escaped pro-Trump Twitterbot.  Amusingly, his\nargument against global warming boils down to, &quot;You see, the sun is\nhot.  Really hot.&quot;  He&#39;s joined by Victor Congdon and Renzo Carli in\nmisunderstanding basic science.</p>\n<p>Then there&#39;s <a href=\"#/person/Dan+Armstrong\">Dan Armstrong</a>, who clearly never got over that time when\nhe was six and Socialists took some of his candy to give to a kid who\nhad none.</p>\n<p><a href=\"#/person/Don+Denley\">Don Denley</a> thinks Dannel Malloy worse than John Rowland, that Clinton\nis a lying whiner but Trump an honest, forceful leader. Anyone\nsurprised that public corruption concerns him less than how policies\naffect his wallet?</p>\n<p>They&#39;re supported by <a href=\"#/person/Dan+Devin\">Dan Devin</a>, who misreads history; by <a href=\"#/person/Richard+Barningham\">Richard Barningham</a>,\nwho only notices those debts incurred by Democrats; and by\n<a href=\"#/person/Lambros+Lambrinides\">Lambros Lambrinides</a>, whose lesson on the Korean war concludes, &quot;The\nUnited States is now confronted with a bonafide psycho who is so far\nout on a ledge I don&#39;t think he can come back.&quot;  Honestly, I simply\nassumed he meant Trump.</p>\n<p>The other side is represented with grace and humor by <a href=\"#/person/Joe+Stevens\">Joe Stevens</a> and\n<a href=\"#/person/Ed+Smith\">Ed Smith</a>.  They are easily able to handle the conservative nonsense,\nyet still got backup from <a href=\"#/person/Colleen+Shaddox\">Colleen Shaddox</a> and <a href=\"#/person/James+Monahan\">James Monahan</a>.</p>\n<p>The sides are chosen: nine conservatives versus four liberals.  I\nguess I won&#39;t jump back in.  This in not a fair fight.  They&#39;re going\nto need a <em>lot</em> more conservatives.</p>\n"
+    },
+    {
+        "Title": "Pay Attention",
+        "Date": "2017-08-01",
+        "Tags": [
+            "Hiatus",
+            "Fact Checking"
+        ],
+        "People": [
+            "Sarah Shapiro",
+            "Marcie Miner",
+            "Victor Carli",
+            "Sam Prentice"
+        ],
+        "Content": "<p><a href=\"#/person/Sarah+Shapiro\">Sarah Shapiro</a> and <a href=\"#/person/Marcie+Miner\">Marcie Miner</a> are right. It’s time for me to take a break. I’m\nsure I’ll be back after a while, but it’s time for someone else to take up the\ntorch. Joe Stevens is going to need some backup!</p>\n<p>I’ve been writing here mostly to counter lies that are written over and over by\na few others. I hate to see the lies stand, but as ridiculous as these letters\nare, it’s hard to imagine that anyone believes them, even their writers. So I\nwill take a hiatus for a while. Please keep in mind when reading letters that\nmake extraordinary claims that these require extraordinary evidence. There are a\nnumber of writers to this paper that don’t seem to know what evidence is.</p>\n<p>So pay attention to what these folks say. If, like <a href=\"#/person/Victor+Carli\">Victor Carli</a>, all they can do\nis misquote others, attempt to repudiate things no one has said, and promote\nviews no one who follows the news will believe, then they’re mostly harmless.\nIf, however, like <a href=\"#/person/Sam+Prentice\">Sam Prentice</a>, they are actively attacking science, especially\nthat part which is trying to forestall the coming environmental disaster, then\nthey are dangerous. Those lies need to be challenged. I leave this in your\nhands.</p>\n"
     }
 ]

@@ -26,8 +26,6 @@ const oxfordJoin = (xs) =>
 
 const tagSort = ([a, x], [b, y]) => 
   y - x || (a < b ? -1 : a > b ? 1 : 0)
-//const personSort = ([aa, x], [bb, y], a = last(aa.split(' ')), b = last(bb.split())) => 
-//  y - x || (a < b ? -1 : a > b ? 1 : 0)
 const personSort = ([a, x], [b, y], aa = last (a.split(' ')), bb = last (b.split(' '))) => 
   y - x || (aa < bb ? -1 : aa > bb ? 1 : 0)
 
