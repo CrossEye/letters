@@ -8,14 +8,16 @@ const combinePaths = (...paths) => (path) => makePath .join (...paths, path)
 const allPromises = (ps) => Promise .all (ps)
 const stringify = (...args) => (o) => JSON. stringify (o, ...args)
 
+const tap = (fn) => (x) => ((fn (x)), x)
 const map = (fn) => (xs) => xs .map (x => fn (x))
 const prop = (p) => (o) => o [p]
 const prepend = (s1) => (s2) => s1 + s2
-const success = () => console .log ('content.js written')
 const sort = (fn, dir = 'ascending') => (xs) => 
   xs.sort ((a, b, aa = fn (a), bb = fn (b)) => 
     (dir == 'descending' ? -1 : 1) * (aa < bb ? -1 : aa > bb ? 1 : 0))
 
+const showSavedContent = () => console .log ('content.js written')
+const showSavedWrapper = () => console .log ('index.html written')
 const warnOfError = (err) => console .warn (`Error: ${err}`)
 
 const parse = (file) =>
@@ -53,6 +55,33 @@ const convert = ({Tags = '', People: ps = '', Content, ...rest},
     Content: marked (linkPeople (People, Content))
 })
 
+const combine = (content) => ([index, style, process]) =>
+  index 
+    .replace (
+      /\<link rel="stylesheet" href="style\.css" \/\>/,
+      `<style type="text/css">
+${style}
+</style>`
+    )
+    .replace (
+      /\<script src="content\.js"\>\<\/script\>/,
+      `<script>
+${content}
+</script>`
+    )
+    .replace (
+      /\<script src="process\.js"\>\<\/script\>/,
+      `<script>
+${process}
+</script>`
+    )
+
+const makeAllInOne = (content) =>
+  Promise.all (['./letters.html', './style.css', './process.js'] .map (readFile))
+    .then (combine (content))
+    .then (writeFile ('./index.html'))
+    .then (() => content)
+
 readdir ('./content') 
   .then (map (combinePaths ('./content')))
   .then (map (readFile))
@@ -60,9 +89,10 @@ readdir ('./content')
   .then (map (parse))
   .then (map (convert))
   .then (sort (prop ('Date'), 'descending'))
-  .then (stringify (null, 4))
-  // .then (stringify ())
+  .then (stringify (null, 4)) // .then (stringify ())
   .then (prepend ('const content = '))
-  .then (writeFile ('content.js'))
-  .then (success)
+  .then (tap (writeFile ('content.js')))
+  .then (tap (showSavedContent))
+  .then (makeAllInOne)
+  .then (tap (showSavedWrapper))
   .catch (warnOfError)

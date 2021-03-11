@@ -25,9 +25,16 @@ const oxfordJoin = (xs) =>
   : [xs.slice(0, -1).join(', '), last(xs)] .join(', and ')
 
 const tagSort = ([a, x], [b, y]) => 
-  y - x || (a < b ? -1 : a > b ? 1 :0)
-const personSort = ([aa, x], [bb, y], a = last(aa.split(' ')), b = last(bb.split())) => 
-  y - x || (a < b ? -1 : a > b ? 1 :0)
+  y - x || (a < b ? -1 : a > b ? 1 : 0)
+//const personSort = ([aa, x], [bb, y], a = last(aa.split(' ')), b = last(bb.split())) => 
+//  y - x || (a < b ? -1 : a > b ? 1 : 0)
+const personSort = ([a, x], [b, y], aa = last (a.split(' ')), bb = last (b.split(' '))) => 
+  y - x || (aa < bb ? -1 : aa > bb ? 1 : 0)
+
+const alphaTagSort = ([a], [b]) =>
+  a < b ? -1 : a > b ? 1 : 0 
+const alphaPersonSort = ([a], [b], aa = last (a.split(' ')), bb = last (b.split(' '))) => 
+  aa < bb ? -1 : aa > bb ? 1 : 0
 
 const gather = (name, content, sorter=tagSort) =>
   Object.entries (counts (prop (name)) (content)) .sort (sorter)
@@ -48,14 +55,14 @@ const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4
     const laterYears = years .slice (moreYears)
 
     return `<div class="sidebar box">
-    <h2><a href="#/"><em>Rivereast</em> Letters</a></h2>
+    <h2><a href="#/letters/">Letters</a></h2>
     <details open>
     <summary>Recent</summary>
     <ul>
         ${recentLetters .map (letterLink) .join ('\n        ')}
     </ul>
     </details>
-    <details open>
+    <details>
     <summary>Older</summary>
     ${initialYears .map (([year, letters]) => `    <details>
         <summary>${year}</summary>
@@ -67,15 +74,13 @@ const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4
     ${laterYears.length > 0 ? 
         `<details>
              <summary>More...</summary>
-             ${laterYears .map (([year, letters]) => `    <details>
-             <summary>${year}</summary>
+             ${laterYears .map (([year, letters]) => `    <h4>${year}</h4>
              <ul>
                  ${letters .map (letterLink) .join ('\n            ')}
-             </ul>
-         </details>`).join ('\n    ')}
+             </ul>`).join ('\n    ')}
         </details>` : ``}
     </details>
-    <h2>Tags</h2>
+    <h2><a href="#/tags/">Tags</a></h2>
     <ul>
     ${tags .slice (0, tagNbr) .map (makeLink ('tag')) .join ('\n    ')}
     </ul>
@@ -85,7 +90,7 @@ const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4
             ${tags .slice (tagNbr) .map (makeLink ('tag')) .join ('\n        ')}
         </ul>
     </details>` : ``}
-    <h2>Other Letter Writers</h2>
+    <h2><a href="#/people/">Other Letter Writers</a></h2>
     <ul>
     ${people .slice (0, prsnNbr) .map (makeLink ('person')) .join ('\n    ')}
     </ul>
@@ -145,6 +150,21 @@ const makePerson = (content, person) => {
     </ul>`
 }
 
+const makeTags = (content) => `    <h1>All Tags</h1>
+    <ul class="long">
+      ${gather ('Tags', content, alphaTagSort) .map (makeLink ('tag')) .join ('\n        ')}
+    </ul>`
+
+const makePeople = (content) => `    <h1>All Letter Writers</h1>
+  <ul class="long">
+    ${gather ('People', content, alphaPersonSort) .map (makeLink ('person')) .join ('\n        ')}
+  </ul>`
+
+const makeLetters = (content) => `    <h1>All Letters</h1>
+  <ul class="long">
+    ${content .map (letterLink) .join ('\n        ')}
+  </ul>`
+
 const updateCurrent = ({Date, Tags, Title}) => {
   document .getElementById ('currentLetter') .innerHTML = 
       `The <a href="#/${Date}">most recent letter</a>, from ${longDate(Date)}, is titled "${Title}", and discusses the ${Tags.length == 1 ? 'subject' : 'subjects'} of ${oxfordJoin (Tags .map (makeTagLink))}.`
@@ -171,6 +191,12 @@ const updateCurrent = ({Date, Tags, Title}) => {
             document .getElementById ('main') .innerHTML = makeTag (content, hash .slice (6) .replaceAll('+', ' '))
         } else if (hash.startsWith('#/person/')) {
             document .getElementById ('main') .innerHTML = makePerson (content, hash .slice (9) .replaceAll('+', ' '))
+        } else if (hash == '#/tags/') {
+            document.getElementById ('main') .innerHTML = makeTags (content)
+        } else if (hash == '#/people/') {
+            document.getElementById ('main') .innerHTML = makePeople (content)
+        } else if (hash == '#/letters/') {
+            document.getElementById ('main') .innerHTML = makeLetters (content)
         }
       } else {
         document.location.hash = '#/'
@@ -178,5 +204,5 @@ const updateCurrent = ({Date, Tags, Title}) => {
     }
     window.addEventListener ('popstate', () => setTimeout(route, 0))
     route()
-    document.getElementById ('root') .innerHTML += makeSidebar(content, 6, 2, 5, 5)
+    document.getElementById ('root') .innerHTML += makeSidebar(content, 8, 3, 5, 5)
 }) (content)

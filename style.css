@@ -19,6 +19,16 @@ h1, h2, h3, h4, summary {
   color: #5f2580;
 }
 
+header {
+  background-color: #a6a600;
+  padding: .5rem 1rem;
+  border-radius: 12px;
+  border: 2px solid rgb(116, 113, 113);
+  margin: -1rem 1rem 1rem 1rem;
+  box-shadow: 2px 2px 2px #666;
+  text-align: center;
+}
+
 h1 {
   font-size: 1.75rem;
 }
@@ -85,6 +95,18 @@ nav {
   text-decoration: none;
 }
 
+ul.long li, ul.long li a {
+  width: 100%
+}
+
+ul.long li a, ul.long li a:visited {
+  background-color: #ffff73;
+}
+
+ul.long li a:hover {
+  background-color: #e5e557;
+}
+
 .main li {
   margin-top: .5rem;
 }
@@ -111,6 +133,7 @@ nav {
   border-radius: 10px;
   padding: .25rem;
 }
+
 .signature {
   margin-left: 2rem;
 }
@@ -119,12 +142,12 @@ nav {
   flex: 2 1 200px;
 }
 
-.sidebar a {
+.sidebar a, header a {
   text-decoration: none;
   color: #5f2580;
 }
 
-.sidebar a:hover {
+.sidebar a:hover, header a:hover {
   text-decoration: underline;
   background-color: #ffff73;
   color: #000;
