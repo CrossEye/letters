@@ -179,6 +179,40 @@ ul.long li a:hover {
   list-style: none;
 }
   
+#searchBox input {
+  width: 75%;
+  font-size: 1.5rem;
+  background-color: #d8d858;
+  border-radius: 18px;
+  padding: 0 1rem;
+}
+
+#searchBox button {
+  font-size: 1.3rem;
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+}
+
+#searchWidget {
+  margin-top: -0.5rem;
+  float: right;
+}
+
+#searchWidget input {
+  background-color: #d8d858;
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 0 .5rem;
+}
+
+#searchWidget button {
+  background-color: inherit;
+  border: none;
+  font-size: 1.0rem;
+  margin-left: -.5rem;
+  cursor: pointer;
+}
 
 @media only screen and (max-width: 900px) {
   .container {

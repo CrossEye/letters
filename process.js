@@ -44,6 +44,8 @@ const letterLink = ({Date, Title}) =>
 const makeTagLink = (Tag) =>
   `<a href="#/tag/${Tag.replace(/ /g, '+')}">${Tag}</a>`
 
+
+
 const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4) => {
     const tags = gather ('Tags', content, tagSort)
     const people = gather ('People', content, personSort)
@@ -53,6 +55,11 @@ const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4
     const laterYears = years .slice (moreYears)
 
     return `<div class="sidebar box">
+    <p id="searchWidget">
+    <input id="sw" type="text"/>
+    <button type="button" method="get" onClick="newSearch('sw')">🔍</button>
+    </p>
+
     <h2><a href="#/letters/">Letters</a></h2>
     <details open>
     <summary>Recent</summary>
@@ -163,6 +170,28 @@ const makeLetters = (content) => `    <h1>All Letters</h1>
     ${content .map (letterLink) .join ('\n        ')}
   </ul>`
 
+const newSearch = (id) => {
+  document.location.href = `/#/search/${encodeURIComponent(document.getElementById(id || 'search').value).replace(/\%20/g, '+')}`
+}
+
+  const makeSearch = (content, query) => {
+  const matches =
+    query .length 
+      ? content.filter(({TextLower}) => TextLower.includes (query.toLowerCase()))
+      : []
+  return `    <h1>Search</h1>
+  <p id="searchBox">
+    <input id="search" type="text" value="${query}"/>
+    <button type="button" method="get" onClick="newSearch()">🔍</button>
+  </p>
+  <h2>${matches .length > 0 ? '' : 'No '}Results</h2>
+  ${matches .length > 0 ? `<h3>Letters</h3>
+  <ul class="long">
+  ${matches .map (letterLink) .join ('\n        ')}
+</ul>` : ``}`
+  
+}
+
 const updateCurrent = ({Date, Tags, Title}) => {
   document .getElementById ('currentLetter') .innerHTML = 
       `The <a href="#/${Date}">most recent letter</a>, from ${longDate(Date)}, is titled "${Title}", and discusses the ${Tags.length == 1 ? 'subject' : 'subjects'} of ${oxfordJoin (Tags .map (makeTagLink))}.`
@@ -195,12 +224,20 @@ const updateCurrent = ({Date, Tags, Title}) => {
             document.getElementById ('main') .innerHTML = makePeople (content)
         } else if (hash == '#/letters/') {
             document.getElementById ('main') .innerHTML = makeLetters (content)
+        } else if (hash .startsWith('#/search/')) {
+            document.getElementById ('main') .innerHTML = makeSearch (content, decodeURIComponent(hash .slice (9).replace(/\+/g, ' ')))
         }
       } else {
         document.location.hash = '#/'
       }
     }
+    const div = document.createElement('div')
+    content .forEach (letter => {
+      div .innerHTML = letter .Content
+      letter .Text = div .textContent
+      letter .TextLower = letter .Text .toLowerCase()
+    })
+    document.getElementById ('root') .innerHTML += makeSidebar(content, 8, 3, 5, 5)
     window.addEventListener ('popstate', () => setTimeout(route, 0))
     route()
-    document.getElementById ('root') .innerHTML += makeSidebar(content, 8, 3, 5, 5)
 }) (content)
