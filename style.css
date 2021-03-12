@@ -148,7 +148,6 @@ ul.long li a:hover {
 }
 
 .sidebar a:hover, header a:hover {
-  text-decoration: underline;
   background-color: #ffff73;
   color: #000;
 }
