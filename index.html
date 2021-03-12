@@ -1162,7 +1162,7 @@ const makeLetters = (content) => `    <h1>All Letters</h1>
   </ul>`
 
 const newSearch = (id) => {
-  document.location.href = `/#/search/${encodeURIComponent(document.getElementById(id || 'search').value).replace(/\%20/g, '+')}`
+  document.location.href = `#/search/${encodeURIComponent(document.getElementById(id || 'search').value).replace(/\%20/g, '+')}`
 }
 
   const makeSearch = (content, query) => {
