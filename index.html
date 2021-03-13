@@ -14,6 +14,7 @@
   --border-color: #000;
   --search-background: #d8d858;
   --tag-background: #e5e557;
+  --border-shadow: #666;
   */
   
   --neutral: #d7e3e5;
@@ -23,8 +24,8 @@
   --root-foreground:  #555;
   --border-color: #aa938f;
   --search-background: #d7e3e5;
-  --tag-background: #b7ccd2;
   --tag-background: #dabea6;
+  --border-shadow: #666;
 }
 
 body {
@@ -47,9 +48,9 @@ header {
   background-color: var(--header-background);
   padding: .5rem 1rem;
   border-radius: 12px;
-  border: 2px solid rgb(116, 113, 113);
+  border: 2px solid var(--border-color);
   margin: -1rem 1rem 1rem 1rem;
-  box-shadow: 2px 2px 2px #666;
+  box-shadow: 2px 2px 2px var(--border-shadow);
   text-align: center;
 }
 
@@ -188,9 +189,9 @@ ul.long li a:hover {
   background-color: var(--sidebar-background);
   padding: 1rem;
   border-radius: 12px;
-  border: 2px solid rgb(116, 113, 113);
+  border: 2px solid var(--border-color);
   margin: 0 1rem;
-  box-shadow: 2px 2px 2px #666;
+  box-shadow: 2px 2px 2px var(--border-shadow);
 }
 
 .sidebar ul {
