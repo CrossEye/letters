@@ -1,17 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 :root {
   box-sizing: border-box;
-/*  
-  --neutral: #f8f8f8;
-  --primary: #ffff73;
-  --secondary: #bfbf30;
-  --tertiary: #a6a600;
-  --highlight: #e5e557;
-  --text-primary: #5f2580;
-  --text-secondary: #333333;
-  --text-tertiary: #000000;
-  --text-highlight: #666666;
- */ 
  
   --neutral: #d7e3e5;
   --primary: #edd8c8;
@@ -22,7 +11,6 @@
   --text-secondary: #333333;
   --text-tertiary: #aa938f;
   --text-highlight: #666666;
-
 }
 
 body {
