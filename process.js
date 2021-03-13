@@ -56,7 +56,7 @@ const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4
     const html = `<div class="sidebar box">
     <p id="searchWidget">
     <input id="sw" type="text"/>
-    <button id= 'swb' type="button" method="get" onClick="newSearch('sw')">🔍</button>
+    <button id= 'swb' type="button" class="search" title="Search">\u2315</button>
     </p>
 
     <h2><a href="#/letters/">Letters</a></h2>
@@ -109,6 +109,7 @@ const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4
 `
   document .getElementById ('root') .innerHTML += html
   const button = document.getElementById('swb')
+  button.onclick = () => newSearch('sw')
   document .getElementById ('sw') .addEventListener ('keyup', (e) => {
     if (e.key == 'Enter') {button. click ()}
   })
@@ -186,14 +187,15 @@ const makeSearch = (el, content, query) => {
   el .innerHTML =  `    <h1>Search</h1>
   <p id="searchBox">
     <input id="search" type="text" value="${query}"/>
-    <button id="sbb" type="button" method="get" onClick="newSearch()">🔍</button>
+    <button id="sbb" type="button" class="search" title="Search"">\u2315</button>
   </p>
   <h2>${matches .length > 0 ? '' : 'No '}Results</h2>
   ${matches .length > 0 ? `<h3>Letters</h3>
   <ul class="long">
   ${matches .map (letterLink) .join ('\n        ')}
   </ul>` : ``}`
-  const button = document.getElementById('sbb')
+  const button = document .getElementById ('sbb')
+  button .onclick = () => newSearch()
   document .getElementById ('search') .addEventListener ('keyup', (e) => {
       if (e.key == 'Enter') {button .click ()}
   })
