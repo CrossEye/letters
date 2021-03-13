@@ -5,6 +5,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 :root {
   box-sizing: border-box;
+  /*
+  --neutral: #f8f8f8;
+  --main-background: #ffff73;
+  --sidebar-background: #bfbf30;
+  --header-background: #a6a600;
+  --root-foreground: #5f2580;
+  --border-color: #000;
+  --search-background: #d8d858;
+  --tag-background: #e5e557;
+  */
+  
+  --neutral: #d7e3e5;
+  --main-background: #edd8c8;
+  --sidebar-background: #b7ccd2;
+  --header-background: #dabea6;
+  --root-foreground:  #555;
+  --border-color: #aa938f;
+  --search-background: #d7e3e5;
+  --tag-background: #b7ccd2;
+  --tag-background: #dabea6;
 }
 
 body {
@@ -12,19 +32,19 @@ body {
   padding: 1rem;
   max-width: 1200px;
   margin: 30px auto;
-  background-color: #f8f8f8;
+  background-color: var(--neutral);
   font-size: 1.2em;
   font-family: Georgia, serif;
-  color: #5f2580;
+  color: var(--root-foreground);
 }
 
 h1, h2, h3, h4, summary {
   font-family: 'Patua One', cursive;
-  color: #5f2580;
+  color: var(--root-foreground);
 }
 
 header {
-  background-color: #a6a600;
+  background-color: var(--header-background);
   padding: .5rem 1rem;
   border-radius: 12px;
   border: 2px solid rgb(116, 113, 113);
@@ -94,8 +114,8 @@ nav {
 }
 
 .main a, .main a:visited {
-  background-color: #e5e557;
-  color: #5f2580;
+  background-color: var(--tag-background);
+  color: var(--root-foreground);
   text-decoration: none;
 }
 
@@ -104,11 +124,11 @@ ul.long li, ul.long li a {
 }
 
 ul.long li a, ul.long li a:visited {
-  background-color: #ffff73;
+  background-color: var(--main-background);
 }
 
 ul.long li a:hover {
-  background-color: #e5e557;
+  background-color: var(--tag-background);
 }
 
 .main li {
@@ -133,7 +153,7 @@ ul.long li a:hover {
 }
 
 .tags li a {
-  border: 1px solid #5f2580;
+  border: 1px solid var(--root-foreground);
   border-radius: 10px;
   padding: .25rem;
 }
@@ -148,12 +168,12 @@ ul.long li a:hover {
 
 .sidebar a, header a {
   text-decoration: none;
-  color: #5f2580;
+  color: var(--root-foreground);
 }
 
 .sidebar a:hover, header a:hover {
-  background-color: #ffff73;
-  color: #000;
+  background-color: var(--main-background);
+  color: var(--border-color);
 }
 
 .sidebar span {
@@ -161,11 +181,11 @@ ul.long li a:hover {
 }
 
 .main.box {
-  background-color: #ffff73;
+  background-color: var(--main-background);
 }
 
 .box {
-  background-color: #bfbf30;
+  background-color: var(--sidebar-background);
   padding: 1rem;
   border-radius: 12px;
   border: 2px solid rgb(116, 113, 113);
@@ -185,7 +205,7 @@ ul.long li a:hover {
 #searchBox input {
   width: 75%;
   font-size: 1.5rem;
-  background-color: #d8d858;
+  background-color: var(--search-background);
   border-radius: 18px;
   padding: 0 1rem;
 }
@@ -203,7 +223,7 @@ ul.long li a:hover {
 }
 
 #searchWidget input {
-  background-color: #d8d858;
+  background-color: var(--search-background);
   border-radius: 10px;
   font-size: 1rem;
   padding: 0 .5rem;
