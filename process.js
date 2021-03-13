@@ -204,7 +204,15 @@ const makeSearch = (el, content, query) => {
 const updateCurrent = ({Date, Tags, Title}) => {
   document .getElementById ('currentLetter') .innerHTML = 
       `The <a href="#/${Date}">most recent letter</a>, from ${longDate(Date)}, is titled "${Title}", and discusses the ${Tags.length == 1 ? 'subject' : 'subjects'} of ${oxfordJoin (Tags .map (makeTagLink))}.`
-}  
+}
+
+const changeTheme = (name) => {
+  const style = document.querySelector(':root').style
+  Object.entries(themes[name] || {}) .forEach (
+    ([key, value]) => style .setProperty(`--${key}`, value)
+  )
+}
+
 
 ((content) => {
     const lookups = Object.fromEntries(content .map (letter => [letter.Date, letter]))

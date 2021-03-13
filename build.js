@@ -55,7 +55,7 @@ const convert = ({Tags = '', People: ps = '', Content, ...rest},
     Content: marked (linkPeople (People, Content))
 })
 
-const combine = (content) => ([index, style, process]) =>
+const combine = (content) => ([index, style, themes, process]) =>
   index 
     .replace (
       /\<link rel="stylesheet" href="style\.css" \/\>/,
@@ -70,6 +70,12 @@ ${content}
 </script>`
     )
     .replace (
+      /\<script src="themes\.js"\>\<\/script\>/,
+      `<script>
+${themes}
+</script>`
+    )
+    .replace (
       /\<script src="process\.js"\>\<\/script\>/,
       `<script>
 ${process}
@@ -77,7 +83,7 @@ ${process}
     )
 
 const makeAllInOne = (content) =>
-  Promise.all (['./letters.html', './style.css', './process.js'] .map (readFile))
+  Promise.all (['./letters.html', './style.css', './themes.js', './process.js'] .map (readFile))
     .then (combine (content))
     .then (writeFile ('./index.html'))
     .then (() => content)
