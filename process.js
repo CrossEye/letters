@@ -6,8 +6,8 @@ const counts = (fn) => (xs) =>
 const identity = (x) => x
 const shortDate = (ds) =>  `${Number(ds.slice(5, 7))}/${Number(ds.slice(8,10))}/${ds.slice(2, 4)}`
 const longDate = ((months) => (ds) => `${months[Number(ds.slice(5, 7) - 1)]} ${Number(ds.slice(8,10))}, ${ds.slice(0, 4)}`)
-  (['January', 'February', 'March', 'April', 'May', 'June', 
-    'July', 'August', 'September', 'October', 'November', 'December']) 
+  (['January', 'February', 'March', 'April', 'May', 'June', 'July', 
+    'August', 'September', 'October', 'November', 'December']) 
 const call = (fn, ...args) => fn (args)
 const getYear = ({Date}) => Date .slice (0, 4)
 const groupBy = (fn) => (xs) =>
@@ -43,7 +43,6 @@ const letterLink = ({Date, Title}) =>
   `<li><a href="#/${Date}">${Title} <span>(${shortDate(Date)})</span></a></li>`
 const makeTagLink = (Tag) =>
   `<a href="#/tag/${Tag.replace(/ /g, '+')}">${Tag}</a>`
-
 
 
 const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4) => {
@@ -123,12 +122,10 @@ const makeLetter = (contents, letter) => {
       To The Editor:
     </p>
     ${letter.Content}
-    <p class="signature">
-      -- Scott Sauyet
-    </p>
+    <p class="signature"> -- Scott Sauyet</p>
     <nav>
       <div id="prev"${prev ? `title="${shortDate(prev.Date)}` : ``}">${prev ? `<a href="#/${prev.Date}">« ${prev.Title}</a>` : ``}</div>
-      <div id="home" title="All letters"><a href="#/">Home</a></div>
+      <div id="home" title="Overview"><a href="#/">Home</a></div>
       <div id="next"${next ? `title="${shortDate(next.Date)}` : ``}">${next ? `<a href="#/${next.Date}">${next.Title} »</a>` : ``}</div>
     </nav>
 `
@@ -144,6 +141,7 @@ const makeTag = (content, tag) => {
       ) .join ('\n        ')}
     </ul>`
 }
+
 const makePerson = (content, person) => {
     const letters = content .filter (({People}) => People .includes (person))
     return `
@@ -174,22 +172,26 @@ const newSearch = (id) => {
   document.location.href = `#/search/${encodeURIComponent(document.getElementById(id || 'search').value).replace(/\%20/g, '+')}`
 }
 
-  const makeSearch = (content, query) => {
+const makeSearch = (el, content, query) => {
   const matches =
     query .length 
       ? content.filter(({TextLower}) => TextLower.includes (query.toLowerCase()))
       : []
-  return `    <h1>Search</h1>
+  el .innerHTML =  `    <h1>Search</h1>
   <p id="searchBox">
     <input id="search" type="text" value="${query}"/>
-    <button type="button" method="get" onClick="newSearch()">🔍</button>
+    <button id="sbb" type="button" method="get" onClick="newSearch()">🔍</button>
   </p>
   <h2>${matches .length > 0 ? '' : 'No '}Results</h2>
   ${matches .length > 0 ? `<h3>Letters</h3>
   <ul class="long">
   ${matches .map (letterLink) .join ('\n        ')}
-</ul>` : ``}`
-  
+  </ul>` : ``}`
+  const button = document.getElementById('sbb')
+  document .getElementById ('search') .addEventListener ('keyup', (e) => {
+      console .log ({e})
+      if (e.keyCode == 13) {button.click()}
+  })
 }
 
 const updateCurrent = ({Date, Tags, Title}) => {
@@ -202,30 +204,31 @@ const updateCurrent = ({Date, Tags, Title}) => {
     updateCurrent (content[0])
     const base = document .getElementById ('main') .innerHTML
     const route = () => {
+      const main = document .getElementById ('main')
       const hash = document.location.hash
       window .scrollTo (0, 0)
       if (hash) {
         if (hash == '#/') {
-            document .getElementById ('main') .innerHTML = base
+            main .innerHTML = base
         } else if (/#\/\d{4}-\d{2}-\d{2}/ .test (hash)) {
             const letter = lookups [hash .slice (2)];
             if (letter) {
-              document .getElementById ('main') .innerHTML = makeLetter (content, letter)
+             main .innerHTML = makeLetter (content, letter)
             } else {
               document.location.hash = '#/'
             }
         } else if (hash.startsWith('#/tag/')) {
-            document .getElementById ('main') .innerHTML = makeTag (content, hash .slice (6) .replaceAll('+', ' '))
+            main .innerHTML = makeTag (content, hash .slice (6) .replaceAll('+', ' '))
         } else if (hash.startsWith('#/person/')) {
-            document .getElementById ('main') .innerHTML = makePerson (content, hash .slice (9) .replaceAll('+', ' '))
+            main .innerHTML = makePerson (content, hash .slice (9) .replaceAll('+', ' '))
         } else if (hash == '#/tags/') {
-            document.getElementById ('main') .innerHTML = makeTags (content)
+            main .innerHTML = makeTags (content)
         } else if (hash == '#/people/') {
-            document.getElementById ('main') .innerHTML = makePeople (content)
+            main .innerHTML = makePeople (content)
         } else if (hash == '#/letters/') {
-            document.getElementById ('main') .innerHTML = makeLetters (content)
+            main .innerHTML = makeLetters (content)
         } else if (hash .startsWith('#/search/')) {
-            document.getElementById ('main') .innerHTML = makeSearch (content, decodeURIComponent(hash .slice (9).replace(/\+/g, ' ')))
+            makeSearch (main, content, decodeURIComponent (hash .slice (9).replace(/\+/g, ' ')))
         }
       } else {
         document.location.hash = '#/'
@@ -235,9 +238,10 @@ const updateCurrent = ({Date, Tags, Title}) => {
     content .forEach (letter => {
       div .innerHTML = letter .Content
       letter .Text = div .textContent
-      letter .TextLower = letter .Text .toLowerCase()
+      letter .TextLower = letter .Text .toLowerCase ()
     })
-    document.getElementById ('root') .innerHTML += makeSidebar(content, 8, 3, 5, 5)
-    window.addEventListener ('popstate', () => setTimeout(route, 0))
-    route()
+    document .getElementById ('root') .innerHTML += makeSidebar (content, 8, 3, 5, 5)
+    window .addEventListener ('popstate', () => setTimeout (route, 0))
+    route ()
 }) (content)
+
