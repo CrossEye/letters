@@ -15,8 +15,9 @@
   --search-background: #d8d858;
   --tag-background: #e5e557;
   --border-shadow: #666;
-  */
-  
+  --hover-text: #333;
+ */ 
+ 
   --neutral: #d7e3e5;
   --main-background: #edd8c8;
   --sidebar-background: #b7ccd2;
@@ -24,8 +25,10 @@
   --root-foreground:  #555;
   --border-color: #aa938f;
   --search-background: #d7e3e5;
-  --tag-background: #dabea6;
+  --tag-background: #e4cbb7;
   --border-shadow: #666;
+  --hover-text: #333;
+
 }
 
 body {
@@ -129,7 +132,7 @@ ul.long li a, ul.long li a:visited {
 }
 
 ul.long li a:hover {
-  background-color: var(--tag-background);
+  background-color: var(--sidebar-background);
 }
 
 .main li {
@@ -137,7 +140,8 @@ ul.long li a:hover {
 }
 
 .main a:hover {
-  text-decoration: underline;
+  background-color: var(--sidebar-background);
+  color: var(--hover-text)
 }
 
 .date {
@@ -172,9 +176,14 @@ ul.long li a:hover {
   color: var(--root-foreground);
 }
 
-.sidebar a:hover, header a:hover {
-  background-color: var(--main-background);
-  color: var(--border-color);
+.sidebar a:hover {
+  background-color: var(--header-background);
+  color: var(--hover-text);
+}
+
+header a:hover {
+  background-color: var(--sidebar-background);
+  color: var(--hover-text);
 }
 
 .sidebar span {
