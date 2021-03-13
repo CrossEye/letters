@@ -1051,8 +1051,8 @@ const counts = (fn) => (xs) =>
 const identity = (x) => x
 const shortDate = (ds) =>  `${Number(ds.slice(5, 7))}/${Number(ds.slice(8,10))}/${ds.slice(2, 4)}`
 const longDate = ((months) => (ds) => `${months[Number(ds.slice(5, 7) - 1)]} ${Number(ds.slice(8,10))}, ${ds.slice(0, 4)}`)
-  (['January', 'February', 'March', 'April', 'May', 'June', 
-    'July', 'August', 'September', 'October', 'November', 'December']) 
+  (['January', 'February', 'March', 'April', 'May', 'June', 'July', 
+    'August', 'September', 'October', 'November', 'December']) 
 const call = (fn, ...args) => fn (args)
 const getYear = ({Date}) => Date .slice (0, 4)
 const groupBy = (fn) => (xs) =>
@@ -1090,7 +1090,6 @@ const makeTagLink = (Tag) =>
   `<a href="#/tag/${Tag.replace(/ /g, '+')}">${Tag}</a>`
 
 
-
 const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4) => {
     const tags = gather ('Tags', content, tagSort)
     const people = gather ('People', content, personSort)
@@ -1099,10 +1098,10 @@ const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4
     const initialYears = years .slice (0, moreYears)
     const laterYears = years .slice (moreYears)
 
-    return `<div class="sidebar box">
+    const html = `<div class="sidebar box">
     <p id="searchWidget">
     <input id="sw" type="text"/>
-    <button type="button" method="get" onClick="newSearch('sw')">🔍</button>
+    <button id= 'swb' type="button" method="get" onClick="newSearch('sw')">🔍</button>
     </p>
 
     <h2><a href="#/letters/">Letters</a></h2>
@@ -1153,6 +1152,12 @@ const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4
 
 </div>
 `
+  document .getElementById ('root') .innerHTML += html
+  const button = document.getElementById('swb')
+  document .getElementById ('sw') .addEventListener ('keyup', (e) => {
+    if (e.key == 'Enter') {button. click ()}
+  })
+
 }
 
 const makeLetter = (contents, letter) => {
@@ -1235,8 +1240,7 @@ const makeSearch = (el, content, query) => {
   </ul>` : ``}`
   const button = document.getElementById('sbb')
   document .getElementById ('search') .addEventListener ('keyup', (e) => {
-      console .log ({e})
-      if (e.keyCode == 13) {button.click()}
+      if (e.key == 'Enter') {button .click ()}
   })
 }
 
@@ -1274,21 +1278,22 @@ const updateCurrent = ({Date, Tags, Title}) => {
         } else if (hash == '#/letters/') {
             main .innerHTML = makeLetters (content)
         } else if (hash .startsWith('#/search/')) {
-            makeSearch (main, content, decodeURIComponent(hash .slice (9).replace(/\+/g, ' ')))
+            makeSearch (main, content, decodeURIComponent (hash .slice (9).replace(/\+/g, ' ')))
         }
       } else {
         document.location.hash = '#/'
       }
     }
     const div = document.createElement('div')
-    content .forEach (letter => {``
+    content .forEach (letter => {
       div .innerHTML = letter .Content
       letter .Text = div .textContent
-      letter .TextLower = letter .Text .toLowerCase()
+      letter .TextLower = letter .Text .toLowerCase ()
     })
-    document.getElementById ('root') .innerHTML += makeSidebar(content, 8, 3, 5, 5)
-    window.addEventListener ('popstate', () => setTimeout(route, 0))
-    route()
+     
+    makeSidebar (content, 8, 3, 5, 5)
+    window .addEventListener ('popstate', () => setTimeout (route, 0))
+    route ()
 }) (content)
 
 

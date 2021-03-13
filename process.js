@@ -53,10 +53,10 @@ const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4
     const initialYears = years .slice (0, moreYears)
     const laterYears = years .slice (moreYears)
 
-    return `<div class="sidebar box">
+    const html = `<div class="sidebar box">
     <p id="searchWidget">
     <input id="sw" type="text"/>
-    <button type="button" method="get" onClick="newSearch('sw')">🔍</button>
+    <button id= 'swb' type="button" method="get" onClick="newSearch('sw')">🔍</button>
     </p>
 
     <h2><a href="#/letters/">Letters</a></h2>
@@ -107,6 +107,12 @@ const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4
 
 </div>
 `
+  document .getElementById ('root') .innerHTML += html
+  const button = document.getElementById('swb')
+  document .getElementById ('sw') .addEventListener ('keyup', (e) => {
+    if (e.key == 'Enter') {button. click ()}
+  })
+
 }
 
 const makeLetter = (contents, letter) => {
@@ -189,8 +195,7 @@ const makeSearch = (el, content, query) => {
   </ul>` : ``}`
   const button = document.getElementById('sbb')
   document .getElementById ('search') .addEventListener ('keyup', (e) => {
-      console .log ({e})
-      if (e.keyCode == 13) {button.click()}
+      if (e.key == 'Enter') {button .click ()}
   })
 }
 
@@ -240,7 +245,8 @@ const updateCurrent = ({Date, Tags, Title}) => {
       letter .Text = div .textContent
       letter .TextLower = letter .Text .toLowerCase ()
     })
-    document .getElementById ('root') .innerHTML += makeSidebar (content, 8, 3, 5, 5)
+     
+    makeSidebar (content, 8, 3, 5, 5)
     window .addEventListener ('popstate', () => setTimeout (route, 0))
     route ()
 }) (content)
