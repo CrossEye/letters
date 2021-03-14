@@ -109,6 +109,27 @@ nav {
   text-decoration: none;
 }
 
+.main svg {
+  width: 100%;
+  margin: 10%;
+}
+
+.main div.themes span {
+  display: block;;
+  margin-top: -2rem;
+  margin-bottom: 1rem
+}
+
+.main .themes button {
+  padding: 0;
+  margin: .5rem;
+  display: inline-block;
+  width: 40%;
+  text-align: center;
+  font-size: 1.25rem;
+  border-radius: 15px;
+}
+
 ul.long li, ul.long li a {
   width: 100%
 }
@@ -228,9 +249,14 @@ header a:hover {
 #searchWidget button {
   background-color: inherit;
   border: none;
-  font-size: 1.7rem;
+  font-size: 2rem;
   margin-left: -.5rem;
   cursor: pointer;
+}
+
+#searchWidget svg {
+  width: 3rem;
+  margin-bottom: -1rem;
 }
 
 @media only screen and (max-width: 900px) {
@@ -1009,30 +1035,30 @@ const content = [
 ]
 </script>
 <script>
-const themes = ((defaultTheme = 'A', colors = {
-  'A': {
-        'neutral': '#d7e3e5',
-        'primary': '#edd8c8',
-        'secondary': '#b7ccd2',
-        'tertiary': '#dabea6',
-        'highlight': '#e4cbb7',
-        'text-primary':  '#555555',
-        'text-secondary': '#333333',
-        'text-tertiary': '#aa938f',
-        'text-highlight': '#666666',
+const themes = ((defaultTheme = 'Sandy Beach', colors = {
+  'Sandy Beach': {
+    'neutral': '#d7e3e5',
+    'primary': '#edd8c8',
+    'secondary': '#b7ccd2',
+    'tertiary': '#dabea6',
+    'highlight': '#e4cbb7',
+    'text-primary':  '#555555',
+    'text-secondary': '#333333',
+    'text-tertiary': '#aa938f',
+    'text-highlight': '#666666',
      },
-  'B': {
-     'neutral': '#f8f8f8',
-     'primary': '#ffff73',
-     'secondary': '#bfbf30',
-     'tertiary': '#a6a600',
-     'highlight': '#e5e557',
-     'text-primary': '#5f2580',
-     'text-secondary': '#333333',
-     'text-tertiary': '#000000',
-     'text-highlight': '#666666',
+  'Mellow Yellow': {
+    'neutral': '#f8f8f8',
+    'primary': '#ffff73',
+    'secondary': '#bfbf30',
+    'tertiary': '#a6a600',
+    'highlight': '#e5e557',
+    'text-primary': '#5f2580',
+    'text-secondary': '#333333',
+    'text-tertiary': '#000000',
+    'text-highlight': '#666666',
   },
-  'C': {
+  'Tangled Up in Blue': {
     'neutral': '#DDDDDD',
     'primary': '#63BCE5',
     'secondary': '#3778C2',
@@ -1043,7 +1069,7 @@ const themes = ((defaultTheme = 'A', colors = {
     'text-tertiary': '#000000',
     'text-highlight': '#666666',
  },
- 'D': {
+ 'Lazy Sunday': {
     'neutral': '#ece5f4',
     'primary': '#ffe1de',
     'secondary': '#c1d7e1',
@@ -1070,7 +1096,7 @@ const themes = ((defaultTheme = 'A', colors = {
     <rect x="20" y="20" rx="15" ry="15" width="260" height="40"
       style="fill: ${tertiary}; stroke-width: 2; stroke: ${tt};"/>
 </svg>`])),
-    change: (name) => {
+    choose: (name) => {
         const style = document.querySelector(':root').style
         Object.entries(colors[name] || {}) .forEach (
           ([key, value]) => style .setProperty(`--${key}`, value)
@@ -1188,8 +1214,9 @@ const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4
 
     const html = `<div class="sidebar box">
     <p id="searchWidget">
-    <input id="sw" type="text"/>
-    <button id= 'swb' type="button" class="search" title="Search">\u2315</button>
+    <!-- <input id="sw" type="text"/> -->
+    <button id="swb" type="button" title="Search">\u2315</button>
+    <button id="thm" type="button" title="Change Theme">${themes.icons[themes.defaultTheme]}</button>
     </p>
 
     <h2><a href="#/letters/">Letters</a></h2>
@@ -1241,13 +1268,11 @@ const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4
 </div>
 `
   document .getElementById ('root') .innerHTML += html
-  const button = document.getElementById('swb')
-  button.onclick = () => newSearch('sw')
-  document .getElementById ('sw') .addEventListener ('keyup', (e) => {
-    if (e.key == 'Enter') {button. click ()}
-  })
-
-}
+  const searchButton = document.getElementById('swb')
+  searchButton.onclick = () => document.location.href = '#/search/'
+  const themeButton = document.getElementById('thm')
+  themeButton.onclick = () => document.location.href = '#/themes/' + document.location.hash
+  }
 
 const makeLetter = (contents, letter) => {
     const prev = contents [contents .indexOf (letter) - 1]
@@ -1312,6 +1337,11 @@ const newSearch = (id) => {
   document.location.href = `#/search/${encodeURIComponent(document.getElementById(id || 'search').value).replace(/\%20/g, '+')}`
 }
 
+const chooseTheme = (name) => {
+  themes.choose(name);
+  document.location.hash = document.location.hash .slice(10) || '#/'
+}
+
 const makeSearch = (el, content, query) => {
   const matches =
     query .length 
@@ -1322,7 +1352,7 @@ const makeSearch = (el, content, query) => {
     <input id="search" type="text" value="${query}"/>
     <button id="sbb" type="button" class="search" title="Search"">\u2315</button>
   </p>
-  <h2>${matches .length > 0 ? '' : 'No '}Results</h2>
+  ${query ? `<h2>${matches .length > 0 ? '' : 'No '}Results</h2>` : ``}
   ${matches .length > 0 ? `<h3>Letters</h3>
   <ul class="long">
   ${matches .map (letterLink) .join ('\n        ')}
@@ -1334,16 +1364,13 @@ const makeSearch = (el, content, query) => {
   })
 }
 
+const makeThemeSwitcher = () => `<h1>Choose Theme</h1><div class="themes">
+${Object.entries(themes.icons).map(([name, icon]) => 
+  `<button onClick="chooseTheme('${name}')">${icon}<span>${name}</span></button>`) .join('\n    ')}</div>`
+
 const updateCurrent = ({Date, Tags, Title}) => {
   document .getElementById ('currentLetter') .innerHTML = 
       `The <a href="#/${Date}">most recent letter</a>, from ${longDate(Date)}, is titled "${Title}", and discusses the ${Tags.length == 1 ? 'subject' : 'subjects'} of ${oxfordJoin (Tags .map (makeTagLink))}.`
-}
-
-const changeTheme = (name) => {
-  const style = document.querySelector(':root').style
-  Object.entries(themes[name] || {}) .forEach (
-    ([key, value]) => style .setProperty(`--${key}`, value)
-  )
 }
 
 
@@ -1358,7 +1385,7 @@ const changeTheme = (name) => {
       if (hash) {
         if (hash == '#/') {
             main .innerHTML = base
-        } else if (/#\/\d{4}-\d{2}-\d{2}/ .test (hash)) {
+        } else if (/^#\/\d{4}-\d{2}-\d{2}$/ .test (hash)) {
             const letter = lookups [hash .slice (2)];
             if (letter) {
              main .innerHTML = makeLetter (content, letter)
@@ -1377,6 +1404,8 @@ const changeTheme = (name) => {
             main .innerHTML = makeLetters (content)
         } else if (hash .startsWith('#/search/')) {
             makeSearch (main, content, decodeURIComponent (hash .slice (9).replace(/\+/g, ' ')))
+        } else if (hash .startsWith('#/themes/')) {
+            main .innerHTML = makeThemeSwitcher ()
         }
       } else {
         document.location.hash = '#/'

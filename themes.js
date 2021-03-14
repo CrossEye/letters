@@ -1,27 +1,27 @@
-const themes = ((defaultTheme = 'A', colors = {
-  'A': {
-        'neutral': '#d7e3e5',
-        'primary': '#edd8c8',
-        'secondary': '#b7ccd2',
-        'tertiary': '#dabea6',
-        'highlight': '#e4cbb7',
-        'text-primary':  '#555555',
-        'text-secondary': '#333333',
-        'text-tertiary': '#aa938f',
-        'text-highlight': '#666666',
+const themes = ((defaultTheme = 'Sandy Beach', colors = {
+  'Sandy Beach': {
+    'neutral': '#d7e3e5',
+    'primary': '#edd8c8',
+    'secondary': '#b7ccd2',
+    'tertiary': '#dabea6',
+    'highlight': '#e4cbb7',
+    'text-primary':  '#555555',
+    'text-secondary': '#333333',
+    'text-tertiary': '#aa938f',
+    'text-highlight': '#666666',
      },
-  'B': {
-     'neutral': '#f8f8f8',
-     'primary': '#ffff73',
-     'secondary': '#bfbf30',
-     'tertiary': '#a6a600',
-     'highlight': '#e5e557',
-     'text-primary': '#5f2580',
-     'text-secondary': '#333333',
-     'text-tertiary': '#000000',
-     'text-highlight': '#666666',
+  'Mellow Yellow': {
+    'neutral': '#f8f8f8',
+    'primary': '#ffff73',
+    'secondary': '#bfbf30',
+    'tertiary': '#a6a600',
+    'highlight': '#e5e557',
+    'text-primary': '#5f2580',
+    'text-secondary': '#333333',
+    'text-tertiary': '#000000',
+    'text-highlight': '#666666',
   },
-  'C': {
+  'Tangled Up in Blue': {
     'neutral': '#DDDDDD',
     'primary': '#63BCE5',
     'secondary': '#3778C2',
@@ -32,7 +32,7 @@ const themes = ((defaultTheme = 'A', colors = {
     'text-tertiary': '#000000',
     'text-highlight': '#666666',
  },
- 'D': {
+ 'Lazy Sunday': {
     'neutral': '#ece5f4',
     'primary': '#ffe1de',
     'secondary': '#c1d7e1',
@@ -59,7 +59,7 @@ const themes = ((defaultTheme = 'A', colors = {
     <rect x="20" y="20" rx="15" ry="15" width="260" height="40"
       style="fill: ${tertiary}; stroke-width: 2; stroke: ${tt};"/>
 </svg>`])),
-    change: (name) => {
+    choose: (name) => {
         const style = document.querySelector(':root').style
         Object.entries(colors[name] || {}) .forEach (
           ([key, value]) => style .setProperty(`--${key}`, value)

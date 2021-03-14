@@ -55,8 +55,9 @@ const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4
 
     const html = `<div class="sidebar box">
     <p id="searchWidget">
-    <input id="sw" type="text"/>
-    <button id= 'swb' type="button" class="search" title="Search">\u2315</button>
+    <!-- <input id="sw" type="text"/> -->
+    <button id="swb" type="button" title="Search">\u2315</button>
+    <button id="thm" type="button" title="Change Theme">${themes.icons[themes.defaultTheme]}</button>
     </p>
 
     <h2><a href="#/letters/">Letters</a></h2>
@@ -108,13 +109,11 @@ const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4
 </div>
 `
   document .getElementById ('root') .innerHTML += html
-  const button = document.getElementById('swb')
-  button.onclick = () => newSearch('sw')
-  document .getElementById ('sw') .addEventListener ('keyup', (e) => {
-    if (e.key == 'Enter') {button. click ()}
-  })
-
-}
+  const searchButton = document.getElementById('swb')
+  searchButton.onclick = () => document.location.href = '#/search/'
+  const themeButton = document.getElementById('thm')
+  themeButton.onclick = () => document.location.href = '#/themes/' + document.location.hash
+  }
 
 const makeLetter = (contents, letter) => {
     const prev = contents [contents .indexOf (letter) - 1]
@@ -179,6 +178,11 @@ const newSearch = (id) => {
   document.location.href = `#/search/${encodeURIComponent(document.getElementById(id || 'search').value).replace(/\%20/g, '+')}`
 }
 
+const chooseTheme = (name) => {
+  themes.choose(name);
+  document.location.hash = document.location.hash .slice(10) || '#/'
+}
+
 const makeSearch = (el, content, query) => {
   const matches =
     query .length 
@@ -189,7 +193,7 @@ const makeSearch = (el, content, query) => {
     <input id="search" type="text" value="${query}"/>
     <button id="sbb" type="button" class="search" title="Search"">\u2315</button>
   </p>
-  <h2>${matches .length > 0 ? '' : 'No '}Results</h2>
+  ${query ? `<h2>${matches .length > 0 ? '' : 'No '}Results</h2>` : ``}
   ${matches .length > 0 ? `<h3>Letters</h3>
   <ul class="long">
   ${matches .map (letterLink) .join ('\n        ')}
@@ -201,16 +205,13 @@ const makeSearch = (el, content, query) => {
   })
 }
 
+const makeThemeSwitcher = () => `<h1>Choose Theme</h1><div class="themes">
+${Object.entries(themes.icons).map(([name, icon]) => 
+  `<button onClick="chooseTheme('${name}')">${icon}<span>${name}</span></button>`) .join('\n    ')}</div>`
+
 const updateCurrent = ({Date, Tags, Title}) => {
   document .getElementById ('currentLetter') .innerHTML = 
       `The <a href="#/${Date}">most recent letter</a>, from ${longDate(Date)}, is titled "${Title}", and discusses the ${Tags.length == 1 ? 'subject' : 'subjects'} of ${oxfordJoin (Tags .map (makeTagLink))}.`
-}
-
-const changeTheme = (name) => {
-  const style = document.querySelector(':root').style
-  Object.entries(themes[name] || {}) .forEach (
-    ([key, value]) => style .setProperty(`--${key}`, value)
-  )
 }
 
 
@@ -225,7 +226,7 @@ const changeTheme = (name) => {
       if (hash) {
         if (hash == '#/') {
             main .innerHTML = base
-        } else if (/#\/\d{4}-\d{2}-\d{2}/ .test (hash)) {
+        } else if (/^#\/\d{4}-\d{2}-\d{2}$/ .test (hash)) {
             const letter = lookups [hash .slice (2)];
             if (letter) {
              main .innerHTML = makeLetter (content, letter)
@@ -244,6 +245,8 @@ const changeTheme = (name) => {
             main .innerHTML = makeLetters (content)
         } else if (hash .startsWith('#/search/')) {
             makeSearch (main, content, decodeURIComponent (hash .slice (9).replace(/\+/g, ' ')))
+        } else if (hash .startsWith('#/themes/')) {
+            main .innerHTML = makeThemeSwitcher ()
         }
       } else {
         document.location.hash = '#/'
