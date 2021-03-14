@@ -85,7 +85,7 @@ const makeSidebar = (content, {ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 
              </ul>`).join ('\n    ')}
         </details>` : ``}
     </details>
-    <h2><a href="#/tags/">Tags</a></h2>
+    <h2><a href="#/tags/">Topics</a></h2>
     <ul>
     ${tags .slice (0, tagNbr) .map (makeLink ('tag')) .join ('\n    ')}
     </ul>
