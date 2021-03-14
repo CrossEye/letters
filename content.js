@@ -759,5 +759,266 @@ const content = [
             "Victor Carli"
         ],
         "Content": "<p><a href=\"#/person/Victor+Carli\">Victor Carli</a> needs to learn to read properly. I did not blame our so-called\npresident for global warming. Instead, I blamed him for abandoning the best\nattempt to address it and forsaking America&#39;s leadership on the issue.</p>\n<p>Mr. Carli describes the thermal relationship between Earth and Sun and\nhistorical variations of temperature. Outside mistaking glaciers for galaxies\n<del>and confusing an isotope of carbon with a temperature (huh?)</del>\n(<strong>Note</strong>: <em>that last phrase was removed in the published version -- the editor\nexplained that it involved his own misreading of Mr. Carli&#39;s hand-written\nletter</em>), his facts seem solid. But they&#39;re entirely irrelevant. The warming\nscientists describe relates to a reduction of the energy reflected to space, not\nthe heat from burning carbon. The portion returned to space has been decreasing\nbecause our atmosphere absorbs more energy.</p>\n<p>The strong scientific consensus is that this is caused by human-generated gasses\nin the atmosphere, especially carbon dioxide. Mr. Carli presents no disputes to\nthis and he brings up irrelevancies. He discusses mathematical proof. Absurd:\nscience is never about that. And he mentions a temperature drop from January,\n2014 to February, 2014 as though that were evidence against global warming. It&#39;s\neasy to see how tiny an anomaly this is at <a href=\"http://bit.ly/seasonal-temps\">http://bit.ly/seasonal-temps</a>.</p>\n<p>In short, humans are causing our land, oceans, and atmosphere to heat rapidly.\nThere is no scientific controversy over this. Yet fossil-fuel industry funded\nresearchers muddy the waters. Conservatives, threatened by changes to their\nbusiness models, buy into such crackpot theories.</p>\n<p>Previously, when we&#39;ve had ecological problems, people came together to address\nthem. Note that we hear little now about acid rain or the ozone hole. We came\ntogether to solve such problems that litter has decreased in this generation.\nNote that toxic waterways have been cleaned. Note. But these days, with\npersonalized news feeds creating echo chambers, we get people accepting\nridiculous lies and denying the truth.</p>\n<p>Cloaking oneself in irrelevancies is still a form of lying.</p>\n"
+    },
+    {
+        "Title": "Conspiracy Theorist",
+        "Date": "2017-06-25",
+        "Tags": [
+            "Conspiracy Theories",
+            "Russia",
+            "Global Warming",
+            "Vince Foster",
+            "Confirmation Bias"
+        ],
+        "People": [
+            "San Prentice"
+        ],
+        "Content": "<p>Sam Prentice accuses me of harping on Russian election meddling.  As\nusual, his view is badly warped.  On 1/6 and 1/20, I rebutted Mr.\nPrentice&#39;s misstatements.  I mentioned it on 4/14 in response to the\nDevin Nunes nonsense and on 5/19 regarding James Comey&#39;s firing.\nThat&#39;s it.</p>\n<p>Mr. Prentice, on the other hand, brought it up on 12/2, 12/16, 12/23,\n1/13, 3/31, 5/26, and 6/23, spending paragraphs or whole letters on\nit.  It&#39;s not me who&#39;s obsessed.</p>\n<p>What else did Sam Prentice discuss in this period?  For one thing, he\nresurrected his old &quot;global warming is a progressive scam to\nredistrube wealth&quot; canard.  I&#39;d hoped that his recent quiet on this\nsubject meant he&#39;d come to his senses.  Silly of me.  Another time he\nclaimed that healthcare and other parts of the social safety net are\nforms of slavery.</p>\n<p>Last week he repeated insinuations about Vince Foster&#39;s suicide,\nnoting that William Sessions was fired the day before Mr. Foster&#39;s\nbody was found.  Why is that any more relevant than the fact that\n&quot;Don&#39;t ask, don&#39;t tell&quot; was announced that same day?  He quotes\ntestimony from Andrew McCabe, who would not necessarily have any\nreason to know about his boss&#39; request, as though that disproves all\nthe other reports about Comey&#39;s resource request.  And he repeats\nInfowars&#39; lie about Tim Kaine and Loretta Lynch, one so grossly wrong\nthat not only the standard fact-checkers, but even sites like Daily\nCaller, had to debunk.</p>\n<p>Again he brought up confirmation bias, the tendency to more easily\ncredit evidence that supports one&#39;s own position than evidence that\ndoesn&#39;t.  Ironically, he doesn&#39;t recognize his own reliance on\nright-wing &quot;news&quot; sources as a form of confirmation bias.</p>\n<p>Remember: those making outrageous claims have a heavy burden of proof.\nThe conspiracies promoted by Sam Prentice are outrageous.</p>\n"
+    },
+    {
+        "Title": "Secret Lawmaking",
+        "Date": "2017-06-17",
+        "Tags": [
+            "Health Care",
+            "Steve Bannon",
+            "Republicans",
+            "Mitch McConnell"
+        ],
+        "People": [
+            "San Prentice"
+        ],
+        "Content": "<p>In the Senate health care bill, Steve Bannon takes charge of\nrevitalized death panels. The poor may purchase insurance only from\nKushner/Mar-a-lago Casualty. To enroll with preexisting conditions,\nconsumers must first win celebrity game show &quot;Tom Price is Right&quot;. The\nbill removes coverage for 150 million Americans and costs $8.2\ntrillion.</p>\n<p>Not so? How do you know? The panel works in secrecy. The House ran\ninto constituent opposition; the Senate avoids this by keeping the\npublic in the dark. Complaining bitterly about how Democrats passed\nObamacare, Republicans retreat on transparency and honesty.</p>\n<p>The reason is simple: they don&#39;t know how to govern. Republicans win\nby being allergic to specifics. They campaign on Small-Government\nslogans that resonate with voters. But whenever they convert these\nslogans into policy, the public balks.  However symbolically\nconservative voters might be, they are operationally liberal: they\nlike specific programs government provides.</p>\n<p>This disconnect between abstract belief and specific support\nprecipitates absurdities like, &quot;Keep your government hands off my\nMedicare!&quot; and &quot;We have to repeal Obamacare, but keep the ACA!&quot; This\nis the logical outcome of Republicans&#39; penchant for simplistic answers\nto complex problems. It&#39;s what puts an incompetent buffoon in the\nWhite House.</p>\n<p>This is asymmetric. Democrats focus on specific issues and are less\nlikely to be ideologically consistent.  But they actually take stands\non issues and manage to get things done.</p>\n<p>Remember when Mitch McConnell helped override a veto, then blamed\nPresident Obama for the resulting law?  It&#39;s similar nonsense here.\nRepublicans don&#39;t actually want to repeal Obamacare; they know it\nwould hurt them. Instead, they&#39;re removing Democrats from the process,\ncrafting a bill that can&#39;t pass without Democrats, and preparing to\nblame Democrats for its failure. More than cynical, this is downright\nevil. Playing political games instead of facing real problems does\nlasting harm.</p>\n"
+    },
+    {
+        "Title": "Conspiracy Theories",
+        "Date": "2017-06-11",
+        "Tags": [
+            "Conspiracy Theories",
+            "Donald Trump",
+            "Vince Foster",
+            "James Comey",
+            "Journalism"
+        ],
+        "People": [
+            "Renzo Carli",
+            "Victor Carli",
+            "Sam Prentice",
+            "Dick Shea"
+        ],
+        "Content": "<p><a href=\"#/person/Renzo+Carli\">Renzo Carli</a> defends <a href=\"#/person/Victor+Carli\">Victor Carli</a> (any relation?) and <a href=\"#/person/Sam+Prentice\">Sam Prentice</a> from\nmy conspiracy theorist label but misses the context:  Victor Carli\nclaimed the &quot;socialist media&quot; expose Russian election interference\njust to chase Donald Trump from office.  Sam Prentice recycled lies\nabout Vince Foster and accused newspapers of lying about James Comey&#39;s\nfunding request: amusing because this was widely reported and the\nchallenger quickly recanted.  These are conspiracy theories, pure and\nsimple.</p>\n<p>Renzo Carli claims I find anyone who disagrees with me crazy or\nillogical.  Nonsense.  I have plenty of respect for conservatives such\nas Jonah Goldberg and David Brooks.  There are many Rivereast\ncorrespondents I disagree with yet respect, like <a href=\"#/person/Dick+Shea\">Dick Shea</a>, who\npromotes conservativism but does not descend into absurdity.  Those\nwho do, I call out.  I have no patience for writers parroting\nright-wing lies, claiming to think for themselves.</p>\n<p>About my &quot;disrespect&quot; in calling Donald Trump our &quot;so-called\nPresident&quot;, I will stop doing so as soon as Mr. Trump publicly\napologizes for calling Judge Robard a &quot;so-called judge.&quot;  I&#39;m not\nholding my breath.</p>\n<p>Mr. Carli&#39;s most important point is his claim that the days of\nnewsroom integrity has died.  I disagree.  But factionalizing media\nsuch as Breitbart, and Daily Caller on the right, The Huffington Post\nand Daily Kos on the left, practice a dishonorable form of advocacy\njournalism.  Too many people listen chiefly to that, believe its lies,\nand decide that the news media distort the truth.  This is another\nform of conspiracy theory.</p>\n<p>There&#39;s still great journalism around.  Journalists are among our\ncounty&#39;s most important and underappreciated heroes.  People who get\ntheir news from advocacy sites are doing everyone a great disfavor.\nLooking at more news sources, they&#39;d learn that conspiracies are rare\nand the truth is easy to recognize.</p>\n"
+    },
+    {
+        "Title": "Paris Agreement",
+        "Date": "2017-06-02",
+        "Tags": [
+            "Global Warming",
+            "Donald Trump"
+        ],
+        "People": [],
+        "Content": "<p>The Earth is heating up.  Quickly.  Human beings are largely\nresponsible.  Denying this is like arguing with the doctor who says\nyou have a fever.</p>\n<p>The world came together to address this.  The Paris Agreement is no\npanacea, but it&#39;s a start.  All countries managed to agree, save Syria\n-- whose government is in shambles -- and Nicaragua -- who thinks it\ndoesn&#39;t go far enough.  And now, thanks to our so-called president,\nthe United States joins them.  Syria, Nicaragua, the United States...\ngreat company.</p>\n<p>It&#39;s infuriating to recognize that had Donald Trump negotiated it, he\nwould call an identical agreement &quot;a tremendous win&quot;.  That&#39;s not the\nimportant point, though; it&#39;s obvious that Mr. Trump has no integrity\nand no idea what honesty even means.  No, there are two important\nconsiderations.</p>\n<p>First, we are destroying our environment.  The U.S. bears great\nresponsibility: the largest per-capita producer of greenhouse gasses,\nand second overall.  These will cause mayhem with our environment,\nmaking seas rise, changing weather patterns, and killing off many\nspecies.</p>\n<p>Second, the United States had been a world leader.  We helped\nmaintained order, and served as an example of democracy and freedom.\nAlthough we were far from perfect, the world looked to us for\nguidance.  We have abdicated.  China will pick up the mantle of\nenvironmental leadership.  On other issues, what country will respect\nAmerica&#39;s promises?  Who will trust a country that abandons trade\nagreements, challenges its top military alliance, and withdraws from\nthe attempt to prevent ecological catastrophe?</p>\n<p>In just a few months this administration has surpassed the corruption\nof the Nixon administration, the incompetence of the Carter\nadministration, and the sheer evil of the Bush Jr. one.  Do we have to\nwait until Democrats retake the House to start impeachment\nproceedings?</p>\n"
+    },
+    {
+        "Title": "Gadfly Season",
+        "Date": "2017-05-26",
+        "Tags": [
+            "Conspiracy Theories",
+            "Gadflies"
+        ],
+        "People": [
+            "Victor Carli",
+            "Sam Prentice",
+            "Chuck Corso"
+        ],
+        "Content": "<p>A new race is brewing.  <a href=\"#/person/Victor+Carli\">Victor Carli</a> challenges <a href=\"#/person/Sam+Prentice\">Sam Prentice</a>&#39;s\nlong-held local reign as champion conspiracy nut.  But Prentice is\nhard to beat.  Remember how badly <a href=\"#/person/Chuck+Corso\">Chuck Corso</a> fared last time around?\nIf you come out for this contest, don&#39;t forget your bug spray.  Gadfly\nseason is upon us!</p>\n<p>Carli starts strong: mentioning that our so-called president &quot;is in\noffice, he can do what he wants.&quot;  Really?  In &quot;a government of laws,\nnot of men&quot;?  It&#39;s a powerful opening shot, which he follows with, &quot;he\nhas the support of the MAJORITY of Americans.&quot;  A totally false\nstatement, unsupported by the polls, and enhanced with capital letter\nshouting.  It might be hard for Prentice to top this!</p>\n<p>But Prentice won&#39;t take it lying down.  Out of the blue, he brings up\nlong-disproven Vince Foster conspiracy theories.  Vince Foster!  We\nhaven&#39;t seen this folderol in fifteen years!  Does the kid even know\nwhat hit him?</p>\n<p>Prentice&#39;s follow-up is straightforward.  He challenges the integrity\nof several of our most respected news institutions, insinuating that\nthey fabricated a certain memo, but then speculating on the content of\nthe memo.  This illogic makes for an inspired conspiracy move.</p>\n<p>But Carli&#39;s response is derivative, calling the media &quot;socialist&quot;, as\nif that&#39;s an insult, and regurgitating conservative media lies as\nthough they&#39;re obvious and true.</p>\n<p>Prentice&#39;s knockout blow comes quickly.  While accusing others of\nprojecting, he actually brings up confirmation bias!  From someone who\nshuns the majority of the news media, crediting only right wing\nnonsense, this is a superlative power play!</p>\n<p>Once again, we have a winner!  This should surprise no one.  It&#39;s\nreally hard to top the man who for years claimed that global warming\nwas a liberal conspiracy to control people’s lives.  But Carli gave a\ngood shot.  And there&#39;s always next month...</p>\n"
+    },
+    {
+        "Title": "Why was Comey Fired?",
+        "Date": "2017-05-14",
+        "Tags": [
+            "James Comey",
+            "Republicans",
+            "Daily Caller",
+            "Breitbart",
+            "Paul Ryan",
+            "Mitch McConnell"
+        ],
+        "People": [
+            "Victor Carli",
+            "Sam Prentice",
+            "Chuck Corso"
+        ],
+        "Content": "<p>Does anyone believe Donald Trump&#39;s protestations that the firing of\nJames Comey had nothing to do with the Russian investigation?</p>\n<p>Why yes, according to the polls, Republicans believe this.</p>\n<p>Upton Sinclair said, &quot;It is difficult to get a man to understand\nsomething, when his salary depends upon his not understanding it.&quot;  Or\nin this case, his ideology.  While we won&#39;t know the truth about this\nincident without a thorough investigation, it is a symptom of\nsomething quite disturbing.  Our nation is polarized over truth\nitself.  What one side views as facts, the other thinks nonsense.\nWorse, this is mostly one-sided.  Republicans too easily swallow\nabsurd lies as truth.</p>\n<p>We see it on these pages: letters suggesting a landslide win for\nDonald Trump, letters promoting ridiculous fallacies about Obamacare,\nletters denying global warming, letters claiming vast voter fraud.\nBut these are not matters of opinion.  There are cold, hard facts\ninvolved.</p>\n<p>It&#39;s difficult to believe the entire Republican Party has gone off the\ndeep end.  Where are the Republicans with intellectual integrity?\nThere once were actual conservatives in the party promoting ideals,\nnot expediency.  Conservatives should object to Donald Trump as much\nas liberals do.  But we don&#39;t hear their voices.  Why?  Has the\nRepublican Party abandoned conservatism?  Are they all as spineless as\nPaul Ryan and Mitch McConnell?</p>\n<p>Our society is ill-served by the right-wing news media that spreads\nsuch misinformation.  The Daily Caller, Breitbart, even Fox News, are\nstifling critical thinking abilities.  We are also ill-served by that\njournalism that attempts to balance opposite sides of an issue when\none is clearly wrong.  Equal time for the flat-earthers insults the\nvery notion of truth.</p>\n<p>... Does anyone believe Donald Trump&#39;s protestations that the Comey\nfiring had nothing to do with the Russian investigation?\nUnfortunately, most Republicans do.</p>\n"
+    },
+    {
+        "Title": "The Assault on Truth",
+        "Date": "2017-04-24",
+        "Tags": [
+            "Al Gore",
+            "Donald Trump",
+            "Truth"
+        ],
+        "People": [],
+        "Content": "<p>Ten years ago, Al Gore presented his devastating critique of the Bush\nAdministration.  He convincingly argued that American democracy,\nfounded on principles of reasoned discourse, was under attack from\npeople who employed opinions in place of facts and ideology in place\nof reason.</p>\n<p>The Trump administration carries this much further, waging a war on\ntruth itself.  From inauguration crowds to &quot;alternative facts&quot; to &quot;the\nMexicans will pay for it&quot; to &quot;Obama spied&quot; to an uncountable number of\nlies, large and small, our so-called president and his cronies have\ndebased the idea of facts themselves.</p>\n<p>Please call it out when you see a naked emperor.  Ignoring it empowers\nthe liars to lie even more.</p>\n"
+    },
+    {
+        "Title": "Flip Flop",
+        "Date": "2017-04-16",
+        "Tags": [
+            "Donald Trump",
+            "NATO"
+        ],
+        "People": [],
+        "Content": "<p>Donald Trump on NATO: &quot;I said it was obsolete.  It&#39;s no longer obsolete.&quot;</p>\n<p>Remember that anti-Dukakis ad with the gymnast flip-flopping?  Sped up\na thousand-fold, it wouldn&#39;t begin to capture the changing positions\nof our so-called president.</p>\n<p>NATO is no longer obsolete.  By fiat?  NATO has not changed, only Mr.\nTrump&#39;s opinions.  Why?  Probably because his most recent conversation\nabout it was with the NATO Secretary General.</p>\n<p>NATO is no longer obsolete, huh?  I don&#39;t believe politicians should\nreligiously stick to their positions.  It&#39;s a sign of maturity to\nadmit one was wrong.  But this is not a change in positions.  It&#39;s\npure narcissism, expressing his change of mind as a change in the real\nworld.</p>\n<p>NATO is no longer obsolete.  What does it mean to be obsolete?  Simply\nthat some stranger on the bus -- sorry, in the limo -- told Donald\nTrump a tale, and he believed it... until someone else told him a\ndifferent one?</p>\n<p>NATO is no longer obsolete.  At least he has remained consistent on\nother major issues, right?  China is still a currency manipulator.\nRussia should still be our best friend.  We still won&#39;t get involved\nin the Syrian quagmire.  Janet Yellin is still incompetent.  The\nExport-Import bank still has to go.  We&#39;re still eliminating the\nnational debt in his first term.  We still need to freeze federal\nhiring.  And the monthly unemployment numbers are still phony.  No,\nreally?  He has reversed himself on all these issues?  It&#39;s been a\nbusy week!  No wonder the man who was never going to need a vacation\nhas golfed continually and spent most weekends at his resort.</p>\n<p>NATO was never obsolete.  It&#39;s a certain politician who&#39;s obsolete.\nWhat does politeness dictate?  How long before it&#39;s appropriate to\nstart impeachment proceedings?</p>\n"
+    },
+    {
+        "Title": "The Republican Party is Dangerous",
+        "Date": "2017-04-09",
+        "Tags": [
+            "Republicans",
+            "EPA"
+        ],
+        "People": [
+            "Victor Carli"
+        ],
+        "Content": "<p>To respond to <a href=\"#/person/Victor+Carli\">Victor Carli</a> or not? I shouldn&#39;t let his misrepresentations about\nmy letter stand. However, his reply contains no meaningful content, only\nridiculous insults. Should I bother when he can&#39;t recognize a simple rhetorical\ntechnique or when he calls lies opinions and their corrections insults? Should I\nexplain that I don&#39;t hate conservatism, but despise hypocrisy and mendacity?\nIt&#39;s probably not worth the effort.</p>\n<p>Instead, let&#39;s continue discussing what Washington Republicans are doing to our\ncountry. Their recent law allows Internet Service Providers to sell personal\ndata to anyone. Our browsing history, our locations, even our smart appliance\ninformation are fair game.</p>\n<p>Republicans react to the Russian-election-meddling investigation by concocting\nstories about Obama officials. Devin Nunes is now discredited, the insinuations\nabout Susan Rice have been disproven, and the wiretapping tweets refuted. Surely\nDonald Trump will make some new attempt to distract. Is this the reason we\nbombed Syria?</p>\n<p>These aren&#39;t the worst thing Republicans are doing: they&#39;re gutting the\nEnvironmental Protection Agency. The EPA ensures that the air we breathe is\nsafe, the land we inhabit is free of toxins, and the water we drink -- and\nbathe, swim and fish in -- is clean. The Republicans are destroying it and\noverturning laws that slow global warming.</p>\n<p>Those old enough to remember the &#39;70s and &#39;80s will recall smog, toxic land,\npoisoned rivers. There are few such stories these days, thanks to the EPA. We&#39;ve\nmade huge ecological progress since the 1969 Cuyahoga River fire. Republicans\nideology insists that government environmental intervention is harmful, that it\nkills jobs. In fact, these Republican actions will kill people. They&#39;re not\nworking for us. They&#39;re shills for corporate polluters.</p>\n<p>The modern Republican Party has become a lethal enemy of the American people.</p>\n"
+    },
+    {
+        "Title": "Statesmen",
+        "Date": "2017-04-03",
+        "Tags": [
+            "Mitch McConnell",
+            "Supreme Court"
+        ],
+        "People": [
+            "Dan Devin"
+        ],
+        "Content": "<p><a href=\"#/person/Dan+Devin\">Dan Devin</a> is correct: there is a damaging political polarization in\nWashington.  But the partisanship is asymmetric.    The left is\nsometimes willing to work with right.  The right refuses to work with\nthe left.  It goes back to the no-holds-barred days of Newt Gingrich,\nTom Delay, and Dennis Hastert.  Think about the fact that we had an\nimpeachment because one President lied about sex, but not one for the\nIran-Contra affair.</p>\n<p>Mitch McConnell is a prime example.  Remember when his top legislative\npriority was to make Obama a one-term president?  He pressured his\ncaucus to walk away from anything the Democrats were doing.  Then he&#39;d\nrant about Democratic partisanship.  His tactics drove out such\nmoderates as Olympia Snowe, Arlen Specter, and Jim Jeffords.</p>\n<p>Now he&#39;s playing games with the Supreme Court.  He claimed it\ntradition that the Senate does not confirm Supreme Court justices in\nan election year.  This was nonsense, of course, and he&#39;s recently\nrecanted.  I guess he doesn&#39;t want to have to agree to live with such\na rule in 2020.  But when the Democrats consider rejecting the latest\nnominee, he starts screaming, &quot;Partisans!&quot;  Pot, meet kettle.</p>\n<p>Have you heard about the adult mediating between two children?\nJohnnie thought they should split the cookie equally between them.\nJoey thought he should get the whole thing.  The adult said, &quot;Let&#39;s\nsplit the difference; Joey can have three fourths and Johnnie one\nfourth.&quot;  Absurd, right?  But this is what the Republicans now think\ncompromise is.  &quot;We&#39;ll run as far from the center as possible, and\nthen ask the Democrats to meet us halfway.&quot;</p>\n<p>We do need statesmen, but in order to find them, the Republican party\nmust stop treating governing as a zero-sum game.  The losers in such\ngames are always the public.</p>\n"
+    },
+    {
+        "Title": "Republican Collapse",
+        "Date": "2017-03-27",
+        "Tags": [
+            "Republicans",
+            "Paul Ryan",
+            "Mitch McConnel",
+            "Merrick Garland",
+            "Donald Trump"
+        ],
+        "People": [],
+        "Content": "<p>I haven&#39;t cared much about political parties.  I&#39;m very liberal and\ngenerally vote for the more liberal candidates, regardless of party.\nBut the total disaster of the Republican&#39;s Washington takeover is\nmaking me rethink.  It&#39;s hard to imagine a bigger mess.</p>\n<p>We have a House &quot;led&quot; by Paul Ryan, once promoted as an effective and\nprincipled conservative who still had a heart.  He has shown himself\nto be the opposite.  After seven years of pledging to overturn the\nAffordable Care Act, the best he can do is to offer a lily-livered\nplan that would have stripped millions of their health care while\ncutting taxes for the wealthy.  Instead of making a stand, he tried\nfor some non-existent middle ground between his party&#39;s wings.  Then,\nwhen it became clear that he didn&#39;t have the votes, he halted the\nprocess.  We actually have an unprincipled, ineffective fence-leaner\nwith absolutely no heart. (<a href=\"http://bit.ly/RyanSpineless\">http://bit.ly/RyanSpineless</a>)</p>\n<p>We have a Senate majority leader who since last March has refused to\nperform one of the Senate&#39;s basic functions, sitting on the Supreme\nCourt nomination of Merrick Garland, but who now insists that it&#39;s\nurgent that the Senate vote on the latest nominee.</p>\n<p>We have a Congressional investigation of Russian electoral\ninterference, in which the Republican contribution has been to and ask\nabout leaks.  Talk about taking your eye off the ball!</p>\n<p>And of course our so-called president is not even slightly\npresidential.  His public temper-tantrums on Twitter, his unbridled\nself-enrichment, his immediate abandonment of every populist campaign\npromise, his choices of unqualified advisors, and his virulent attacks\non the news media -- all this demonstrates total disarray.</p>\n<p>The Republican Party once stood for something.  Abraham Lincoln and\nTeddy Roosevelt would be ashamed to see it now.</p>\n"
+    },
+    {
+        "Title": "Breathless",
+        "Date": "2017-03-19",
+        "Tags": [
+            "Donald Trump"
+        ],
+        "People": [
+            "Sam Prentice",
+            "Victor Carli"
+        ],
+        "Content": "<p><a href=\"#/person/Sam+Prentice\">Sam Prentice</a> needs to have his lungs checked.  He finds it\n&quot;breathtaking&quot; that people are outraged by the wiretapping accusations\nmade by our so-called president against former President Obama.  The\nold joke about politicians seems to be tailor-made for Donald Trump:\n&quot;How can you tell when he&#39;s lying?  His lips are moving.&quot;  Or in this\ncase his Twitter thumbs.  This accusation is clearly one more\nridiculous bit of nonsense from a demagogue who can&#39;t help but lying.\nBut it&#39;s also the most serious accusations ever made by one White\nHouse occupant about another in many decades.</p>\n<p>So what has taken away Sam Prentice&#39;s wind?  He wants to describe a\nparallel with the talk about the Russian-Trump connection.  Stories\nthat have been widely reported across the spectrum and events that\nhave already caused exits of Trump appointees -- these are what Mr.\nPrentice thinks to compare to evidence-free stories promoted\nimmediately after they appear on right-wing media and which the White\nHouse continues to uphold, even after they&#39;re renounced by those same\nmedia sources and denied by all parties.</p>\n<p>If outrage over this takes your breath away, you have a serious\nbreathing problem.</p>\n<p>Then Mr. Prentice takes another page out of the Trump\nblame-the-messenger book, and complains about those leaking the story.\nNo government likes to have its dirty secrets revealed, but quality\njournalism involves finding those stories regardless.  Those leaking\nthese secrets are doing our nation a great service.  To complain about\nthem is to complain about one of the most important institutions of a\nfree society.</p>\n<p>Mr. Prentice, please get to a doctor soon.  Pneumonia is not laughing\nmatter.  (Oh, and could you take <a href=\"#/person/Victor+Carli\">Victor Carli</a> with you?  His paranoia\nabout the evil Socialists is flaring up again.)</p>\n"
+    },
+    {
+        "Title": "Simple Voting",
+        "Date": "2017-03-05",
+        "Tags": [
+            "Electoral College",
+            "National Popular Vote"
+        ],
+        "People": [
+            "Sam Prentice"
+        ],
+        "Content": "<p><a href=\"#/person/Sam+Prentice\">Sam Prentice</a> is confused.  He says the National Popular Vote Compact\n(NPV) proposal is contorted.  Actually, it&#39;s very simple: it awards\nthe popular vote winner the presidency.</p>\n<p>Compare it to now:  We do not vote for the president.  We elect a\nslate of electors who choose the president.  They can choose anyone.\nThe number of electors varies unevenly: a Vermont voter has 2.4 times\nthe influence of a Connecticut voter.  If the electors cannot reach a\nmajority decision, the election goes to the House, which must choose\none of the top three electoral candidates.  Here there&#39;s just one vote\nper state. State delegations must themselves first agree; if they\ncan&#39;t, they get no vote.</p>\n<p>Mr. Prentice thinks this system is simpler than the one-person,\none-vote of the NPV.  Really?</p>\n<p>Alexander Hamilton argued that the Electoral College would assure the\nPresidency was not granted to &quot;any man who is not in an eminent degree\nendowed with the requisite qualifications.&quot;  And it would stymie &quot;the\ndesire in foreign powers to gain an improper ascendant in our\ncouncils.&quot;  The recent election showcased the Electoral College\nfailing at this.  It&#39;s past time to replace it.</p>\n<p>The NPV is not the best way to do that; better would be a\nConstitutional amendment.  We have had five amendments that changed\nthe form of our elections.  Another is not politically feasible right\nnow, but the NPV allows the states to use their Constitutional\nauthority to enact this democratic reform.  The Constitution does not\nmandate winner-take-all.</p>\n<p>Sam Prentice calls this a Progressive notion.  He&#39;s misguided again.\nThere are liberal and conservative sponsors, Republican and Democratic\nvotes.  Supporters are simply those who feel that true democracy is\nmore important than eighteenth-century federalism.</p>\n<p>So, Mr. Prentice, can you explain why majority win is complex?</p>\n"
+    },
+    {
+        "Title": "The Bullet is Better",
+        "Date": "2017-02-25",
+        "Tags": [
+            "Donald Trump",
+            "Hillary Clinton"
+        ],
+        "People": [
+            "Sam Prentice"
+        ],
+        "Content": "<p>A few weeks ago <a href=\"#/person/Sam+Prentice\">Sam Prentice</a> said that by not electing Hillary Clinton\nwe had dodged a bullet.  If so, we dodged right into the path of a\nspeeding locomotive.</p>\n<p>Our so-called president declared the news media the enemy of the\npeople.  He called reporters &quot;scum&quot; and &quot;terrible people&quot;.  Surrogate\n(or is he actually the principle?) Steve Bannon named the news media\nthe opposition.  Now they&#39;re barring reporters they don&#39;t like from\npress briefings.</p>\n<p>This is starting to look less and less like the America I know and love.</p>\n<p>We have a cabinet full of unqualified people, many opposed to the very\nmissions of their departments.  We have officeholders who lie\nrepeatedly and publicly gripe when they&#39;re caught at it.  We have\nsenior advisers promoting &quot;alternative facts&quot; and imaginary attacks.\nWe have a Senate leader who for a year refused to do one of the\nSenate&#39;s most important jobs but lambastes the opposition for\nconsidering any delay in that job now.  We have a House majority so\nfull of cowardice that its leader briefly appeared on the Wikipedia\npage for invertebrates (<a href=\"http://bit.ly/RyanSpineless\">http://bit.ly/RyanSpineless</a>).</p>\n<p>Donald Trump&#39;s routine of bullying others while whining about being\nmistreated is the very opposite of leadership.  Five weeks into office\nand he&#39;s caused so much harm to America that we&#39;ll be lucky to recover\ninside a generation.</p>\n<p>The bullet would be better.</p>\n"
+    },
+    {
+        "Title": "Knowledgeable Nabobs",
+        "Date": "2017-02-12",
+        "Tags": [
+            "Hillary Clinton",
+            "Donald Trump",
+            "Electoral College"
+        ],
+        "People": [
+            "Victor Carli",
+            "Chip Hale"
+        ],
+        "Content": "<p>In his &quot;Nattering Nabobs&quot;, <a href=\"#/person/Victor+Carli\">Victor Carli</a> conflated complaints about\nSecretary Clinton&#39;s handling of official emails with the election-time\nhacking of campaign-related emails.  When I point out the difference,\nhis response is the confounding, &quot;I never used the word &#39;server&#39;, so\nhow could I hack it?&quot;  Can he at least hack the truth?</p>\n<p>He entirely misunderstands my pointing out that Trump&#39;s Electoral\nCollege win is in the bottom 25%, claiming that I say that a landslide\nmust be in the top 25%.  That&#39;s not what I said, but actually, that&#39;s\nnot a stringent enough standard.  Certainly the 56.5% of the electors\nTrump won doesn&#39;t qualify.  This was not a landslide.</p>\n<p>He complains that I left out part of his letter in my response.  Of\ncourse I did.  I ignored the irrelevancies.  But if he wants a\nresponse: no I don&#39;t think that the American public has rights to the\ncandidates&#39; internal deliberations.</p>\n<p>On the question of patriotism, I would ask that of anyone who could\nwrite, &quot;If we assume that the emails were hacked by Russians, that\ninformation is irrelevant and unimportant.&quot;</p>\n<p>Mr. Carli concludes &quot;Truth is omnipotent; you should try it sometime.&quot;\nThe election of Donald Trump has demonstrated that this is fantasy.\nTruth too can be the victim of a smear campaign.</p>\n<p>Briefly, to <a href=\"#/person/Chip+Hale\">Chip Hale</a>: it would be better that we enshrine one person,\none vote into law, electing the popular vote winner.  The end-run is\nnot around the Constitution, which does not mandate winner-take all\nnor mandate that electors pay attention to what voters choose.  The\nend-run is around the current broken system.  If we can fix it with an\namendment, we should, as we&#39;ve done by electing Senators directly.\nThis is just another chance to expand our democracy.</p>\n"
+    },
+    {
+        "Title": "Bag of Lies",
+        "Date": "2017-02-05",
+        "Tags": [
+            "Donald Trump",
+            "Elections",
+            "Progressivism",
+            "Capitalism",
+            "Authoritarianism"
+        ],
+        "People": [
+            "Sam Prentice",
+            "Dan Devin",
+            "Joe Stevens"
+        ],
+        "Content": "<p>Another week, another bag of lies from <a href=\"#/person/Sam+Prentice\">Sam Prentice</a>.</p>\n<p>When a right-winger accuses &quot;the media&quot; of corruption and sycophancy,\nyou have to blame the steady diet of lies they&#39;ve consumed from\nconservative echo chambers.  It warps their judgment.</p>\n<p>When he -- again -- calls Donald Trump&#39;s win a &quot;landslide&quot; is he\nlying, is he being a dupe for the so-called president&#39;s propaganda or\nis he incapable of realizing that 46th of 58 is in the bottom 25%,\nnothing like a landslide?</p>\n<p>When he thinks he sees into the hearts of progressives, he is badly\nmisinformed.  Most of us love our country, but recognize both the good\nand the bad. Sam Prentice probably does as well, even if we disagree\nabout which is which.</p>\n<p>I can&#39;t speak for <a href=\"#/person/Joe+Stevens\">Joe Stevens</a>, but my notion of &quot;unfettered\ncapitalism&quot; has to do with robber barons, river pollution, Pinkerton\nunion busting, credit default swaps: things companies do to serve\ntheir own self-interest at the expense of society&#39;s.  Society has an\nobligation to intervene.</p>\n<p>Most absurd is the contention that electing Trump is a step away from\nauthoritarianism when it is so obviously a leap towards it.</p>\n<p>An accusation of sophistry from Mr. Prentice brings to mind pots and\nkettles.  As I do often for conservative gadflies, I rebutted\nmisstatements with actual facts, making no editorial stand.  But, in\nfact, I don&#39;t believe Secretary Clinton is particularly dishonest or\ncorrupt, nor do the leaked emails demonstrate anything like that.  She\nis a typical politician, not as trustworthy as an Obama or a Carter,\nbut not nearly as bad as a Nixon or the current president, likely the\nmost dishonest person ever to serve.</p>\n<p>Briefly, to <a href=\"#/person/Dan+Devin\">Dan Devin</a>: the Democrats would be much more amenable if\nMr. Trump presented qualified nominees..</p>\n"
+    },
+    {
+        "Title": "National Popular Vote",
+        "Date": "2017-01-29",
+        "Tags": [
+            "National Popular Vote",
+            "Electoral College"
+        ],
+        "People": [],
+        "Content": "<p>You don&#39;t matter.</p>\n<p>I know it sounds horrible, but it&#39;s true.  To presidential candidates,\nConnecticut voters simply don&#39;t matter.  Democratic candidates take us\nfor granted and Republican ones don&#39;t even try.</p>\n<p>We&#39;re not alone.  Alabama voters don&#39;t matter.  California voters\ndon&#39;t matter.  Texas voters don&#39;t matter.  The only ones candidates\ncare about are those in the handful of swing states.</p>\n<p>We could discuss the unbalanced weighting of the Electoral College:\nvoters from Wyoming have 3.6 times the influence as those from Texas\nor New York.  That is important, but it&#39;s minor compared to the fact\nthat the candidates&#39; focus is entirely on voters from a small set of\nstates.  It&#39;s not just that this is undemocratic.  It&#39;s also very\nwarping.  What if those states don&#39;t represent the interests of the\npeople as a whole?  When all candidates pander to the same minority,\nwe all lose.</p>\n<p>This is not beyond repair. True, the Electoral College is enshrined in\nour Constitution, and there&#39;s no chance of getting enough states to\nagree to an amendment.  But the National Popular Vote is an interstate\ncompact that might do an end-run by agreeing to pool all their\nelectoral votes for the national popular vote winner.  When this\nconsortium includes states with 270 electoral votes, the compact goes\ninto effect.  Right now there are eleven states, with 165 votes\nbetween them.</p>\n<p>Connecticut could be next.  Please call your state senators and\nrepresentatives to support Senate Bill #9 and House Bill #5434.  Next\nelection, let&#39;s make sure that the candidates pay just as much\nattention to Connecticut voters as they do to those from Ohio and\nFlorida.</p>\n<p>Next time, let&#39;s ensure that our votes actually matter.</p>\n"
+    },
+    {
+        "Title": "Alternative Facts",
+        "Date": "2017-01-22",
+        "Tags": [
+            "Facts"
+        ],
+        "People": [
+            "Vicor Cali"
+        ],
+        "Content": "<p>Inauguration addresses are traditionally times to heal divisions, to\nbring our country together.  But our new president&#39;s angry speech lied\nabout many things:</p>\n<ul>\n<li><p>Crime. The truth: the violent crime rate is half of what it was 25\nyears ago.</p>\n</li>\n<li><p>Jobs. The truth: the unemployment rate is below historic averages;\nwe&#39;ve had 75 consecutive months of job increases.</p>\n</li>\n<li><p>Welfare. The truth: welfare roles dropped by 27% under President\nObama and by 75% in the past 20 years.</p>\n</li>\n<li><p>Immigration. The truth: illegal immigration has dropped by 75% in\nthe last 15 years; we&#39;ve doubled the border guard count.</p>\n</li>\n</ul>\n<p>The day after the inauguration, the president&#39;s press secretary made\nmultiple unsolicited lies obscuring facts about inauguration\nattendance.  The president&#39;s counselor then explained that they\nweren&#39;t lies but &quot;alternative facts&quot;.</p>\n<p>&quot;Alternative facts?&quot;  This from an adult?  From someone in a position of power?</p>\n<p>We&#39;re in for years of this, folks.  When the boss is allergic to the\ntruth, his underlings shy away from it.</p>\n<p>So do fans writing letters here.  To Victor Carli: there is no\nreasonable definition by which we can call Donald Trump&#39;s win a\n&quot;landslide&quot;.  He lost by 2.8 million votes.  He won the electoral\ncollege by smaller margins than 75% of our presidents.</p>\n<p>You need to check your facts.  Secretary Clinton&#39;s private email\nserver was never hacked.  The hacking was of an aide&#39;s GMail account\nand the DNC&#39;s server.  Mr. Carli, you say the fact that the Russians\nhacked them is irrelevant.  In other words, it&#39;s irrelevant that a\nhostile foreign power was actively and effectively influencing our\nelection.  Do you consider yourself a patriot?</p>\n<p>Finally, one wag noted the sad truth: &quot;Peaceful transitions of power\nare amazing.  One moment, Barrack Obama was the leader of the free\nworld.  The next one, Angela Merkel was.&quot;</p>\n"
+    },
+    {
+        "Title": "True American History",
+        "Date": "2017-01-14",
+        "Tags": [
+            "Progressivism"
+        ],
+        "People": [
+            "Sam Prentice",
+            "Joe Stevens"
+        ],
+        "Content": "<p>One has to pity <a href=\"#/person/Sam+Prentice\">Sam Prentice</a>: he denied Russian election engineering\nonly days before events forced even Donald Trump to admit it.  Who\ndoes he think is conflating these stories with vote-count tampering?\nHe certainly hasn&#39;t seen such claims here.</p>\n<p>That&#39;s not my main subject.</p>\n<p><a href=\"#/person/Joe+Stevens\">Joe Stevens</a>&#39; analysis is short-sighted.  While he is rightfully\nembittered by our country&#39;s mess, the current disaster  is not &quot;the\nhistory of America&quot;.  On the contrary, as has been noted, &quot;The arc of\nthe moral universe is long, but it bends toward justice.&quot;</p>\n<p>We&#39;ve seen the end of slavery, the enfranchisement of women, of\nworkers, of racial minorities.  We are seeing the destigmatization of\nhomosexuality.  From the days when Catholics and Mormons were\npersecuted, we&#39;ve come to see Catholic Justices, a Catholic President,\nand Mormon presidential candidates.  We see a freedom of religion\nbarely dampened by Mr. Trump&#39;s assault on Islam. Though they&#39;re\nsurrounded by ever more hacks, we still see the intrepid reporters of\na free press.</p>\n<p>Ours is the country of Jefferson, of Lincoln, of Susan B. Anthony, of\nboth Roosevelts, of Rosa Parks, and of Martin Luther King.  The\nGoldwater/Reagan revolution is only an aberration.  And the ineptitude\nof a Trump administration can only hasten its end.</p>\n<p>True, we&#39;re in a dark period, sponsored by right-wing shills for the\n1%.  Those on the left cannot ignore our own responsibility.\nProgressives have not articulated a positive message to counter the\nRight&#39;s fear-mongering.  The Left talks about how the ship is listing\nbut not about how to set it right.</p>\n<p>Let us promote the message of progressivism: Together we are strong.\nTogether we can overcome oppression.  Together we can promote the\nwelfare of all.  Let us stand before the wealthy, the corporations,\nthe governments, and make them understand that true power comes from\nus.</p>\n"
+    },
+    {
+        "Title": "Lies, Damned Lies, and Republicans",
+        "Date": "2016-12-28",
+        "Tags": [
+            "Donald Trump",
+            "Election",
+            "Hillary Clinton",
+            "Andrew Napolitano"
+        ],
+        "People": [
+            "Sam Prentice"
+        ],
+        "Content": "<p>Donald Trump is allergic to the truth.  He repeats his lies again and\nagain, shouting over any voices noting his errors.  We have entered an\nera of lies, damned lies, and Republicans.</p>\n<p>I suppose it&#39;s not a big surprise then that letters supporting Mr.\nTrump employ the same tactic.  When <a href=\"#/person/Sam+Prentice\">Sam Prentice</a> says (again!) that\nMr. Trump&#39;s electoral win was massive, please remember that he is\nreferring to a win in the bottom 25%, number 46 of our 58 presidential\nelections, involving by far the lowest popular vote margin for any\nwinning candidate in history, -2.8 million.</p>\n<p>Then Mr. Prentice claims that the heads of the CIA and the FBI count\nfor nothing in their statements that the Russians attempted to\ninfluence the election in favor of Donald Trump. But he floats his own\nentirely unsubstantiated theory that Secretary Clinton&#39;s servers were\nhacked (the FBI says there is no evidence of that) and that the NSA\nwas responsible, doing so in retaliation for Clinton&#39;s supposed\nsecurity breaches.  Mr. Prentice&#39;s source for this outlandish theory?\nTrump advisor Andrew Napolitano.  (Actually, Mr. Trump might want to\nbe careful of that particular advisor, who noted that the real meaning\nof the Second Amendment, &quot;is not that it protects the right to shoot\ndeer. It protects the right to shoot tyrants.&quot;)</p>\n<p>Let&#39;s say that again.  Sam Prentice argues that the public statements\nof two of our top intelligence officials, not to mention our current\nPresident, mean nothing.  But the conspiracy theory from a television\ntalking head with no intelligence experience is more plausible,</p>\n<p>Mr. Prentice, I hate to break it to you, but maybe with the following\nthings cleared up you can see our national situation more clearly:\nthere are no unicorns, the earth is round, and the Tooth Fairy is just\nyour parents.</p>\n"
     }
 ]

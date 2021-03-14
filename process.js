@@ -45,7 +45,7 @@ const makeTagLink = (Tag) =>
   `<a href="#/tag/${Tag.replace(/ /g, '+')}">${Tag}</a>`
 
 
-const makeSidebar = (content, ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4) => {
+const makeSidebar = (content, {ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4}) => {
     const tags = gather ('Tags', content, tagSort)
     const people = gather ('People', content, personSort)
     const recentLetters = content .slice (0, ltrNbr)
@@ -260,7 +260,11 @@ const updateCurrent = ({Date, Tags, Title}) => {
       letter .TextLower = letter .Text .toLowerCase ()
     })
 
-    makeSidebar (content, 8, 3, 5, 5)
+    makeSidebar (
+      content, 
+      {ltrNbr: 8, moreYears: 2, tagNbr: 5, prsnNbr: 5}
+    )
+    
     window .addEventListener ('popstate', () => setTimeout (route, 0))
     route ()
 }) (content)

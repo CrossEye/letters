@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 :root {
-  box-sizing: border-box;
- 
+  box-sizing: border-box; 
   --neutral: #d7e3e5;
   --primary: #edd8c8;
   --secondary: #b7ccd2;
