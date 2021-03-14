@@ -67,3 +67,6 @@ const themes = ((defaultTheme = 'Sandy Beach', colors = {
     },
     defaultTheme
 }))()
+
+const config = JSON.parse(localStorage .getItem ('letters') || "{}")
+if (config.theme) {themes .choose (config .theme)}

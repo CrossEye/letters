@@ -180,7 +180,8 @@ const newSearch = (id) => {
 
 const chooseTheme = (name) => {
   themes.choose(name);
-  document.location.hash = document.location.hash .slice(10) || '#/'
+  localStorage .setItem ('letters', JSON.stringify({...JSON.parse(localStorage.getItem('letters')), theme: name}))
+  document.location.hash = document.location.hash .slice (document.location.hash .slice(1).indexOf('#') + 1) || '#/'
 }
 
 const makeSearch = (el, content, query) => {
@@ -258,7 +259,7 @@ const updateCurrent = ({Date, Tags, Title}) => {
       letter .Text = div .textContent
       letter .TextLower = letter .Text .toLowerCase ()
     })
-     
+
     makeSidebar (content, 8, 3, 5, 5)
     window .addEventListener ('popstate', () => setTimeout (route, 0))
     route ()
