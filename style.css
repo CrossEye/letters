@@ -21,6 +21,16 @@ body {
   color: var(--text-primary);
 }
 
+button, input {
+  color : var(--text-primary);
+  background: var(--neutral)
+}
+
+.themes button {
+  color: black;
+  background-color: white;
+}
+
 button:focus {
   outline:none;
 }

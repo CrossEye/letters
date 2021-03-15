@@ -9,7 +9,7 @@ const themes = ((defaultTheme = 'Sandy Beach', colors = {
     'text-secondary': '#333333',
     'text-tertiary': '#aa938f',
     'text-highlight': '#666666',
-     },
+  },
   'Mellow Yellow': {
     'neutral': '#f8f8f8',
     'primary': '#ffff73',
@@ -31,8 +31,8 @@ const themes = ((defaultTheme = 'Sandy Beach', colors = {
     'text-secondary': '#150734',
     'text-tertiary': '#000000',
     'text-highlight': '#666666',
- },
- 'Lazy Sunday': {
+  },
+  'Lazy Sunday': {
     'neutral': '#ece5f4',
     'primary': '#ffe1de',
     'secondary': '#c1d7e1',
@@ -42,7 +42,29 @@ const themes = ((defaultTheme = 'Sandy Beach', colors = {
     'text-secondary': '#150734',
     'text-tertiary': '#98b8c6',
     'text-highlight': '#666666',
- },
+  },
+  'Infrared': {
+    'neutral': '#333333',
+    'primary': '#de534c',
+    'secondary': '#3c1874',
+    'tertiary': '#283747',
+    'highlight': '#cb3c3f',
+    'text-primary':  '#f3f3f3',
+    'text-secondary': '#cccccc',
+    'text-tertiary': '#dddddd',
+    'text-highlight': '#eeeeee',
+  },
+  'Grape': {
+    'neutral': '#e5eaf5',
+    'primary': '#a0d2eb',
+    'secondary': '#d0bdf4',
+    'tertiary': '#8458b3',
+    'highlight': '#bdc7cf',
+    'text-primary': '#494d5f',
+    'text-secondary': '#333333',
+    'text-tertiary': '#000000',
+    'text-highlight': '#666666',
+  },
 }) => ({
     colors,
     icons: Object .fromEntries (
