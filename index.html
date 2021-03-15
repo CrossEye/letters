@@ -4,6 +4,7 @@
 <style type="text/css">
 :root {
   box-sizing: border-box; 
+/*
   --neutral: #d7e3e5;
   --primary: #edd8c8;
   --secondary: #b7ccd2;
@@ -13,6 +14,81 @@
   --text-secondary: #333333;
   --text-tertiary: #aa938f;
   --text-highlight: #666666;
+*/
+
+
+  --neutral: #d7e3e5;
+  --border: #aa938f;
+  --accent: #666666;
+  --primary-background: #edd8c8;
+  --primary-text: #555555;
+  --primary-highlight: #e4cbb7;
+  --primary-accent: #b7ccd2;
+  --secondary-background: #b7ccd2;
+  --secondary-text: #555555;
+  --secondary-highlight: #b7ccd2;
+  --secondary-accent: #dabea6;
+  --tertiary-background: #dabea6;
+  --tertiary-text: #555555;
+  --tertiary-highlight: #dabea6;
+  --tertiary-accent: #b7ccd2;
+
+}
+
+.main {
+  background-color: var(--primary-background);
+  color: var(--primary-text);
+  border-color: var(--border);
+}
+
+.main a, .main a:visited {
+  background-color: var(--primary-highlight);
+  color: var(--primary-text);
+}
+
+.main a:hover {
+  background-color: var(--primary-accent);
+}
+
+.sidebar {
+  background-color: var(--secondary-background);
+  color: var(--secondary-text);
+  border-color: var(--border);
+}
+
+.sidebar a, .sidebar a:hover {
+  background-color: var(--secondary-highlight);
+  color: var(--secondary-text);
+}
+
+.sidebar a:hover {
+  background-color: var(--secondary-accent);
+}
+
+header {
+  background-color: var(--tertiary-background);
+  color: var(--tertiary-text);
+  border-color: var(--border);
+}
+
+header a, header a:visited {
+  background-color: var(--tertiary-highlight);
+  color: var(--tertiary-text);
+}
+
+header a:hover {
+  background-color: var(--tertiary-accent);
+}
+
+.sidebar a, header a {
+  text-decoration: none;
+}
+
+header, .box {
+  border-radius: 12px;
+  border-width: 2px;
+  border-style: solid;  
+  box-shadow: 2px 2px 2px var(--accent);
 }
 
 body {
@@ -22,15 +98,14 @@ body {
   margin: 30px auto;
   background-color: var(--neutral);
   font-size: 1.2em;
-  color: var(--text-primary);
+  color: var(--primary-text); /* TODO: necessary? */
 }
 
 button, input {
-  color : var(--text-primary);
   background: var(--neutral)
 }
 
-.themes button {
+.main .themes button {
   color: black;
   background-color: white;
 }
@@ -41,16 +116,11 @@ button:focus {
 
 h1, h2, h3, h4, summary {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: var(--text-primary);
 }
 
 header {
-  background-color: var(--tertiary);
   padding: .5rem 1rem;
-  border-radius: 12px;
-  border: 2px solid var(--text-tertiary);
   margin: -1rem 1rem 1rem 1rem;
-  box-shadow: 2px 2px 2px var(--text-highlight);
   text-align: center;
 }
 
@@ -115,8 +185,6 @@ nav {
 }
 
 .main a, .main a:visited {
-  background-color: var(--highlight);
-  color: var(--text-primary);
   text-decoration: none;
 }
 
@@ -157,11 +225,6 @@ ul.long li a:hover {
   margin-top: .5rem;
 }
 
-.main a:hover {
-  background-color: var(--secondary);
-  color: var(--text-secondary)
-}
-
 .date {
   text-align: right;
 }
@@ -176,7 +239,7 @@ ul.long li a:hover {
 }
 
 .tags li a {
-  border: 1px solid var(--text-primary);
+  border: 1px solid;
   border-radius: 10px;
   padding: .25rem;
 }
@@ -189,36 +252,14 @@ ul.long li a:hover {
   flex: 2 1 200px;
 }
 
-.sidebar a, header a {
-  text-decoration: none;
-  color: var(--text-primary);
-}
-
-.sidebar a:hover {
-  background-color: var(--tertiary);
-  color: var(--text-secondary);
-}
-
-header a:hover {
-  background-color: var(--secondary);
-  color: var(--text-secondary);
-}
-
 .sidebar span {
   opacity: 60%;
 }
 
-.main.box {
-  background-color: var(--primary);
-}
-
 .box {
-  background-color: var(--secondary);
   padding: 1rem;
-  border-radius: 12px;
-  border: 2px solid var(--text-tertiary);
   margin: 0 1rem;
-  box-shadow: 2px 2px 2px var(--text-highlight);
+  box-shadow: 2px 2px 2px var(--accent);
 }
 
 .sidebar ul {
