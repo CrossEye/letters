@@ -31,6 +31,14 @@
 
 }
 
+
+/*  Colors  */
+
+body {
+  background-color: var(--neutral);
+  color: var(--primary-text); /* TODO: necessary? */
+}
+
 .main {
   background-color: var(--primary-background);
   color: var(--primary-text);
@@ -76,9 +84,20 @@ header a:hover {
   background-color: var(--tertiary-accent);
 }
 
-.sidebar a, header a {
-  text-decoration: none;
+#searchWidget button {
+  background-color: inherit;
+  border: none;
 }
+
+
+/* TODO: should these be stylesheet variables? */
+.main .themes button {
+  color: black;
+  background-color: white;
+}
+
+
+/*  Borders  */
 
 header, .box {
   border-radius: 12px;
@@ -87,23 +106,50 @@ header, .box {
   box-shadow: 2px 2px 2px var(--accent);
 }
 
+.main .themes button {
+  border-radius: 15px;
+}
+
+.tags li a {
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.sidebar a, header a {
+  text-decoration: none;
+}
+
+#searchBox input {
+  border-radius: 18px;
+}
+
+#searchBox button {
+  border: none;
+}
+
+#searchWidget input {
+  border-radius: 10px;
+}
+
+#searchWidget button {
+  border: none;
+}
+
+
+
+
+
+
 body {
   margin: 0;
   padding: 1rem;
   max-width: 1200px;
   margin: 30px auto;
-  background-color: var(--neutral);
   font-size: 1.2em;
-  color: var(--primary-text); /* TODO: necessary? */
 }
 
 button, input {
   background: var(--neutral)
-}
-
-.main .themes button {
-  color: black;
-  background-color: white;
 }
 
 button:focus {
@@ -190,9 +236,9 @@ nav {
 }
 
 .main div.themes span {
-  display: block;;
+  display: block;
   margin-top: -2rem;
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
 }
 
 .main .themes button {
@@ -202,7 +248,6 @@ nav {
   width: 40%;
   text-align: center;
   font-size: 1.25rem;
-  border-radius: 15px;
 }
 
 ul.long li, ul.long li a {
@@ -235,8 +280,6 @@ ul.long li a:hover {
 }
 
 .tags li a {
-  border: 1px solid;
-  border-radius: 10px;
   padding: .25rem;
 }
 
@@ -255,7 +298,6 @@ ul.long li a:hover {
 .box {
   padding: 1rem;
   margin: 0 1rem;
-  box-shadow: 2px 2px 2px var(--accent);
 }
 
 .sidebar ul {
@@ -271,15 +313,12 @@ ul.long li a:hover {
   width: 75%;
   font-size: 1.5rem;
   background-color: var(--neutral);
-  border-radius: 18px;
   padding: 0 1rem;
 }
 
 #searchBox button {
   font-size: 2rem;
   cursor: pointer;
-  background-color: inherit;
-  border: none;
 }
 
 #searchWidget {
@@ -289,14 +328,12 @@ ul.long li a:hover {
 
 #searchWidget input {
   background-color: var(--neutral);
-  border-radius: 10px;
   font-size: 1rem;
   padding: 0 .5rem;
 }
 
 #searchWidget button {
   background-color: inherit;
-  border: none;
   font-size: 2rem;
   margin-left: -.5rem;
   cursor: pointer;
