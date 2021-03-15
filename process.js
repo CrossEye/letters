@@ -262,7 +262,7 @@ const updateCurrent = ({Date, Tags, Title}) => {
 
     makeSidebar (
       content, 
-      {ltrNbr: 8, moreYears: 2, tagNbr: 5, prsnNbr: 5}
+      {ltrNbr: 10, moreYears: 2, tagNbr: 6, prsnNbr: 6}
     )
     
     window .addEventListener ('popstate', () => setTimeout (route, 0))

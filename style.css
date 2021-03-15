@@ -21,6 +21,10 @@ body {
   color: var(--text-primary);
 }
 
+button:focus {
+  outline:none;
+}
+
 h1, h2, h3, h4, summary {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: var(--text-primary);

@@ -1120,7 +1120,7 @@ const content = [
         "Content": "<p>It turns out <a href=\"#/person/Sam+Prentice\">Sam Prentice</a> has no understanding of facts.  Twice it&#39;s\nbeen pointed out that his article has been debunked by professional\nfact-checkers.  Still he desperately promotes it.</p>\n<p>Mr. Prentice, if I were to cite some political scandal about, say,\nRand Paul, sticking to it even after it was debunked because I found\nit in the left-wing Mother Jones, you would find this ridiculous.  I\nwouldn&#39;t do that; I&#39;d accept the facts when they&#39;re presented to me,\neven if it meant losing face.  I wish you would extend others the same\ncourtesy.</p>\n<p>No, Mr. Prentice, PolitiFact is not engaged in spin.  That&#39;s the\nprovince of sites like the Daily Caller.  When Fox News, Rush Limbaugh\nand the New York Post reported this Clinton Foundation story in April,\n2015, there was an echo chamber effect, but no bad faith.  Carly\nFiorina&#39;s revival was still fairly reasonable.  By the time of that\nDaily Caller article, it had been entirely debunked.  Any journalist\nworth reading would know that.</p>\n<p>There is a cottage industry of independent journalists working to\ncheck politicians&#39; statements.  I know this is difficult to grasp for\nthose whose brains have been warped by Fox and The Daily Caller, but\nthese fact-checkers are non-partisan, loyal only to the truth.  Their\nreports are at <a href=\"http://bit.ly/clint-found-1\">http://bit.ly/clint-found-1</a>,\n<a href=\"http://bit.ly/clint-found-2\">http://bit.ly/clint-found-2</a>, <a href=\"http://bit.ly/clint-found-3\">http://bit.ly/clint-found-3</a>, and, from\nthe Chronicle of Philanthropy, at <a href=\"http://bit.ly/clint-found-4\">http://bit.ly/clint-found-4</a>.</p>\n<p>Promoting that article, with its irrelevant numbers and incomplete,\nout-of-context quotes, after having twice been shown the truth\ndemonstrates such intellectual dishonesty that it&#39;s time we relegate\nSam Prentice to the bottom tier of letter-writers, in the company of\nthe dim bulb we affectionately call the Bamboozled Buffoon.  That\nmeans that the rest of the nonsense in his letter – an unfounded\nattack on <a href=\"#/person/Joe+Stevens\">Joe Stevens</a> and on the Clintons – is not  worth responding\nto.</p>\n"
     },
     {
-        "Title": "Fact Checking",
+        "Title": "Foundation Facts",
         "Date": "2016-10-18",
         "Tags": [
             "Clinton Foundation",
@@ -1131,6 +1131,256 @@ const content = [
             "Sam Prentice",
             "Dick Schroth"
         ],
-        "Content": "<p>I&#39;ve been confusing lucidity with intellectual depth.  Often, when\ndisagreeing with <a href=\"#/person/Sam+Prentice\">Sam Prentice</a>, I&#39;ve favorably compared him to certain\nother conservative letter writers.  My head was turned by the fact\nthat unlike too many of his brethren, he is actually articulate, and I\nsimply ignored the gaps in his logic.</p>\n<p>His most recent letter, though, is rather stunning.  Earlier, he&#39;d\ncritiqued the financial management of the Clinton Foundation.  This\nattack had been making the rounds in conservative media; it&#39;s not\nsurprising to see it repeated here.  But when the following week Dick\nSchroth responded with the actual facts, Mr. Prentice attacked the\nmessenger, doubling down on his misinformation.</p>\n<p>One would think that when challenged so, Mr. Prentice might bother to\ncheck the facts.  Instead, he simply invoked The Daily Caller.  (This\nis a conservative political website; it may want to think of itself as\ncompeting with The New York Times, but really it&#39;s just a right-wing\nversion of The Huffington Post.)  Whether it&#39;s from the Daily Caller\nor his own head, Sam Prentice&#39;s information is bogus.</p>\n<p>For the truth of the matter, one can search for &quot;Clinton Foundation&quot;\non the political fact-checking sites, such as FactCheck.org,\nPolitiFact.com or the Washington Post Fact Check.  These non-partisan\nsites all give the same information: It is a healthy, A-rated\nfoundation, spending 88% of its money on charitable programs.  That\nonly 6% is given in grants is meaningless, since this is not primarily\na grant-giving organization, but one that operates its own projects.\nActually, the Clinton Foundation receives grants from other charities\nin order to do its work.</p>\n<p>Next time, it&#39;s best to check the facts before posting them the first\ntime.  But it&#39;s intellectually dishonest to attack someone&#39;s\ncorrections without doing some actual research first.  Don&#39;t make\ntruth a casualty of your ideology.</p>\n"
+        "Content": "<p>I&#39;ve been confusing lucidity with intellectual depth. Often, when disagreeing\nwith <a href=\"#/person/Sam+Prentice\">Sam Prentice</a>, I&#39;ve favorably compared him to certain other conservative\nletter writers. My head was turned by the fact that unlike too many of his\nbrethren, he is actually articulate, and I simply ignored the gaps in his logic.</p>\n<p>His most recent letter, though, is rather stunning. Earlier, he&#39;d critiqued the\nfinancial management of the Clinton Foundation. This attack had been making the\nrounds in conservative media; it&#39;s not surprising to see it repeated here. But\nwhen the following week <a href=\"#/person/Dick+Schroth\">Dick Schroth</a> responded with the actual facts, Mr.\nPrentice attacked the messenger, doubling down on his misinformation.</p>\n<p>One would think that when challenged so, Mr. Prentice might bother to check the\nfacts. Instead, he simply invoked The Daily Caller. (This is a conservative\npolitical website; it may want to think of itself as competing with The New York\nTimes, but really it&#39;s just a right-wing version of The Huffington Post.)\nWhether it&#39;s from the Daily Caller or his own head, Sam Prentice&#39;s information\nis bogus.</p>\n<p>For the truth of the matter, one can search for &quot;Clinton Foundation&quot; on the\npolitical fact-checking sites, such as FactCheck.org, PolitiFact.com or the\nWashington Post Fact Check. These non-partisan sites all give the same\ninformation: It is a healthy, A-rated foundation, spending 88% of its money on\ncharitable programs. That only 6% is given in grants is meaningless, since this\nis not primarily a grant-giving organization, but one that operates its own\nprojects. Actually, the Clinton Foundation receives grants from other charities\nin order to do its work.</p>\n<p>Next time, it&#39;s best to check the facts before posting them the first time. But\nit&#39;s intellectually dishonest to attack someone&#39;s corrections without doing some\nactual research first. Don&#39;t make truth a casualty of your ideology.</p>\n"
+    },
+    {
+        "Title": "The Joke's On Us",
+        "Date": "2016-10-02",
+        "Tags": [
+            "Donald Trump"
+        ],
+        "People": [
+            "Larry Zimmerman"
+        ],
+        "Content": "<p><a href=\"#/person/Larry+Zimmerman\">Larry Zimmerman</a> had me going at first.  I thought he was seriously\ndefending Donald Trump.  I did eventually realize that anyone\nintelligent enough to quote the definitions of misogyny, xenophobia,\nand racism could not possibly mistake Mr. Trump&#39;s pronouncements for\nanything else.</p>\n<p>Yes, it is a bit amusing, if crude, to counter Donald Trump&#39;s\nstatements on women and specifically on Carly Fiorina, Rosie\nO&#39;Donnell, Megyn Kelly, and Alicia Machado with the notion that he\n&quot;married three beautiful women&quot;.  Less funny was the bit about Mr.\nTrump treating all citizens with respect: see his Twitter feed.  Of\ncourse with all the anti-Muslim, anti-Mexican rhetoric, there&#39;s really\nno joke possible about the candidate&#39;s xenophobia.</p>\n<p>But Mr. Zimmerman has another gag.  He implies Donald Trump is an\nimprovement on President Obama, who when elected &quot;knew absolutely\nnothing about government&quot; and whose mantra of hope and change utterly\nfailed.  That&#39;s hysterical!</p>\n<p>A builder and entertainer who started with millions in gifts from his\nfather, declared bankruptcy six times, stiffed thousands of\ncontractors, who belittles anyone who disagrees with him -- this man\nknows much more about government than a former Senator, state\nlegislator, community organizer, and professional constitutional\nscholar?  I&#39;m in stitches.</p>\n<p>Also, suggesting there&#39;s been no change is comical. During the Obama\nyears, we&#39;ve seen the longest run of improving job numbers in history,\na fall of the unemployment rate to 4.9%.  We&#39;ve seen the stock market\nboom, household incomes grow.   We&#39;ve seen two wars concluded, a 24%\ndrop in the trade deficit, growing energy independence, 15.2 million\nfewer uninsured, and a large reduction in illegal immigration.  Even\ngasoline prices are great.  &quot;Hope and change&quot; seems to have worked.</p>\n<p>The big trouble with Mr. Zimmerman&#39;s bit of humor is the real\npossibility we could elect this dangerous demagogue President.  And\nthat&#39;s no joke.</p>\n"
+    },
+    {
+        "Title": "Never, Never, Never Trump",
+        "Date": "2016-09-17",
+        "Tags": [
+            "Donald Trump"
+        ],
+        "People": [],
+        "Content": "<p>It&#39;s been difficult to write a letter about Donald Trump. True, he is the\ngreatest danger to our republic since the Civil War. True, he has spewed racism,\nxenophobia, misogyny, and ever imaginable form of bigotry throughout the\ncampaign. True. he doesn&#39;t know the difference between the truth and his own\nlies. True, he&#39;s a narcissistic cry-baby. True, his history in business is one\nof cheating and abuse. True, he openly idolizes strongmen and dictators.</p>\n<p>But none of that really captures why I&#39;m so horrified by Mr. Trump&#39;s candidacy.\nIt&#39;s more personal than that.</p>\n<p>I&#39;m bothered because I love my country. I believe the United States was founded\nby true idealists; I believe we still mostly live by those ideals of freedom and\ntolerance, of openness and collaboration.</p>\n<p>A country that elects Donald Trump has forgotten those ideals.</p>\n<p>My two children are entering early adulthood. What would it say to them if they\ncountry they are now being asked to help watch over were lead by an egomaniacal\nbully with no qualifications for office, only the abilities to belittle others,\nrun businesses into the ground, lie about every topic he encounters, and\nshamelessly promote himself? I don&#39;t know. I think the only thing America could\ndo for them is to apologize.</p>\n<p>Let&#39;s not let it get to that.</p>\n"
+    },
+    {
+        "Title": "Keeping Our Country",
+        "Date": "2016-09-03",
+        "Tags": [
+            "Government",
+            "Flag"
+        ],
+        "People": [],
+        "Content": "<p>A few weeks ago a letter exclaimed that &quot;We Want Our Country Back!&quot;\nOur flag, it said, &quot;is sacred and must be respected.&quot;  The writer and\nI have very different ideas on what &quot;sacred&quot; means, and very different\nideas about respect.</p>\n<p>This letter suggests we should pass a law (according the Supreme Court\nit would have to be a Constitutional Amendment) to prevent desecration\nof the flag, and says we should make the Pledge of Allegiance\nmandatory in schools.</p>\n<p>Ridiculous!</p>\n<p>Our flag is a symbol of our nation, of the experiment in\nself-government so successful it&#39;s been copied around the world.  It&#39;s\na symbol of a country that takes its freedoms seriously, including our\nfreedom of expression, our freedom to choose our leaders, our freedom\nto challenge those leaders and petition them for redress of\ngrievances.  It&#39;s a symbol of a people strong and resilient.</p>\n<p>But it&#39;s only a symbol.  A law as described would put the symbol ahead\nof the people and their freedoms that the flag symbolizes.  Does the\nwriter love the flag more than the freedom-loving country it\nrepresents?  Is she in favor of our government of the people, by the\npeople, an for the people? Because enforcing a pledge to a flag is the\nmark of an authoritarian regime, not of a democracy.</p>\n<p>There were several other odd points in the letter, but this one\ndeserves a response:  She says that immigrants must learn our language\nand traditions.  It seems to me that just as with every previous group\nof immigrants in our history, the first generation starts to adapt,\nand the second one becomes nearly fully assimilated.  This is the way\nit&#39;s always gone.</p>\n<p>I don&#39;t know who she wants the country back from, but to my eyes, it&#39;s\nstill in pretty good hands: ours.</p>\n"
+    },
+    {
+        "Title": "Poor Donald Trump",
+        "Date": "2016-07-12",
+        "Tags": [
+            "Donald Trump",
+            "Fox News"
+        ],
+        "People": [
+            "Donna Jean Burke"
+        ],
+        "Content": "<p>Donald Trump, the poor dear, is being bullied. <a href=\"#/person/Donna+Jean+Burke\">Donna Jean Burke</a> explained to us\nlast week how the only unbiased news source, Fox News, has opened her eyes to\nthe terrible burden placed upon the unfortunate billionaire candidate.</p>\n<p>She&#39;s right, of course. Not content with with providing Mr. Trump with hundreds\nof millions of dollars in free exposure, the mainstream media is also reporting\nhis racist, xenophobic, misogynistic diatribes as though they were the words of\na normal statesman. But all that is buried by the terrible disservice the media\nis doing to Trump: believe it or not, they have the gall to accurately report\nwhat he says. The bullies!</p>\n"
+    },
+    {
+        "Title": "Minimum Wage Facts",
+        "Date": "2016-06-07",
+        "Tags": [
+            "Minimum Wage",
+            "Inflation"
+        ],
+        "People": [
+            "Sam Prentice"
+        ],
+        "Content": "<p><a href=\"#/person/Sam+Prentice\">Sam Prentice</a> presents his view of the minimum wage, condescending to his fellow\ncitizens in doing so.</p>\n<p>His theory is that a rise in the minimum wage would increase inflation and\ndecrease employment. He has a reasonable explanation of why he thinks so. But he\npresents no evidence.</p>\n<p>There is a good reason for this. The evidence all contradicts his theory. The\nbest study of these issues was done by Dube, Lester, and Reich in 2010\n(<a href=\"http://bit.ly/1HSIxMA\">http://bit.ly/1HSIxMA</a>). This is a technical paper and not particularly easy to\nread, but anyone who&#39;s taken a statistics course and is not afraid of Greek\nletters should be able to follow it. An easier-to-read summarization of the\nresearch from the past fifteen years was done by John Schmitt in 2013\n(<a href=\"http://bit.ly/1eWItVi\">http://bit.ly/1eWItVi</a>). The author&#39;s analysis is colored by his liberal\npolitical ideology. Nonetheless, it is a comprehensive overview of the recent\nliterature; the summarizations are straightforward and apolitical.</p>\n<p>The results of these studies is conclusive: the published work, taken together,\n&quot;revealed no statistically significant negative employment effects of the\nminimum wage.&quot; Nor did minimum wage hikes substantially change wages higher up\nthe pay scale.</p>\n<p>There is somewhat less evidence about inflation. The most-cited study seems to\nbe an overview by Lemos in 2004 (<a href=\"http://bit.ly/1HfLM4W\">http://bit.ly/1HfLM4W</a>). This one is fairly\nreadable, and not at all math-heavy. It is a survey and critique of the\navailable literature and an analysis of the published data. It makes a simple\nconclusion: a 10% hike in the minimum wage would not have a large impact on\ninflation, adding not more than 0.4 points to the inflation rate.</p>\n<p>Theories without evidence are merely ideology. Evidence is what points us toward\nthe truth. The evidence says there is minimal harm and substantial good to be\nhad by increasing the minimum wage.</p>\n"
+    },
+    {
+        "Title": "Living Document",
+        "Date": "2016-04-10",
+        "Tags": [
+            "Constitution"
+        ],
+        "People": [
+            "Daniel Colby",
+            "Sam Prentice"
+        ],
+        "Content": "<p><a href=\"#/person/Daniel+Colby\">Daniel Colby</a> does not believe in a living, breathing Constitution. It seems he\nmust then also believes our government and our society are dead, inert things as\nwell.</p>\n<p>Where in the Constitution does he find an answer to the question of whether the\ngovernment can compel a cell phone maker to develop software overcoming its\nprivacy protection security? How does he believe that Madison would think about\nthe notion of our Government collecting telephone records on citizens not\nsuspected of any crime in order to fight terrorism? And how does he imagine\neighteenth century farmers, shopkeepers, and tradesmen would decide in the\nquestion of whether the President may order strikes by aerial drones in\nsituations where American citizens could be harmed?</p>\n<p>The genius of the Constitution is that it is a flexible framework for\ngovernment, one that has adapted itself over time to our country&#39;s changing\ncircumstances. Had that not been the case, it would certainly not have lasted.</p>\n<p>Schoolchildren are taught that the Supreme Court decides on the\nconstitutionality of laws, but I challenge anyone to find that power enumerated\nin Article III or anywhere else in the Constitution. The Constitution puts the\ndecisions about war into the hands of Congress. The last time Congress declared\nwar was WWII. We&#39;ve had several wars since. The US has grown by conquest and by\npurchase; but I challenge anyone to find Constitutional justification for the\npurchase of the Louisiana territory or Alaska or of the relationship with Puerto\nRico, Guam, American Samoa, etc.</p>\n<p>What has allowed this is our living, breathing constitution.</p>\n<p>On another note, kudos to <a href=\"#/person/Sam+Prentice\">Sam Prentice</a> on his excellent letter. Although I know\nwe disagree on what proceeds from there, his is an excellent basis for the start\nof discussions on the role of government in our society.</p>\n"
+    },
+    {
+        "Title": "Understanding, not Emptathy",
+        "Date": "2016-03-28",
+        "Tags": [
+            "Government",
+            "Conservatism",
+            "Progressivism"
+        ],
+        "People": [
+            "Joe Stevens",
+            "Daniel Colby"
+        ],
+        "Content": "<p><a href=\"#/person/Joe+Stevens\">Joe Stevens</a> aptly describes the problematic symptoms presented by <a href=\"#/person/Daniel+Colby\">Daniel Colby</a>&#39;s\nletter, but his diagnosis is mistaken. There is an empathy problem with the\nloud-mouthed leadership speaking for the Right, but this is not an issue for\nmost everyday conservatives. No, what Mr. Colby&#39;s letter displays is a\nfundamental lack of understanding of our government, the role of government in\nsociety, and our modern political world.</p>\n<p>Mr. Colby describes libertarianism and calls it conservatism. He describes\nauthoritarianism and calls it liberalism. The latter is especially strange since\nthis election features at least one authoritarian candidate trying to pass as\nconservative. This ignorance of the basics of political philosophy is\nunderstandable, but not really excusable. Those who listen only to the\nself-reinforcing echo chamber of Fox News without applying critical thinking can\nend up buying such nonsense.</p>\n<p>It&#39;s not just politics at issue; it&#39;s the very nature of government. Daniel\nColby longs for the days when, &quot;People used to look to one another, their\ncommunities, they were the first resource, not the government,&quot; making the\nabsurd assumption that government is something external, not part of our\ncommunity, that it&#39;s other, alien. But government is not an external force\nimposed on an unwary citizenry. It&#39;s simply an instrument of the people.</p>\n<p>His contention that the Left believes in limitless government is equally absurd.\nThe Left has a very long history of removing restrictive laws; the Left is very\nstrong on individual liberties. If we want to discuss authoritarianism, by all\nmeans let&#39;s do so, but don&#39;t call it liberalism; that&#39;s something very\ndifferent.</p>\n<p>For much of our history, political absurdities appeared equally often on the\nLeft and the Right. But somewhere in this generation, the Right has gone off the\ndeep end. Uninformed letters like Mr. Colby&#39;s just cheer on the madness.</p>\n"
+    },
+    {
+        "Title": "Consitutional Spirit",
+        "Date": "2016-02-28",
+        "Tags": [
+            "Government",
+            "Constitution",
+            "Progressivism"
+        ],
+        "People": [
+            "Sam Prentice"
+        ],
+        "Content": "<p><a href=\"#/person/Sam+Prentice\">Sam Prentice</a>&#39;s recent letter, presumably in response to my series, looks for\nConstitutional scholarship when what was described was philosophy of government.\nThere is a substantial difference, and he seems well-enough read and intelligent\nenough that he really should understand that. (Unlike certain other\nletter-writers who do seem to believe that repeating their idiotic insults will\nmake them true.) Mr. Prentice exhorts us to &quot;return to the spirit of the\nConstitution&quot;. Let&#39;s try to see what that might mean.</p>\n<p>The American revolutionaries won their independence and put in place a small,\nweak government. They were not happy with it. They wrote the Constitution\nexpressly to give the national government more power. Anyone who wants to wrap\nhimself in both the spirit of the Constitution and the notion of a small\ngovernment must come to terms with that contradiction.</p>\n<p>But the Founders were afraid of investing too much power in any individual or\ninstitution. That sounds a lot like what I described for progressivism.\nProgressives worry about the concentration of power in the hands of the rich, of\nthe government, of corporations. The Constitution dealt with this concern in an\nintricate series of checks on each branch of government, on the federal\ngovernment as a whole, on the states, and even on the popular will of its\ncitizens.</p>\n<p>Returning to the spirit of the Constitution involves ensuring that no\nindividuals or institutions amass enough power to threaten the rest of us. Or\nthat at the very least there are counterbalancing institutions to keep them in\ncheck.</p>\n<p>Please remember that those who fought for independence, wrote the Declaration,\nwrote the Constitution, and served as our first generation of leaders were the\nprogressives of their day. To support the spirit of their document is to support\nthe spirit of progressivism.</p>\n"
+    },
+    {
+        "Title": "Progressivism from the Source, Responses",
+        "Date": "2016-02-14",
+        "Tags": [
+            "Progressivism",
+            "Series - Progressivism from the Source"
+        ],
+        "People": [
+            "Daniel Colby",
+            "Don Denley",
+            "Sam Prentice",
+            "Chuck Corso",
+            "Ryan Gritter"
+        ],
+        "Content": "<p>My series of letters on progressive beliefs sparked some response.</p>\n<p><a href=\"#/person/Daniel+Colby\">Daniel Colby</a> wrote the very sort of letter that prompted my series, an insulting\ndescription of what progressivism is from the outside, without any real\nunderstanding. It would be the equivalent of me -- a dyed-in-the-wool liberal --\nexplaining what conservatives believe, insulting them all the while. If instead\nof philosophy, he wants to discuss history, I&#39;m more than willing to compare\nthe liberal leaders of our land against the conservative ones. But that&#39;s a\ndifferent discussion.</p>\n<p><a href=\"#/person/Don+Denley\">Don Denley</a> finds it difficult to distinguish between looking for a handout\nand preventing the powerful from abusing those without power. It&#39;s really\nnot complicated.</p>\n<p><a href=\"#/person/Sam+Prentice\">Sam Prentice</a>, who really should know better, does not distinguish between\ninequality in outcomes and inequality of opportunity. Should we really be rating\nthe quality of input of three- year olds before deciding that the ones from rich\nfamilies deserve so much better chances than the others?</p>\n<p>Unsurprisingly, <a href=\"#/person/Chuck+Corso\">Chuck Corso</a> used a lot of words to say very little. Parody is a\nmixture of three things: understanding the original material, altering it in a\nsatirical or ironic tone, and making the results amusing. Sorry, Mr. Corso,\nthree strikes again. Let me respond to just one point: Conservatives continually\nbemoan the fact that academia and journalism are bastions of liberalism. But\nturn it around for a second. What does it say about conservatism that the most\nintelligent and the most knowledgeable members of our society are liberals?</p>\n<p><a href=\"#/person/Ryan+Gritter\">Ryan Gritter</a> does understand the use of satire, and I absolutely love his modest\nproposal. Unfortunately, I must gratefully decline the invitation to join his\ncontest. It would hardly be fair to pit my meager talents against the repeated\nwinner of the Windbag Olympics.</p>\n"
+    },
+    {
+        "Title": "Progressivism from the Source 5",
+        "Date": "2016-02-05",
+        "Tags": [
+            "Progressivism",
+            "Teddy Roosevelt",
+            "Series - Progressivism from the Source"
+        ],
+        "People": [],
+        "Content": "<p>Fifth and final in a series discussing what progressives actually believe. Last\ntime: corporate power.</p>\n<p>Perhaps a fitting way to end this is to quote from one of the most famous\nprogressives in American history. Theodore Roosevelt helped shape the twentieth\ncentury progressive movement, and his words from a century ago still ring true:</p>\n<p>&quot;I believe in pure democracy. With Lincoln, I hold that &#39;this country, with its\ninstitutions, belongs to the people who inhabit it.. Whenever they shall grow\nweary of the existing government, they can exercise their constitutional right\nof amending it.&#39;</p>\n<p>&quot;We Progressives believe that the people have the right, the power, and the duty\nto protect themselves and their own welfare; that human rights are supreme over\nall other rights; that wealth should be the servant, not the master, of the\npeople.</p>\n<p>&quot;We believe that unless representative government does absolutely represent the\npeople it is not representative government at all.</p>\n<p>&quot;We test the worth of any men and all measures by asking how they contribute to\nthe welfare of the men, women, and children of whom this nation is composed.</p>\n<p>&quot;We are engaged in one of the great battles of the age-long contest waged\nagainst privilege on behalf of the common welfare.&quot;</p>\n<p>Roosevelt&#39;s battle continues to this day, and it&#39;s progressives who are waging\nit.</p>\n"
+    },
+    {
+        "Title": "Progressivism from the Source 4",
+        "Date": "2016-01-29",
+        "Tags": [
+            "Progressivism",
+            "Corporations",
+            "Series - Progressivism from the Source"
+        ],
+        "People": [],
+        "Content": "<p>Fourth in a series discussing what progressives actually believe. Last time:\nkeeping the government in check.</p>\n<p>Government and the rich are not the only sources of corrosive power that worry\nliberals. Large corporations easily gain unwarranted power as well. Currently\nAmerican society has a laissez-faire attitude towards its corporations. That was\na major factor in the global economic meltdown and the Great Recession. Liberals\never worry about the control such corporations gain over our day-to-day lives\nand the power they clearly already maintain over our politics.</p>\n<p>Corporations are not people. Regardless of what Congress and the courts say,\ncorporations don&#39;t bleed when you cut them. They don&#39;t feel anger or fear,\nhunger or love. They allow individual benefits without individual\nresponsibility. (Or when did you last see a stockholder go to jail because of a\ncompany&#39;s illegal activity?) Corporations are constructs made of laws and\ncontracts. They exist by public sufferance and should only be tolerated if on\nbalance they improve the public interest. Liberals recognize that corporations\nhave a lot of good to offer, but will not accept the ridiculous notion that\nregulations are inherently anti-business, anti-American. Corporations are\ntolerated because they are good for society; when they become a burden, they\nmust be altered or removed.</p>\n<p>There&#39;s a theme here. We noted that the rich, left unchecked, will run roughshod\nover everyone else. We noted that governments, left unchecked, will start\nabusing the rights of its citizenry. We noted that large corporations, left\nunchecked, will tend toward anti-consumer behavior. Progressivism is about\nproviding checks on these abuses of power.</p>\n<p>In the end, progressivism is a simple concept: it&#39;s best to band together to\nprotect the weak from abuse by the strong so that everyone gets a fair chance at\nthe good things in life.</p>\n<p>Next time: Teddy Roosevelt.</p>\n"
+    },
+    {
+        "Title": "Progressivism from the Source 3",
+        "Date": "2016-01-22",
+        "Tags": [
+            "Progressivism",
+            "Government",
+            "Series - Progressivism from the Source"
+        ],
+        "People": [],
+        "Content": "<p>Third in a series discussing what progressives actually believe. Last time: how\ngovernment helps level the playing field between rich and poor children.</p>\n<p>A competing philosophy proclaims that a smaller government is always a better\ngovernment. Those preaching this don&#39;t really believe it. The proof: ask if they\nwould support eliminating our military, jails, and police in order to reduce the\nsize of the government. If not, they don&#39;t truly believe smaller is always\nbetter. Then one can actually discuss competing priorities for what government\nshould do. If they argue that the military, the courts, and the police are the\ncentral functions of government, ask how they respond to someone who sees\neducation and environmental protections as central. Why are their issues more\nimportant? Just because they say so?</p>\n<p>Progressives recognize that government can and does overstep its mandate. It\nenforces biases of the majority on everyone, even in places where it has no\nbusiness, such as the Jim Crow laws or statutes forbidding gay marriage.\nThankfully, the force of history is generally with liberalism; over time society\ngrows more tolerant, more liberal, more accepting of differences. Government\neventually follows.</p>\n<p>Sometimes the government does the wrong thing, and it becomes our duty to change\nit. This has happened often: the Dred Scott decision, Japanese internment camps,\nMcCarthy witch-hunts, anti-miscegenation laws, the recently fallen laws against\ngay marriage.</p>\n<p>We must be ever-vigilant. A current issue is the NSA&#39;s domestic spying. To\nliberals, this is intolerable. Our government has claimed rights far beyond what\nsociety is willing to grant. This must stop. We are glad to have conservative\nand libertarian allies in this battle, but are suspicious of their motivation.\nSupporters of the USA PATRIOT now upset by the powers the government claims are\nhypocritical.</p>\n<p>Next time: The power of corporations.</p>\n"
+    },
+    {
+        "Title": "Progressivism from the Source 2",
+        "Date": "2016-01-15",
+        "Tags": [
+            "Progressivism",
+            "Children",
+            "Government",
+            "Series - Progressivism from the Source"
+        ],
+        "People": [],
+        "Content": "<p>Second in a series discussing what progressives actually believe. Last time: how\nthe rich are tilting the playing field in favor of their children.</p>\n<p>This is not how our democracy is supposed to work. Everyone wants to help their\nchildren and do what&#39;s best for them, but something has gone fundamentally wrong\nwhen the rich and powerful can exclude everyone else, when the gap in\nopportunity between the children of the very wealthy and the children of\neveryone else is so large. Progressives believe that society must work to reduce\nthat gap.</p>\n<p>The best way is to ensure that all children get a good start. So liberals\nbelieve in supporting quality public education, in ensuring that the children of\nthe poor have enough to eat, that there is adequate medical care for those in\nneed. It implies a society that offers a hand up the ladder of success.</p>\n<p>This contradicts the mythos promoted by small-government conservatives. They\nlike to gush about rugged individualism and the self-made entrepreneurs, Such\nfolks have had a hand in our history, but ours is also a history of cooperation,\nof mutual striving. Our most enduring colonial era story is that of sharing the\nfirst Thanksgiving.</p>\n<p>Progressives believe government is not the enemy. How could it be? Government is\nyou and me. Government is people banding together for mutual benefit, especially\nto protect the weak from abuses by the strong. Government can, and too\nfrequently does, overstep its bounds and become a source of problems. The only\ndefense is constant vigilance. But since government is the people ourselves, a\nhatred of the government is a hatred of oneself. Paranoia over the government is\nparanoia over the neighbors. Hostility towards the government is hostility\ntowards our brothers and sisters.</p>\n<p>Next time: Keeping the government in check.</p>\n"
+    },
+    {
+        "Title": "Progressivism from the Source 1",
+        "Date": "2016-01-12",
+        "Tags": [
+            "Progressivism",
+            "The Wealthy",
+            "Series - Progressivism from the Source"
+        ],
+        "People": [],
+        "Content": "<p>Far too often, letters here talk about Progressivism in scary terms. Those\nletters are ill-informed and can&#39;t tell you what progressives actually believe.\nTheir caricatures are absurd and might be insulting if they weren&#39;t so\nlaughable. It&#39;s time to set the record straight. In this letter and a few\nfollow-ups, I will try to explain what it is that progressives believe. I cannot\nspeak for anyone other than myself, but I believe these views are common among\nprogressives. I also believe they will help show that progressive thought is\nmainstream American thought -- that the right-wing is out of touch. But that&#39;s\nnot the main goal. The main goal is simply for a liberal to explain what\nliberalism actually is.</p>\n<p>Progressives believe in children. We believe children should be given an equal\nshot at all the good things in life. This sounds simple, but it has a lot of\nimportant consequences.</p>\n<p>Over the past thirty-five years, the gains in equal opportunity made since World\nWar II have been rolled back; the rich have rigged the system to make things\neasier for them and harder for everyone else. Worse, they&#39;ve rigged it to\nbenefit their own children at the expense of other children.</p>\n<p>The children of the rich are more likely to rise to the positions of power\nacross our society. Although one might debate the real political skills in the\nKennedy or Bush clans, it&#39;s easy to see how in both families the money, the\nprestige, and the power of each generation helped impel the following one to\nsuccess as Senators, Governors, and Presidents. The same is true in industry and\ncommerce. The number of top executives of large companies whose parents were\nalso leaders of industry demonstrate a developing plutocracy.</p>\n<p>Next time: Reducing the gap in opportunity.</p>\n"
+    },
+    {
+        "Title": "Rebutting Chuck Corso",
+        "Date": "2015-04-12",
+        "Tags": [
+            "Federal Debt"
+        ],
+        "People": [
+            "Chuck Corso"
+        ],
+        "Content": "<p>Does anyone else want to take a turn rebutting the stream of nonsense flowing\nfrom <a href=\"#/person/Chuck+Corso\">Chuck Corso</a>? It&#39;s easy to do do and occasionally amusing. Let me explain\nthe process.</p>\n<p>We start with practically any statement in one of his letters. Let&#39;s take last\nweek&#39;s numbers about the federal debt. We could then proceed in either of two\nways.</p>\n<p>First, since the man is congenitally allergic to facts, we could note that his\nnumbers are incorrect: Presidents are not responsible for the budget of the\nfirst year of their terms, so he&#39;s measuring the wrong things. That&#39;s plenty\nsimple and clearly shows that slinging around &quot;bamboozled&quot; does not beef up\none&#39;s argument.</p>\n<p>But there&#39;s a second way to proceed, and it might be more fun. This involves\ndemonstrating the absurdity of his conclusions even had his assumptions been\ncorrect. Mr. Corso points out that on the day President Obama took office the\nfederal debt stood at $10.6 trillion, meaning that all the previous presidents\ncombined had racked up a total debt of $10.6 trillion. Then he points out that\nsince then almost $8 trillion dollars has been added, which he claims is, &quot;more\nthan all other presidents combined!&quot; So Chuck Corso says that &quot;almost $8\ntrillion&quot; is more than $10.6 trillion. And he wonders why people don&#39;t take him\nseriously on other matters?</p>\n<p>You see how easy that was? Granted, this isn&#39;t much of an intellectual\nchallenge, but think of it as a community service. I am turning my attention to\nother matters over the next few weeks; so it&#39;s your turn now.</p>\n"
+    },
+    {
+        "Title": "Figuring the Lies",
+        "Date": "2015-03-18",
+        "Tags": [
+            "Federal Debt",
+            "George Wallace"
+        ],
+        "People": [
+            "Chuck Corso"
+        ],
+        "Content": "<p>It&#39;s significant that <a href=\"#/person/Chuck+Corso\">Chuck Corso</a> twists &quot;figures don&#39;t lie, but liars figure&quot;,\ninto a claim that figures lie too. For him, the truth never stands in the way of\nideology. He must find it disheartening that reality has a stubborn liberal\nbias.</p>\n<p>My figures are from <a href=\"http://abt.cm/19qUKxX\">http://abt.cm/19qUKxX</a>, spot-checked against the Federal Debt\nsite. It uses precisely the method described by Sam Prentice, associating with\npresidents the debt accumulated in the years they were responsible for the\nbudget, modified by charging the 2009 Stimulus Act to President Obama.</p>\n<p>Chuck Corso&#39;s numbers are wrong, probably caused by blaming each president for\ndebt of the term&#39;s first year. His larger point is also misleading. He claims\nthat Obama has increased the debt by more than all previous presidents combined\n(this is not true now, although it&#39;s remotely possible by 2017) and ignores the\nfact that, George W. Bush increased the debt by more than all previous\npresidents combined. Ronald Reagan increased it by nearly twice as much as all\nprevious presidents combined. Not since Kennedy and Eisenhower did it increase\nby less than 10%; not since Coolidge did it actually decrease.</p>\n<p>Mr. Corso plays coy about his assertion of George Wallace&#39;s liberalism but\ncontinues to conflate the notion of being a Democrat with being liberal. Perhaps\nhe&#39;s never read any history. Perhaps he doesn&#39;t realize that the Republican\nparty was created as a liberal alternative to the Democrats. Perhaps he doesn&#39;t\nunderstand that party ideologies shift over time. Or perhaps he&#39;s just\ninterested in seeing how often he can use &quot;left wing-nut&quot; and &quot;bamboozled&quot;.</p>\n<p>George Wallace was a states-rights, Dixiecrat conservative who railed against\nliberals and considered switching parties to be Barry Goldwater&#39;s running mate.\nBut, please, Mr. Corso, don&#39;t let the truth get in the way of your fantasies.</p>\n"
+    },
+    {
+        "Title": "Hat Back On",
+        "Date": "2015-03-15",
+        "Tags": [
+            "Progressivism",
+            "Government",
+            "George Wallace"
+        ],
+        "People": [
+            "John Stimpson",
+            "Sam Prentice",
+            "Chuck Corso"
+        ],
+        "Content": "<p><a href=\"#/person/John+Stimpson\">John Stimpson</a> might want to put his hat back on.</p>\n<p>He admires <a href=\"#/person/Sam+Prentice\">Sam Prentice</a> and <a href=\"#/person/Chuck+Corso\">Chuck Corso</a> for what he perceives as their\nconservative views. For all they write in these pages, neither of them has done\nmuch to present their own views. Both mostly discuss problems they see with\ncontemporary liberalism. My read on Mr. Prentice, though, is that he&#39;s not\nparticularly a conservative, but more of a libertarian. True libertarianism\nshares as much with modern liberalism as it does with modern conservatism.</p>\n<p>At least Sam Prentice writes readable, logically consistent letters. Mr. Corso\nis harder to read. The venom he spews is clearly anti-liberal, but he does not\nseem to stake out any positions of his own. Of course a man who strictly\nidentifies party affiliation with political ideology clearly has left logic far\nbehind. (George Wallace as a liberal? Really?!)</p>\n<p>Just to be clear, liberals do not believe that a bigger government is a better\nthing. But we also do not believe that smaller is always better. I doubt most\nconservatives do either. Would they support immediately disbanding the police,\nthe military, and the courts in order to drastically reduce the size of our\ngovernment?</p>\n<p>And now we have hand-wringing over the debt. It&#39;s amazing how this is being\nblamed on President Obama. The debt increased 186% under Reagan, 54% under Bush,\nSr., 32% under Clinton, 101% under Bush, Jr. So far it&#39;s been 53% under Obama\nand it looks as though it will reach around 97%, although the improving economy\nmight reduce that. That&#39;s 14.2% per year under the supposed conservatives, and\nbetween 5.6% and 6.2% per year under the supposed liberals. So watch where that\nfinger is pointing.</p>\n<p>Mr. Stimpson, there are plenty of worthy conservatives; I&#39;m not sure you&#39;re\nadmiring the right ones.</p>\n"
+    },
+    {
+        "Title": "Graceless",
+        "Date": "2015-03-01",
+        "Tags": [
+            "Barrack Obama",
+            "Progressivism"
+        ],
+        "People": [
+            "Chuck Corso"
+        ],
+        "Content": "<p><a href=\"#/person/Chuck+Corso\">Chuck Corso</a> seems to expect me to be embarrassed because he doesn&#39;t know how to\nread... very strange. I wrote a letter asking if those who&#39;d blamed President\nObama for an earlier poor economy whether they would credit him for the much\nimproved one. I very carefully made it clear that I did not give the current or\nany president much credit for short-term economic outcomes, good or bad. I\ndescribed the current state of the economy, how it compared to two years ago and\nhow President Obama&#39;s tenure compared to his predecessor&#39;s. That&#39;s it.</p>\n<p>I just wanted to know if those who tied such outcomes to the White House\nincumbent had the grace and the fairness to be even-handed about it. Apparently\nnot.</p>\n<p>And once again, Mr. Corso seems to expect his sobriquet, &quot;left-wing-nut&quot; to be\ninsulting. While I don&#39;t consider myself nearly as nutty as anyone who uses the\nword &quot;bamboozled&quot; so often with so little reason, I willingly embrace\n&quot;left-wing&quot;. On every major issue in the history of our country, the left wing\nhas been on side of morality and reason, and on the right side of history too.\nThink about it: From the Revolution, to abolitionism, to workers rights, to\nuniversal suffrage, to anti-antisemitism, to civil rights, to women&#39;s rights,\nand today to gay rights: that&#39;s the legacy of the left wing. I&#39;m happy to be\nassociated with that tradition. I would be embarrassed to be tied to the radical\nright or to Chuck Corso&#39;s brand of vituperation.</p>\n<p>Mr. Corso will probably write another letter of denial; I won&#39;t bother\nresponding. Anyone who wants the truth can simply read through the last few\nweeks&#39; letters.</p>\n"
+    },
+    {
+        "Title": "What Sam Prentice Doesn't Know",
+        "Date": "2015-02-21",
+        "Tags": [
+            "Progressivism"
+        ],
+        "People": [
+            "Sam Prentice"
+        ],
+        "Content": "<p>Once again, <a href=\"#/person/Sam+Prentice\">Sam Prentice</a> displays a stunning lack of knowledge about his topic.\nProgressivism, of course, goes back to people like Locke and Hume. He&#39;s off by\ncenturies. Moreover, it has absolutely nothing to do with Fascism, which grew\nout of antithetical ideological roots. And noting flaws in proponents of an idea\nas though that repudiates an idea is a well-known logical fallacy. (Or does Mr.\nPrentice want to argue that the American Revolution&#39;s ideals of equality were\nillegitimate because so many of its founders were slave-holders?) I&#39;d also want\nto see some documentation on his accusations against Dewey, which are new to me.</p>\n<p>But we&#39;re used to this from Sam Prentice. In his delusional world the evil\nProgressives are trying to build their mind-control techniques to enslave the\nheroic citizens. Hearing about it over and over gets tiring. (Hey, at least\nwe&#39;re no longer hearing his mantra about global warming being a progressive\nconspiracy to enslave us all!)</p>\n<p>I&#39;m willing to bet I spend more time with progressives than does Mr. Prentice,\nand I can tell you that there&#39;s no conspiracy; we could never get that\norganized! Nor would we want the sort of world Sam Prentice fantasizes we might.\nThe main difference is that we see the potential for both bad and good from\ngovernment. We don&#39;t want to strip it down to the Rand-ian minimum, because we\nbelieve government can help protect the weak from abuses by the strong; that, in\nprogressive eyes, is its chief function.</p>\n<p>Much follows from that, and clearly it&#39;s not to Mr. Prentice&#39;s liking. But this\nis not a diabolical plot, simply a political disagreement. And I&#39;d really\nappreciate not being painted as either a tool of or a mastermind behind an evil\nstate.</p>\n"
+    },
+    {
+        "Title": "Better Economy",
+        "Date": "2015-02-14",
+        "Tags": [
+            "Barrack Obama",
+            "Economy"
+        ],
+        "People": [],
+        "Content": "<p>Before the last presidential election, a number of people wrote to the Rivereast\nto blame President Obama for the poor shape of our economy. I wonder, are those\nsame folks are now willing to credit the president for the much-improved\nconditions? (I personally don&#39;t think any president has much to do with it\neither way.)</p>\n<p>The economy has added over 6.3 million jobs during the President&#39;s six years,\nmore than five times the total over his predecessor&#39;s eight years. The\nunemployment rate is now at 5.6%, slightly below the post-WWII average, and far\nbelow what it was when Bush left office.</p>\n<p>Inflation during Barrack Obama&#39;s term has so far averaged below 2%. Real weekly\nearnings have increased 1.7%. Gasoline (which was a subject of sore complaint in\nsome of those letters even though it remained below the highs seen during the\nBush administration) is now way down at $2.05 nationally.</p>\n<p>Corporate profits have nearly tripled during President Obama&#39;s first six years,\nand the stock markets indices have doubled or tripled; all are currently in\nrecord territory. Meanwhile, reliance on imported oil has been cut by 55%.</p>\n<p>After a rough start, Obamacare is working extremely well. There are millions\nfewer Americans without health care. Health care prices rose only 2% last year,\nsubstantially lower than a few years ago. And there are 25% more insurers in the\nmarketplaces this year than last.</p>\n<p>I&#39;m not saying it&#39;s all peaches and cream, of course. The number of long-term\nunemployed is still very high, food stamp recipients are at record numbers, and\nhome ownership numbers are down. But on balance, the economy is doing really\nwell.</p>\n<p>You blamed the President for an earlier mess. Do you now give him credit for\nthis turnaround?</p>\n"
+    },
+    {
+        "Title": "Giving Credit",
+        "Date": "2015-02-14",
+        "Tags": [
+            "Conservatives",
+            "Barrack Obama"
+        ],
+        "People": [
+            "Bill Desrosiers",
+            "Joe Stevens",
+            "Chuck Corso"
+        ],
+        "Content": "<p><a href=\"#/person/Bill+Desrosiers\">Bill Desrosiers</a> hits a very important point. While <a href=\"#/person/Joe+Stevens\">Joe Stevens</a>&#39; regular notes\nserve as an important counterbalance to the idiocy penned by Mr. Corso&#39;s\nintellectual ilk, I do wish he would stop painting all conservatives with the\nsame brush. There are good people of all political persuasions.</p>\n<p>The conservative policies of politicians and zealots are fair game. Those who\npromote the military over social services, who fight for more prisons and police\nand against immigrants and public education, those who do so loudly in the\npublic forum -- those folks deserve a sustained and vocal response. But let&#39;s\nnot pretend that this represents everyone who calls themselves conservative. I\nhave strong feelings about this, as I&#39;m often the one responding to Sam\nPrentice&#39;s anti-progressive diatribes.</p>\n<p>On to Mr. Corso.</p>\n<p><a href=\"#/person/Chuck+Corso\">Chuck Corso</a> had the temerity to blame the President -- who inherited the worst\nconditions since the Great Depression -- when the economy was doing poorly, but\nnot the grace to credit him when it&#39;s doing well. He specifically called out the\nPresident on high gasoline prices, denying that external forces were a critical\nfactor. Now that prices are improved, Mr. Corso is willing to credit only those\nforces. On all other points, he ignores or contradicts figures easily checked.</p>\n<p>I maintained then and still maintain that Presidential policies have little to\ndo with short-term economic outcomes: they can help steer around crises and set\nthe country on its long-term path. On quarterly or annual economic numbers, any\nPresident has limited influence.</p>\n<p>Chuck Corso is simply braying stale talking points from Fox&#39;s talking heads. I\nremember when the right had some intellectual heft. Can you imagine what William\nSafire or William F. Buckley, Jr. would make of Mr. Corso&#39;s sophistry?</p>\n"
     }
 ]
