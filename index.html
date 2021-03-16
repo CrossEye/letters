@@ -2,21 +2,9 @@
 <head>
 <title>Scott Sauyet : Letters to the Editor</title>
 <style type="text/css">
+/*  Colors  */
+
 :root {
-  box-sizing: border-box; 
-/*
-  --neutral: #d7e3e5;
-  --primary: #edd8c8;
-  --secondary: #b7ccd2;
-  --tertiary: #dabea6;
-  --highlight: #e4cbb7;
-  --text-primary:  #555555;
-  --text-secondary: #333333;
-  --text-tertiary: #aa938f;
-  --text-highlight: #666666;
-*/
-
-
   --neutral: #d7e3e5;
   --border: #aa938f;
   --accent: #666666;
@@ -32,11 +20,7 @@
   --tertiary-text: #555555;
   --tertiary-highlight: #dabea6;
   --tertiary-accent: #b7ccd2;
-
 }
-
-
-/*  Colors  */
 
 body {
   background-color: var(--neutral);
@@ -162,6 +146,10 @@ header, .box {
 
 /*  Layout  */
 
+:root {
+  box-sizing: border-box; 
+}
+
 
 body {
   padding: 1rem;
@@ -280,7 +268,7 @@ ul.long li, ul.long li a {
   margin: 0 1rem;
 }
 
-.sidebar ul {
+.sidebar ul, ul.long {
   list-style: none;
 }
   
@@ -2195,7 +2183,7 @@ const makeTag = (content, tag) => {
     const letters = content .filter (({Tags}) => Tags .includes (tag))
     return `
     <h1>Letters tagged "${tag}"</h1>
-    <ul>
+    <ul class="long">
       ${letters .map (letter => 
         `<li><a href="#/${letter .Date}">${letter .Title} (${shortDate (letter .Date)})</a></li>`
       ) .join ('\n        ')}
@@ -2206,7 +2194,7 @@ const makePerson = (content, person) => {
     const letters = content .filter (({People}) => People .includes (person))
     return `
     <h1>Letters mentioning Rivereast letter writer ${person}</h1>
-    <ul>
+    <ul class="long">
       ${letters .map (letter => 
         `<li><a href="#/${letter .Date}">${letter .Title} (${shortDate (letter .Date)})</a></li>`
       ) .join ('\n        ')}

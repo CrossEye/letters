@@ -141,7 +141,7 @@ const makeTag = (content, tag) => {
     const letters = content .filter (({Tags}) => Tags .includes (tag))
     return `
     <h1>Letters tagged "${tag}"</h1>
-    <ul>
+    <ul class="long">
       ${letters .map (letter => 
         `<li><a href="#/${letter .Date}">${letter .Title} (${shortDate (letter .Date)})</a></li>`
       ) .join ('\n        ')}
@@ -152,7 +152,7 @@ const makePerson = (content, person) => {
     const letters = content .filter (({People}) => People .includes (person))
     return `
     <h1>Letters mentioning Rivereast letter writer ${person}</h1>
-    <ul>
+    <ul class="long">
       ${letters .map (letter => 
         `<li><a href="#/${letter .Date}">${letter .Title} (${shortDate (letter .Date)})</a></li>`
       ) .join ('\n        ')}
