@@ -54,6 +54,14 @@ body {
   background-color: var(--primary-accent);
 }
 
+ul.long li a, ul.long li a:visited {
+  background-color: var(--primary-background);
+}
+
+ul.long li a:hover {
+  background-color: var(--primary-accent);
+}
+
 .sidebar {
   background-color: var(--secondary-background);
   color: var(--secondary-text);
@@ -84,16 +92,24 @@ header a:hover {
   background-color: var(--tertiary-accent);
 }
 
-#searchWidget button {
-  background-color: inherit;
-  border: none;
+button, input {
+  background: var(--neutral);
+  color: inherit;
 }
 
-
-/* TODO: should these be stylesheet variables? */
 .main .themes button {
   color: black;
   background-color: white;
+}
+
+#searchBox button {
+  background-color: inherit;
+  color: inherit;
+}
+
+#searchWidget button {
+  background-color: inherit;
+  color: inherit;
 }
 
 
@@ -135,43 +151,23 @@ header, .box {
   border: none;
 }
 
+.themes button:focus {
+  outline: none;
+  border: 3px solid black;
+}
 
-
-
+/*  Layout  */
 
 
 body {
-  margin: 0;
   padding: 1rem;
   max-width: 1200px;
   margin: 30px auto;
-  font-size: 1.2em;
-}
-
-button, input {
-  background: var(--neutral)
-}
-
-button:focus {
-  outline:none;
-}
-
-h1, h2, h3, h4, summary {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
   padding: .5rem 1rem;
   margin: -1rem 1rem 1rem 1rem;
-  text-align: center;
-}
-
-h1 {
-  font-size: 1.75rem;
-}
-
-h2 {
-  font-size: 1.5rem;
 }
 
 details {
@@ -218,7 +214,6 @@ nav {
 
 #next {
   flex: 2 1 150px;
-  text-align: right;
 }
 
 .main {
@@ -246,33 +241,14 @@ nav {
   margin: .5rem;
   display: inline-block;
   width: 40%;
-  text-align: center;
-  font-size: 1.25rem;
 }
 
 ul.long li, ul.long li a {
   width: 100%
 }
 
-ul.long li a, ul.long li a:visited {
-  background-color: var(--primary);
-}
-
-ul.long li a:hover {
-  background-color: var(--secondary);
-}
-
 .main li {
   margin-top: .5rem;
-}
-
-.date {
-  text-align: right;
-}
-
-.tags ul {
-  list-style: none;
-  text-align: right;
 }
 
 .tags li {
@@ -304,21 +280,10 @@ ul.long li a:hover {
   list-style: none;
 }
   
-.sidebar li {
-  text-indent: -.5rem;
-  list-style: none;
-}
   
 #searchBox input {
   width: 75%;
-  font-size: 1.5rem;
-  background-color: var(--neutral);
   padding: 0 1rem;
-}
-
-#searchBox button {
-  font-size: 2rem;
-  cursor: pointer;
 }
 
 #searchWidget {
@@ -327,22 +292,86 @@ ul.long li a:hover {
 }
 
 #searchWidget input {
-  background-color: var(--neutral);
-  font-size: 1rem;
   padding: 0 .5rem;
 }
 
 #searchWidget button {
-  background-color: inherit;
-  font-size: 2rem;
   margin-left: -.5rem;
-  cursor: pointer;
 }
 
 #searchWidget svg {
   width: 3rem;
   margin-bottom: -1rem;
 }
+
+ul.long li a:hover {
+  margin: -.2rem;
+  padding: .2rem;
+}
+
+
+
+/*  Typography  */
+
+body {
+  font-size: 1.2em;
+}
+
+h1, h2, h3, h4, summary {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+#next {
+  text-align: right;
+}
+
+.main .themes button {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.date {
+  text-align: right;
+}
+
+.tags ul {
+  list-style: none;
+  text-align: right;
+}
+
+.sidebar li {
+  text-indent: -.5rem;
+  list-style: none;
+}
+  
+#searchBox input {
+  font-size: 1.5rem;
+  background-color: var(--neutral);
+}
+
+#searchBox button {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#searchWidget button {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/*  Responsiveness  */
 
 @media only screen and (max-width: 900px) {
   .container {

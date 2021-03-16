@@ -204,6 +204,7 @@ const makeSearch = (el, content, query) => {
   document .getElementById ('search') .addEventListener ('keyup', (e) => {
       if (e.key == 'Enter') {button .click ()}
   })
+  document .getElementById ('search') .focus ()
 }
 
 const makeThemeSwitcher = () => `<h1>Choose Theme</h1><div class="themes">
@@ -215,7 +216,7 @@ const updateCurrent = ({Date, Tags, Title}) => {
       `The <a href="#/${Date}">most recent letter</a>, from ${longDate(Date)}, is titled "${Title}", and discusses the ${Tags.length == 1 ? 'subject' : 'subjects'} of ${oxfordJoin (Tags .map (makeTagLink))}.`
 }
 
-
+// TODO: clean this up!!
 ((content) => {
     const lookups = Object.fromEntries(content .map (letter => [letter.Date, letter]))
     updateCurrent (content[0])
@@ -248,6 +249,7 @@ const updateCurrent = ({Date, Tags, Title}) => {
             makeSearch (main, content, decodeURIComponent (hash .slice (9).replace(/\+/g, ' ')))
         } else if (hash .startsWith('#/themes/')) {
             main .innerHTML = makeThemeSwitcher ()
+            document.querySelector('div.themes button').focus()
         }
       } else {
         document.location.hash = '#/'
