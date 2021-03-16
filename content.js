@@ -255,8 +255,8 @@ const content = [
         "Title": "Science and Scientists, Responses",
         "Date": "2019-10-06",
         "Tags": [
-            "Science and Scientists",
-            "Global Warming"
+            "Global Warming",
+            "Series - Science and Scientists"
         ],
         "People": [
             "Dan Armstrong"
@@ -277,8 +277,8 @@ const content = [
         "Title": "Science and Scientists, Part 4",
         "Date": "2019-09-20",
         "Tags": [
-            "Science and Scientists",
-            "Global Warming"
+            "Global Warming",
+            "Series - Science and Scientists"
         ],
         "People": [
             "Dan Armstrong"
@@ -289,8 +289,8 @@ const content = [
         "Title": "Science and Scientists, Part 3",
         "Date": "2019-09-14",
         "Tags": [
-            "Science and Scientists",
-            "Global Warming"
+            "Global Warming",
+            "Series - Science and Scientists"
         ],
         "People": [
             "Dan Armstrong"
@@ -301,8 +301,8 @@ const content = [
         "Title": "Science and Scientists, Part 2",
         "Date": "2019-09-08",
         "Tags": [
-            "Science and Scientists",
-            "Global Warming"
+            "Global Warming",
+            "Series - Science and Scientists"
         ],
         "People": [
             "Dan Armstrong"
@@ -313,8 +313,8 @@ const content = [
         "Title": "Science and Scientists, Part 1",
         "Date": "2019-09-03",
         "Tags": [
-            "Science and Scientists",
-            "Global Warming"
+            "Global Warming",
+            "Series - Science and Scientists"
         ],
         "People": [
             "Dan Armstrong"
@@ -1243,7 +1243,7 @@ const content = [
         "Content": "<p>My series of letters on progressive beliefs sparked some response.</p>\n<p><a href=\"#/person/Daniel+Colby\">Daniel Colby</a> wrote the very sort of letter that prompted my series, an insulting\ndescription of what progressivism is from the outside, without any real\nunderstanding. It would be the equivalent of me -- a dyed-in-the-wool liberal --\nexplaining what conservatives believe, insulting them all the while. If instead\nof philosophy, he wants to discuss history, I&#39;m more than willing to compare\nthe liberal leaders of our land against the conservative ones. But that&#39;s a\ndifferent discussion.</p>\n<p><a href=\"#/person/Don+Denley\">Don Denley</a> finds it difficult to distinguish between looking for a handout\nand preventing the powerful from abusing those without power. It&#39;s really\nnot complicated.</p>\n<p><a href=\"#/person/Sam+Prentice\">Sam Prentice</a>, who really should know better, does not distinguish between\ninequality in outcomes and inequality of opportunity. Should we really be rating\nthe quality of input of three- year olds before deciding that the ones from rich\nfamilies deserve so much better chances than the others?</p>\n<p>Unsurprisingly, <a href=\"#/person/Chuck+Corso\">Chuck Corso</a> used a lot of words to say very little. Parody is a\nmixture of three things: understanding the original material, altering it in a\nsatirical or ironic tone, and making the results amusing. Sorry, Mr. Corso,\nthree strikes again. Let me respond to just one point: Conservatives continually\nbemoan the fact that academia and journalism are bastions of liberalism. But\nturn it around for a second. What does it say about conservatism that the most\nintelligent and the most knowledgeable members of our society are liberals?</p>\n<p><a href=\"#/person/Ryan+Gritter\">Ryan Gritter</a> does understand the use of satire, and I absolutely love his modest\nproposal. Unfortunately, I must gratefully decline the invitation to join his\ncontest. It would hardly be fair to pit my meager talents against the repeated\nwinner of the Windbag Olympics.</p>\n"
     },
     {
-        "Title": "Progressivism from the Source 5",
+        "Title": "Progressivism from the Source, Part 5",
         "Date": "2016-02-05",
         "Tags": [
             "Progressivism",
@@ -1254,7 +1254,7 @@ const content = [
         "Content": "<p>Fifth and final in a series discussing what progressives actually believe. Last\ntime: corporate power.</p>\n<p>Perhaps a fitting way to end this is to quote from one of the most famous\nprogressives in American history. Theodore Roosevelt helped shape the twentieth\ncentury progressive movement, and his words from a century ago still ring true:</p>\n<p>&quot;I believe in pure democracy. With Lincoln, I hold that &#39;this country, with its\ninstitutions, belongs to the people who inhabit it.. Whenever they shall grow\nweary of the existing government, they can exercise their constitutional right\nof amending it.&#39;</p>\n<p>&quot;We Progressives believe that the people have the right, the power, and the duty\nto protect themselves and their own welfare; that human rights are supreme over\nall other rights; that wealth should be the servant, not the master, of the\npeople.</p>\n<p>&quot;We believe that unless representative government does absolutely represent the\npeople it is not representative government at all.</p>\n<p>&quot;We test the worth of any men and all measures by asking how they contribute to\nthe welfare of the men, women, and children of whom this nation is composed.</p>\n<p>&quot;We are engaged in one of the great battles of the age-long contest waged\nagainst privilege on behalf of the common welfare.&quot;</p>\n<p>Roosevelt&#39;s battle continues to this day, and it&#39;s progressives who are waging\nit.</p>\n"
     },
     {
-        "Title": "Progressivism from the Source 4",
+        "Title": "Progressivism from the Source, Part 4",
         "Date": "2016-01-29",
         "Tags": [
             "Progressivism",
@@ -1265,7 +1265,7 @@ const content = [
         "Content": "<p>Fourth in a series discussing what progressives actually believe. Last time:\nkeeping the government in check.</p>\n<p>Government and the rich are not the only sources of corrosive power that worry\nliberals. Large corporations easily gain unwarranted power as well. Currently\nAmerican society has a laissez-faire attitude towards its corporations. That was\na major factor in the global economic meltdown and the Great Recession. Liberals\never worry about the control such corporations gain over our day-to-day lives\nand the power they clearly already maintain over our politics.</p>\n<p>Corporations are not people. Regardless of what Congress and the courts say,\ncorporations don&#39;t bleed when you cut them. They don&#39;t feel anger or fear,\nhunger or love. They allow individual benefits without individual\nresponsibility. (Or when did you last see a stockholder go to jail because of a\ncompany&#39;s illegal activity?) Corporations are constructs made of laws and\ncontracts. They exist by public sufferance and should only be tolerated if on\nbalance they improve the public interest. Liberals recognize that corporations\nhave a lot of good to offer, but will not accept the ridiculous notion that\nregulations are inherently anti-business, anti-American. Corporations are\ntolerated because they are good for society; when they become a burden, they\nmust be altered or removed.</p>\n<p>There&#39;s a theme here. We noted that the rich, left unchecked, will run roughshod\nover everyone else. We noted that governments, left unchecked, will start\nabusing the rights of its citizenry. We noted that large corporations, left\nunchecked, will tend toward anti-consumer behavior. Progressivism is about\nproviding checks on these abuses of power.</p>\n<p>In the end, progressivism is a simple concept: it&#39;s best to band together to\nprotect the weak from abuse by the strong so that everyone gets a fair chance at\nthe good things in life.</p>\n<p>Next time: Teddy Roosevelt.</p>\n"
     },
     {
-        "Title": "Progressivism from the Source 3",
+        "Title": "Progressivism from the Source, Part 3",
         "Date": "2016-01-22",
         "Tags": [
             "Progressivism",
@@ -1276,7 +1276,7 @@ const content = [
         "Content": "<p>Third in a series discussing what progressives actually believe. Last time: how\ngovernment helps level the playing field between rich and poor children.</p>\n<p>A competing philosophy proclaims that a smaller government is always a better\ngovernment. Those preaching this don&#39;t really believe it. The proof: ask if they\nwould support eliminating our military, jails, and police in order to reduce the\nsize of the government. If not, they don&#39;t truly believe smaller is always\nbetter. Then one can actually discuss competing priorities for what government\nshould do. If they argue that the military, the courts, and the police are the\ncentral functions of government, ask how they respond to someone who sees\neducation and environmental protections as central. Why are their issues more\nimportant? Just because they say so?</p>\n<p>Progressives recognize that government can and does overstep its mandate. It\nenforces biases of the majority on everyone, even in places where it has no\nbusiness, such as the Jim Crow laws or statutes forbidding gay marriage.\nThankfully, the force of history is generally with liberalism; over time society\ngrows more tolerant, more liberal, more accepting of differences. Government\neventually follows.</p>\n<p>Sometimes the government does the wrong thing, and it becomes our duty to change\nit. This has happened often: the Dred Scott decision, Japanese internment camps,\nMcCarthy witch-hunts, anti-miscegenation laws, the recently fallen laws against\ngay marriage.</p>\n<p>We must be ever-vigilant. A current issue is the NSA&#39;s domestic spying. To\nliberals, this is intolerable. Our government has claimed rights far beyond what\nsociety is willing to grant. This must stop. We are glad to have conservative\nand libertarian allies in this battle, but are suspicious of their motivation.\nSupporters of the USA PATRIOT now upset by the powers the government claims are\nhypocritical.</p>\n<p>Next time: The power of corporations.</p>\n"
     },
     {
-        "Title": "Progressivism from the Source 2",
+        "Title": "Progressivism from the Source, Part 2",
         "Date": "2016-01-15",
         "Tags": [
             "Progressivism",
@@ -1288,7 +1288,7 @@ const content = [
         "Content": "<p>Second in a series discussing what progressives actually believe. Last time: how\nthe rich are tilting the playing field in favor of their children.</p>\n<p>This is not how our democracy is supposed to work. Everyone wants to help their\nchildren and do what&#39;s best for them, but something has gone fundamentally wrong\nwhen the rich and powerful can exclude everyone else, when the gap in\nopportunity between the children of the very wealthy and the children of\neveryone else is so large. Progressives believe that society must work to reduce\nthat gap.</p>\n<p>The best way is to ensure that all children get a good start. So liberals\nbelieve in supporting quality public education, in ensuring that the children of\nthe poor have enough to eat, that there is adequate medical care for those in\nneed. It implies a society that offers a hand up the ladder of success.</p>\n<p>This contradicts the mythos promoted by small-government conservatives. They\nlike to gush about rugged individualism and the self-made entrepreneurs, Such\nfolks have had a hand in our history, but ours is also a history of cooperation,\nof mutual striving. Our most enduring colonial era story is that of sharing the\nfirst Thanksgiving.</p>\n<p>Progressives believe government is not the enemy. How could it be? Government is\nyou and me. Government is people banding together for mutual benefit, especially\nto protect the weak from abuses by the strong. Government can, and too\nfrequently does, overstep its bounds and become a source of problems. The only\ndefense is constant vigilance. But since government is the people ourselves, a\nhatred of the government is a hatred of oneself. Paranoia over the government is\nparanoia over the neighbors. Hostility towards the government is hostility\ntowards our brothers and sisters.</p>\n<p>Next time: Keeping the government in check.</p>\n"
     },
     {
-        "Title": "Progressivism from the Source 1",
+        "Title": "Progressivism from the Source, Part 1",
         "Date": "2016-01-12",
         "Tags": [
             "Progressivism",
@@ -1382,5 +1382,97 @@ const content = [
         ],
         "People": [],
         "Content": "<p>Before the last presidential election, a number of people wrote to the Rivereast\nto blame President Obama for the poor shape of our economy. I wonder, are those\nsame folks are now willing to credit the president for the much-improved\nconditions? (I personally don&#39;t think any president has much to do with it\neither way.)</p>\n<p>The economy has added over 6.3 million jobs during the President&#39;s six years,\nmore than five times the total over his predecessor&#39;s eight years. The\nunemployment rate is now at 5.6%, slightly below the post-WWII average, and far\nbelow what it was when Bush left office.</p>\n<p>Inflation during Barrack Obama&#39;s term has so far averaged below 2%. Real weekly\nearnings have increased 1.7%. Gasoline (which was a subject of sore complaint in\nsome of those letters even though it remained below the highs seen during the\nBush administration) is now way down at $2.05 nationally.</p>\n<p>Corporate profits have nearly tripled during President Obama&#39;s first six years,\nand the stock markets indices have doubled or tripled; all are currently in\nrecord territory. Meanwhile, reliance on imported oil has been cut by 55%.</p>\n<p>After a rough start, Obamacare is working extremely well. There are millions\nfewer Americans without health care. Health care prices rose only 2% last year,\nsubstantially lower than a few years ago. And there are 25% more insurers in the\nmarketplaces this year than last.</p>\n<p>I&#39;m not saying it&#39;s all peaches and cream, of course. The number of long-term\nunemployed is still very high, food stamp recipients are at record numbers, and\nhome ownership numbers are down. But on balance, the economy is doing really\nwell.</p>\n<p>You blamed the President for an earlier mess. Do you now give him credit for\nthis turnaround?</p>\n"
+    },
+    {
+        "Title": "Liberal Jesus",
+        "Date": "2014-11-16",
+        "Tags": [
+            "Jesus",
+            "Progressivism"
+        ],
+        "People": [
+            "Wendy Worley",
+            "Sam Prentice"
+        ],
+        "Content": "<p><a href=\"#/person/Wendy+Worley\">Wendy Worley</a> objects to my characterizing Jesus as a liberal. We can at least\nask how his lessons apply now. Before that, though: The standard theological\ndescription is &quot;fully human and fully divine&quot;. To deny full humanity is to deny\nthe meaning of the sacrifice on the cross.</p>\n<p>Jesus of Nazareth hung out with the sick, the hungry, the prostitutes, and the\nfriendless. He taught a message of love and of service. He preached forgiveness\nand compassion. He opposed public prayer and rigid legalisms.</p>\n<p>&quot;It is easier for a camel to go through the eye of a needle, than for a rich man\nto enter into the kingdom of God.&quot; ... &quot;He that is without sin among you, let\nhim first cast a stone.&quot; ... &quot;Inasmuch as ye have done it unto one of the least\nof these my brethren, ye have done it unto me.&quot;</p>\n<p>It&#39;s easy to imagine Jesus working in a soup kitchen or helping a social worker\nfind clothing for a poor family. Picture him banging nails next to Jimmy Carter.\nBut can you imagine him as an investment banker? Could you see him rallying\nsupport for a stronger military? Would he promote mandatory sentencing laws for\ndrug users?</p>\n<p>Whether we can apply &quot;liberal&quot; to Jesus, today it&#39;s liberals who carry forward\nhis teachings. Conservatives have a different agenda.</p>\n<p>Meanwhile, back on the Rand-ch, <a href=\"#/person/Sam+Prentice\">Sam Prentice</a> should realize that removing part\nof a quotation to change its meaning is one of the lowest forms of intellectual\ndishonesty. In our country -- he dropped that part -- the Left has been on the\ncorrect side of history at every turn... think abolitionism, trade unionism,\nwomen&#39;s suffrage, civil rights, gay rights. In all the major issues, the Left\nhas been on the side of reason and morality.</p>\n"
+    },
+    {
+        "Title": "Logic",
+        "Date": "2014-11-02",
+        "Tags": [
+            "Logic",
+            "Global Warming",
+            "Education"
+        ],
+        "People": [
+            "Chuck Corso"
+        ],
+        "Content": "<p>It&#39;s probably an exercise in futility, but I&#39;ll try again to explain basic\nlogic, and interject some truth, countering the ignorance and fabrications in\n<a href=\"#/person/Chuck+Corso\">Chuck Corso</a>&#39;s recent letters.</p>\n<p>&quot;Arctic ice is up 42 percent in the last two years.&quot; This is true; here&#39;s the\ncontext: The 1979-2000 average Arctic sea ice extent was 2.59 million square\nmiles. It&#39;s decreased substantially since, culminating in an extent of 1.32\nmillion square miles in 2012. It then increased by 42%, this year reaching 2.04\nmillion square miles, the sixth lowest reading on record, 21% below normal. Now\nit&#39;s receding again. (See <a href=\"http://bit.ly/1A29iQG\">http://bit.ly/1A29iQG</a>)</p>\n<p>As to education, one can hope that Mr. Corso simply plays dumb, and not that he\ncan&#39;t understand a simple parallel. He suggested that political control of a\njurisdiction is the preeminent factor in the quality of its education. I\ncountered that the relative wealth of the jurisdiction is a much more\nsignificant factor. I supported my argument by pointing out that it covers the\ncases he brought up, the poor large cities, as well as the cases of our poorest\nstates, with the worst educational records. His proposal doesn&#39;t cover these\ncases, so a poverty effect is more likely.</p>\n<p>Finally, if Mr. Corso thinks calling me a left-winger insults me, he&#39;s badly\nmistaken. A few other left-wingers: Jesus, DaVinci, Jefferson, Madison, Lincoln,\nGandhi, MLK. In our country, the Left has been on the correct side of history at\nevery turn, for a very simple reason: it has reason and morality on its side.</p>\n<p>I&#39;m done with this. It&#39;s unsporting to joust with the court jester. Chuck Corso\ncan feel free to have the last word. We can guess that word will be\n&quot;bamboozled&quot;..</p>\n"
+    },
+    {
+        "Title": "Complete Thoughts",
+        "Date": "2014-10-20",
+        "Tags": [
+            "Global Warming",
+            "Education",
+            "Progressivism"
+        ],
+        "People": [
+            "Chuck Corso",
+            "Joe Stevens"
+        ],
+        "Content": "<p><a href=\"#/person/Chuck+Corso\">Chuck Corso</a> has a problem completing his thoughts.  I thought I might\nbe able to help out.</p>\n<p>He notes that &quot;Arctic Ocean ice is up 42% in the last two years,” He\nobviously forgot the second clause in that sentence, which should\nread, &quot;to what is the sixth lowest level ever recorded, well below\nnormal values.&quot;  This is called cherry-picking one&#39;s data; it would\nget you kicked out of the news-room at a reputable newspaper.  The\nfull data, with useful graphs of the trend-lines is at\n<a href=\"http://nsidc.org/arcticseaicenews/\">http://nsidc.org/arcticseaicenews/</a>.</p>\n<p>He also says that &quot;Progressives have controlled American cities for\nover a half century and have run the school systems into the ground.&quot;\nHe forgot to report the other half, that &quot;Conservatives have been\nrunning such states as Alabama, Mississippi, and Louisiana for\ngenerations, and these states have the very worst educational\nrecords.&quot;  This is called false-cause (&quot;correlation does not imply\ncausation&quot;); the debate team would eat you alive for it.  His\nhypothesis seems extremely sketchy.  It would benefit us to search for\na different cause.  Dare we suggest investigating the links of\neducational achievement and poverty?</p>\n<p>Mr. Corso tells us that <a href=\"#/person/Joe+Stevens\">Joe Stevens</a>&#39; letters &quot;are a weekly, personal\nattack on letter writers he disagrees with.&quot;  Again he forgets the\nsubordinate clause, in which he should have added, &quot;as of course, are\nall of mine.&quot;  This is called hypocrisy.  I&#39;ve just reread the last\nseveral months of letters.  Mr. Stevens writes sharply about the\npublished philosophy of conservatism and the results this philosophy\nhas on our society.  He very rarely stoops to name-calling.  Mr.\nCorso, on the other hand, does almost nothing but insult others.</p>\n<p>So there you have it, three half-completed thoughts now finished.\nYou&#39;re quite welcome, Mr. Corso.</p>\n"
+    },
+    {
+        "Title": "The Education of Chuck Corso",
+        "Date": "2014-10-05",
+        "Tags": [
+            "Education",
+            "Progressivism"
+        ],
+        "People": [
+            "Chuck Corso",
+            "Joe Stevens"
+        ],
+        "Content": "<p><a href=\"#/person/Chuck+Corso\">Chuck Corso</a> bemoans the state of education in American cities.  The\nremainder of his recent letter bears this out.</p>\n<p>His letter, which claims that progressives bash conservatives but\noffer no solutions of their own, itself bashes progressives but offers\nno solutions of its own.  He misuses a recent statistic in a way any\nten year-old could see through and complains that this statistic is\nbeing censored by school officials.  (Sorry, Mr. Corso, the Science\nDepartment isn&#39;t interested in your grainy Bigfoot photos either.)</p>\n<p>Mr. Corso acts like a schoolyard bully, inventing insulting names in\nthe the hopes that others will pick them up.  Tellingly, one of these\ninsults uses the word &quot;Distortion&quot;, which aptly describes his own\nsummary of <a href=\"#/person/Joe+Stevens\">Joe Stevens</a>&#39; recently published letters.</p>\n<p>And of course, Mr. Corso uses his own peculiar misinterpretation of\nMr. Stevens&#39; words to describe an entirely different person -- me --\nas hypocritical.</p>\n<p>Yes, Chuck Corso&#39;s writing is prima facie evidence that there&#39;s\nsomething wrong with our educational system.  If I want to know how\nconservatives think, I wouldn&#39;t ask Mr. Corso.  First, I&#39;d need to\nfind one who actually can.</p>\n"
+    },
+    {
+        "Title": "American Exceptionalism",
+        "Date": "2014-09-14",
+        "Tags": [
+            "Constitution",
+            "Democracy",
+            "Progressivism",
+            "Science"
+        ],
+        "People": [
+            "Sam Prentice"
+        ],
+        "Content": "<p>I&#39;ll say it again: if you want to know how progressives think, you should ask\none rather than to listen to <a href=\"#/person/Sam+Prentice\">Sam Prentice</a>. I&#39;m a progressive; let me set the\nrecord straight. I think our Constitution is one of the greatest accomplishments\nin history.</p>\n<p>Our founders got astoundingly many things right. What they did best was to build\na living document, designed to change with the times. Madison&#39;s optimism that\npeople could adapt his Constitutional framework to the needs of their times\nproved true. Jefferson&#39;s pessimism that each generation would need its own\nrevolution proved false.</p>\n<p>Mr. Prentice, progressives do not believe in a controlling central authority. We\nbelieve government is the banding together of its people to prevent the abuse of\nthe weak by the strong, ensuring that all get a fair shot at life, liberty and\nthe pursuit of happiness. Progressives want the government to prevent the rich\nand powerful from rigging the system so they and their children have the best of\neverything. We want the American dream available to all.</p>\n<p>Similarly, if you want to know how scientists think, ask them instead of Sam\nPrentice. If there are none handy, you can ask schoolchildren about the\nscientific method. They will explain that science isn&#39;t the search for Truth;\nthat&#39;s left for theologians.</p>\n<p>Scientists create theories about the natural world and make observations and\nexperiments that attempt to disprove them. The longer a theory withstands such\nattempts, the more credible it becomes. Eventually a theory becomes established\nas the consensus of the scientific community. That is the current state of the\ntheory that human activity is responsible for global warming. Tellingly, Mr.\nPrentice only sees or only believes studies that support his ideology. He needs\nto learn something from those schoolchildren.</p>\n"
+    },
+    {
+        "Title": "Conscience of a Liberal",
+        "Date": "2014-03-17",
+        "Tags": [
+            "NSA Spying",
+            "Barrack Obama"
+        ],
+        "People": [
+            "Sam Prentice"
+        ],
+        "Content": "<p>This is a letter I&#39;ve wanted to write for a while. But every time I go to take\nup my pen, some idiocy by Bamboozled Buffoon or one of the Randroids needs\nanswering instead. Finally, here goes:</p>\n<p>All liberals should be outraged by the NSA spying revelations that continue to\npour in. We need to let our representatives in Congress know that this needs to\nstop. And we need to let President Obama know just how disappointed we are that\nthe president we expected to bring about sweeping liberal reforms -- a\nConstitutional scholar to boot -- could not recognize the gross betrayal of\ntrust engendered in his sanctioning of these programs.</p>\n<p>Our government has no right to spy on its citizens. It&#39;s really that simple.\nAbsent a clear and present threat, the people have the simple right to be left\nalone.</p>\n<p>Any claims about the programs collecting mere metadata ignores the fact that a\ngreat wealth of individual information can be gleaned from the metadata. (See\nthe recent report at <a href=\"http://bit.ly/1kYKFvY\">http://bit.ly/1kYKFvY</a> for more information.)</p>\n<p>I&#39;m glad to see that the opposition is not just from liberals, but from\nconservatives as well. But I do wonder a little about their motives. Those who\nsupported the PATRIOT act are reaping their just rewards in these new programs.\nNonetheless, welcome to the fight. Let&#39;s see if together we can abolish this\nreprehensible intrusion of the government into our lives.</p>\n"
+    },
+    {
+        "Title": "Inequalities",
+        "Date": "2014-01-18",
+        "Tags": [
+            "Progressivism",
+            "Government",
+            "Education"
+        ],
+        "People": [
+            "Sam Prentice"
+        ],
+        "Content": "<p>If you want to know how progressives think, you would do better to ask one than\nto listen to <a href=\"#/person/Sam+Prentice\">Sam Prentice</a>&#39;s diatribes.</p>\n<p>Our analysis of inequality is not reflexive; it&#39;s data-driven and quite\nobjective. The income and education of one&#39;s parents are clear-cut predictors of\nthe course of one&#39;s life. Our health, wealth, life expectancy, and even many\nself-reported measures of happiness are strongly correlated to our parents&#39;\nincome and education. These are facts, backed up by far too many studies to\ndispute, regardless of how many inspiring rags-to-riches anecdotes we might\nhear. Progressives do not bemoan outcome disparities; it&#39;s disparities in\nopportunity that make our blood boil.</p>\n<p>Therefore progressives want to prevent the rich and powerful from rigging the\nsystem so that they and their children have the very best of everything. We want\nthe American dream to be available to all.</p>\n<p>To this end, we support a public education system that gives all kids a solid\nfooting. We support a health-care system that everyone can afford. We support\nprograms that help families rise out of poverty. We support an America that\npromotes the reality of equal opportunity, not just the myth.</p>\n<p>Those who argue that none of this is the place of the government forget what\ngovernments are at their core. Of course we need to worry about growing\ngovernment power; one must be ever vigilant about the abuses of power. But at\nits core, government is people banding together to protect themselves from\nabuses by the powerful.</p>\n<p>So while Mr. Prentice goes back to mixing his metaphors (a hive of sheep?),\nplease keep in mind that his notions of progressivism are akin to a lifelong\nnun&#39;s notions of sexual relations.</p>\n"
     }
 ]
