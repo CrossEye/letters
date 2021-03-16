@@ -50,7 +50,7 @@ const themes = ((defaultTheme = 'Echo Beach', colors = {
     "tertiary-highlight": "#7ED5EA",
     "tertiary-accent": "#3778C2"
   },
-  "Lazy Sunday": {
+  "Sunday Papers": {
     "neutral": "#ece5f4",
     "border": "#98b8c6",
     "accent": "#666666",
