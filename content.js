@@ -991,9 +991,9 @@ const content = [
             "Facts"
         ],
         "People": [
-            "Vicor Carli"
+            "Victor Carli"
         ],
-        "Content": "<p>Inauguration addresses are traditionally times to heal divisions, to\nbring our country together.  But our new president&#39;s angry speech lied\nabout many things:</p>\n<ul>\n<li><p>Crime. The truth: the violent crime rate is half of what it was 25\nyears ago.</p>\n</li>\n<li><p>Jobs. The truth: the unemployment rate is below historic averages;\nwe&#39;ve had 75 consecutive months of job increases.</p>\n</li>\n<li><p>Welfare. The truth: welfare roles dropped by 27% under President\nObama and by 75% in the past 20 years.</p>\n</li>\n<li><p>Immigration. The truth: illegal immigration has dropped by 75% in\nthe last 15 years; we&#39;ve doubled the border guard count.</p>\n</li>\n</ul>\n<p>The day after the inauguration, the president&#39;s press secretary made\nmultiple unsolicited lies obscuring facts about inauguration\nattendance.  The president&#39;s counselor then explained that they\nweren&#39;t lies but &quot;alternative facts&quot;.</p>\n<p>&quot;Alternative facts?&quot;  This from an adult?  From someone in a position of power?</p>\n<p>We&#39;re in for years of this, folks.  When the boss is allergic to the\ntruth, his underlings shy away from it.</p>\n<p>So do fans writing letters here.  To Victor Carli: there is no\nreasonable definition by which we can call Donald Trump&#39;s win a\n&quot;landslide&quot;.  He lost by 2.8 million votes.  He won the electoral\ncollege by smaller margins than 75% of our presidents.</p>\n<p>You need to check your facts.  Secretary Clinton&#39;s private email\nserver was never hacked.  The hacking was of an aide&#39;s GMail account\nand the DNC&#39;s server.  Mr. Carli, you say the fact that the Russians\nhacked them is irrelevant.  In other words, it&#39;s irrelevant that a\nhostile foreign power was actively and effectively influencing our\nelection.  Do you consider yourself a patriot?</p>\n<p>Finally, one wag noted the sad truth: &quot;Peaceful transitions of power\nare amazing.  One moment, Barrack Obama was the leader of the free\nworld.  The next one, Angela Merkel was.&quot;</p>\n"
+        "Content": "<p>Inauguration addresses are traditionally times to heal divisions, to\nbring our country together.  But our new president&#39;s angry speech lied\nabout many things:</p>\n<ul>\n<li><p>Crime. The truth: the violent crime rate is half of what it was 25\nyears ago.</p>\n</li>\n<li><p>Jobs. The truth: the unemployment rate is below historic averages;\nwe&#39;ve had 75 consecutive months of job increases.</p>\n</li>\n<li><p>Welfare. The truth: welfare roles dropped by 27% under President\nObama and by 75% in the past 20 years.</p>\n</li>\n<li><p>Immigration. The truth: illegal immigration has dropped by 75% in\nthe last 15 years; we&#39;ve doubled the border guard count.</p>\n</li>\n</ul>\n<p>The day after the inauguration, the president&#39;s press secretary made\nmultiple unsolicited lies obscuring facts about inauguration\nattendance.  The president&#39;s counselor then explained that they\nweren&#39;t lies but &quot;alternative facts&quot;.</p>\n<p>&quot;Alternative facts?&quot;  This from an adult?  From someone in a position of power?</p>\n<p>We&#39;re in for years of this, folks.  When the boss is allergic to the\ntruth, his underlings shy away from it.</p>\n<p>So do fans writing letters here.  To <a href=\"#/person/Victor+Carli\">Victor Carli</a>: there is no\nreasonable definition by which we can call Donald Trump&#39;s win a\n&quot;landslide&quot;.  He lost by 2.8 million votes.  He won the electoral\ncollege by smaller margins than 75% of our presidents.</p>\n<p>You need to check your facts.  Secretary Clinton&#39;s private email\nserver was never hacked.  The hacking was of an aide&#39;s GMail account\nand the DNC&#39;s server.  Mr. Carli, you say the fact that the Russians\nhacked them is irrelevant.  In other words, it&#39;s irrelevant that a\nhostile foreign power was actively and effectively influencing our\nelection.  Do you consider yourself a patriot?</p>\n<p>Finally, one wag noted the sad truth: &quot;Peaceful transitions of power\nare amazing.  One moment, Barrack Obama was the leader of the free\nworld.  The next one, Angela Merkel was.&quot;</p>\n"
     },
     {
         "Title": "True American History",
@@ -1474,5 +1474,62 @@ const content = [
             "Sam Prentice"
         ],
         "Content": "<p>If you want to know how progressives think, you would do better to ask one than\nto listen to <a href=\"#/person/Sam+Prentice\">Sam Prentice</a>&#39;s diatribes.</p>\n<p>Our analysis of inequality is not reflexive; it&#39;s data-driven and quite\nobjective. The income and education of one&#39;s parents are clear-cut predictors of\nthe course of one&#39;s life. Our health, wealth, life expectancy, and even many\nself-reported measures of happiness are strongly correlated to our parents&#39;\nincome and education. These are facts, backed up by far too many studies to\ndispute, regardless of how many inspiring rags-to-riches anecdotes we might\nhear. Progressives do not bemoan outcome disparities; it&#39;s disparities in\nopportunity that make our blood boil.</p>\n<p>Therefore progressives want to prevent the rich and powerful from rigging the\nsystem so that they and their children have the very best of everything. We want\nthe American dream to be available to all.</p>\n<p>To this end, we support a public education system that gives all kids a solid\nfooting. We support a health-care system that everyone can afford. We support\nprograms that help families rise out of poverty. We support an America that\npromotes the reality of equal opportunity, not just the myth.</p>\n<p>Those who argue that none of this is the place of the government forget what\ngovernments are at their core. Of course we need to worry about growing\ngovernment power; one must be ever vigilant about the abuses of power. But at\nits core, government is people banding together to protect themselves from\nabuses by the powerful.</p>\n<p>So while Mr. Prentice goes back to mixing his metaphors (a hive of sheep?),\nplease keep in mind that his notions of progressivism are akin to a lifelong\nnun&#39;s notions of sexual relations.</p>\n"
+    },
+    {
+        "Title": "Progressive Parties",
+        "Date": "2013-09-20",
+        "Tags": [
+            "Progressivism",
+            "Democrats",
+            "Libertariansm"
+        ],
+        "People": [
+            "Dan Devin",
+            "Sam Prentice"
+        ],
+        "Content": "<p><a href=\"#/person/Dan+Devin\">Dan Devin</a> makes two odd points. He attempts to discredit progressivism by\npointing out that that certain progressives from history were not perfect\npeople, or that they might not be considered progressives by modern standards.\nAnd he writes, with no evidence whatsoever, as though those of us promoting\nprogressive and liberal ideas are wedded to the Democratic Party.</p>\n<p>Yes, Woodrow Wilson and Margaret Sanger had deep flaws. (I knew little about\nGeorge Bernard Shaw&#39;s politics, and a casual reading about the issue leaves me\nin some doubt about Mr. Devin&#39;s characterization.) But ad hominem has never been\na persuasive argument. That these people had ideas that were not liberal in no\nway impugns liberalism itself.</p>\n<p>And as to party politics, I don&#39;t give a fig about which party houses the\nliberals; that&#39;s the party for me. These days the Democrats are generally more\nprogressive than the Republicans, but it hasn&#39;t always been that way. I&#39;m ready\nto vote for whoever has the ideas that best match mine, including the Green\nParty or, on occasion, the Libertarians.</p>\n<p>And speaking of Libertarians, <a href=\"#/person/Sam+Prentice\">Sam Prentice</a> has -- once again -- no point to\nmake. Just because he wants to reserve the word &quot;liberal&quot; for what is usually\nthese days called &quot;libertarian&quot; doesn&#39;t mean that anyone else is going to go\nalong with him.</p>\n"
+    },
+    {
+        "Title": "Liberal History",
+        "Date": "2013-09-07",
+        "Tags": [
+            "Progressivism",
+            "Liberals",
+            "American History"
+        ],
+        "People": [
+            "Sam Prentice"
+        ],
+        "Content": "<p>Again, <a href=\"#/person/Sam+Prentice\">Sam Prentice</a> seems to have little grasp on the subject he presents in his\nletter. (Anyone for another dose of how global warming is a conspiracy of\nliberals to take over the economy?) He seems to want to draw a sharp distinction\nbetween liberals and progressive, one that means little to those of us on that\nside of the fence, who are generally comfortable with either term. He seems to\nhave little knowledge of what liberalism has meant in America. Perhaps a little\nhistory lesson is in order.</p>\n<p>When the American colonies declared independence from England and fought a war\nto support it, the conservatives were the ones who favored maintaining their\nstatus as colonists. It was liberals who wanted a change.</p>\n<p>When the issue was slavery, the abolitionists were the liberals; those promoting\nslavery were the conservatives.</p>\n<p>Those who supported the rights of workers to create trade-unions and bargain\ncollectively were liberals, fighting against the powerful conservative business\ninterests.</p>\n<p>The women&#39;s suffrage movement was a liberal cause, opposed by the conservative\nestablishment.</p>\n<p>The civil rights movement against segregation was a movement of liberals\nfighting a violent conservative backlash.</p>\n<p>Those promoting the women&#39;s rights movement were the liberals; those opposing it\nwere the conservatives.</p>\n<p>Liberals are the downtrodden, the powerless, and those sympathetic with them.\nThey are sometimes the majority, sometimes not, but they are never some small\ncadre of elite that Sam Prentice likes to imagine. And time and again, it is the\nliberals who are on the right side of history.</p>\n"
+    },
+    {
+        "Title": "True Progressivism",
+        "Date": "2013-08-20",
+        "Tags": [
+            "Progressivism"
+        ],
+        "People": [
+            "Sam Prentice"
+        ],
+        "Content": "<p><a href=\"#/person/Sam+Prentice\">Sam Prentice</a> is at it again. He runs down progressivism as though it were a form\nof social collectivism. The straw man he&#39;s tearing down is not one that those of\nus proud to call ourselves liberals and/or progressives even recognize.</p>\n<p>It&#39;s pretty simple, actually. Progressives do believe in the efficacy of working\ntogether. &quot;Two heads are better than one,&quot; and &quot;Many hands make light work,&quot;\nring true for progressives. But this has nothing to do with central planning or\ngovernment control. I don&#39;t know what &quot;cadre of elites&quot; he thinks we plan on\nfoisting on him, but it&#39;s never been discussed at the secret cabal meetings I&#39;ve\nattended!</p>\n<p>Instead, progressives believe in banding together to protect the weak from\nabuses by the powerful. We believe in ensuring equal opportunity for everyone.\nWe believe in individual rights, in pluralism, in toleration for one another&#39;s\ndifferences. But we&#39;re suspicious of centralized power -- note that this is a\nliberal idea -- believing that power too often corrupts.</p>\n<p>The caricature that Sam Prentice presents has nothing to do with reality. So\nwhat else is new?</p>\n"
+    },
+    {
+        "Title": "True Leaders",
+        "Date": "2013-04-23",
+        "Tags": [
+            "Leadership"
+        ],
+        "People": [],
+        "Content": "<p>I returned from vacation to two episodes of a rambling discourse on &quot;Leading vs.\nDictating&quot;, and I have to respond.</p>\n<p>Clearly the writer is a bit confused, arguing both that the Constitution is\nsacred and unchanging and that our lawmakers have a duty to carry forward the\nmajority opinions of their constituents.</p>\n<p>For the record, a substantial majority of Americans favored the gun law that\nrecently failed to pass the Senate. While I am part of that majority, I don&#39;t\nthink majority opinion is the right reason for it to be law. Our democracy is\nnot about majority rule. Our Founders could have chosen the Athenian model; I\nbelieve they were wise not to. I think our system is better.</p>\n<p>In our democracy, we choose representative based on what they believe, on what\nthey&#39;ve done, on their integrity, and on how effective we expect them to be. We\nshould never elect them to parrot back our particular views.</p>\n<p>While our elected representatives should listen to our views, true leaders do\nnot govern based on popular opinion. True leaders govern based upon what it\nright.</p>\n"
+    },
+    {
+        "Title": "Gun Solution",
+        "Date": "2013-01-20",
+        "Tags": [
+            "Gun Control",
+            "NRA"
+        ],
+        "People": [],
+        "Content": "<p>In the wake of the Sandy Hook shootings, the National Rifle Association has been\nmaking several interesting arguments. According to the NRA we don&#39;t have a gun\nproblem at all. We have a terrible mental health epidemic and a glaring lack of\nsecurity at places like our elementary schools. We should post armed guards in\nthe schools and figure out some screening process to identify dangerously\nunstable individuals unsuitable for gun ownership.</p>\n<p>I think I have sensible compromises to offer on both of these issues.</p>\n<p>If the gun industry thinks posting guards at our schools is so important, then\nthey should foot the bill. There are about 250,000 schools in this country.\nSmaller schools might only need one guard; some might need a handful. Let&#39;s be\nreasonable, and suggest annual salary, including benefits of $60,000 per guard.\nOh, and perhaps we should consider movie theaters too, and a few other venues,\nwherever people might be vulnerable to a nutjob with an Uzi. Maybe the NRA\nitself could bring this proposal back to its membership and to the industry that\nfunds it. It probably shouldn&#39;t cost much more than $100 billion annually.</p>\n<p>And second, as to the mental health issue, this one could be even easier. Guns\nthat fire dozens or hundreds of rounds a minute, and the clips that feed them,\nguns that can&#39;t be used for hunting and are not appropriate to defending one&#39;s\nhome, that&#39;s just crazy right? So let&#39;s codify that. We want to keep guns out of\nthe hands of those with dangerous psychoses. Why don&#39;t we simply consider the\nownership of, or the desire to own, assault weapons and ammunition definitive\nevidence of such a dangerous mental illness?</p>\n<p>Problems solved!</p>\n"
     }
 ]

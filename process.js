@@ -116,8 +116,8 @@ const makeSidebar = (content, {ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 
   }
 
 const makeLetter = (contents, letter) => {
-    const prev = contents [contents .indexOf (letter) - 1]
-    const next = contents [contents .indexOf (letter) + 1]
+    const prev = contents [contents .indexOf (letter) + 1]
+    const next = contents [contents .indexOf (letter) - 1]
     return `
     <h1>${letter.Title}</h1>
     ${letter.Tags.length ? `<ul class="tags">
