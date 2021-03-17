@@ -1523,7 +1523,7 @@ const content = [
         "Content": "<p>I returned from vacation to two episodes of a rambling discourse on &quot;Leading vs.\nDictating&quot;, and I have to respond.</p>\n<p>Clearly the writer is a bit confused, arguing both that the Constitution is\nsacred and unchanging and that our lawmakers have a duty to carry forward the\nmajority opinions of their constituents.</p>\n<p>For the record, a substantial majority of Americans favored the gun law that\nrecently failed to pass the Senate. While I am part of that majority, I don&#39;t\nthink majority opinion is the right reason for it to be law. Our democracy is\nnot about majority rule. Our Founders could have chosen the Athenian model; I\nbelieve they were wise not to. I think our system is better.</p>\n<p>In our democracy, we choose representative based on what they believe, on what\nthey&#39;ve done, on their integrity, and on how effective we expect them to be. We\nshould never elect them to parrot back our particular views.</p>\n<p>While our elected representatives should listen to our views, true leaders do\nnot govern based on popular opinion. True leaders govern based upon what it\nright.</p>\n"
     },
     {
-        "Title": "Gun Solution",
+        "Title": "Gun Solutions",
         "Date": "2013-01-20",
         "Tags": [
             "Gun Control",
@@ -1531,5 +1531,106 @@ const content = [
         ],
         "People": [],
         "Content": "<p>In the wake of the Sandy Hook shootings, the National Rifle Association has been\nmaking several interesting arguments. According to the NRA we don&#39;t have a gun\nproblem at all. We have a terrible mental health epidemic and a glaring lack of\nsecurity at places like our elementary schools. We should post armed guards in\nthe schools and figure out some screening process to identify dangerously\nunstable individuals unsuitable for gun ownership.</p>\n<p>I think I have sensible compromises to offer on both of these issues.</p>\n<p>If the gun industry thinks posting guards at our schools is so important, then\nthey should foot the bill. There are about 250,000 schools in this country.\nSmaller schools might only need one guard; some might need a handful. Let&#39;s be\nreasonable, and suggest annual salary, including benefits of $60,000 per guard.\nOh, and perhaps we should consider movie theaters too, and a few other venues,\nwherever people might be vulnerable to a nutjob with an Uzi. Maybe the NRA\nitself could bring this proposal back to its membership and to the industry that\nfunds it. It probably shouldn&#39;t cost much more than $100 billion annually.</p>\n<p>And second, as to the mental health issue, this one could be even easier. Guns\nthat fire dozens or hundreds of rounds a minute, and the clips that feed them,\nguns that can&#39;t be used for hunting and are not appropriate to defending one&#39;s\nhome, that&#39;s just crazy right? So let&#39;s codify that. We want to keep guns out of\nthe hands of those with dangerous psychoses. Why don&#39;t we simply consider the\nownership of, or the desire to own, assault weapons and ammunition definitive\nevidence of such a dangerous mental illness?</p>\n<p>Problems solved!</p>\n"
+    },
+    {
+        "Title": "Elect Leaders, not Poll-Watchers",
+        "Date": "2012-11-18",
+        "Tags": [
+            "Leadership",
+            "Politicians"
+        ],
+        "People": [
+            "Steven Schuster"
+        ],
+        "Content": "<p>I must respectfully disagree with part of <a href=\"#/person/Steven+Schuster\">Steven Schuster</a>&#39;s reflection from last\nweek. While our representatives should certainly listen to our views, they\nshould never govern based upon poll numbers. We should elect people based upon\ntheir convictions – as demonstrated by their words and their records – and based\nupon their having the strength of character to be able to both stand up for\ntheir beliefs most of the time but also to be able to change their positions in\nthe face of additional evidence or changing circumstances.</p>\n<p>In short, we have to choose leaders, not poll-watchers.</p>\n"
+    },
+    {
+        "Title": "Fooled by a Hoax Email",
+        "Date": "2012-11-13",
+        "Tags": [
+            "Fact Checking",
+            "Hoax",
+            "Executive Orders",
+            "Barrack Obama"
+        ],
+        "People": [
+            "Richard Lindstrom",
+            "Chuck Corso"
+        ],
+        "Content": "<p>Some people, when presented with actual facts that contradict their\nopinions, own up to their mistakes.  I&#39;ve given up on <a href=\"#/person/Chuck+Corso\">Chuck Corso</a>.\nHe&#39;d rather make up insulting nicknames or stick his fingers in his\nears and pretend he can&#39;t hear, or engage in other grade-school\nbehavior.</p>\n<p>I&#39;m hoping that <a href=\"#/person/Richard+Lindstrom\">Richard Lindstrom</a> will be able to admit his mistake.\nHe was taken in by a hoax email circulating regarding executive\norders.  I&#39;d suggest that when something outrageous like this comes\nalong, the recipient should do a little research before passing it on,\nespecially in a letter to the editor.  Such research should not be\nthrough a biased news outlet, such as MSNBC on the left or Fox, which\nmight as well be the propaganda department of the Republican Party.\nThere are plenty of non-partisan fact-checking organizations out\nthere.  My personal choice for urban legend checking is a website\ncalled snopes.com.  For politics, I choose FactCheck.org.  But there\nare many other equally worthy ones.</p>\n<p>FactCheck.org recently debunked the email Lindstrom was obviously\nquoting:  <a href=\"http://www.factcheck.org/2012/09/obamas-executive-orders/\">http://www.factcheck.org/2012/09/obamas-executive-orders/</a>.\nSnopes also reports it as false:\n<a href=\"http://www.snopes.com/politics/obama/executiveorders.asp\">http://www.snopes.com/politics/obama/executiveorders.asp</a>.</p>\n<p>What&#39;s really amusing is that Obama in fact has the fewest executive\norders of any president since Chester Arthur, according to the\nAmerican Presidency Project.  Instead of the 923 Lindstrom cited, this\nsite says there are 138, although I believe there has been one more\nissued since their data was collected on Sept. 20.  You can see the\nentire list at <a href=\"http://www.presidency.ucsb.edu/data/orders.php\">http://www.presidency.ucsb.edu/data/orders.php</a>.</p>\n<p>Please, folks, take a moment to think over this sort of email.  If it\nseems outlandish, designed to boil your blood, perhaps it in fact was\nintentionally designed exactly that way.</p>\n"
+    },
+    {
+        "Title": "Simple Economics",
+        "Date": "2012-10-30",
+        "Tags": [
+            "Economy",
+            "Barrack Obama"
+        ],
+        "People": [
+            "Chuck Corso"
+        ],
+        "Content": "<p>Would it be worse if <a href=\"#/person/Chuck+Corso\">Chuck Corso</a> is cynically pretending the poor economy is\nObama&#39;s fault or if he&#39;s bamboozled enough to believe it? I said Obama didn&#39;t\ncreate the economic mess. Corso assumed I&#39;m blaming Bush. Bush deserves some\nblame, but the problems developed over a generation. Deregulation frenzy started\nunder Reagan, lasting twenty-eight years. The Glass-Steagall act was repealed\nunder Clinton. Dodd contributed. Even Goldwater gets blame -- for starting the\nmovement.</p>\n<p>Corso compares the 7.8% 2009 unemployment rate with today&#39;s 8.1%. Should we\nblame Reagan for the increase from 7.5% to 10.8% in October, 1982? How about\nBush Sr., who oversaw it rise from 5.4% to 7.3%? Bush Jr. inherited 4.2% from\nClinton and ended at 7.8%. Was that his fault? Can we concede that presidents\nhave limited influence on unemployment?</p>\n<p>Then there&#39;s decreasing median income. Fewer jobs, lower average income: very\nsimple. Median income peaked at the end of the Clinton years; it&#39;s been falling\nsince, with a minor increase 2004-2007. Our tax policy favors the wealthy. Is it\nsurprising average citizens aren&#39;t doing well?</p>\n<p>Next: gasoline prices, which parallel the global economy. If Obama is\nresponsible for increased fuel prices, he&#39;s also responsible for the economic\nimprovement. If it&#39;s just about price, the record high occurred during the Bush\nadministration.</p>\n<p>Finally, national debt: federal debt increased 51% during Obama&#39;s first term.\nWhy is Corso complaining now? I don&#39;t remember his complaint when the debt\nnearly doubled during the Bush, Jr. administration or tripled during the Reagan\nyears. For Bush Sr. it grew by 54%.</p>\n<p>Our president bears little blame for the economic mess. These are nobody&#39;s stale\ntalking points. They are simple economic facts.</p>\n"
+    },
+    {
+        "Title": "Dysfunctional Republicans",
+        "Date": "2012-09-17",
+        "Tags": [
+            "Mitt Romney",
+            "Barrack Obama"
+        ],
+        "People": [],
+        "Content": "<p>There&#39;s something terribly sad when the Republican candidate for President has\nto lie about his greatest accomplishment as governor, pretending it didn&#39;t\nhappen, because his rival copied it nationally, and Republican orthodoxy insists\nanything this opponent does is inherently wrong.</p>\n<p>Now this dysfunctional party, which spent the primary trying not to nominate\nMitt Romney, is trying to pretend it enthusiastically supports him. Their only\nreason: they&#39;ve grown accustomed to power, having won seven of the last eleven\ncontests. Why else would Republican leaders publicly admit that Obama&#39;s defeat\nwas their most important legislative goal?</p>\n<p>Bloomberg recently analyzed job creation since 1960; the numbers aren&#39;t good for\nRepublicans. Only 24 million private-sector jobs were added when a Republican\nwas in the White House. But 42 million were added during Democratic\nadministrations. The Democrats did more than twice as well per month: 150,000\nversus 71,000.</p>\n<p>Exactly what were the arguments for choosing Romney? Obama did not create the\nmess. He&#39;s started cleaning it up. He&#39;s been hindered by Republican\nobstructionism. The Democrats do much better at creating jobs. The Republican\nParty is influenced by fanatics unwittingly serving the interests of right-wing\nbillionaires. Mitt Romney&#39;s plans are filled with simplistic rhetoric, but\ndevoid of specifics. (Is this man allergic to details?) The only argument that\nmakes any sense is that the Republicans might be less obstructive to Romney.\nEven if this were true -- and the Tea Party&#39;s disdain for him makes that\nquestionable -- is our country going to submit to blackmail?</p>\n<p>The Republicans have made a disastrous mistake. In their zeal to prevent the\nPresident from succeeding, they have also inhibited our nation&#39;s success. We\nmust show them the error of their ways on Election Day.</p>\n"
+    },
+    {
+        "Title": "Charter Review",
+        "Date": "2012-02-12",
+        "Tags": [
+            "Andover",
+            "Charter"
+        ],
+        "People": [],
+        "Content": "<p>In all the discussions about the proposed changes to Andover’s Charter, one\nthing seems to be missing: the actual details of the changes. I’m trying to\nrectify that.</p>\n<p>I have collected the current charter, the version created by the Charter Review\nCommission, and the quite different one submitted for referendum. They are all\nposted at <a href=\"http://charter.andoverct.info/\">http://charter.andoverct.info/</a> .</p>\n<p>I’m hoping, as time permits, to add some analysis of the actual changes between\nversions (and if anyone wants to contribute, I’d love the help!) But for the\nmoment, you can at least read all of the raw documents in one place.</p>\n"
+    },
+    {
+        "Title": "We Need Julia",
+        "Date": "2011-04-18",
+        "Tags": [
+            "Andover",
+            "Charter",
+            "Endorsement"
+        ],
+        "People": [],
+        "Content": "<p>During the past five years, Andover has suffered through some terrible financial\ntimes, starting with the debacle of the Barnett administration and continuing\nthrough the ongoing fallout of the Bush recession. I don&#39;t envy Bob Burbank the\njob he&#39;s had to face as First Selectman. Just keeping the lights on in these\nconditions is a major accomplishment. Bob Burbank has done a credible job. So\nI&#39;m somewhat sorry not to be endorsing Bob for another term. But it&#39;s time for\nsomething more than just credible; it&#39;s time to put Andover back on the right\ntrack.</p>\n<p>So it&#39;s with great pleasure that I recommend Julia Haverl. Her years of deep\ninvolvement in our community speak for themselves. It&#39;s hard to think of anyone\nwho&#39;s done more for the town.</p>\n<p>But it&#39;s her ability to bring together disparate groups that will be her\nstrongest asset. Andover has so many serious problems right now, and the fact\nthat different interest groups are fighting for pieces of a shrinking fiscal pie\nhas made our civic discourse far too discordant.</p>\n<p>We need a First Selectman who can comfortably work with everyone, bringing\ntogether all of the community into constructive dialog. We need someone who can\ndiscover creative solutions to our budget problems. We need someone who can help\nus restore the basic services that have been whittled away for years. We need\nsomeone who can steer us back in the direction this great town should be\nheading.</p>\n<p>We need Julia.</p>\n<p>Please vote for her Monday, May 2.</p>\n"
+    },
+    {
+        "Title": "Neanderthals, Deconstructionists, and Republicans",
+        "Date": "2010-11-14",
+        "Tags": [
+            "Elections",
+            "Neanderthal",
+            "Derrida"
+        ],
+        "People": [
+            "Margaret McCutcheon Faber",
+            "Robert Kodym",
+            "Dick Shea"
+        ],
+        "Content": "<p>Three quick responses to letters in the November 12 issue. First, to that most\nelegantly literate Neanderthal, <a href=\"#/person/Margaret+McCutcheon+Faber\">Margaret McCutcheon Faber</a>: Thank you so much;\nI&#39;ve smiled all weekend long. Those upstart Cro-Magnons ain&#39;t got nothing on\nyou!</p>\n<p>To <a href=\"#/person/Robert+Kodym\">Robert Kodym</a>: You regular contributions to these pages are always worth\nreading, if not necessarily for the reasons you intend. This last was more\ninscrutable than usual, though. I have a question for you, and for all disciples\nof Derrida. Did you realize that words can also be used to communicate with\nothers?</p>\n<p>And, on a more serious note, to <a href=\"#/person/Dick+Shea\">Dick Shea</a>: Instead of assuming that your fellow\nstate residents incompetently voted against their own interests, shouldn&#39;t\nyou consider that perhaps they simply disagree with you? I&#39;m on the other\nside, fairly happy with the state results and disappointed with the national\nones. I find it distressing that nationally voters held the Democrats\naccountable for not solving in two years the problems it took Republicans a\ngeneration to create. But I won&#39;t imply that the other side is stupid or\nincompetent. I wish you would extend us the same courtesy.</p>\n"
+    },
+    {
+        "Title": "For The People",
+        "Date": "2010-10-12",
+        "Tags": [
+            "Economy",
+            "Deregulation",
+            "Tea Party",
+            "Republicans"
+        ],
+        "People": [
+            "Margaret McCutcheon Faber",
+            "Robert Kodym",
+            "Dick Shea"
+        ],
+        "Content": "<p>The last time the banks almost destroyed our economy, the United States pieced\ntogether a New Deal that said people are more important than big business and\nthat government would provide a check on corporate excesses. For the next two\ngenerations, our middle class grew and prospered and poverty fell sharply.</p>\n<p>But since then, three decades of deregulation have reversed this course. The\nmiddle class has stagnated, poverty has skyrocketed, and the only ones\nbenefiting are the rich. We&#39;ve managed to build a government of the wealthy, by\nthe wealthy, and for the wealthy. We&#39;ve even fought two wars in Iraq to promote\nthe interests of oil giants. (If you don&#39;t believe oil was the reason, answer\nthis: Would we have fought two wars there if Iraq was the world&#39;s third-largest\nproducer of carrots?) Meanwhile, the American dream has slipped further away\nfrom us. Once again the banks nearly destroyed our economy.</p>\n<p>An angry response has arisen, in the form of the Tea Party movements. The anger\nis legitimate, but it is not properly directed. For the past two years, the\nDemocrats have worked to restore some measure of sanity, to reiterate that\ngovernment is to serve the interests of the people, and not those of Wall\nStreet. The Republicans have opposed them in lock-step, promoting cynical\npolitical calculations rather than principled stands. We should be angry at\nthese Republicans.</p>\n<p>President Bush&#39;s TARP program prevented a total collapse of the banking system,\nbut when it came to adding accountability for those who caused the disaster, the\nRepublicans said no. President Obama&#39;s stimulus program has prevented the loss\nof millions more jobs, but when it came to expanding it to help additional\nsuffering Americans, the Republicans said no. And when the Democrats made a\ngenerations-overdue attempt to rein in the spiraling health-care costs, the\nRepublicans again said no. They&#39;ll claim concern for the deficit, but when they\nwere in charge, the federal debt rose at an historic 8.3% per year.</p>\n<p>Now in Connecticut, the Republicans are putting up multi-millionaire candidates\nfor office, using vast personal fortunes to try to buy their way into office. I\nguess they really do figure that if the government is going to be for the\nwealthy, it should be by the wealthy. They&#39;re wrong. The government should be on\nthe side of average Americans. To the party of No, we need to say one thing: No.</p>\n"
     }
 ]
