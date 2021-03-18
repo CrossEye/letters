@@ -46,6 +46,18 @@ ul.long li a:hover {
   background-color: var(--primary-accent);
 }
 
+#search-results li a {
+    background-color: var(--primary-highlight);
+}
+
+#search-results li a:hover {
+    background-color: var(--primary-accent);
+}
+
+#search-results span.match {
+    background-color: var(--primary-accent);
+}
+
 .sidebar {
   background-color: var(--secondary-background);
   color: var(--secondary-text);
@@ -235,6 +247,10 @@ ul.long li, ul.long li a {
   width: 100%
 }
 
+#search-results ul.letter li {
+  padding: .75rem 0;
+}
+
 .main li {
   margin-top: .5rem;
 }
@@ -268,7 +284,6 @@ ul.long li, ul.long li a {
   list-style: none;
 }
   
-  
 #searchBox input {
   width: 75%;
   padding: 0 1rem;
@@ -297,6 +312,9 @@ ul.long li a:hover {
   padding: .2rem;
 }
 
+#search-results .snippet {
+  padding: 0 1rem;
+}
 
 
 /*  Typography  */
@@ -359,6 +377,9 @@ h2 {
   cursor: pointer;
 }
 
+#search-results .snippet {
+  font-style: italic;
+}
 /*  Responsiveness  */
 
 @media only screen and (max-width: 900px) {

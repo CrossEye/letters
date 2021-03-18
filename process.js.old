@@ -5,9 +5,9 @@ const counts = (fn) => (xs) =>
   xs .reduce ((a, x) => (fn (x) || []) .reduce ((a, v) => ((a[v] = (a[v] || 0) + 1), a), a), {})
 const identity = (x) => x
 const shortDate = (ds) =>  `${Number(ds.slice(5, 7))}/${Number(ds.slice(8,10))}/${ds.slice(2, 4)}`
-const longDate = ((months) => (ds) => `${months[Number(ds.slice(5, 7) - 1)]} ${Number(ds.slice(8,10))}, ${ds.slice(0, 4)}`)
-  (['January', 'February', 'March', 'April', 'May', 'June', 'July', 
-    'August', 'September', 'October', 'November', 'December']) 
+const longDate = ((months) => (ds) => 
+  `${months[Number(ds.slice(5, 7) - 1)]} ${Number(ds.slice(8,10))}, ${ds.slice(0, 4)}`
+)(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']) 
 const call = (fn, ...args) => fn (args)
 const getYear = ({Date}) => Date .slice (0, 4)
 const groupBy = (fn) => (xs) =>
@@ -15,10 +15,6 @@ const groupBy = (fn) => (xs) =>
     (a, x) => call ((key) => ((a[key] = a[key] || []), (a [key] .push (x)), a), fn(x)),
     {}
   ))
-const clamp = (min, max) => (n) =>
-  Math.min (Math.max (min, n), max)
-const findAllIndices = (x) => (xs, pos = 0, idx = xs .indexOf (x, pos)) =>
-  idx == -1 ? [] : [idx, ...findAllIndices (x) (xs, idx + 1)]
 const oxfordJoin = (xs) =>
   xs .length == 0
     ? ''
@@ -27,6 +23,8 @@ const oxfordJoin = (xs) =>
   : xs.length == 2
     ? xs .join (' and ')
   : [xs.slice(0, -1).join(', '), last(xs)] .join(', and ')
+const findAllIndices = (x) => (xs, pos = 0, idx = xs .indexOf(x, pos)) =>
+  idx == -1 ? [] : [idx, ...findAllIndices (x) (xs, idx + 1)]
 
 const tagSort = ([a, x], [b, y]) => 
   y - x || (a < b ? -1 : a > b ? 1 : 0)
@@ -178,95 +176,49 @@ const makeLetters = (content) => `    <h1>All Letters</h1>
     ${content .map (letterLink) .join ('\n        ')}
   </ul>`
 
+const newSearch = (id) => {
+  document.location.href = `#/search/${encodeURIComponent(document.getElementById(id || 'search').value).replace(/\%20/g, '+')}`
+}
+
 const chooseTheme = (name) => {
   themes.choose(name);
   localStorage .setItem ('letters', JSON.stringify({...JSON.parse(localStorage.getItem('letters')), theme: name}))
   document.location.hash = document.location.hash .slice (document.location.hash .slice(1).indexOf('#') + 1) || '#/'
 }
 
-const makeThemeSwitcher = () => `<h1>Choose Theme</h1><div class="themes">
-${Object.entries(themes.icons).map(([name, icon]) => 
-  `<button onClick="chooseTheme('${name}')">${icon}<span>${name}</span></button>`) .join('\n    ')}</div>`
-
-const newSearch = (id) => {
-  document.location.href = `#/search/${encodeURIComponent(document.getElementById(id || 'search').value).replace(/\%20/g, '+')}`
-}
-
 const getMatches = (content, query) => {
   const test = query .toLowerCase ()
-  return content .map (({Title, Date, Text, TextLower}) => {
-    const max = TextLower.length - 1
-    return [Title, Date, findAllIndices (test) (TextLower) .map (i => {
-      const start = clamp (0, max) (i - Math.floor (Math.random() * 50 + 50))
-      const end = clamp (0, max) (i + query.length + Math.floor (Math.random() * 50 + 50))
-      return `${Text .slice (start, i) .replace (/^\S*\s/, '') .replace (/\n/g, ' ')
-             }<span class="match">${Text.slice (i, i + query.length)}</span>${
-              Text .slice (i + query.length, end).replace(/\s\S*$/, '') .replace(/\n/g, ' ')}`
-    })] 
+  content.map(({TextLower, Title}) => {
+    
   })
-  .filter (([_, __, r]) => r .length > 0) 
-  .map (([Title, Date, Snippets]) => ({Title, Date, Snippets}))
 }
 
-const makeSnippet = ({Date, Title, Snippets}) =>
-  `<li>
-    <a href="#/${Date}">${Title} <span>(${shortDate(Date)})</span></a>
-    <div class="snippet">... ${Snippets .slice(0, 3).join(' ... <br/> ...')} ...</div>  
-  </li>`
-
-
-const makeSearch = (el, content, q) => {
-  const query = q.toLowerCase()
+const makeSearch = (el, content, query) => {
   const matches =
     query .length 
-      ? getMatches (content, query)
+      ? content.filter(({TextLower}) => TextLower.includes (query.toLowerCase()))
       : []
-  const tags = gather ('Tags', content, tagSort) .filter (([tag]) => tag .toLowerCase () .includes (query)) 
-  const people = gather ('People', content, personSort) .filter (([person]) => person .toLowerCase () .includes (query))
-  
   el .innerHTML =  `    <h1>Search</h1>
   <p id="searchBox">
     <input id="search" type="text" value="${query}"/>
     <button id="sbb" type="button" class="search" title="Search"">\u2315</button>
   </p>
-  ${query 
-      ? matches .length > 0  || tags.length > 0 || people.length > 0 
-        ? `<h2>Results</h2>
-           <div id="search-results">
-            ${tags.length > 0 
-               ? `<h4>Topics</h4>
-                  <ul class="long topics">
-                    ${tags .map ((Tag) => `<li>${makeLink('tag')(Tag)}</li>`) .join ('\n        ')}
-                  </ul>`
-               : ``
-             }
-             ${people.length > 0 
-               ? `<h4>People</h4>
-                  <ul class="long people">
-                    ${people .map ((Person) => `<li>${makeLink('person')(Person)}</li>`) .join ('\n        ')}
-                  </ul>`
-               : ``
-             }
-            ${matches.length > 0 
-               ? `<h4>Letters</h4>
-                  <ul class="long letters">
-                    ${matches .map (makeSnippet) .join ('\n        ')}
-                  </ul>`
-               : ``
-             }
-           </div>`
-        : `<h2>No Results</h2>`
-      : ``
-  }`
-
-
-
+  ${query ? `<h2>${matches .length > 0 ? '' : 'No '}Results</h2>` : ``}
+  ${matches .length > 0 ? `<h3>Letters</h3>
+  <ul class="long">
+  ${matches .map (letterLink) .join ('\n        ')}
+  </ul>` : ``}`
   const button = document .getElementById ('sbb')
   button .onclick = () => newSearch()
   document .getElementById ('search') .addEventListener ('keyup', (e) => {
       if (e.key == 'Enter') {button .click ()}
   })
+  document .getElementById ('search') .focus ()
 }
+
+const makeThemeSwitcher = () => `<h1>Choose Theme</h1><div class="themes">
+${Object.entries(themes.icons).map(([name, icon]) => 
+  `<button onClick="chooseTheme('${name}')">${icon}<span>${name}</span></button>`) .join('\n    ')}</div>`
 
 const updateCurrent = ({Date, Tags, Title}) => {
   document .getElementById ('currentLetter') .innerHTML = 
@@ -327,5 +279,4 @@ const updateCurrent = ({Date, Tags, Title}) => {
     window .addEventListener ('popstate', () => setTimeout (route, 0))
     route ()
 }) (content)
-
 
