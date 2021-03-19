@@ -1,5 +1,5 @@
-const themes = ((defaultTheme = 'Echo Beach', colors = {
-  "Echo Beach": {
+const themes = ((defaultTheme = 'Rockaway Beach', colors = {
+  "Rockaway Beach": {
     "neutral": "#d7e3e5",
     "border": "#aa938f",
     "accent": "#666666",
@@ -17,7 +17,7 @@ const themes = ((defaultTheme = 'Echo Beach', colors = {
     "tertiary-accent": "#b7ccd2"
   },
   "Songs from the Woods": {
-    "neutral": "#99D98C",
+    "neutral": "#D9ED92",
     "border": "#333333",
     "accent": "#52B69A",
     "primary-background": "#76C893",
