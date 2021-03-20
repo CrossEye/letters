@@ -108,6 +108,9 @@ button, input {
   color: inherit;
 }
 
+#searchBox input {
+  background-color: var(--neutral);
+}
 
 /*  Borders  */
 
@@ -320,6 +323,9 @@ ul.long li a:hover {
   padding: 0 1rem;
 }
 
+#searchBox input:focus {
+  outline: none;
+}
 
 /*  Typography  */
 
@@ -368,7 +374,6 @@ h2 {
   
 #searchBox input {
   font-size: 1.5rem;
-  background-color: var(--neutral);
 }
 
 #searchBox button {

@@ -263,9 +263,11 @@ const makeSearch = (el, content, q) => {
 
   const button = document .getElementById ('sbb')
   button .onclick = () => newSearch()
-  document .getElementById ('search') .addEventListener ('keyup', (e) => {
+  const searchBox = document .getElementById ('search') 
+  searchBox .addEventListener ('keyup', (e) => {
       if (e.key == 'Enter') {button .click ()}
   })
+  searchBox .focus ()
 }
 
 const updateCurrent = ({Date, Tags, Title}) => {
