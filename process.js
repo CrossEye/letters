@@ -17,6 +17,13 @@ const groupBy = (fn) => (xs) =>
   ))
 const clamp = (min, max) => (n) =>
   Math.min (Math.max (min, n), max)
+const matches = (regex) => (str) =>
+  regex .test (str)
+const equals = (s1) => (s2) => 
+  s1 === s2
+const startsWith = (prefix) => s =>
+  s .startsWith (prefix)
+const noop = () => {}
 const findAllIndices = (x) => (xs, pos = 0, idx = xs .indexOf (x, pos)) =>
   idx == -1 ? [] : [idx, ...findAllIndices (x) (xs, idx + 1)]
 const oxfordJoin = (xs) =>
@@ -290,32 +297,27 @@ const updateCurrent = ({Date, Tags, Title}) => {
       `The <a href="#/${Date}">most recent letter</a>, from ${longDate(Date)}, is titled "${Title}", and discusses the ${Tags.length == 1 ? 'subject' : 'subjects'} of ${oxfordJoin (Tags .map (makeTagLink))}.`
 }
 
-const router = (lookups, base) => () => {
-  const main = document .getElementById ('main')
-  const hash = document.location.hash
-  window .scrollTo (0, 0)
-  if (hash) {
-    if (hash == '#/') {
-      makeBase (base) (main, content, hash)
-    } else if (/^#\/\d{4}-\d{2}-\d{2}$/ .test (hash)) {
-      makeLetter (lookups) (main, content, hash)
-    } else if (hash.startsWith('#/tag/')) {
-      makeTag (main, content, hash)
-    } else if (hash.startsWith('#/person/')) {
-      makePerson (main, content, hash)
-    } else if (hash == '#/tags/') {
-      makeTags (main, content, hash)
-    } else if (hash == '#/people/') {
-      makePeople (main, content)
-    } else if (hash == '#/letters/') {
-      makeLetters (main, content)
-    } else if (hash .startsWith('#/search/')) {
-      makeSearch (main, content, hash)
-    } else if (hash .startsWith('#/themes/')) {
-      makeThemeSwitcher (main, content, hash)
+const router = (lookups, base) => {
+  const routes = [
+    [equals      ('#/'),                      makeBase (base)],
+    [matches     (/^#\/\d{4}-\d{2}-\d{2}$/),  makeLetter (lookups)],
+    [startsWith  ('#/tag/'),                  makeTag],
+    [startsWith  ('#/person/'),               makePerson],
+    [equals      ('#/tags/'),                 makeTags],
+    [equals      ('#/people/'),               makePeople],
+    [equals      ('#/letters/'),              makeLetters],
+    [startsWith  ('#/search/'),               makeSearch],
+    [startsWith  ('#/themes/'),               makeThemeSwitcher]
+  ]
+  return () => {
+    const main = document .getElementById ('main')
+    const hash = document.location.hash
+    window .scrollTo (0, 0)
+    if (hash) {
+      (routes .find (([pred]) => pred (hash)) || [, noop]) [1] (main, content, hash)
+    } else {
+      document.location.hash = '#/'
     }
-  } else {
-    document.location.hash = '#/'
   }
 }
 
