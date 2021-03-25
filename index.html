@@ -467,7 +467,7 @@ const themes = ((defaultTheme = 'Rockaway Beach', colors = {
     "accent": "#666666",
     "primary-background": "#daad86",
     "primary-text": "#333333",
-    "primary-highlight": "#bc986a",
+    "primary-highlight": "#bc986c",
     "primary-accent": "#659dbd",
     "secondary-background": "#bc986c",
     "secondary-text": "#fbeec1",
@@ -773,8 +773,6 @@ const makeLetter = (lookups) => (main, contents, hash) => {
   } else {
     document.location.hash = '#/'
   }
-
-
 }
 
 const makeTag = (main, content, hash) => {
@@ -920,45 +918,49 @@ const updateCurrent = ({Date, Tags, Title}) => {
       `The <a href="#/${Date}">most recent letter</a>, from ${longDate(Date)}, is titled "${Title}", and discusses the ${Tags.length == 1 ? 'subject' : 'subjects'} of ${oxfordJoin (Tags .map (makeTagLink))}.`
 }
 
-// TODO: clean this up!!
+const router = (lookups, base) => () => {
+  const main = document .getElementById ('main')
+  const hash = document.location.hash
+  window .scrollTo (0, 0)
+  if (hash) {
+    if (hash == '#/') {
+      makeBase (base) (main, content, hash)
+    } else if (/^#\/\d{4}-\d{2}-\d{2}$/ .test (hash)) {
+      makeLetter (lookups) (main, content, hash)
+    } else if (hash.startsWith('#/tag/')) {
+      makeTag (main, content, hash)
+    } else if (hash.startsWith('#/person/')) {
+      makePerson (main, content, hash)
+    } else if (hash == '#/tags/') {
+      makeTags (main, content, hash)
+    } else if (hash == '#/people/') {
+      makePeople (main, content)
+    } else if (hash == '#/letters/') {
+      makeLetters (main, content)
+    } else if (hash .startsWith('#/search/')) {
+      makeSearch (main, content, hash)
+    } else if (hash .startsWith('#/themes/')) {
+      makeThemeSwitcher (main, content, hash)
+    }
+  } else {
+    document.location.hash = '#/'
+  }
+}
+
 ((content) => {
     const lookups = Object.fromEntries(content .map (letter => [letter.Date, letter]))
-    updateCurrent (content[0])
     const base = document .getElementById ('main') .innerHTML
-    const route = () => {
-      const main = document .getElementById ('main')
-      const hash = document.location.hash
-      window .scrollTo (0, 0)
-      if (hash) {
-        if (hash == '#/') {
-          makeBase (base) (main, content, hash)
-        } else if (/^#\/\d{4}-\d{2}-\d{2}$/ .test (hash)) {
-          makeLetter (lookups) (main, content, hash)
-        } else if (hash.startsWith('#/tag/')) {
-          makeTag (main, content, hash)
-        } else if (hash.startsWith('#/person/')) {
-          makePerson (main, content, hash)
-        } else if (hash == '#/tags/') {
-          makeTags (main, content, hash)
-        } else if (hash == '#/people/') {
-          makePeople (main, content)
-        } else if (hash == '#/letters/') {
-          makeLetters (main, content)
-        } else if (hash .startsWith('#/search/')) {
-          makeSearch (main, content, hash)
-        } else if (hash .startsWith('#/themes/')) {
-          makeThemeSwitcher (main, content, hash)
-        }
-      } else {
-        document.location.hash = '#/'
-      }
-    }
+
+    const route = router (lookups, base)
+
     const div = document.createElement('div')
     content .forEach (letter => {
       div .innerHTML = letter .Content
       letter .Text = div .textContent
       letter .TextLower = letter .Text .toLowerCase ()
     })
+
+    updateCurrent (content[0])
 
     makeSidebar (
       content, 

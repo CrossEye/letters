@@ -56,7 +56,7 @@ const themes = ((defaultTheme = 'Rockaway Beach', colors = {
     "accent": "#666666",
     "primary-background": "#daad86",
     "primary-text": "#333333",
-    "primary-highlight": "#bc986a",
+    "primary-highlight": "#bc986c",
     "primary-accent": "#659dbd",
     "secondary-background": "#bc986c",
     "secondary-text": "#fbeec1",
