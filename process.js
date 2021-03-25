@@ -49,13 +49,13 @@ const makeTagLink = (Tag) =>
   `<a href="#/tag/${Tag.replace(/ /g, '+')}">${Tag}</a>`
 
 
-const makeSidebar = (content, {ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 4}) => {
+const makeSidebar = (content, {letterAboveFold = 5, yearsAboveFold = 3, tagsAboveFold = 8, peopleAboveFold = 4}) => {
     const tags = gather ('Tags', content, tagSort)
     const people = gather ('People', content, personSort)
-    const recentLetters = content .slice (0, ltrNbr)
-    const years = groupBy (getYear) (content .slice (ltrNbr)) .sort (([a], [b]) => b - a)
-    const initialYears = years .slice (0, moreYears)
-    const laterYears = years .slice (moreYears)
+    const recentLetters = content .slice (0, letterAboveFold)
+    const years = groupBy (getYear) (content .slice (letterAboveFold)) .sort (([a], [b]) => b - a)
+    const initialYears = years .slice (0, yearsAboveFold)
+    const laterYears = years .slice (yearsAboveFold)
 
     const html = `<div class="sidebar box">
     <p id="searchWidget">
@@ -91,22 +91,22 @@ const makeSidebar = (content, {ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 
     </details>
     <h2><a href="#/tags/">Topics</a></h2>
     <ul>
-    ${tags .slice (0, tagNbr) .map (makeLink ('tag')) .join ('\n    ')}
+    ${tags .slice (0, tagsAboveFold) .map (makeLink ('tag')) .join ('\n    ')}
     </ul>
-    ${tags.length > tagNbr ? `    <details class="more">
+    ${tags.length > tagsAboveFold ? `    <details class="more">
         <summary>More...</summary>
         <ul>
-            ${tags .slice (tagNbr) .map (makeLink ('tag')) .join ('\n        ')}
+            ${tags .slice (tagsAboveFold) .map (makeLink ('tag')) .join ('\n        ')}
         </ul>
     </details>` : ``}
     <h2><a href="#/people/">Other Letter Writers</a></h2>
     <ul>
-    ${people .slice (0, prsnNbr) .map (makeLink ('person')) .join ('\n    ')}
+    ${people .slice (0, peopleAboveFold) .map (makeLink ('person')) .join ('\n    ')}
     </ul>
-    ${people.length > prsnNbr ? `    <details class="more">
+    ${people.length > peopleAboveFold ? `    <details class="more">
         <summary>More...</summary>
         <ul>
-            ${people .slice (prsnNbr) .map (makeLink ('person')) .join ('\n        ')}
+            ${people .slice (peopleAboveFold) .map (makeLink ('person')) .join ('\n        ')}
         </ul>
     </details>` : ``}
 
@@ -118,11 +118,15 @@ const makeSidebar = (content, {ltrNbr = 5, moreYears = 3, tagNbr = 8, prsnNbr = 
   const themeButton = document.getElementById('thm')
   themeButton.onclick = () => document.location.href = '#/themes/' + document.location.hash
   }
+const makeBase = (base) => (main, contents, hash) =>
+  main .innerHTML = base
 
-const makeLetter = (contents, letter) => {
+const makeLetter = (lookups) => (main, contents, hash) => {
+  const letter = lookups [hash .slice (2)];
+  if (letter) {
     const prev = contents [contents .indexOf (letter) + 1]
     const next = contents [contents .indexOf (letter) - 1]
-    return `
+    main .innerHTML = `
     <h1>${letter.Title}</h1>
     ${letter.Tags.length ? `<ul class="tags">
     ${letter.Tags .map (tag => `<li><a href="#/tag/${tag.replace(/ /g, '+')}">${tag}</a></li>`) .join ('\n    ')}
@@ -137,13 +141,18 @@ const makeLetter = (contents, letter) => {
       <div id="prev"${prev ? `title="${shortDate(prev.Date)}` : ``}">${prev ? `<a href="#/${prev.Date}">« ${prev.Title}</a>` : ``}</div>
       <div id="home" title="Overview"><a href="#/">Home</a></div>
       <div id="next"${next ? `title="${shortDate(next.Date)}` : ``}">${next ? `<a href="#/${next.Date}">${next.Title} »</a>` : ``}</div>
-    </nav>
-`
+    </nav>`
+  } else {
+    document.location.hash = '#/'
+  }
+
+
 }
 
-const makeTag = (content, tag) => {
+const makeTag = (main, content, hash) => {
+    const tag = hash .slice (6) .replaceAll('+', ' ')
     const letters = content .filter (({Tags}) => Tags .includes (tag))
-    return `
+    main.innerHTML = `
     <h1>Letters tagged "${tag}"</h1>
     <ul class="long">
       ${letters .map (letter => 
@@ -152,9 +161,10 @@ const makeTag = (content, tag) => {
     </ul>`
 }
 
-const makePerson = (content, person) => {
+const makePerson = (main, content, hash) => {
+    const person = hash .slice (9) .replaceAll('+', ' ')
     const letters = content .filter (({People}) => People .includes (person))
-    return `
+    main.innerHTML = `
     <h1>Letters mentioning Rivereast letter writer ${person}</h1>
     <ul class="long">
       ${letters .map (letter => 
@@ -163,17 +173,20 @@ const makePerson = (content, person) => {
     </ul>`
 }
 
-const makeTags = (content) => `    <h1>All Tags</h1>
+const makeTags = (main, content, hash) => 
+    main.innerHTML = `<h1>All Tags</h1>
     <ul class="long">
       ${gather ('Tags', content, alphaTagSort) .map (makeLink ('tag')) .join ('\n        ')}
     </ul>`
 
-const makePeople = (content) => `    <h1>All Letter Writers</h1>
+const makePeople = (main, content) => 
+  main.innerHTML = `<h1>All Letter Writers</h1>
   <ul class="long">
     ${gather ('People', content, alphaPersonSort) .map (makeLink ('person')) .join ('\n        ')}
   </ul>`
 
-const makeLetters = (content) => `    <h1>All Letters</h1>
+const makeLetters = (main, content) => 
+  main.innerHTML = `<h1>All Letters</h1>
   <ul class="long">
     ${content .map (letterLink) .join ('\n        ')}
   </ul>`
@@ -184,9 +197,13 @@ const chooseTheme = (name) => {
   document.location.hash = document.location.hash .slice (document.location.hash .slice(1).indexOf('#') + 1) || '#/'
 }
 
-const makeThemeSwitcher = () => `<h1>Choose Theme</h1><div class="themes">
-${Object.entries(themes.icons).map(([name, icon]) => 
-  `<button onClick="chooseTheme('${name}')">${icon}<span>${name}</span></button>`) .join('\n    ')}</div>`
+const makeThemeSwitcher = (main, content, hash) => {
+  main.innerHTML = `<h1>Choose Theme</h1><div class="themes">
+  ${Object.entries(themes.icons).map(([name, icon]) => 
+    `<button onClick="chooseTheme('${name}')">${icon}<span>${name}</span></button>`
+  ) .join('\n    ')}</div>`
+  document.querySelector('div.themes button').focus()
+}
 
 const newSearch = (id) => {
   document.location.href = `#/search/${encodeURIComponent(document.getElementById(id || 'search').value).replace(/\%20/g, '+')}`
@@ -215,8 +232,8 @@ const makeSnippet = ({Date, Title, Snippets}) =>
   </li>`
 
 
-const makeSearch = (el, content, q) => {
-  const query = q.toLowerCase()
+const makeSearch = (main, content, hash) => {
+  const query = decodeURIComponent (hash .slice (9).replace(/\+/g, ' ')).toLowerCase()
   const matches =
     query .length 
       ? getMatches (content, query)
@@ -224,7 +241,7 @@ const makeSearch = (el, content, q) => {
   const tags = gather ('Tags', content, tagSort) .filter (([tag]) => tag .toLowerCase () .includes (query)) 
   const people = gather ('People', content, personSort) .filter (([person]) => person .toLowerCase () .includes (query))
   
-  el .innerHTML =  `    <h1>Search</h1>
+  main .innerHTML =  `    <h1>Search</h1>
   <p id="searchBox">
     <input id="search" type="text" value="${query}"/>
     <button id="sbb" type="button" class="search" title="Search"">\u2315</button>
@@ -286,29 +303,23 @@ const updateCurrent = ({Date, Tags, Title}) => {
       window .scrollTo (0, 0)
       if (hash) {
         if (hash == '#/') {
-            main .innerHTML = base
+          makeBase (base) (main, content, hash)
         } else if (/^#\/\d{4}-\d{2}-\d{2}$/ .test (hash)) {
-            const letter = lookups [hash .slice (2)];
-            if (letter) {
-             main .innerHTML = makeLetter (content, letter)
-            } else {
-              document.location.hash = '#/'
-            }
+          makeLetter (lookups) (main, content, hash)
         } else if (hash.startsWith('#/tag/')) {
-            main .innerHTML = makeTag (content, hash .slice (6) .replaceAll('+', ' '))
+          makeTag (main, content, hash)
         } else if (hash.startsWith('#/person/')) {
-            main .innerHTML = makePerson (content, hash .slice (9) .replaceAll('+', ' '))
+          makePerson (main, content, hash)
         } else if (hash == '#/tags/') {
-            main .innerHTML = makeTags (content)
+          makeTags (main, content, hash)
         } else if (hash == '#/people/') {
-            main .innerHTML = makePeople (content)
+          makePeople (main, content)
         } else if (hash == '#/letters/') {
-            main .innerHTML = makeLetters (content)
+          makeLetters (main, content)
         } else if (hash .startsWith('#/search/')) {
-            makeSearch (main, content, decodeURIComponent (hash .slice (9).replace(/\+/g, ' ')))
+          makeSearch (main, content, hash)
         } else if (hash .startsWith('#/themes/')) {
-            main .innerHTML = makeThemeSwitcher ()
-            document.querySelector('div.themes button').focus()
+          makeThemeSwitcher (main, content, hash)
         }
       } else {
         document.location.hash = '#/'
@@ -323,7 +334,7 @@ const updateCurrent = ({Date, Tags, Title}) => {
 
     makeSidebar (
       content, 
-      {ltrNbr: 10, moreYears: 2, tagNbr: 6, prsnNbr: 6}
+      {letterAboveFold: 10, yearsAboveFold: 3, tagsAboveFold: 6, peopleAboveFold: 6}
     )
     
     window .addEventListener ('popstate', () => setTimeout (route, 0))
