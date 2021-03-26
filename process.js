@@ -294,7 +294,7 @@ const makeSearch = (main, content, hash) => {
 
 const updateCurrent = ({Date, Tags, Title}) => {
   document .getElementById ('currentLetter') .innerHTML = 
-      `The <a href="#/${Date}">most recent letter</a>, from ${longDate(Date)}, is titled "${Title}", and discusses the ${Tags.length == 1 ? 'subject' : 'subjects'} of ${oxfordJoin (Tags .map (makeTagLink))}.`
+      `The most recent letter, from ${longDate(Date)}, is titled "<a href="#/${Date}">${Title}</a>", and discusses the ${Tags.length == 1 ? 'subject' : 'subjects'} of ${oxfordJoin (Tags .map (makeTagLink))}.`
 }
 
 const router = (lookups, base) => {
@@ -323,6 +323,7 @@ const router = (lookups, base) => {
 
 ((content) => {
     const lookups = Object.fromEntries(content .map (letter => [letter.Date, letter]))
+    updateCurrent (content[0])
     const base = document .getElementById ('main') .innerHTML
 
     const route = router (lookups, base)
@@ -333,8 +334,6 @@ const router = (lookups, base) => {
       letter .Text = div .textContent
       letter .TextLower = letter .Text .toLowerCase ()
     })
-
-    updateCurrent (content[0])
 
     makeSidebar (
       content, 
