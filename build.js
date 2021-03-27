@@ -17,7 +17,7 @@ const sort = (fn, dir = 'ascending') => (xs) =>
     (dir == 'descending' ? -1 : 1) * (aa < bb ? -1 : aa > bb ? 1 : 0))
 
 const showSavedContent = () => console .log ('content.js written')
-const showSavedWrapper = () => console .log ('index.html written')
+const showSavedWrapper = () => console .log ('letters.html written')
 const warnOfError = (err) => console .warn (`Error: ${err}`)
 
 const parse = (file) =>
@@ -83,9 +83,9 @@ ${process}
     )
 
 const makeAllInOne = (content) =>
-  Promise.all (['./letters.html', './style.css', './themes.js', './process.js'] .map (readFile))
+  Promise.all (['./index.html', './style.css', './themes.js', './process.js'] .map (readFile))
     .then (combine (content))
-    .then (writeFile ('./index.html'))
+    .then (writeFile ('./letters.html'))
     .then (() => content)
 
 readdir ('./content') 
