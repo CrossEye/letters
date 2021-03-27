@@ -15,5 +15,4 @@ jobs:
           commit_message: Add generated filed
           commit_user_name: GitHub Auto-Build Bot
           commit_user_email: scott@sauyet.com
-          commit_author: Scott Sauyet
           skip_dirty_check: false    
