@@ -9,14 +9,11 @@ jobs:
         with:
           node-version: '14'
       - run: node build
-      - name: Commit files
-        run: |
-          git config --local user.email "scott@sauyet.com"
-          git config --local user.name "Scott Sauyet"
-          git add .
-          git commit -m "Add changes"
       - name: Push changes
-        uses: ad-m/github-push-action@master
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          commit_message: Add generated filed
+          commit_user_name: GitHub Auto-Build Bot
+          commit_user_email: scott@sauyet.com
+          commit_author: Scott Sauyet
+          skip_dirty_check: false    
