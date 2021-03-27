@@ -343,5 +343,3 @@ const router = (lookups, base) => {
     window .addEventListener ('popstate', () => setTimeout (route, 0))
     route ()
 }) (content)
-
-// comment to test workflow

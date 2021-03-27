@@ -142,7 +142,7 @@ const themes = ((defaultTheme = "I Feel the Earth Move", colors = {
       [k, 
 `<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
     <rect x="0" y="0" rx="30" ry="30" width="300" height="200"
-      style="fill: ${neutral};"/>
+      style="fill: ${neutral}; stroke-width: 2; stroke: #ccc;"/>
     <rect x="20" y="80" rx="15" ry="15" width="160" height="100"
       style="fill: ${primary}; stroke-width: 2; stroke: ${border};"/>
     <rect x="200" y="80" rx="15" ry="15" width="80" height="100"
