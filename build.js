@@ -55,38 +55,20 @@ const convert = ({Tags = '', People: ps = '', Content, ...rest},
     Content: marked (linkPeople (People, Content))
 })
 
+
 const combine = (content) => ([index, style, themes, process]) =>
-  index 
-    .replace (
-      /\<link rel="stylesheet" href="style\.css" \/\>/,
-      `<style type="text/css">
-${style}
-</style>`
-    )
-    .replace (
-      /\<script src="content\.js"\>\<\/script\>/,
-      `<script>
-${content}
-</script>`
-    )
-    .replace (
-      /\<script src="themes\.js"\>\<\/script\>/,
-      `<script>
-${themes}
-</script>`
-    )
-    .replace (
-      /\<script src="process\.js"\>\<\/script\>/,
-      `<script>
-${process}
-</script>`
-    )
+  [
+    [style, /\<link rel="stylesheet" href="style\.css" \/\>/, `<style type="text/css">$$</style>`],
+    [content, /\<script src="content\.js"\>\<\/script\>/, `<script>$$</script>`],
+    [themes, /\<script src="themes\.js"\>\<\/script\>/, `<script>$$</script>`],
+    [process, /\<script src="process\.js"\>\<\/script\>/, `<script>$$</script>`],
+  ] .reduce ((index, [c, r, h]) =>  index.replace(r, h.replace('$$', c)), index)
 
 const makeAllInOne = (content) =>
   Promise.all (['./index.html', './style.css', './themes.js', './process.js'] .map (readFile))
     .then (combine (content))
     .then (writeFile ('./letters.html'))
-    .then (() => content)
+
 
 readdir ('./content') 
   .then (map (combinePaths ('./content')))
@@ -100,6 +82,6 @@ readdir ('./content')
   .then (prepend ('const content = '))
   .then (tap (writeFile ('content.js')))
   .then (tap (showSavedContent))
-  .then (makeAllInOne)
+  .then (tap (makeAllInOne))
   .then (tap (showSavedWrapper))
   .catch (warnOfError)
