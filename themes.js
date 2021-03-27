@@ -1,4 +1,21 @@
-const themes = ((defaultTheme = 'Rockaway Beach', colors = {
+const themes = ((defaultTheme = "I Feel the Earth Move", colors = {
+  "I Feel the Earth Move": {
+    "neutral": "#fbeec1",
+    "border": "#000000",
+    "accent": "#666666",
+    "primary-background": "#daad86",
+    "primary-text": "#333333",
+    "primary-highlight": "#bc986c",
+    "primary-accent": "#659dbd",
+    "secondary-background": "#bc986c",
+    "secondary-text": "#fbeec1",
+    "secondary-highlight": "#bc986c",
+    "secondary-accent": "#659dbd",
+    "tertiary-background": "#8d8741",
+    "tertiary-text": "#fbeec1",
+    "tertiary-highlight": "#8d8741",
+    "tertiary-accent": "#659dbd"
+  },
   "Rockaway Beach": {
     "neutral": "#d7e3e5",
     "border": "#aa938f",
@@ -49,23 +66,6 @@ const themes = ((defaultTheme = 'Rockaway Beach', colors = {
     "tertiary-text": "#0F2557",
     "tertiary-highlight": "#7ED5EA",
     "tertiary-accent": "#3778C2"
-  },
-  "I Feel the Earth Move": {
-    "neutral": "#fbeec1",
-    "border": "#000000",
-    "accent": "#666666",
-    "primary-background": "#daad86",
-    "primary-text": "#333333",
-    "primary-highlight": "#bc986c",
-    "primary-accent": "#659dbd",
-    "secondary-background": "#bc986c",
-    "secondary-text": "#fbeec1",
-    "secondary-highlight": "#bc986c",
-    "secondary-accent": "#659dbd",
-    "tertiary-background": "#8d8741",
-    "tertiary-text": "#fbeec1",
-    "tertiary-highlight": "#8d8741",
-    "tertiary-accent": "#659dbd"
   },
   "Radioactive": {
     "neutral": "#333333",
