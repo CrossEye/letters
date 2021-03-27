@@ -282,8 +282,6 @@ const makeSearch = (main, content, hash) => {
       : ``
   }`
 
-
-
   const button = document .getElementById ('sbb')
   button .onclick = () => newSearch()
   const searchBox = document .getElementById ('search') 
@@ -298,17 +296,17 @@ const updateCurrent = ({Date, Tags, Title}) => {
       `The most recent letter, from ${longDate(Date)}, is titled "<a href="#/${Date}">${Title}</a>", and discusses the ${Tags.length == 1 ? 'subject' : 'subjects'} of ${oxfordJoin (Tags .map (makeTagLink))}.`
 }
 
-const router = (lookups, base) => {
+const router = (content, lookups, base) => {
   const routes = [
     [equals      ('#/'),                      makeBase (base)],
     [matches     (/^#\/\d{4}-\d{2}-\d{2}$/),  makeLetter (lookups)],
-    [startsWith  ('#/tag/'),                  makeTag],
-    [startsWith  ('#/person/'),               makePerson],
     [equals      ('#/tags/'),                 makeTags],
+    [startsWith  ('#/tag/'),                  makeTag],
     [equals      ('#/people/'),               makePeople],
+    [startsWith  ('#/person/'),               makePerson],
     [equals      ('#/letters/'),              makeLetters],
     [startsWith  ('#/search/'),               makeSearch],
-    [startsWith  ('#/themes/'),               makeThemeSwitcher]
+    [startsWith  ('#/themes/'),               makeThemeSwitcher],
   ]
   return () => {
     const main = document .getElementById ('main')
@@ -322,26 +320,33 @@ const router = (lookups, base) => {
   }
 }
 
-((content) => {
+const enhanceContent = (content, div = document.createElement('div')) =>  
+  content .map ((letter) => (
+    (div .innerHTML = letter .Content), ({
+      ...letter,
+      Text: div .textContent,
+      TextLower:  div .textContent .toLowerCase ()
+    }))
+  );
+
+
+((rawContent) => {
+    const content = enhanceContent (rawContent)
+
     updateCurrent (content[0])
-    
-    const lookups = Object.fromEntries(content .map (letter => [letter.Date, letter]))
+
+    const lookups = Object .fromEntries (content .map (letter => [letter.Date, letter]))
     const base = document .getElementById ('main') .innerHTML
-
-    const route = router (lookups, base)
-
-    const div = document.createElement('div')
-    content .forEach (letter => {
-      div .innerHTML = letter .Content
-      letter .Text = div .textContent
-      letter .TextLower = letter .Text .toLowerCase ()
-    })
 
     makeSidebar (
       content, 
       {letterAboveFold: 10, yearsAboveFold: 3, tagsAboveFold: 6, peopleAboveFold: 6}
     )
     
+    const route = router (content, lookups, base)
+
     window .addEventListener ('popstate', () => setTimeout (route, 0))
+
     route ()
+    
 }) (content)

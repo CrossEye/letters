@@ -12,7 +12,7 @@ jobs:
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Add generated filed
+          commit_message: Add generated files
           commit_user_name: GitHub Auto-Build Bot
           commit_user_email: scott@sauyet.com
           skip_dirty_check: false    
