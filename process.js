@@ -238,7 +238,8 @@ const makeSnippet = ({Date, Title, Snippets}) =>
 
 
 const makeSearch = (main, content, hash) => {
-  const query = decodeURIComponent (hash .slice (9).replace(/\+/g, ' ')).toLowerCase()
+  const q = decodeURIComponent (hash .slice (9).replace(/\+/g, ' '))
+  const query = q.toLowerCase()
   const matches =
     query .length 
       ? getMatches (content, query)
@@ -248,7 +249,7 @@ const makeSearch = (main, content, hash) => {
   
   main .innerHTML =  `    <h1>Search</h1>
   <p id="searchBox">
-    <input id="search" type="text" value="${query}"/>
+    <input id="search" type="text" value="${q}"/>
     <button id="sbb" type="button" class="search" title="Search"">\u2315</button>
   </p>
   ${query 

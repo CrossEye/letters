@@ -376,13 +376,8 @@ h2 {
   font-size: 1.5rem;
 }
 
-#searchBox button {
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-#searchWidget button {
-  font-size: 2rem;
+#searchBox button, #searchWidget button {
+  font-size: 3rem;
   cursor: pointer;
 }
 
