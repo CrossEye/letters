@@ -323,8 +323,9 @@ const router = (lookups, base) => {
 }
 
 ((content) => {
-    const lookups = Object.fromEntries(content .map (letter => [letter.Date, letter]))
     updateCurrent (content[0])
+    
+    const lookups = Object.fromEntries(content .map (letter => [letter.Date, letter]))
     const base = document .getElementById ('main') .innerHTML
 
     const route = router (lookups, base)
