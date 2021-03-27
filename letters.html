@@ -2616,22 +2616,10 @@ const router = (lookups, base) => {
   }
 }
 
-const enhanceContent = (content, div = document.createElement('div')) =>  
-  content .map ((letter) => (
-    (div .innerHTML = letter .Content), ({
-      ...letter,
-      Text: div .textContent,
-      TextLower:  div .textContent .toLowerCase ()
-    }))
-  );
-
-
-((rawContent) => {
-    const content = enhanceContent (rawContent)
-
+((content) => {
     updateCurrent (content[0])
-
-    const lookups = Object .fromEntries (content .map (letter => [letter.Date, letter]))
+    
+    const lookups = Object.fromEntries(content .map (letter => [letter.Date, letter]))
     const base = document .getElementById ('main') .innerHTML
 
     const route = router (lookups, base)
