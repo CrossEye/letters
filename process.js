@@ -348,5 +348,4 @@ const enhanceContent = (content, div = document.createElement('div')) =>
     window .addEventListener ('popstate', () => setTimeout (route, 0))
 
     route ()
-    
 }) (content)

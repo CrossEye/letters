@@ -2592,7 +2592,7 @@ const updateCurrent = ({Date, Tags, Title}) => {
       `The most recent letter, from ${longDate(Date)}, is titled "<a href="#/${Date}">${Title}</a>", and discusses the ${Tags.length == 1 ? 'subject' : 'subjects'} of ${oxfordJoin (Tags .map (makeTagLink))}.`
 }
 
-const router = (lookups, base) => {
+const router = (content, lookups, base) => {
   const routes = [
     [equals      ('#/'),                      makeBase (base)],
     [matches     (/^#\/\d{4}-\d{2}-\d{2}$/),  makeLetter (lookups)],
@@ -2616,19 +2616,31 @@ const router = (lookups, base) => {
   }
 }
 
-((content) => {
-    updateCurrent (content[0])
-    
-    const lookups = Object.fromEntries(content .map (letter => [letter.Date, letter]))
-    const base = document .getElementById ('main') .innerHTML
+const enhanceContent = (content, div = document.createElement('div')) =>  
+  content .map ((letter) => (
+    (div .innerHTML = letter .Content), ({
+      ...letter,
+      Text: div .textContent,
+      TextLower:  div .textContent .toLowerCase ()
+    }))
+  );
 
-    const route = router (lookups, base)
+
+((rawContent) => {
+    const content = enhanceContent (rawContent)
+
+    updateCurrent (content[0])
+
+    const lookups = Object .fromEntries (content .map (letter => [letter.Date, letter]))
+    const base = document .getElementById ('main') .innerHTML
 
     makeSidebar (
       content, 
       {letterAboveFold: 10, yearsAboveFold: 3, tagsAboveFold: 6, peopleAboveFold: 6}
     )
     
+    const route = router (content, lookups, base)
+
     window .addEventListener ('popstate', () => setTimeout (route, 0))
 
     route ()
