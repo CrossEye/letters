@@ -194,6 +194,7 @@ const chooseTheme = (name) => {
     'letters', 
     JSON .stringify ({...JSON .parse (localStorage .getItem ('letters')), theme: name})
   )
+  document.getElementById('thm').innerHTML = themes.icons[name]
   document .location .hash = 
     document .location .hash 
       .slice (document .location .hash .slice (1) .indexOf('#') + 1) 
