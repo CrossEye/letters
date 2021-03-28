@@ -121,7 +121,7 @@ const makeSidebar = (content, {letterAboveFold = 5, yearsAboveFold = 3, tagsAbov
 
 const makeBase = (base) => () => base
 
-const makeLetter = (lookups) => (main, contents, hash) => {
+const makeLetter = (lookups) => (contents, hash) => {
   const letter = lookups [hash .slice (2)];
   const prev = letter && contents [contents .indexOf (letter) + 1]
   const next = letter && contents [contents .indexOf (letter) - 1]
@@ -145,7 +145,7 @@ const makeLetter = (lookups) => (main, contents, hash) => {
       <p>No letter found for ${longDate(hash.slice(2))}`
 }
 
-const makeTag = (main, content, hash) => {
+const makeTag = (content, hash) => {
   const tag = hash .slice (6) .replaceAll('+', ' ')
   const letters = content .filter (({Tags}) => Tags .includes (tag))
   return `
@@ -157,7 +157,7 @@ const makeTag = (main, content, hash) => {
     </ul>`
 }
 
-const makePerson = (main, content, hash) => {
+const makePerson = (content, hash) => {
   const person = hash .slice (9) .replaceAll('+', ' ')
   const letters = content .filter (({People}) => People .includes (person))
   return `
@@ -169,19 +169,19 @@ const makePerson = (main, content, hash) => {
     </ul>`
 }
 
-const makeTags = (main, content, hash) => 
+const makeTags = (content) => 
   `<h1>All Tags</h1>
     <ul class="long">
       ${gather ('Tags', content, alphaTagSort) .map (makeLink ('tag')) .join ('\n        ')}
     </ul>`
 
-const makePeople = (main, content) => 
+const makePeople = (content) => 
   `<h1>All Letter Writers</h1>
   <ul class="long">
     ${gather ('People', content, alphaPersonSort) .map (makeLink ('person')) .join ('\n        ')}
   </ul>`
 
-const makeLetters = (main, content) => 
+const makeLetters = (content) => 
   `<h1>All Letters</h1>
   <ul class="long">
     ${content .map (letterLink) .join ('\n        ')}
@@ -206,7 +206,7 @@ const themeClicked = (e) =>
 const themesFocus = () =>
   document .querySelector ('div.themes button') .focus()
 
-const makeThemeSwitcher = (main, content, hash) => 
+const makeThemeSwitcher = () => 
   `<h1>Choose Theme</h1><div class="themes">
   ${Object.entries (themes .icons) .map (([name, icon]) => 
     `<button data-theme="${encodeURIComponent(name)}">${icon}<span>${name}</span></button>`
@@ -247,7 +247,7 @@ const makeSnippet = ({Date, Title, Snippets}) =>
 const searchFocus = () =>
   document .getElementById ('search') .focus ()
 
-const makeSearch = (main, content, hash) => {
+const makeSearch = (content, hash) => {
   const q = decodeURIComponent (hash .slice (9).replace(/\+/g, ' '))
   const query = q.toLowerCase()
   const matches =
@@ -295,7 +295,10 @@ const makeSearch = (main, content, hash) => {
 
 const updateCurrent = ({Date, Tags, Title}) => {
   document .getElementById ('currentLetter') .innerHTML = 
-      `The most recent letter, from ${longDate(Date)}, is titled "<a href="#/${Date}">${Title}</a>", and discusses the ${Tags.length == 1 ? 'subject' : 'subjects'} of ${oxfordJoin (Tags .map (makeTagLink))}.`
+    `The most recent letter, from ${longDate(Date)
+    }, is titled "<a href="#/${Date}">${Title
+    }</a>", and discusses the ${Tags.length == 1 ? 'subject' : 'subjects'
+    } of ${oxfordJoin (Tags .map (makeTagLink))}.`
 }
 
 const enhanceContent = (content, div = document.createElement('div')) =>  
@@ -311,10 +314,7 @@ const addEvents = (cfg) =>
   Object .entries (cfg) .forEach (
     ([name, actions]) => window .addEventListener (
       name, 
-      (e) => console .log (e) || (actions .find (
-        ([pred]) => pred (e.target)
-        ) || [, noop]
-      ) [1] (e)
+      (e) => (actions .find (([pred]) => pred (e.target)) || [, noop]) [1] (e)
     )
   )
 
@@ -334,23 +334,22 @@ const router = (content) => {
     [startsWith  ('#/themes/'),               makeThemeSwitcher,    themesFocus],
   ]
   return () => {
-    const main = document .getElementById ('main')
     const hash = document.location.hash
     window .scrollTo (0, 0)
     const [_, getContent, after] = routes .find (([pred]) => pred (hash)) ||
           [, returnHome, noop]
-    main .innerHTML = getContent (main, content, hash)
-    after ()
+    document .getElementById ('main') .innerHTML = getContent (content, hash)
+    after () // TODO: replace these with a DOM event listener
   }
 }
 
 ((rawContent) => {
   const content = enhanceContent (rawContent)
 
-  const route = router (content)
-
   updateCurrent (content[0])
 
+  const route = router (content)
+ 
   makeSidebar (
     content, 
     {letterAboveFold: 10, yearsAboveFold: 3, tagsAboveFold: 6, peopleAboveFold: 6}
