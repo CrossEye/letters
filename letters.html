@@ -2362,7 +2362,6 @@ const makeSidebar = (content, {letterAboveFold = 5, yearsAboveFold = 3, tagsAbov
 
     const html = `<div class="sidebar box">
     <p id="searchWidget">
-    <!-- <input id="sw" type="text"/> -->
     <button id="swb" type="button" title="Search">\u2315</button>
     <button id="thm" type="button" title="Change Theme">${themes.icons[themes.defaultTheme]}</button>
     </p>
@@ -2416,10 +2415,12 @@ const makeSidebar = (content, {letterAboveFold = 5, yearsAboveFold = 3, tagsAbov
 </div>
 `
   document .getElementById ('root') .innerHTML += html
+/*
   const searchButton = document.getElementById('swb')
   searchButton.onclick = () => document.location.href = '#/search/'
   const themeButton = document.getElementById('thm')
   themeButton.onclick = () => document.location.href = '#/themes/' + document.location.hash
+*/
   }
 const makeBase = (base) => (main, contents, hash) =>
   main .innerHTML = base
@@ -2623,10 +2624,23 @@ const enhanceContent = (content, div = document.createElement('div')) =>
       Text: div .textContent,
       TextLower:  div .textContent .toLowerCase ()
     }))
-  );
+  )
 
+const addEvents = (cfg) =>
+  Object .entries (cfg) .forEach (
+    ([name, actions]) => window .addEventListener (
+      name, 
+      (e) => (actions .find (
+        ([test]) => test (e.target)
+        ) || [, noop]
+      ) [1] (e)
+    )
+  )
 
-((rawContent) => {
+const hasId = (id) => (target) => 
+  target.id == id
+
+;((rawContent) => {
     const content = enhanceContent (rawContent)
 
     updateCurrent (content[0])
@@ -2640,6 +2654,13 @@ const enhanceContent = (content, div = document.createElement('div')) =>
     )
     
     const route = router (content, lookups, base)
+  
+    addEvents ({
+      click: [
+        [hasId ('swb'), (e) => document.location.href = '#/search/']
+        [hasId ('thm'), (e) => document.location.href = '#/themes/' + document.location.hash]
+      ]
+    })
 
     window .addEventListener ('popstate', () => setTimeout (route, 0))
 

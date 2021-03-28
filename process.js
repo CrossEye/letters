@@ -1,29 +1,25 @@
+const call = (fn, ...args) => fn (args)
+const identity = (x) => x
 const prop = (p) => (o) => o[p]
 const chain = (fn) => (xs) => xs .flatMap (fn)
 const last = (xs) => xs [xs .length - 1]
+const clamp = (min, max) => (n) => Math .min (Math .max (min, n), max)
+const matches = (regex) => (str) => regex .test (str)
+const equals = (s1) => (s2) => s1 === s2
+const startsWith = (prefix) => s => s .startsWith (prefix)
+const noop = () => {}
+const hasId = (id) => (target) => !!target .closest (`#${id}`)
 const counts = (fn) => (xs) =>
   xs .reduce ((a, x) => (fn (x) || []) .reduce ((a, v) => ((a[v] = (a[v] || 0) + 1), a), a), {})
-const identity = (x) => x
-const shortDate = (ds) =>  `${Number(ds.slice(5, 7))}/${Number(ds.slice(8,10))}/${ds.slice(2, 4)}`
-const longDate = ((months) => (ds) => `${months[Number(ds.slice(5, 7) - 1)]} ${Number(ds.slice(8,10))}, ${ds.slice(0, 4)}`)
-  (['January', 'February', 'March', 'April', 'May', 'June', 'July', 
-    'August', 'September', 'October', 'November', 'December']) 
-const call = (fn, ...args) => fn (args)
+const shortDate = (ds) =>  
+  `${Number(ds.slice(5, 7))}/${Number(ds.slice(8,10))}/${ds.slice(2, 4)}`
+const longDate = ((months) => (ds) => 
+  `${months[Number(ds.slice(5, 7) - 1)]} ${Number(ds.slice(8,10))}, ${ds.slice(0, 4)}`
+) (['January', 'February', 'March', 'April', 'May', 'June', 'July',  'August', 'September', 'October', 'November', 'December']) 
 const getYear = ({Date}) => Date .slice (0, 4)
-const groupBy = (fn) => (xs) =>
-  Object .entries (xs .reduce (
-    (a, x) => call ((key) => ((a[key] = a[key] || []), (a [key] .push (x)), a), fn(x)),
-    {}
-  ))
-const clamp = (min, max) => (n) =>
-  Math.min (Math.max (min, n), max)
-const matches = (regex) => (str) =>
-  regex .test (str)
-const equals = (s1) => (s2) => 
-  s1 === s2
-const startsWith = (prefix) => s =>
-  s .startsWith (prefix)
-const noop = () => {}
+const groupBy = (fn) => (xs) => Object .entries (xs .reduce (
+  (a, x) => call ((key) => ((a[key] = a[key] || []), (a [key] .push (x)), a), fn(x)), {}
+))
 const findAllIndices = (x) => (xs, pos = 0, idx = xs .indexOf (x, pos)) =>
   idx == -1 ? [] : [idx, ...findAllIndices (x) (xs, idx + 1)]
 const oxfordJoin = (xs) =>
@@ -66,7 +62,6 @@ const makeSidebar = (content, {letterAboveFold = 5, yearsAboveFold = 3, tagsAbov
 
     const html = `<div class="sidebar box">
     <p id="searchWidget">
-    <!-- <input id="sw" type="text"/> -->
     <button id="swb" type="button" title="Search">\u2315</button>
     <button id="thm" type="button" title="Change Theme">${themes.icons[themes.defaultTheme]}</button>
     </p>
@@ -120,11 +115,8 @@ const makeSidebar = (content, {letterAboveFold = 5, yearsAboveFold = 3, tagsAbov
 </div>
 `
   document .getElementById ('root') .innerHTML += html
-  const searchButton = document.getElementById('swb')
-  searchButton.onclick = () => document.location.href = '#/search/'
-  const themeButton = document.getElementById('thm')
-  themeButton.onclick = () => document.location.href = '#/themes/' + document.location.hash
-  }
+}
+
 const makeBase = (base) => (main, contents, hash) =>
   main .innerHTML = base
 
@@ -327,10 +319,20 @@ const enhanceContent = (content, div = document.createElement('div')) =>
       Text: div .textContent,
       TextLower:  div .textContent .toLowerCase ()
     }))
-  );
+  )
 
+const addEvents = (cfg) =>
+  Object .entries (cfg) .forEach (
+    ([name, actions]) => window .addEventListener (
+      name, 
+      (e) => console .log (e) || (actions .find (
+        ([test]) => test (e.target)
+        ) || [, noop]
+      ) [1] (e)
+    )
+  )
 
-((rawContent) => {
+;((rawContent) => {
     const content = enhanceContent (rawContent)
 
     updateCurrent (content[0])
@@ -344,6 +346,13 @@ const enhanceContent = (content, div = document.createElement('div')) =>
     )
     
     const route = router (content, lookups, base)
+  
+    addEvents ({
+      click: [
+        [hasId ('swb'), (e) => document.location.href = '#/search/'],
+        [hasId ('thm'), (e) => document.location.href = '#/themes/' + document.location.hash]
+      ]
+    })
 
     window .addEventListener ('popstate', () => setTimeout (route, 0))
 
