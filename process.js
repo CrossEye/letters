@@ -189,21 +189,35 @@ const makeLetters = (main, content) =>
   </ul>`
 
 const chooseTheme = (name) => {
-  themes.choose(name);
-  localStorage .setItem ('letters', JSON.stringify({...JSON.parse(localStorage.getItem('letters')), theme: name}))
-  document.location.hash = document.location.hash .slice (document.location.hash .slice(1).indexOf('#') + 1) || '#/'
+  themes .choose (name);
+  localStorage .setItem (
+    'letters', 
+    JSON .stringify ({...JSON .parse (localStorage .getItem ('letters')), theme: name})
+  )
+  document .location .hash = 
+    document .location .hash 
+      .slice (document .location .hash .slice (1) .indexOf('#') + 1) 
+    || '#/'
 }
+
+const themeClicked = (e) =>
+  chooseTheme (decodeURIComponent (e .target .closest ('.themes button') .dataset .theme))
 
 const makeThemeSwitcher = (main, content, hash) => {
   main.innerHTML = `<h1>Choose Theme</h1><div class="themes">
-  ${Object.entries(themes.icons).map(([name, icon]) => 
-    `<button onClick="chooseTheme('${name}')">${icon}<span>${name}</span></button>`
-  ) .join('\n    ')}</div>`
-  document.querySelector('div.themes button').focus()
+  ${Object.entries (themes .icons) .map (([name, icon]) => 
+    `<button data-theme="${encodeURIComponent(name)}">${icon}<span>${name}</span></button>`
+  ) .join ('\n    ')}</div>`
+  document .querySelector ('div.themes button') .focus()
 }
 
-const newSearch = (id) => {
-  document.location.href = `#/search/${encodeURIComponent(document.getElementById(id || 'search').value).replace(/\%20/g, '+')}`
+const isThemeButton = (target) => 
+  !!target.closest('.themes button')
+
+const newSearch = () => {
+  document.location.href = `#/search/${
+    encodeURIComponent (document .getElementById ('search') .value) .replace (/\%20/g, '+')
+  }`
 }
 
 const getMatches = (content, query) => {
@@ -274,12 +288,6 @@ const makeSearch = (main, content, hash) => {
       : ``
   }`
 
-  const button = document .getElementById ('sbb')
-  button .onclick = () => newSearch()
-  const searchBox = document .getElementById ('search') 
-  searchBox .addEventListener ('keyup', (e) => {
-      if (e.key == 'Enter') {button .click ()}
-  })
   searchBox .focus ()
 }
 
@@ -288,7 +296,30 @@ const updateCurrent = ({Date, Tags, Title}) => {
       `The most recent letter, from ${longDate(Date)}, is titled "<a href="#/${Date}">${Title}</a>", and discusses the ${Tags.length == 1 ? 'subject' : 'subjects'} of ${oxfordJoin (Tags .map (makeTagLink))}.`
 }
 
-const router = (content, lookups, base) => {
+const enhanceContent = (content, div = document.createElement('div')) =>  
+  content .map ((letter) => (
+    (div .innerHTML = letter .Content), ({
+      ...letter,
+      Text: div .textContent,
+      TextLower:  div .textContent .toLowerCase ()
+    }))
+  )
+
+const addEvents = (cfg) =>
+  Object .entries (cfg) .forEach (
+    ([name, actions]) => window .addEventListener (
+      name, 
+      (e) => console .log (e) || (actions .find (
+        ([pred]) => pred (e.target)
+        ) || [, noop]
+      ) [1] (e)
+    )
+  )
+
+const router = (content) => {
+  const lookups = Object .fromEntries (content .map (letter => [letter.Date, letter]))
+  const base = document .getElementById ('main') .innerHTML
+
   const routes = [
     [equals      ('#/'),                      makeBase (base)],
     [matches     (/^#\/\d{4}-\d{2}-\d{2}$/),  makeLetter (lookups)],
@@ -312,45 +343,27 @@ const router = (content, lookups, base) => {
   }
 }
 
-const enhanceContent = (content, div = document.createElement('div')) =>  
-  content .map ((letter) => (
-    (div .innerHTML = letter .Content), ({
-      ...letter,
-      Text: div .textContent,
-      TextLower:  div .textContent .toLowerCase ()
-    }))
-  )
-
-const addEvents = (cfg) =>
-  Object .entries (cfg) .forEach (
-    ([name, actions]) => window .addEventListener (
-      name, 
-      (e) => console .log (e) || (actions .find (
-        ([test]) => test (e.target)
-        ) || [, noop]
-      ) [1] (e)
-    )
-  )
-
 ;((rawContent) => {
     const content = enhanceContent (rawContent)
 
     updateCurrent (content[0])
-
-    const lookups = Object .fromEntries (content .map (letter => [letter.Date, letter]))
-    const base = document .getElementById ('main') .innerHTML
 
     makeSidebar (
       content, 
       {letterAboveFold: 10, yearsAboveFold: 3, tagsAboveFold: 6, peopleAboveFold: 6}
     )
     
-    const route = router (content, lookups, base)
+    const route = router (content)
   
     addEvents ({
       click: [
         [hasId ('swb'), (e) => document.location.href = '#/search/'],
-        [hasId ('thm'), (e) => document.location.href = '#/themes/' + document.location.hash]
+        [hasId ('thm'), (e) => document.location.href = '#/themes/' + document.location.hash],
+        [hasId ('sbb'), newSearch],
+        [isThemeButton, themeClicked],
+      ],
+      keyup: [
+        [hasId ('search'), (e) => {if (e .key == 'Enter') {newSearch ()}}],
       ]
     })
 
