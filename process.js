@@ -31,6 +31,8 @@ const oxfordJoin = (xs) =>
     ? xs .join (' and ')
   : [xs.slice(0, -1).join(', '), last(xs)] .join(', and ')
 
+const returnHome = () => document.location.hash = '#/'
+
 const tagSort = ([a, x], [b, y]) => 
   y - x || (a < b ? -1 : a > b ? 1 : 0)
 const personSort = ([a, x], [b, y], aa = last (a.split(' ')), bb = last (b.split(' '))) => 
@@ -117,39 +119,36 @@ const makeSidebar = (content, {letterAboveFold = 5, yearsAboveFold = 3, tagsAbov
   document .getElementById ('root') .innerHTML += html
 }
 
-const makeBase = (base) => (main, contents, hash) =>
-  main .innerHTML = base
+const makeBase = (base) => () => base
 
 const makeLetter = (lookups) => (main, contents, hash) => {
   const letter = lookups [hash .slice (2)];
-  if (letter) {
-    const prev = contents [contents .indexOf (letter) + 1]
-    const next = contents [contents .indexOf (letter) - 1]
-    main .innerHTML = `
-    <h1>${letter.Title}</h1>
-    ${letter.Tags.length ? `<ul class="tags">
-    ${letter.Tags .map (tag => `<li><a href="#/tag/${tag.replace(/ /g, '+')}">${tag}</a></li>`) .join ('\n    ')}
-    </ul>` : ``}
-    <p class="date">${longDate(letter.Date)}</p>
-    <p class="salutation">
-      To The Editor:
-    </p>
-    ${letter.Content}
-    <p class="signature"> -- Scott Sauyet</p>
-    <nav>
-      <div id="prev"${prev ? `title="${shortDate(prev.Date)}` : ``}">${prev ? `<a href="#/${prev.Date}">« ${prev.Title}</a>` : ``}</div>
-      <div id="home" title="Overview"><a href="#/">Home</a></div>
-      <div id="next"${next ? `title="${shortDate(next.Date)}` : ``}">${next ? `<a href="#/${next.Date}">${next.Title} »</a>` : ``}</div>
-    </nav>`
-  } else {
-    document.location.hash = '#/'
-  }
+  const prev = letter && contents [contents .indexOf (letter) + 1]
+  const next = letter && contents [contents .indexOf (letter) - 1]
+  return letter
+    ? `<h1>${letter.Title}</h1>
+      ${letter.Tags.length ? `<ul class="tags">
+      ${letter.Tags .map (tag => `<li><a href="#/tag/${tag.replace(/ /g, '+')}">${tag}</a></li>`) .join ('\n    ')}
+      </ul>` : ``}
+      <p class="date">${longDate(letter.Date)}</p>
+      <p class="salutation">
+        To The Editor:
+      </p>
+      ${letter.Content}
+      <p class="signature"> -- Scott Sauyet</p>
+      <nav>
+        <div id="prev"${prev ? `title="${shortDate(prev.Date)}` : ``}">${prev ? `<a href="#/${prev.Date}">« ${prev.Title}</a>` : ``}</div>
+        <div id="home" title="Overview"><a href="#/">Home</a></div>
+        <div id="next"${next ? `title="${shortDate(next.Date)}` : ``}">${next ? `<a href="#/${next.Date}">${next.Title} »</a>` : ``}</div>
+      </nav>` 
+    : `<h1>Not Found</h1>
+      <p>No letter found for ${longDate(hash.slice(2))}`
 }
 
 const makeTag = (main, content, hash) => {
-    const tag = hash .slice (6) .replaceAll('+', ' ')
-    const letters = content .filter (({Tags}) => Tags .includes (tag))
-    main.innerHTML = `
+  const tag = hash .slice (6) .replaceAll('+', ' ')
+  const letters = content .filter (({Tags}) => Tags .includes (tag))
+  return `
     <h1>Letters tagged "${tag}"</h1>
     <ul class="long">
       ${letters .map (letter => 
@@ -159,9 +158,9 @@ const makeTag = (main, content, hash) => {
 }
 
 const makePerson = (main, content, hash) => {
-    const person = hash .slice (9) .replaceAll('+', ' ')
-    const letters = content .filter (({People}) => People .includes (person))
-    main.innerHTML = `
+  const person = hash .slice (9) .replaceAll('+', ' ')
+  const letters = content .filter (({People}) => People .includes (person))
+  return `
     <h1>Letters mentioning Rivereast letter writer ${person}</h1>
     <ul class="long">
       ${letters .map (letter => 
@@ -171,19 +170,19 @@ const makePerson = (main, content, hash) => {
 }
 
 const makeTags = (main, content, hash) => 
-    main.innerHTML = `<h1>All Tags</h1>
+  `<h1>All Tags</h1>
     <ul class="long">
       ${gather ('Tags', content, alphaTagSort) .map (makeLink ('tag')) .join ('\n        ')}
     </ul>`
 
 const makePeople = (main, content) => 
-  main.innerHTML = `<h1>All Letter Writers</h1>
+  `<h1>All Letter Writers</h1>
   <ul class="long">
     ${gather ('People', content, alphaPersonSort) .map (makeLink ('person')) .join ('\n        ')}
   </ul>`
 
 const makeLetters = (main, content) => 
-  main.innerHTML = `<h1>All Letters</h1>
+  `<h1>All Letters</h1>
   <ul class="long">
     ${content .map (letterLink) .join ('\n        ')}
   </ul>`
@@ -204,13 +203,15 @@ const chooseTheme = (name) => {
 const themeClicked = (e) =>
   chooseTheme (decodeURIComponent (e .target .closest ('.themes button') .dataset .theme))
 
-const makeThemeSwitcher = (main, content, hash) => {
-  main.innerHTML = `<h1>Choose Theme</h1><div class="themes">
+const themesFocus = () =>
+  document .querySelector ('div.themes button') .focus()
+
+const makeThemeSwitcher = (main, content, hash) => 
+  `<h1>Choose Theme</h1><div class="themes">
   ${Object.entries (themes .icons) .map (([name, icon]) => 
     `<button data-theme="${encodeURIComponent(name)}">${icon}<span>${name}</span></button>`
   ) .join ('\n    ')}</div>`
-  document .querySelector ('div.themes button') .focus()
-}
+
 
 const isThemeButton = (target) => 
   !!target.closest('.themes button')
@@ -243,6 +244,8 @@ const makeSnippet = ({Date, Title, Snippets}) =>
     <div class="snippet">... ${Snippets .slice(0, 3).join(' ... <br/> ...')} ...</div>  
   </li>`
 
+const searchFocus = () =>
+  document .getElementById ('search') .focus ()
 
 const makeSearch = (main, content, hash) => {
   const q = decodeURIComponent (hash .slice (9).replace(/\+/g, ' '))
@@ -254,7 +257,7 @@ const makeSearch = (main, content, hash) => {
   const tags = gather ('Tags', content, tagSort) .filter (([tag]) => tag .toLowerCase () .includes (query)) 
   const people = gather ('People', content, personSort) .filter (([person]) => person .toLowerCase () .includes (query))
   
-  main .innerHTML =  `    <h1>Search</h1>
+  return `    <h1>Search</h1>
   <p id="searchBox">
     <input id="search" type="text" value="${q}"/>
     <button id="sbb" type="button" class="search" title="Search"">\u2315</button>
@@ -288,8 +291,6 @@ const makeSearch = (main, content, hash) => {
         : `<h2>No Results</h2>`
       : ``
   }`
-
-  searchBox .focus ()
 }
 
 const updateCurrent = ({Date, Tags, Title}) => {
@@ -322,53 +323,52 @@ const router = (content) => {
   const base = document .getElementById ('main') .innerHTML
 
   const routes = [
-    [equals      ('#/'),                      makeBase (base)],
-    [matches     (/^#\/\d{4}-\d{2}-\d{2}$/),  makeLetter (lookups)],
-    [equals      ('#/tags/'),                 makeTags],
-    [startsWith  ('#/tag/'),                  makeTag],
-    [equals      ('#/people/'),               makePeople],
-    [startsWith  ('#/person/'),               makePerson],
-    [equals      ('#/letters/'),              makeLetters],
-    [startsWith  ('#/search/'),               makeSearch],
-    [startsWith  ('#/themes/'),               makeThemeSwitcher],
+    [equals      ('#/'),                      makeBase (base),      noop],
+    [matches     (/^#\/\d{4}-\d{2}-\d{2}$/),  makeLetter (lookups), noop],
+    [equals      ('#/tags/'),                 makeTags,             noop],
+    [startsWith  ('#/tag/'),                  makeTag,              noop],
+    [equals      ('#/people/'),               makePeople,           noop],
+    [startsWith  ('#/person/'),               makePerson,           noop],
+    [equals      ('#/letters/'),              makeLetters,          noop],
+    [startsWith  ('#/search/'),               makeSearch,           searchFocus],
+    [startsWith  ('#/themes/'),               makeThemeSwitcher,    themesFocus],
   ]
   return () => {
     const main = document .getElementById ('main')
     const hash = document.location.hash
     window .scrollTo (0, 0)
-    if (hash) {
-      (routes .find (([pred]) => pred (hash)) || [, noop]) [1] (main, content, hash)
-    } else {
-      document.location.hash = '#/'
-    }
+    const [_, getContent, after] = routes .find (([pred]) => pred (hash)) ||
+          [, returnHome, noop]
+    main .innerHTML = getContent (main, content, hash)
+    after ()
   }
 }
 
-;((rawContent) => {
-    const content = enhanceContent (rawContent)
+((rawContent) => {
+  const content = enhanceContent (rawContent)
 
-    updateCurrent (content[0])
+  const route = router (content)
 
-    makeSidebar (
-      content, 
-      {letterAboveFold: 10, yearsAboveFold: 3, tagsAboveFold: 6, peopleAboveFold: 6}
-    )
-    
-    const route = router (content)
+  updateCurrent (content[0])
+
+  makeSidebar (
+    content, 
+    {letterAboveFold: 10, yearsAboveFold: 3, tagsAboveFold: 6, peopleAboveFold: 6}
+  )
   
-    addEvents ({
-      click: [
-        [hasId ('swb'), (e) => document.location.href = '#/search/'],
-        [hasId ('thm'), (e) => document.location.href = '#/themes/' + document.location.hash],
-        [hasId ('sbb'), newSearch],
-        [isThemeButton, themeClicked],
-      ],
-      keyup: [
-        [hasId ('search'), (e) => {if (e .key == 'Enter') {newSearch ()}}],
-      ]
-    })
+  addEvents ({
+    click: [
+      [hasId ('swb'), (e) => document.location.href = '#/search/'],
+      [hasId ('thm'), (e) => document.location.href = '#/themes/' + document.location.hash],
+      [hasId ('sbb'), newSearch],
+      [isThemeButton, themeClicked],
+    ],
+    keyup: [
+      [hasId ('search'), (e) => {if (e .key == 'Enter') {newSearch ()}}],
+    ]
+  })
 
-    window .addEventListener ('popstate', () => setTimeout (route, 0))
+  window .addEventListener ('popstate', () => setTimeout (route, 0))
 
-    route ()
+  route ()
 }) (content)
