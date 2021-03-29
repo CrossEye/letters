@@ -1,28 +1,29 @@
-const call = (fn, ...args) => fn (args)
-const identity = (x) => x
+// Utility Functions
 const always = (x) => () => x
-const prop = (p) => (o) => o[p]
+const call = (fn, ...args) => fn (args)
 const chain = (fn) => (xs) => xs .flatMap (fn)
-const last = (xs) => xs [xs .length - 1]
 const clamp = (min, max) => (n) => Math .min (Math .max (min, n), max)
-const matches = (regex) => (str) => regex .test (str)
-const equals = (s1) => (s2) => s1 === s2
-const startsWith = (prefix) => s => s .startsWith (prefix)
-const noop = () => {}
-const hasId = (id) => (target) => !!target .closest (`#${id}`)
 const countBy = (fn) => (xs) =>
   xs .reduce ((a, x) => (fn (x) || []) .reduce ((a, v) => ((a[v] = (a[v] || 0) + 1), a), a), {})
+const equals = (s1) => (s2) => s1 === s2
+const findAllIndices = (x) => (xs, pos = 0, idx = xs .indexOf (x, pos)) =>
+  idx == -1 ? [] : [idx, ...findAllIndices (x) (xs, idx + 1)]
+const getYear = ({Date}) => Date .slice (0, 4)
 const groupBy = (fn) => (xs) => Object .entries (xs .reduce (
   (a, x) => call ((key) => ((a[key] = a[key] || []), (a [key] .push (x)), a), fn(x)), {}
 ))
-const shortDate = (ds) =>  
-  `${Number(ds.slice(5, 7))}/${Number(ds.slice(8,10))}/${ds.slice(2, 4)}`
+const hasId = (id) => (target) => !!target .closest (`#${id}`)
+const identity = (x) => x
+const last = (xs) => xs [xs .length - 1]
 const longDate = ((months) => (ds) => 
   `${months[Number(ds.slice(5, 7) - 1)]} ${Number(ds.slice(8,10))}, ${ds.slice(0, 4)}`
 ) (['January', 'February', 'March', 'April', 'May', 'June', 'July',  'August', 'September', 'October', 'November', 'December']) 
-const getYear = ({Date}) => Date .slice (0, 4)
-const findAllIndices = (x) => (xs, pos = 0, idx = xs .indexOf (x, pos)) =>
-  idx == -1 ? [] : [idx, ...findAllIndices (x) (xs, idx + 1)]
+const matches = (regex) => (str) => regex .test (str)
+const noop = () => {}
+const prop = (p) => (o) => o[p]
+const shortDate = (ds) =>  
+  `${Number(ds.slice(5, 7))}/${Number(ds.slice(8,10))}/${ds.slice(2, 4)}`
+const startsWith = (prefix) => s => s .startsWith (prefix)
 const oxfordJoin = (xs) =>
   xs .length == 0
     ? ''
@@ -32,6 +33,8 @@ const oxfordJoin = (xs) =>
     ? xs .join (' and ')
   : [xs.slice(0, -1).join(', '), last(xs)] .join(', and ')
 
+
+// Helper functions
 const returnHome = () => document.location.hash = '#/'
 
 const topicSort = ([a, x], [b, y]) => 
@@ -55,6 +58,7 @@ const makeTopicLink = (Topic) =>
   `<a href="#/topic/${Topic.replace(/ /g, '+')}">${Topic}</a>`
 
 
+// Sidebar Setup
 const makeSidebarButtons = (themes) =>
   `<p id="searchWidget">
   <button id="swb" type="button" title="Search">\u2315</button>
@@ -158,6 +162,8 @@ const makeSidebar = (
     ${makeSidebarPeople (content, peopleAboveFold)}
   </div>`
 
+
+// Letter Route
 const makeLetterBody = ({Title, Topics = [], Date, Content}) =>
   `<h1>${Title}</h1>
   ${Topics.length 
@@ -197,6 +203,7 @@ const makeLetter = (lookups) => (
       <p>No letter found for ${longDate(hash.slice(2))}`
 
 
+// Topic Route
 const makeTopic = (
   content, 
   hash,
@@ -211,6 +218,7 @@ const makeTopic = (
   </ul>`
 
 
+// Person Route
 const makePerson = (
   content, 
   hash,
@@ -224,24 +232,32 @@ const makePerson = (
     ) .join ('\n')}
   </ul>`
 
+
+// Topics Route
 const makeTopics = (content) => 
   `<h1>All Topics</h1>
     <ul class="long">
       ${gather ('Topics', content, alphaTopicSort) .map (makeLink ('topic')) .join ('\n        ')}
     </ul>`
 
+
+// People Route
 const makePeople = (content) => 
   `<h1>All Letter Writers</h1>
   <ul class="long">
     ${gather ('People', content, alphaPersonSort) .map (makeLink ('person')) .join ('\n        ')}
   </ul>`
 
+
+// Letters Route
 const makeLetters = (content) => 
   `<h1>All Letters</h1>
   <ul class="long">
     ${content .map (letterLink) .join ('\n        ')}
   </ul>`
 
+
+// Themes Route
 const chooseTheme = (name) => {
   themes .choose (name);
   localStorage .setItem (
@@ -271,28 +287,32 @@ const makeThemeSwitcher = () =>
 const isThemeButton = (target) => 
   !!target.closest('.themes button')
 
+
+// Search
 const newSearch = () => 
   document.location.href = `#/search/${
     encodeURIComponent (document .getElementById ('search') .value) .replace (/\%20/g, '+')
   }`
 
-
-// TODO: Question: is this minor randomization of matches actually helpful?
 const getMatches = (
   content, 
   query,
   test = query .toLowerCase ()
 ) => 
-  content .map (({Title, Date, Text, TextLower}) => {
-    const max = TextLower.length - 1
-    return [Title, Date, findAllIndices (test) (TextLower) .map (i => {
-      const start = clamp (0, max) (i - Math.floor (Math.random() * 50 + 50))
-      const end = clamp (0, max) (i + query.length + Math.floor (Math.random() * 50 + 50))
-      return `${Text .slice (start, i) .replace (/^\S*\s/, '') .replace (/\n/g, ' ')
-             }<span class="match">${Text.slice (i, i + query.length)}</span>${
-              Text .slice (i + query.length, end).replace(/\s\S*$/, '') .replace(/\n/g, ' ')}`
-    })] 
-  })
+  content .map (({Title, Date, Text, TextLower}) => 
+    call ((
+      max = TextLower.length - 1
+    ) => [Title, Date, findAllIndices (test) (TextLower) .map (i => 
+      call ((
+        // TODO: Question: is this minor randomization of matches actually helpful?
+        start = clamp (0, max) (i - Math.floor (Math.random() * 50 + 50)),
+        end = clamp (0, max) (i + query.length + Math.floor (Math.random() * 50 + 50))
+      ) => 
+        `${Text .slice (start, i) .replace (/^\S*\s/, '') .replace (/\n/g, ' ')
+        }<span class="match">${Text.slice (i, i + query.length)}</span>${
+        Text .slice (i + query.length, end).replace(/\s\S*$/, '') .replace(/\n/g, ' ')}`)
+    )]) 
+  )
   .filter (([_, __, r]) => r .length > 0) 
   .map (([Title, Date, Snippets]) => ({Title, Date, Snippets}))
 
@@ -368,6 +388,7 @@ const makeSearch = (
   ${makeSearchResults (content, query.toLowerCase())}`
 
 
+// Setup
 const updateCurrent = ({Date, Topics, Title}) => 
   `The most recent letter, from ${longDate(Date)
   }, is titled "<a href="#/${Date}">${Title
@@ -384,6 +405,8 @@ const enhanceContent = (content, div = document.createElement('div')) =>
     }))
   )
 
+
+// DOM Events
 const addEvents = (cfg) =>
   Object .entries (cfg) .forEach (
     ([name, actions]) => window .addEventListener (
@@ -392,6 +415,8 @@ const addEvents = (cfg) =>
     )
   )
 
+
+// Routing
 const router = (content) => {
   const lookups = Object .fromEntries (content .map (letter => [letter.Date, letter]))
   const base = document .getElementById ('main') .innerHTML
@@ -417,6 +442,8 @@ const router = (content) => {
   }
 }
 
+
+// Main
 ((rawContent, themes) => {
   const content = enhanceContent (rawContent)
 

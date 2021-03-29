@@ -125,7 +125,7 @@ header, .box {
   border-radius: 15px;
 }
 
-.tags li a {
+.topics li a {
   border: 1px solid;
   border-radius: 10px;
 }
@@ -266,11 +266,11 @@ ul.long li, ul.long li a {
   margin-top: .5rem;
 }
 
-.tags li {
+.topics li {
   display: inline-block;
 }
 
-.tags li a {
+.topics li a {
   padding: .25rem;
 }
 
@@ -362,7 +362,7 @@ h2 {
   text-align: right;
 }
 
-.tags ul {
+.topics ul {
   list-style: none;
   text-align: right;
 }
