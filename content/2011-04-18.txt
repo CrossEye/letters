@@ -1,6 +1,6 @@
 Title: We Need Julia
 Date: 2011-04-18
-Tags: Andover, Charter, Endorsement
+Topics: Andover, Charter, Endorsement
 Content:
 --------------------------------------------------------------------------------
 

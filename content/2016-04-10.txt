@@ -1,6 +1,6 @@
 Title: Living Document
 Date: 2016-04-10
-Tags: Constitution
+Topics: Constitution
 People: Daniel Colby, Sam Prentice
 Content:
 --------------------------------------------------------------------------------

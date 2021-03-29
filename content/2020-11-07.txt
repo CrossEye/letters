@@ -1,6 +1,6 @@
 Title: An Actual Democracy
 Date: 2020-11-07 
-Tags: Democracy, Electoral College, Constitution, Federalist Papers
+Topics: Democracy, Electoral College, Constitution, Federalist Papers
 People: Sam Prentice
 Content:
 --------------------------------------------------------------------------------

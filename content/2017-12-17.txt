@@ -1,6 +1,6 @@
 Title: Fact-Resistant Humans
 Date: 2017-12-17
-Tags: Facts, Conservatism
+Topics: Facts, Conservatism
 People: Sam Prentice
 Content:
 --------------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 Title: Simple Voting
 Date: 2017-03-05
-Tags: Electoral College, National Popular Vote
+Topics: Electoral College, National Popular Vote
 People: Sam Prentice
 Content:
 --------------------------------------------------------------------------------

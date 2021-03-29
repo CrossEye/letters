@@ -2,7 +2,7 @@ const content = [
     {
         "Title": "Mainstream Media",
         "Date": "2021-03-19",
-        "Tags": [
+        "Topics": [
             "Mainstream Media",
             "Journalism",
             "Fact Checking"
@@ -13,7 +13,7 @@ const content = [
     {
         "Title": "Sedition",
         "Date": "2021-01-18",
-        "Tags": [
+        "Topics": [
             "Capitol Hill Riots",
             "Antifa"
         ],
@@ -25,7 +25,7 @@ const content = [
     {
         "Title": "How to Fact Check",
         "Date": "2020-12-19",
-        "Tags": [
+        "Topics": [
             "Fact Checking"
         ],
         "People": [
@@ -38,7 +38,7 @@ const content = [
     {
         "Title": "Election Conspiracy Theory",
         "Date": "2020-12-06",
-        "Tags": [
+        "Topics": [
             "Elections",
             "Joe Biden",
             "Donald Trump"
@@ -51,7 +51,7 @@ const content = [
     {
         "Title": "How to Pretend to Win an Argument",
         "Date": "2020-11-20",
-        "Tags": [
+        "Topics": [
             "Democracy",
             "Republic",
             "Electoral College"
@@ -64,7 +64,7 @@ const content = [
     {
         "Title": "An Actual Democracy",
         "Date": "2020-11-07",
-        "Tags": [
+        "Topics": [
             "Democracy",
             "Electoral College",
             "Constitution",
@@ -78,7 +78,7 @@ const content = [
     {
         "Title": "Our Neighbor",
         "Date": "2020-10-25",
-        "Tags": [
+        "Topics": [
             "Endorsement",
             "Connecticut",
             "Mr. Rogers"
@@ -91,7 +91,7 @@ const content = [
     {
         "Title": "A Simple Description",
         "Date": "2020-10-19",
-        "Tags": [
+        "Topics": [
             "Donald Trump"
         ],
         "People": [],
@@ -100,7 +100,7 @@ const content = [
     {
         "Title": "Collins over Green",
         "Date": "2020-09-28",
-        "Tags": [
+        "Topics": [
             "Endorsement"
         ],
         "People": [
@@ -112,7 +112,7 @@ const content = [
     {
         "Title": "Playground Taunt",
         "Date": "2020-08-29",
-        "Tags": [
+        "Topics": [
             "Donald Trump",
             "Elections"
         ],
@@ -124,7 +124,7 @@ const content = [
     {
         "Title": "Orwellian",
         "Date": "2020-08-18",
-        "Tags": [
+        "Topics": [
             "Donald Trump",
             "George Orwell"
         ],
@@ -137,7 +137,7 @@ const content = [
     {
         "Title": "Party History",
         "Date": "2020-07-26",
-        "Tags": [
+        "Topics": [
             "Racism",
             "Elections",
             "Republicans",
@@ -151,7 +151,7 @@ const content = [
     {
         "Title": "Right Wing Propaganda",
         "Date": "2020-06-29",
-        "Tags": [
+        "Topics": [
             "Covid",
             "Police",
             "BLM",
@@ -168,7 +168,7 @@ const content = [
     {
         "Title": "Not All Conservatives",
         "Date": "2020-06-07",
-        "Tags": [
+        "Topics": [
             "Covid",
             "Apology",
             "Conservatism",
@@ -182,7 +182,7 @@ const content = [
     {
         "Title": "Wearing Masks",
         "Date": "2020-05-23",
-        "Tags": [
+        "Topics": [
             "Covid",
             "Conservatism",
             "Cooperation"
@@ -193,7 +193,7 @@ const content = [
     {
         "Title": "Merchants of Doubt",
         "Date": "2020-03-20",
-        "Tags": [
+        "Topics": [
             "Science",
             "Global Warming",
             "Tobacco",
@@ -206,7 +206,7 @@ const content = [
     {
         "Title": "Building on Fire",
         "Date": "2020-02-11",
-        "Tags": [
+        "Topics": [
             "Science",
             "Global Warming"
         ],
@@ -218,7 +218,7 @@ const content = [
     {
         "Title": "Actual Tyranny",
         "Date": "2019-12-24",
-        "Tags": [
+        "Topics": [
             "Donald Trump",
             "Impeachment"
         ],
@@ -228,7 +228,7 @@ const content = [
     {
         "Title": "Government Funding",
         "Date": "2019-12-09",
-        "Tags": [
+        "Topics": [
             "Science"
         ],
         "People": [],
@@ -237,7 +237,7 @@ const content = [
     {
         "Title": "Ecological Successes",
         "Date": "2019-11-09",
-        "Tags": [
+        "Topics": [
             "Science",
             "Environment",
             "Global Warming"
@@ -251,7 +251,7 @@ const content = [
     {
         "Title": "Pound the Table",
         "Date": "2019-10-28",
-        "Tags": [
+        "Topics": [
             "Science",
             "Environment",
             "Global Warming",
@@ -265,7 +265,7 @@ const content = [
     {
         "Title": "Science and Scientists, Responses",
         "Date": "2019-10-06",
-        "Tags": [
+        "Topics": [
             "Global Warming",
             "Series - Science and Scientists"
         ],
@@ -277,7 +277,7 @@ const content = [
     {
         "Title": "Libertarianism and Corruption",
         "Date": "2019-09-29",
-        "Tags": [
+        "Topics": [
             "Libertarianism",
             "Donald Trump"
         ],
@@ -287,7 +287,7 @@ const content = [
     {
         "Title": "Science and Scientists, Part 4",
         "Date": "2019-09-20",
-        "Tags": [
+        "Topics": [
             "Global Warming",
             "Series - Science and Scientists"
         ],
@@ -299,7 +299,7 @@ const content = [
     {
         "Title": "Science and Scientists, Part 3",
         "Date": "2019-09-14",
-        "Tags": [
+        "Topics": [
             "Global Warming",
             "Series - Science and Scientists"
         ],
@@ -311,7 +311,7 @@ const content = [
     {
         "Title": "Science and Scientists, Part 2",
         "Date": "2019-09-08",
-        "Tags": [
+        "Topics": [
             "Global Warming",
             "Series - Science and Scientists"
         ],
@@ -323,7 +323,7 @@ const content = [
     {
         "Title": "Science and Scientists, Part 1",
         "Date": "2019-09-03",
-        "Tags": [
+        "Topics": [
             "Global Warming",
             "Series - Science and Scientists"
         ],
@@ -335,7 +335,7 @@ const content = [
     {
         "Title": "Absurdist Fantasies",
         "Date": "2019-08-25",
-        "Tags": [
+        "Topics": [
             "Donald Trump"
         ],
         "People": [],
@@ -344,7 +344,7 @@ const content = [
     {
         "Title": "Reasons for Hope",
         "Date": "2019-07-22",
-        "Tags": [
+        "Topics": [
             "Global Warming",
             "Hope"
         ],
@@ -354,7 +354,7 @@ const content = [
     {
         "Title": "Denialists' Nonsense",
         "Date": "2019-07-07",
-        "Tags": [
+        "Topics": [
             "Fact Checking",
             "Global Warming",
             "Denialism"
@@ -367,7 +367,7 @@ const content = [
     {
         "Title": "Dangerous Denialists",
         "Date": "2019-06-23",
-        "Tags": [
+        "Topics": [
             "Fact Checking",
             "Global Warming",
             "Denialism"
@@ -380,7 +380,7 @@ const content = [
     {
         "Title": "What Kind of Leader",
         "Date": "2019-06-16",
-        "Tags": [
+        "Topics": [
             "Donald Trump",
             "Leadership"
         ],
@@ -390,7 +390,7 @@ const content = [
     {
         "Title": "Trust The Sentries",
         "Date": "2019-06-09",
-        "Tags": [
+        "Topics": [
             "Global Warming",
             "Science",
             "Denialism",
@@ -404,7 +404,7 @@ const content = [
     {
         "Title": "Democratic Decisions",
         "Date": "2019-05-20",
-        "Tags": [
+        "Topics": [
             "Democracy"
         ],
         "People": [
@@ -415,7 +415,7 @@ const content = [
     {
         "Title": "Our Social Contract",
         "Date": "2019-04-28",
-        "Tags": [
+        "Topics": [
             "Democracy",
             "Libertarianism"
         ],
@@ -425,7 +425,7 @@ const content = [
     {
         "Title": "Mueller Report",
         "Date": "2019-04-23",
-        "Tags": [
+        "Topics": [
             "Democracy",
             "Libertarianism"
         ],
@@ -437,7 +437,7 @@ const content = [
     {
         "Title": "Another American Party",
         "Date": "2019-03-11",
-        "Tags": [
+        "Topics": [
             "Republicans"
         ],
         "People": [],
@@ -446,7 +446,7 @@ const content = [
     {
         "Title": "Remember The Context",
         "Date": "2019-02-23",
-        "Tags": [
+        "Topics": [
             "Economy",
             "Stock Market",
             "Bill Clinton",
@@ -462,7 +462,7 @@ const content = [
     {
         "Title": "Partisan Economies",
         "Date": "2019-02-18",
-        "Tags": [
+        "Topics": [
             "Economy",
             "Democrats",
             "Republicans"
@@ -473,7 +473,7 @@ const content = [
     {
         "Title": "Distortion Contortions",
         "Date": "2019-02-10",
-        "Tags": [
+        "Topics": [
             "Economy",
             "Progressives"
         ],
@@ -483,7 +483,7 @@ const content = [
     {
         "Title": "Two Years of Trump",
         "Date": "2019-01-21",
-        "Tags": [
+        "Topics": [
             "Donald Trump"
         ],
         "People": [],
@@ -492,7 +492,7 @@ const content = [
     {
         "Title": "Evidence Not Theories",
         "Date": "2019-01-05",
-        "Tags": [
+        "Topics": [
             "Economy",
             "Minimum Wage",
             "Inflation",
@@ -508,7 +508,7 @@ const content = [
     {
         "Title": "Randian Fantasies",
         "Date": "2018-12-06",
-        "Tags": [
+        "Topics": [
             "Minimum Wage",
             "Ayn Rand"
         ],
@@ -523,7 +523,7 @@ const content = [
     {
         "Title": "The Truth Hurst",
         "Date": "2018-09-16",
-        "Tags": [
+        "Topics": [
             "Fact Checking",
             "Fox News",
             "Donald Trump"
@@ -536,7 +536,7 @@ const content = [
     {
         "Title": "Truth Decay",
         "Date": "2018-08-31",
-        "Tags": [
+        "Topics": [
             "Science",
             "Vaccinations",
             "Donald Trump",
@@ -548,7 +548,7 @@ const content = [
     {
         "Title": "Free Market Failings",
         "Date": "2018-06-24",
-        "Tags": [
+        "Topics": [
             "Free Markets"
         ],
         "People": [
@@ -559,7 +559,7 @@ const content = [
     {
         "Title": "King Donald",
         "Date": "2018-06-18",
-        "Tags": [
+        "Topics": [
             "Donald Trump"
         ],
         "People": [],
@@ -568,7 +568,7 @@ const content = [
     {
         "Title": "Trump world",
         "Date": "2018-06-18",
-        "Tags": [
+        "Topics": [
             "Donald Trump"
         ],
         "People": [],
@@ -577,7 +577,7 @@ const content = [
     {
         "Title": "Conspiracy, Anyone?",
         "Date": "2018-05-29",
-        "Tags": [
+        "Topics": [
             "Donald Trump",
             "Taxes",
             "Barrack Obama",
@@ -595,7 +595,7 @@ const content = [
     {
         "Title": "No More Taxes",
         "Date": "2018-05-12",
-        "Tags": [
+        "Topics": [
             "Taxes",
             "Government"
         ],
@@ -607,7 +607,7 @@ const content = [
     {
         "Title": "Spinning the Facts",
         "Date": "2018-03-13",
-        "Tags": [
+        "Topics": [
             "Democrats",
             "Republicans"
         ],
@@ -619,7 +619,7 @@ const content = [
     {
         "Title": "Return of the Know-Nothings",
         "Date": "2018-02-26",
-        "Tags": [
+        "Topics": [
             "Democrats",
             "Republicans"
         ],
@@ -631,7 +631,7 @@ const content = [
     {
         "Title": "Understanding Evidence",
         "Date": "2018-01-21",
-        "Tags": [
+        "Topics": [
             "Democrats",
             "Republicans"
         ],
@@ -643,7 +643,7 @@ const content = [
     {
         "Title": "Political Sociopathy",
         "Date": "2018-01-14",
-        "Tags": [
+        "Topics": [
             "Republicans"
         ],
         "People": [
@@ -654,7 +654,7 @@ const content = [
     {
         "Title": "Fact-Resistant Humans",
         "Date": "2017-12-17",
-        "Tags": [
+        "Topics": [
             "Facts",
             "Conservatism"
         ],
@@ -666,7 +666,7 @@ const content = [
     {
         "Title": "Actual Fact-Checking",
         "Date": "2017-12-02",
-        "Tags": [
+        "Topics": [
             "Fact Checking",
             "Elizabeth Warren",
             "NRA",
@@ -680,7 +680,7 @@ const content = [
     {
         "Title": "Time to Return",
         "Date": "2017-10-01",
-        "Tags": [
+        "Topics": [
             "Global Warming",
             "Progressivism",
             "Dannel Malloy",
@@ -704,7 +704,7 @@ const content = [
     {
         "Title": "Pay Attention",
         "Date": "2017-08-01",
-        "Tags": [
+        "Topics": [
             "Hiatus",
             "Fact Checking"
         ],
@@ -719,7 +719,7 @@ const content = [
     {
         "Title": "Lunatic Fringe",
         "Date": "2017-07-23",
-        "Tags": [
+        "Topics": [
             "Conspiracy Theories",
             "Donald Trump"
         ],
@@ -732,7 +732,7 @@ const content = [
     {
         "Title": "Searching for Truth",
         "Date": "2017-07-14",
-        "Tags": [
+        "Topics": [
             "Truth",
             "Science",
             "Law",
@@ -748,7 +748,7 @@ const content = [
     {
         "Title": "Counting the Lies",
         "Date": "2017-07-07",
-        "Tags": [
+        "Topics": [
             "Elections",
             "Law",
             "Courts",
@@ -763,7 +763,7 @@ const content = [
     {
         "Title": "Global Warming Deniers",
         "Date": "2017-07-02",
-        "Tags": [
+        "Topics": [
             "Global Warming"
         ],
         "People": [
@@ -774,7 +774,7 @@ const content = [
     {
         "Title": "Conspiracy Theorist",
         "Date": "2017-06-25",
-        "Tags": [
+        "Topics": [
             "Conspiracy Theories",
             "Russia",
             "Global Warming",
@@ -789,7 +789,7 @@ const content = [
     {
         "Title": "Secret Lawmaking",
         "Date": "2017-06-17",
-        "Tags": [
+        "Topics": [
             "Health Care",
             "Steve Bannon",
             "Republicans",
@@ -803,7 +803,7 @@ const content = [
     {
         "Title": "Conspiracy Theories",
         "Date": "2017-06-11",
-        "Tags": [
+        "Topics": [
             "Conspiracy Theories",
             "Donald Trump",
             "Vince Foster",
@@ -821,7 +821,7 @@ const content = [
     {
         "Title": "Paris Agreement",
         "Date": "2017-06-02",
-        "Tags": [
+        "Topics": [
             "Global Warming",
             "Donald Trump"
         ],
@@ -831,7 +831,7 @@ const content = [
     {
         "Title": "Gadfly Season",
         "Date": "2017-05-26",
-        "Tags": [
+        "Topics": [
             "Conspiracy Theories",
             "Gadflies"
         ],
@@ -845,7 +845,7 @@ const content = [
     {
         "Title": "Why was Comey Fired?",
         "Date": "2017-05-14",
-        "Tags": [
+        "Topics": [
             "James Comey",
             "Republicans",
             "Daily Caller",
@@ -863,7 +863,7 @@ const content = [
     {
         "Title": "The Assault on Truth",
         "Date": "2017-04-24",
-        "Tags": [
+        "Topics": [
             "Al Gore",
             "Donald Trump",
             "Truth"
@@ -874,7 +874,7 @@ const content = [
     {
         "Title": "Flip Flop",
         "Date": "2017-04-16",
-        "Tags": [
+        "Topics": [
             "Donald Trump",
             "NATO"
         ],
@@ -884,7 +884,7 @@ const content = [
     {
         "Title": "The Republican Party is Dangerous",
         "Date": "2017-04-09",
-        "Tags": [
+        "Topics": [
             "Republicans",
             "EPA"
         ],
@@ -896,7 +896,7 @@ const content = [
     {
         "Title": "Statesmen",
         "Date": "2017-04-03",
-        "Tags": [
+        "Topics": [
             "Mitch McConnell",
             "Supreme Court"
         ],
@@ -908,7 +908,7 @@ const content = [
     {
         "Title": "Republican Collapse",
         "Date": "2017-03-27",
-        "Tags": [
+        "Topics": [
             "Republicans",
             "Paul Ryan",
             "Mitch McConnel",
@@ -921,7 +921,7 @@ const content = [
     {
         "Title": "Breathless",
         "Date": "2017-03-19",
-        "Tags": [
+        "Topics": [
             "Donald Trump"
         ],
         "People": [
@@ -933,7 +933,7 @@ const content = [
     {
         "Title": "Simple Voting",
         "Date": "2017-03-05",
-        "Tags": [
+        "Topics": [
             "Electoral College",
             "National Popular Vote"
         ],
@@ -945,7 +945,7 @@ const content = [
     {
         "Title": "The Bullet is Better",
         "Date": "2017-02-25",
-        "Tags": [
+        "Topics": [
             "Donald Trump",
             "Hillary Clinton"
         ],
@@ -957,7 +957,7 @@ const content = [
     {
         "Title": "Knowledgeable Nabobs",
         "Date": "2017-02-12",
-        "Tags": [
+        "Topics": [
             "Hillary Clinton",
             "Donald Trump",
             "Electoral College"
@@ -971,7 +971,7 @@ const content = [
     {
         "Title": "Bag of Lies",
         "Date": "2017-02-05",
-        "Tags": [
+        "Topics": [
             "Donald Trump",
             "Elections",
             "Progressivism",
@@ -988,7 +988,7 @@ const content = [
     {
         "Title": "National Popular Vote",
         "Date": "2017-01-29",
-        "Tags": [
+        "Topics": [
             "National Popular Vote",
             "Electoral College"
         ],
@@ -998,7 +998,7 @@ const content = [
     {
         "Title": "Alternative Facts",
         "Date": "2017-01-22",
-        "Tags": [
+        "Topics": [
             "Facts"
         ],
         "People": [
@@ -1009,7 +1009,7 @@ const content = [
     {
         "Title": "True American History",
         "Date": "2017-01-14",
-        "Tags": [
+        "Topics": [
             "Progressivism"
         ],
         "People": [
@@ -1021,7 +1021,7 @@ const content = [
     {
         "Title": "Lies, Damned Lies, and Republicans",
         "Date": "2016-12-28",
-        "Tags": [
+        "Topics": [
             "Donald Trump",
             "Election",
             "Hillary Clinton",
@@ -1035,7 +1035,7 @@ const content = [
     {
         "Title": "Rightists' Ridiculous Claims",
         "Date": "2016-12-13",
-        "Tags": [
+        "Topics": [
             "Donald Trump",
             "Election",
             "Hillary Clinton",
@@ -1049,7 +1049,7 @@ const content = [
     {
         "Title": "Cry Me a Towel",
         "Date": "2016-12-04",
-        "Tags": [
+        "Topics": [
             "Donald Trump",
             "Election"
         ],
@@ -1062,7 +1062,7 @@ const content = [
     {
         "Title": "The Real Steve Bannon",
         "Date": "2016-11-27",
-        "Tags": [
+        "Topics": [
             "Steve Bannon",
             "Donald Trump",
             "Breitbart"
@@ -1075,7 +1075,7 @@ const content = [
     {
         "Title": "Electoral College",
         "Date": "2016-11-20",
-        "Tags": [
+        "Topics": [
             "Electoral College",
             "Donald Trump"
         ],
@@ -1085,7 +1085,7 @@ const content = [
     {
         "Title": "Foundation Research",
         "Date": "2016-11-07",
-        "Tags": [
+        "Topics": [
             "Clinton Foundation",
             "Bill Clinton",
             "Hillary Clinton"
@@ -1098,7 +1098,7 @@ const content = [
     {
         "Title": "Facts Matter",
         "Date": "2016-10-29",
-        "Tags": [
+        "Topics": [
             "Clinton Foundation",
             "Bill Clinton",
             "Hillary Clinton",
@@ -1115,7 +1115,7 @@ const content = [
     {
         "Title": "Fact Checking",
         "Date": "2016-10-23",
-        "Tags": [
+        "Topics": [
             "Fact Checking",
             "Politifact",
             "Daily Caller",
@@ -1133,7 +1133,7 @@ const content = [
     {
         "Title": "Foundation Facts",
         "Date": "2016-10-18",
-        "Tags": [
+        "Topics": [
             "Clinton Foundation",
             "Daily Caller",
             "Truth"
@@ -1147,7 +1147,7 @@ const content = [
     {
         "Title": "The Joke's On Us",
         "Date": "2016-10-02",
-        "Tags": [
+        "Topics": [
             "Donald Trump"
         ],
         "People": [
@@ -1158,7 +1158,7 @@ const content = [
     {
         "Title": "Never, Never, Never Trump",
         "Date": "2016-09-17",
-        "Tags": [
+        "Topics": [
             "Donald Trump"
         ],
         "People": [],
@@ -1167,7 +1167,7 @@ const content = [
     {
         "Title": "Keeping Our Country",
         "Date": "2016-09-03",
-        "Tags": [
+        "Topics": [
             "Government",
             "Flag"
         ],
@@ -1177,7 +1177,7 @@ const content = [
     {
         "Title": "Poor Donald Trump",
         "Date": "2016-07-12",
-        "Tags": [
+        "Topics": [
             "Donald Trump",
             "Fox News"
         ],
@@ -1189,7 +1189,7 @@ const content = [
     {
         "Title": "Minimum Wage Facts",
         "Date": "2016-06-07",
-        "Tags": [
+        "Topics": [
             "Minimum Wage",
             "Inflation"
         ],
@@ -1201,7 +1201,7 @@ const content = [
     {
         "Title": "Living Document",
         "Date": "2016-04-10",
-        "Tags": [
+        "Topics": [
             "Constitution"
         ],
         "People": [
@@ -1213,7 +1213,7 @@ const content = [
     {
         "Title": "Understanding, not Emptathy",
         "Date": "2016-03-28",
-        "Tags": [
+        "Topics": [
             "Government",
             "Conservatism",
             "Progressivism"
@@ -1227,7 +1227,7 @@ const content = [
     {
         "Title": "Consitutional Spirit",
         "Date": "2016-02-28",
-        "Tags": [
+        "Topics": [
             "Government",
             "Constitution",
             "Progressivism"
@@ -1240,7 +1240,7 @@ const content = [
     {
         "Title": "Progressivism from the Source, Responses",
         "Date": "2016-02-14",
-        "Tags": [
+        "Topics": [
             "Progressivism",
             "Series - Progressivism from the Source"
         ],
@@ -1256,7 +1256,7 @@ const content = [
     {
         "Title": "Progressivism from the Source, Part 5",
         "Date": "2016-02-05",
-        "Tags": [
+        "Topics": [
             "Progressivism",
             "Teddy Roosevelt",
             "Series - Progressivism from the Source"
@@ -1267,7 +1267,7 @@ const content = [
     {
         "Title": "Progressivism from the Source, Part 4",
         "Date": "2016-01-29",
-        "Tags": [
+        "Topics": [
             "Progressivism",
             "Corporations",
             "Series - Progressivism from the Source"
@@ -1278,7 +1278,7 @@ const content = [
     {
         "Title": "Progressivism from the Source, Part 3",
         "Date": "2016-01-22",
-        "Tags": [
+        "Topics": [
             "Progressivism",
             "Government",
             "Series - Progressivism from the Source"
@@ -1289,7 +1289,7 @@ const content = [
     {
         "Title": "Progressivism from the Source, Part 2",
         "Date": "2016-01-15",
-        "Tags": [
+        "Topics": [
             "Progressivism",
             "Children",
             "Government",
@@ -1301,7 +1301,7 @@ const content = [
     {
         "Title": "Progressivism from the Source, Part 1",
         "Date": "2016-01-12",
-        "Tags": [
+        "Topics": [
             "Progressivism",
             "The Wealthy",
             "Series - Progressivism from the Source"
@@ -1312,7 +1312,7 @@ const content = [
     {
         "Title": "Rebutting Chuck Corso",
         "Date": "2015-04-12",
-        "Tags": [
+        "Topics": [
             "Federal Debt"
         ],
         "People": [
@@ -1323,7 +1323,7 @@ const content = [
     {
         "Title": "Figuring the Lies",
         "Date": "2015-03-18",
-        "Tags": [
+        "Topics": [
             "Federal Debt",
             "George Wallace"
         ],
@@ -1335,7 +1335,7 @@ const content = [
     {
         "Title": "Hat Back On",
         "Date": "2015-03-15",
-        "Tags": [
+        "Topics": [
             "Progressivism",
             "Government",
             "George Wallace"
@@ -1350,7 +1350,7 @@ const content = [
     {
         "Title": "Graceless",
         "Date": "2015-03-01",
-        "Tags": [
+        "Topics": [
             "Barrack Obama",
             "Progressivism"
         ],
@@ -1362,7 +1362,7 @@ const content = [
     {
         "Title": "What Sam Prentice Doesn't Know",
         "Date": "2015-02-21",
-        "Tags": [
+        "Topics": [
             "Progressivism"
         ],
         "People": [
@@ -1373,7 +1373,7 @@ const content = [
     {
         "Title": "Giving Credit",
         "Date": "2015-02-14",
-        "Tags": [
+        "Topics": [
             "Conservatives",
             "Barrack Obama"
         ],
@@ -1387,7 +1387,7 @@ const content = [
     {
         "Title": "Better Economy",
         "Date": "2015-01-31",
-        "Tags": [
+        "Topics": [
             "Barrack Obama",
             "Economy"
         ],
@@ -1397,7 +1397,7 @@ const content = [
     {
         "Title": "Liberal Jesus",
         "Date": "2014-11-16",
-        "Tags": [
+        "Topics": [
             "Jesus",
             "Progressivism"
         ],
@@ -1410,7 +1410,7 @@ const content = [
     {
         "Title": "Logic",
         "Date": "2014-11-02",
-        "Tags": [
+        "Topics": [
             "Logic",
             "Global Warming",
             "Education"
@@ -1423,7 +1423,7 @@ const content = [
     {
         "Title": "Complete Thoughts",
         "Date": "2014-10-20",
-        "Tags": [
+        "Topics": [
             "Global Warming",
             "Education",
             "Progressivism"
@@ -1437,7 +1437,7 @@ const content = [
     {
         "Title": "The Education of Chuck Corso",
         "Date": "2014-10-05",
-        "Tags": [
+        "Topics": [
             "Education",
             "Progressivism"
         ],
@@ -1450,7 +1450,7 @@ const content = [
     {
         "Title": "American Exceptionalism",
         "Date": "2014-09-14",
-        "Tags": [
+        "Topics": [
             "Constitution",
             "Democracy",
             "Progressivism",
@@ -1464,7 +1464,7 @@ const content = [
     {
         "Title": "Conscience of a Liberal",
         "Date": "2014-03-17",
-        "Tags": [
+        "Topics": [
             "NSA Spying",
             "Barrack Obama"
         ],
@@ -1476,7 +1476,7 @@ const content = [
     {
         "Title": "Inequalities",
         "Date": "2014-01-18",
-        "Tags": [
+        "Topics": [
             "Progressivism",
             "Government",
             "Education"
@@ -1489,7 +1489,7 @@ const content = [
     {
         "Title": "Progressive Parties",
         "Date": "2013-09-20",
-        "Tags": [
+        "Topics": [
             "Progressivism",
             "Democrats",
             "Libertariansm"
@@ -1503,7 +1503,7 @@ const content = [
     {
         "Title": "Liberal History",
         "Date": "2013-09-07",
-        "Tags": [
+        "Topics": [
             "Progressivism",
             "Liberals",
             "American History"
@@ -1516,7 +1516,7 @@ const content = [
     {
         "Title": "True Progressivism",
         "Date": "2013-08-20",
-        "Tags": [
+        "Topics": [
             "Progressivism"
         ],
         "People": [
@@ -1527,7 +1527,7 @@ const content = [
     {
         "Title": "True Leaders",
         "Date": "2013-04-23",
-        "Tags": [
+        "Topics": [
             "Leadership"
         ],
         "People": [],
@@ -1536,7 +1536,7 @@ const content = [
     {
         "Title": "Gun Solutions",
         "Date": "2013-01-20",
-        "Tags": [
+        "Topics": [
             "Gun Control",
             "NRA"
         ],
@@ -1546,7 +1546,7 @@ const content = [
     {
         "Title": "Elect Leaders, not Poll-Watchers",
         "Date": "2012-11-18",
-        "Tags": [
+        "Topics": [
             "Leadership",
             "Politicians"
         ],
@@ -1558,7 +1558,7 @@ const content = [
     {
         "Title": "Fooled by a Hoax Email",
         "Date": "2012-11-13",
-        "Tags": [
+        "Topics": [
             "Fact Checking",
             "Hoax",
             "Executive Orders",
@@ -1573,7 +1573,7 @@ const content = [
     {
         "Title": "Simple Economics",
         "Date": "2012-10-30",
-        "Tags": [
+        "Topics": [
             "Economy",
             "Barrack Obama"
         ],
@@ -1585,7 +1585,7 @@ const content = [
     {
         "Title": "Dysfunctional Republicans",
         "Date": "2012-09-17",
-        "Tags": [
+        "Topics": [
             "Mitt Romney",
             "Barrack Obama"
         ],
@@ -1595,7 +1595,7 @@ const content = [
     {
         "Title": "Charter Review",
         "Date": "2012-02-12",
-        "Tags": [
+        "Topics": [
             "Andover",
             "Charter"
         ],
@@ -1605,7 +1605,7 @@ const content = [
     {
         "Title": "We Need Julia",
         "Date": "2011-04-18",
-        "Tags": [
+        "Topics": [
             "Andover",
             "Charter",
             "Endorsement"
@@ -1616,7 +1616,7 @@ const content = [
     {
         "Title": "Neanderthals, Deconstructionists, and Republicans",
         "Date": "2010-11-14",
-        "Tags": [
+        "Topics": [
             "Elections",
             "Neanderthal",
             "Derrida"
@@ -1631,7 +1631,7 @@ const content = [
     {
         "Title": "For The People",
         "Date": "2010-10-12",
-        "Tags": [
+        "Topics": [
             "Economy",
             "Deregulation",
             "Tea Party",
@@ -1643,7 +1643,7 @@ const content = [
     {
         "Title": "Stacking Meetings",
         "Date": "2008-06-28",
-        "Tags": [
+        "Topics": [
             "Town Meetings"
         ],
         "People": [
@@ -1654,7 +1654,7 @@ const content = [
     {
         "Title": "Candidate Comparison",
         "Date": "2007-04-28",
-        "Tags": [
+        "Topics": [
             "Board of Finance",
             "Ensorsement"
         ],
@@ -1667,7 +1667,7 @@ const content = [
     {
         "Title": "Lies or Manipulation?",
         "Date": "2007-04-23",
-        "Tags": [
+        "Topics": [
             "Board of Finance",
             "Revaluation"
         ],

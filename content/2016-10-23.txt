@@ -1,6 +1,6 @@
 Title: Fact Checking
 Date: 2016-10-23
-Tags: Fact Checking, Politifact, Daily Caller, Fox News, Rush Limbaugh, Clinton Foundation
+Topics: Fact Checking, Politifact, Daily Caller, Fox News, Rush Limbaugh, Clinton Foundation
 People: Sam Prentice, Joe Stevens, Chuck Corso
 Content:
 --------------------------------------------------------------------------------

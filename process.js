@@ -34,25 +34,25 @@ const oxfordJoin = (xs) =>
 
 const returnHome = () => document.location.hash = '#/'
 
-const tagSort = ([a, x], [b, y]) => 
+const topicSort = ([a, x], [b, y]) => 
   y - x || (a < b ? -1 : a > b ? 1 : 0)
 const personSort = ([a, x], [b, y], aa = last (a.split(' ')), bb = last (b.split(' '))) => 
   y - x || (aa < bb ? -1 : aa > bb ? 1 : 0)
 
-const alphaTagSort = ([a], [b]) =>
+const alphaTopicSort = ([a], [b]) =>
   a < b ? -1 : a > b ? 1 : 0 
 const alphaPersonSort = ([a], [b], aa = last (a.split(' ')), bb = last (b.split(' '))) => 
   aa < bb ? -1 : aa > bb ? 1 : 0
 
-const gather = (name, content, sorter=tagSort) =>
+const gather = (name, content, sorter=topicSort) =>
   Object.entries (countBy (prop (name)) (content)) .sort (sorter)
 
 const makeLink = (type) => ([t, c]) => 
   `<li><a href="#/${type}/${t.replace(/ /g, '+')}">${t} <span>(${c} letter${c > 1 ? 's' : ''})</span></a></li>`
 const letterLink = ({Date, Title}) =>
   `<li><a href="#/${Date}">${Title} <span>(${shortDate(Date)})</span></a></li>`
-const makeTagLink = (Tag) =>
-  `<a href="#/tag/${Tag.replace(/ /g, '+')}">${Tag}</a>`
+const makeTopicLink = (Topic) =>
+  `<a href="#/topic/${Topic.replace(/ /g, '+')}">${Topic}</a>`
 
 
 const makeSidebarButtons = (themes) =>
@@ -111,19 +111,19 @@ const makeSidebarLetters = (
   ${makeRecentSidebarLetters(content, lettersAboveFold)}
   ${makeOlderSidebarLetters(content, lettersAboveFold, yearsAboveFold)}`
 
-makeSidebarTags = (
+makeSidebarTopics = (
   content,
-  tagsAboveFold,
-  tags = gather ('Tags', content, tagSort)
+  topicsAboveFold,
+  topics = gather ('Topics', content, topicSort)
 ) =>
-  `<h2><a href="#/tags/">Topics</a></h2>
+  `<h2><a href="#/topics/">Topics</a></h2>
   <ul>
-  ${tags .slice (0, tagsAboveFold) .map (makeLink ('tag')) .join ('\n')}
+  ${topics .slice (0, topicsAboveFold) .map (makeLink ('topic')) .join ('\n')}
   </ul>
-  ${tags.length > tagsAboveFold ? `    <details class="more">
+  ${topics.length > topicsAboveFold ? `    <details class="more">
       <summary>More...</summary>
       <ul>
-          ${tags .slice (tagsAboveFold) .map (makeLink ('tag')) .join ('\n')}
+          ${topics .slice (topicsAboveFold) .map (makeLink ('topic')) .join ('\n')}
       </ul>
   </details>` : ``}`
 
@@ -149,20 +149,20 @@ const makeSidebarPeople = (
 const makeSidebar = (
   content, 
   themes, 
-  {lettersAboveFold = 5, yearsAboveFold = 3, tagsAboveFold = 8, peopleAboveFold = 4}
+  {lettersAboveFold = 5, yearsAboveFold = 3, topicsAboveFold = 8, peopleAboveFold = 4}
 ) => 
   `<div class="sidebar box">
     ${makeSidebarButtons (themes)}
     ${makeSidebarLetters (content, lettersAboveFold, yearsAboveFold)}
-    ${makeSidebarTags (content, tagsAboveFold)}
+    ${makeSidebarTopics (content, topicsAboveFold)}
     ${makeSidebarPeople (content, peopleAboveFold)}
   </div>`
 
-const makeLetterBody = ({Title, Tags = [], Date, Content}) =>
+const makeLetterBody = ({Title, Topics = [], Date, Content}) =>
   `<h1>${Title}</h1>
-  ${Tags.length 
-    ? `<ul class="tags">
-        ${Tags .map (tag => `<li><a href="#/tag/${tag .replace (/ /g, '+')}">${tag}</a></li>`) .join ('\n    ')}
+  ${Topics.length 
+    ? `<ul class="topics">
+        ${Topics .map (topic => `<li><a href="#/topic/${topic .replace (/ /g, '+')}">${topic}</a></li>`) .join ('\n    ')}
       </ul>` 
     : ``
   }
@@ -197,13 +197,13 @@ const makeLetter = (lookups) => (
       <p>No letter found for ${longDate(hash.slice(2))}`
 
 
-const makeTag = (
+const makeTopic = (
   content, 
   hash,
-  tag = hash .slice (6) .replaceAll('+', ' '),
-  letters = content .filter (({Tags}) => Tags .includes (tag))
+  topic = hash .slice (8) .replaceAll('+', ' '),
+  letters = content .filter (({Topics}) => Topics .includes (topic))
 ) => 
-  `<h1>Letters tagged "${tag}"</h1>
+  `<h1>Letters with topic "${topic}"</h1>
   <ul class="long">
     ${letters .map (({Date, Title}) => 
       `<li><a href="#/${Date}">${Title} <span>(${shortDate (Date)})</span></a></li>`
@@ -224,10 +224,10 @@ const makePerson = (
     ) .join ('\n')}
   </ul>`
 
-const makeTags = (content) => 
-  `<h1>All Tags</h1>
+const makeTopics = (content) => 
+  `<h1>All Topics</h1>
     <ul class="long">
-      ${gather ('Tags', content, alphaTagSort) .map (makeLink ('tag')) .join ('\n        ')}
+      ${gather ('Topics', content, alphaTopicSort) .map (makeLink ('topic')) .join ('\n        ')}
     </ul>`
 
 const makePeople = (content) => 
@@ -306,11 +306,11 @@ const makeSnippet = ({Date, Title, Snippets}) =>
 const searchFocus = () =>
   document .getElementById ('search') .focus ()
 
-const makeSearchTagsResult = (tags) =>
-  `${tags.length > 0 
+const makeSearchTopicsResult = (topics) =>
+  `${topics.length > 0 
     ? `<h4>Topics</h4>
        <ul class="long topics">
-         ${tags .map ((Tag) => `<li>${makeLink('tag')(Tag)}</li>`) .join ('\n')}
+         ${topics .map ((Topic) => `<li>${makeLink('topic')(Topic)}</li>`) .join ('\n')}
        </ul>`
     : ``
   }`
@@ -343,14 +343,14 @@ const makeSearchResults = (
   content, 
   query,
   matches = query .length ? getMatches (content, query) : [],
-  tags = gather ('Tags', content, tagSort) .filter (([tag]) => tag .toLowerCase () .includes (query)) ,
+  topics = gather ('Topics', content, topicSort) .filter (([topic]) => topic .toLowerCase () .includes (query)) ,
   people = gather ('People', content, personSort) .filter (([person]) => person .toLowerCase () .includes (query))
 ) => 
   `${query 
-    ? matches .length > 0  || tags.length > 0 || people.length > 0 
+    ? matches .length > 0  || topics.length > 0 || people.length > 0 
       ? `<h2>Results</h2>
          <div id="search-results">
-           ${makeSearchTagsResult (tags)}
+           ${makeSearchTopicsResult (topics)}
            ${makeSearchPeopleResult (people)}
            ${makeSearchLettersResult (matches)}
          </div>`
@@ -368,11 +368,11 @@ const makeSearch = (
   ${makeSearchResults (content, query.toLowerCase())}`
 
 
-const updateCurrent = ({Date, Tags, Title}) => 
+const updateCurrent = ({Date, Topics, Title}) => 
   `The most recent letter, from ${longDate(Date)
   }, is titled "<a href="#/${Date}">${Title
-  }</a>", and discusses the ${Tags.length == 1 ? 'subject' : 'subjects'
-  } of ${oxfordJoin (Tags .map (makeTagLink))}.`
+  }</a>", and discusses the ${Topics.length == 1 ? 'subject' : 'subjects'
+  } of ${oxfordJoin (Topics .map (makeTopicLink))}.`
 
 
 const enhanceContent = (content, div = document.createElement('div')) =>  
@@ -399,8 +399,8 @@ const router = (content) => {
   const routes = [
     [equals      ('#/'),                      always (base),        noop],
     [matches     (/^#\/\d{4}-\d{2}-\d{2}$/),  makeLetter (lookups), noop],
-    [equals      ('#/tags/'),                 makeTags,             noop],
-    [startsWith  ('#/tag/'),                  makeTag,              noop],
+    [equals      ('#/topics/'),               makeTopics,           noop],
+    [startsWith  ('#/topic/'),                makeTopic,            noop],
     [equals      ('#/people/'),               makePeople,           noop],
     [startsWith  ('#/person/'),               makePerson,           noop],
     [equals      ('#/letters/'),              makeLetters,          noop],
@@ -427,7 +427,7 @@ const router = (content) => {
   document .getElementById ('root') .innerHTML += makeSidebar (
     content,
     themes,
-    {lettersAboveFold: 10, yearsAboveFold: 3, tagsAboveFold: 6, peopleAboveFold: 6}
+    {lettersAboveFold: 10, yearsAboveFold: 3, topicsAboveFold: 6, peopleAboveFold: 6}
   )
   
   addEvents ({

@@ -1,6 +1,6 @@
 Title: Democratic Decisions
 Date: 2019-05-20
-Tags: Democracy
+Topics: Democracy
 People: Sam Prentice
 Content:
 --------------------------------------------------------------------------------

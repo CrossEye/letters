@@ -46,11 +46,11 @@ const parse = (file) =>
 const linkPeople = (People, Content) => 
   People .reduce ((c, p) => c.replace(p, `[${p}](#/person/${p.replace(/ /g, '+')})`), Content)
 
-const convert = ({Tags = '', People: ps = '', Content, ...rest}, 
+const convert = ({Topics = '', People: ps = '', Content, ...rest}, 
     People = ps .trim () .split (/\,\s*/) .filter (Boolean)
 ) => ({
     ...rest,
-    Tags: Tags .trim () .split (/\,\s*/),
+    Topics: Topics .trim () .split (/\,\s*/),
     People,
     Content: marked (linkPeople (People, Content))
 })
