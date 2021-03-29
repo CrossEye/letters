@@ -168,6 +168,10 @@ body {
   margin: 30px auto;
 }
 
+span {
+  opacity: 60%;
+}
+
 header {
   padding: .5rem 1rem;
   margin: -1rem 1rem 1rem 1rem;
@@ -276,10 +280,6 @@ ul.long li, ul.long li a {
 
 .sidebar {
   flex: 2 1 200px;
-}
-
-.sidebar span {
-  opacity: 60%;
 }
 
 .box {
