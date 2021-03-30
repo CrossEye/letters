@@ -16,7 +16,8 @@ const sort = (fn, dir = 'ascending') => (xs) =>
   xs.sort ((a, b, aa = fn (a), bb = fn (b)) => 
     (dir == 'descending' ? -1 : 1) * (aa < bb ? -1 : aa > bb ? 1 : 0))
 
-const showSavedContent = () => console .log ('content.js written')
+const showSavedLetters = () => console .log ('content.js written')
+const showSavedPages = () => console .log ('pages.js written')
 const showSavedWrapper = () => console .log ('letters.html written')
 const warnOfError = (err) => console .warn (`Error: ${err}`)
 
@@ -46,7 +47,7 @@ const parse = (file) =>
 const linkPeople = (People, Content) => 
   People .reduce ((c, p) => c.replace(p, `[${p}](#/person/${p.replace(/ /g, '+')})`), Content)
 
-const convert = ({Topics = '', People: ps = '', Content, ...rest}, 
+const convertLetter = ({Topics = '', People: ps = '', Content, ...rest}, 
     People = ps .trim () .split (/\,\s*/) .filter (Boolean)
 ) => ({
     ...rest,
@@ -54,34 +55,58 @@ const convert = ({Topics = '', People: ps = '', Content, ...rest},
     People,
     Content: marked (linkPeople (People, Content))
 })
+ 
+const convertPage = ({Content, 'Sort Order': so, ...rest}) => ({
+    ...rest,
+    ['Sort Order']: Number(so),
+    Content: marked (Content)
+})
 
-
-const combine = (content) => ([index, style, themes, process]) =>
+const combine = (content, pages) => ([index, style, themes, process]) =>
   [
     [style, /\<link rel="stylesheet" href="style\.css" \/\>/, `<style type="text/css">$$</style>`],
     [content, /\<script src="content\.js"\>\<\/script\>/, `<script>$$</script>`],
+    [pages, /\<script src="pages\.js"\>\<\/script\>/, `<script>$$</script>`],
     [themes, /\<script src="themes\.js"\>\<\/script\>/, `<script>$$</script>`],
     [process, /\<script src="process\.js"\>\<\/script\>/, `<script>$$</script>`],
   ] .reduce ((index, [c, r, h]) =>  index.replace(r, h.replace('$$', c)), index)
 
-const makeAllInOne = (content) =>
+const makeAllInOne = ([content, pages]) =>
   Promise.all (['./index.html', './style.css', './themes.js', './process.js'] .map (readFile))
-    .then (combine (content))
+    .then (combine (content, pages))
     .then (writeFile ('./letters.html'))
 
+const makeLetters = () =>
+  readdir ('./content/letters') 
+    .then (map (combinePaths ('./content/letters')))
+    .then (map (readFile))
+    .then (allPromises)
+    .then (map (parse))
+    .then (map (convertLetter))
+    .then (sort (prop ('Date'), 'descending'))
+    .then (stringify (null, 2))  
+    //.then (stringify ())
+    .then (prepend ('const content = '))
+    .then (tap (writeFile ('content.js')))
+    .then (tap (showSavedLetters))
 
-readdir ('./content') 
-  .then (map (combinePaths ('./content')))
-  .then (map (readFile))
-  .then (allPromises)
-  .then (map (parse))
-  .then (map (convert))
-  .then (sort (prop ('Date'), 'descending'))
-  .then (stringify (null, 4))  
-  //.then (stringify ())
-  .then (prepend ('const content = '))
-  .then (tap (writeFile ('content.js')))
-  .then (tap (showSavedContent))
+// TODO: extact common features from makeLetters/makePages
+const makePages = () =>
+  readdir ('./content/pages') 
+    .then (map (combinePaths ('./content/pages')))
+    .then (map (readFile))
+    .then (allPromises)
+    .then (map (parse))
+    .then (map (convertPage))
+    .then (sort (prop ('Sort Order'), 'ascending'))
+    .then (stringify (null, 2))  
+    //.then (stringify ())
+    .then (prepend ('const pages = '))
+    .then (tap (writeFile ('pages.js')))
+    .then (tap (showSavedPages))
+
+
+Promise.all ([makeLetters(), makePages()])
   .then (tap (makeAllInOne))
   .then (tap (showSavedWrapper))
   .catch (warnOfError)

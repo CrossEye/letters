@@ -8,6 +8,7 @@ const countBy = (fn) => (xs) =>
 const equals = (s1) => (s2) => s1 === s2
 const findAllIndices = (x) => (xs, pos = 0, idx = xs .indexOf (x, pos)) =>
   idx == -1 ? [] : [idx, ...findAllIndices (x) (xs, idx + 1)]
+const firstPara = (text) => text.slice(0, text.indexOf('</p>') + 4) 
 const getYear = ({Date}) => Date .slice (0, 4)
 const groupBy = (fn) => (xs) => Object .entries (xs .reduce (
   (a, x) => call ((key) => ((a[key] = a[key] || []), (a [key] .push (x)), a), fn(x)), {}
@@ -56,6 +57,8 @@ const letterLink = ({Date, Title}) =>
   `<li><a href="#/${Date}">${Title} <span>(${shortDate(Date)})</span></a></li>`
 const makeTopicLink = (Topic) =>
   `<a href="#/topic/${Topic.replace(/ /g, '+')}">${Topic}</a>`
+const makeTopicListLink = (Topic) =>
+  `<li>${makeTopicLink(Topic)}</li>`
 
 
 // Sidebar Setup
@@ -106,12 +109,15 @@ const makeOlderSidebarLetters = (
   }
   </details>`
 
+const makeSidebarPages = (pages) =>
+  pages .map (({Title, Slug}) => `<h3><a href="#/pages/${Slug}">${Title}</a></h3>`) .join ('\n')
+
 const makeSidebarLetters = (
   content,
   lettersAboveFold,
   yearsAboveFold,
 ) =>
-  `<h2><a href="#/letters/">Letters</a></h2>
+  `<h3><a href="#/letters/">Letters</a></h3>
   ${makeRecentSidebarLetters(content, lettersAboveFold)}
   ${makeOlderSidebarLetters(content, lettersAboveFold, yearsAboveFold)}`
 
@@ -120,11 +126,11 @@ makeSidebarTopics = (
   topicsAboveFold,
   topics = gather ('Topics', content, topicSort)
 ) =>
-  `<h2><a href="#/topics/">Topics</a></h2>
+  `<h3><a href="#/topics/">Topics</a></h3>
   <ul>
   ${topics .slice (0, topicsAboveFold) .map (makeLink ('topic')) .join ('\n')}
   </ul>
-  ${topics.length > topicsAboveFold ? `    <details class="more">
+  ${topics.length > topicsAboveFold ? `<details class="more">
       <summary>More...</summary>
       <ul>
           ${topics .slice (topicsAboveFold) .map (makeLink ('topic')) .join ('\n')}
@@ -151,12 +157,14 @@ const makeSidebarPeople = (
   }`
 
 const makeSidebar = (
-  content, 
+  content,
+  pages,
   themes, 
   {lettersAboveFold = 5, yearsAboveFold = 3, topicsAboveFold = 8, peopleAboveFold = 4}
 ) => 
   `<div class="sidebar box">
     ${makeSidebarButtons (themes)}
+    ${makeSidebarPages (pages)}
     ${makeSidebarLetters (content, lettersAboveFold, yearsAboveFold)}
     ${makeSidebarTopics (content, topicsAboveFold)}
     ${makeSidebarPeople (content, peopleAboveFold)}
@@ -192,16 +200,25 @@ const makeLetterNav = (
   </nav>`
 
 const makeLetter = (lookups) => (
-  contents, 
+  content, 
   hash,
   letter = lookups [hash .slice (2)],
 ) => 
   letter
     ? `${makeLetterBody (letter)}
-       ${makeLetterNav (contents, letter)}` 
+       ${makeLetterNav (content, letter)}` 
     : `<h1>Not Found</h1>
       <p>No letter found for ${longDate(hash.slice(2))}`
 
+
+// Page Route
+const makePage = (pages) => (
+  content, 
+  hash,
+  slug = hash .slice (8) .replaceAll('+', ' '),
+  {Title, Content} = pages .find (({Slug}) => Slug == slug)
+) => Content
+      
 
 // Topic Route
 const makeTopic = (
@@ -237,7 +254,7 @@ const makePerson = (
 const makeTopics = (content) => 
   `<h1>All Topics</h1>
     <ul class="long">
-      ${gather ('Topics', content, alphaTopicSort) .map (makeLink ('topic')) .join ('\n        ')}
+      ${gather ('Topics', content, alphaTopicSort) .map (makeLink ('topic')) .join ('\n')}
     </ul>`
 
 
@@ -245,7 +262,7 @@ const makeTopics = (content) =>
 const makePeople = (content) => 
   `<h1>All Letter Writers</h1>
   <ul class="long">
-    ${gather ('People', content, alphaPersonSort) .map (makeLink ('person')) .join ('\n        ')}
+    ${gather ('People', content, alphaPersonSort) .map (makeLink ('person')) .join ('\n')}
   </ul>`
 
 
@@ -388,14 +405,17 @@ const makeSearch = (
   ${makeSearchResults (content, query.toLowerCase())}`
 
 
+// Main route
+const makeMain = (content) =>
+  `<h1>Recent Letters</h1>
+  ${content .slice (0, 10) .map (({Title, Date, Topics, Content}) => 
+    `<div class="gloss"><h4><a href="">${Title} <span>(${shortDate(Date)})</span></a></h4>
+    <ul class="topics">${Topics .map (makeTopicListLink) .join(' ')}</ul>
+    <em>${firstPara (Content) .slice (0, -4)}<a href="#/${Date}"> &hellip; more</a></em>
+    </div>`
+  ).join('\n')}`
+
 // Setup
-const updateCurrent = ({Date, Topics, Title}) => 
-  `The most recent letter, from ${longDate(Date)
-  }, is titled "<a href="#/${Date}">${Title
-  }</a>", and discusses the ${Topics.length == 1 ? 'subject' : 'subjects'
-  } of ${oxfordJoin (Topics .map (makeTopicLink))}.`
-
-
 const enhanceContent = (content, div = document.createElement('div')) =>  
   content .map ((letter) => (
     (div .innerHTML = letter .Content), ({
@@ -404,6 +424,22 @@ const enhanceContent = (content, div = document.createElement('div')) =>
       TextLower:  div .textContent .toLowerCase ()
     }))
   )
+
+const updateCurrent = ({Date, Topics, Title}) => 
+  `The most recent letter, from ${longDate(Date)
+  }, is titled "<a href="#/${Date}">${Title
+  }</a>", and discusses the ${Topics.length == 1 ? 'subject' : 'subjects'
+  } of ${oxfordJoin (Topics .map (makeTopicLink))}.`
+
+const getSubs = (content) => ({
+  currentLetter: updateCurrent (content [0])
+})
+
+const enhancePages = (content, pages, substitutions = getSubs (content)) =>
+  pages.map (({Content, ...rest}) => ({
+    ...rest,
+    Content: Content.replace(/\<\!\-\-\s*subtitute\:\s*(\w+)\s*\-\-\>/g, (s, k) => substitutions[k] || ``)
+  }))
 
 
 // DOM Events
@@ -417,12 +453,13 @@ const addEvents = (cfg) =>
 
 
 // Routing
-const router = (content) => {
+const router = (content, pages) => {
   const lookups = Object .fromEntries (content .map (letter => [letter.Date, letter]))
   const base = document .getElementById ('main') .innerHTML
 
   const routes = [
-    [equals      ('#/'),                      always (base),        noop],
+    [equals      ('#/'),                      makeMain,             noop],
+    [startsWith  ('#/pages/'),                makePage (pages),     noop],
     [matches     (/^#\/\d{4}-\d{2}-\d{2}$/),  makeLetter (lookups), noop],
     [equals      ('#/topics/'),               makeTopics,           noop],
     [startsWith  ('#/topic/'),                makeTopic,            noop],
@@ -444,15 +481,15 @@ const router = (content) => {
 
 
 // Main
-((rawContent, themes) => {
+((rawContent, rawPages, themes) => {
   const content = enhanceContent (rawContent)
+  const pages = enhancePages (content, rawPages)
 
-  document .getElementById ('currentLetter') .innerHTML = updateCurrent (content[0])
-
-  const route = router (content)
+  const route = router (content, pages)
  
   document .getElementById ('root') .innerHTML += makeSidebar (
     content,
+    pages,
     themes,
     {lettersAboveFold: 10, yearsAboveFold: 3, topicsAboveFold: 6, peopleAboveFold: 6}
   )
@@ -472,4 +509,4 @@ const router = (content) => {
   window .addEventListener ('popstate', () => setTimeout (route, 0))
 
   route ()
-}) (content, themes)
+}) (content, pages, themes)

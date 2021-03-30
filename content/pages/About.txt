@@ -1,0 +1,52 @@
+Title: About
+Slug: about
+Sort Order: 1
+Content:
+--------------------------------------------------------------------------------
+
+ About this Site
+ ===============
+
+I am one of those gadflies who writes often to the local weekly paper. I've been
+doing it for years.  This page is collecting those letters for posterity.  At
+the moment, the letters from 2012 to the present are included, plus a scattering
+of older ones.  I will add more as I find time (and, often, as I find the
+letters themselves.) 
+
+<!-- subtitute: currentLetter -->
+
+Notes
+-----
+
+I'm a politically-involved, progressive citizen with strong opinions. That comes
+through in those letters.  I have covered topics such as [Global Warming][gw],
+the ideas of [Progressivism][pr], [Fact Checking][fc], the presidency of 
+[Donald Trump][dt], as well as [many others][to].
+
+I do try to include a modicum of humor in many of these letters.  But please
+remember that I am serious, that I think the issues discussed are often very
+important, the local ones, the national ones, and the global ones. 
+
+Although I have in the past served in the local government of Andover,
+Connecticut (on the Board of Education, the Capital Improvements and Planning
+Commission, the town Website Committee as well as the Democratic Town
+Committee), all of the letters here represent my own views and not those of
+these organizations.
+
+These are letters as submitted to the paper.  The titles are what I gave them,
+not the headers supplied by the <em>Rivereast</em>.  The dates are the dates I
+wrote them, not the issue date in which they appeared.  A few were never
+published, and I never did try to determine why.  There may have been mild
+editing by the <em>Rivereast</em> so that these don't exactly match what was
+published, but that's rare, and it never changes the meaning.
+
+Feel free to [email me][em] with any comments or suggestions.
+
+  [dt]: #/topic/Donald+Trump
+	[em]: mailto:scott@sauyet.com
+  [fc]: #/topic/Fact+Checking
+  [gw]: #/topic/Global+Warming
+  [pr]: #/topic/Progressivism
+  [to]: #/topics/
+
+--------------------------------------------------------------------------------

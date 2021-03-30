@@ -112,6 +112,18 @@ button, input {
   background-color: var(--neutral);
 }
 
+.gloss a, .gloss a:visited {
+  background-color: var(--primary-background)
+}
+
+.gloss p a, .gloss p a:visited {
+  background-color: var(--primary-highlight)
+}
+
+.gloss a:hover {
+  background-color: var(--primary-accent)
+}
+
 /*  Borders  */
 
 header, .box {
@@ -254,6 +266,14 @@ nav {
   width: 40%;
 }
 
+.gloss {
+  margin-bottom: 5rem;
+}
+
+.gloss .topics {
+  margin-top: -1rem;
+}
+
 ul.long li, ul.long li a {
   width: 100%
 }
@@ -297,7 +317,7 @@ ul.long li, ul.long li a {
 }
 
 #searchWidget {
-  margin-top: -0.5rem;
+  margin-top: -2rem;
   float: right;
 }
 
@@ -364,6 +384,11 @@ h2 {
 
 .topics ul {
   list-style: none;
+  text-align: right;
+}
+
+.gloss .topics {
+  font-size: 85%;
   text-align: right;
 }
 
