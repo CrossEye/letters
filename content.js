@@ -3,9 +3,8 @@ const content = [
     "Title": "Mainstream Media",
     "Date": "2021-03-19",
     "Topics": [
-      "Mainstream Media",
-      "Journalism",
-      "Fact Checking"
+      "Media",
+      "Journalism"
     ],
     "People": [],
     "Content": "<p>An interesting phrase is overused in public discourse: &quot;mainstream media&quot;. We\nshould define such highly used terms; after extensive analysis I can report that\n&quot;mainstream media&quot; means &quot;news sources I disagree with.&quot;</p>\n<p>That&#39;s all.</p>\n<p>When people tell you the truth is to be found on some obscure website, but that\n&quot;the mainstream media are covering it up,&quot; you can be 99.99% certain that their\n&quot;truth&quot; is pure nonsense. If you hear, &quot;That&#39;s what they want you to think,&quot;\nit&#39;s this same balderdash.</p>\n<p>When some MSNBC or Fox talking head describes a story &quot;the mainstream media was\ntoo timid to cover&quot;, it means they have some fact-free, sensationalized idea\nwith no credible expert support. For believers, the very fact that the experts\ndisagree is itself evidence it must be true -- pure delusion.</p>\n<p>The phrase was once used equally by the left and the right, but the left has\nmoved to on to &quot;corporate-owned media&quot;, which means mostly the same thing. These\ndays &quot;mainstream media&quot; connotes &quot;journalism that doesn&#39;t agree with my\npreconceived conservative ideas&quot;.</p>\n<p>People using &quot;mainstream media&quot; imply they have access to highly credible,\nwell-hidden sources the rest of us have overlooked. That&#39;s almost never true.\nInstead it means that because they don&#39;t like the facts, they will proclaim\nfalsehoods that suit them better. Think global warming deniers. Think\nanti-vaxxers.</p>\n<p>You see this everywhere. A recent letter was a good example, suggesting that\nPonzi-schemer Martin Armstrong was locked up not for fraud and not because he\nwouldn&#39;t return his ill-gotten gains, but because he wanted to keep his source\ncode private. I&#39;m sure the writer would tell you that the mainstream media got\nall this wrong. Hint: you can believe the normal press, court filings, and many\nrebuttal websites over Armstrong&#39;s own pages.</p>\n"

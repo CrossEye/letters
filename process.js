@@ -409,9 +409,9 @@ const makeSearch = (
 const makeMain = (content) =>
   `<h1>Recent Letters</h1>
   ${content .slice (0, 10) .map (({Title, Date, Topics, Content}) => 
-    `<div class="gloss"><h4><a href="">${Title} <span>(${shortDate(Date)})</span></a></h4>
-    <ul class="topics">${Topics .map (makeTopicListLink) .join(' ')}</ul>
-    <em>${firstPara (Content) .slice (0, -4)}<a href="#/${Date}"> &hellip; more</a></em>
+    `<div class="abstract"><div class="header"><h4><a href="">${Title} <span>(${shortDate(Date)})</span></a></h4>
+    <ul class="topics">${Topics .map (makeTopicListLink) .join(' ')}</ul></div>
+    <em>${firstPara (Content) .slice (0, -4)}<a class="more" href="#/${Date}"> &hellip; more</a></em>
     </div>`
   ).join('\n')}`
 

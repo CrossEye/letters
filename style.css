@@ -1,21 +1,21 @@
 /*  Colors  */
 
 :root {
-  --neutral: #d7e3e5;
-  --border: #aa938f;
+  --neutral: #fbeec1;
+  --border: #000000;
   --accent: #666666;
-  --primary-background: #edd8c8;
-  --primary-text: #555555;
-  --primary-highlight: #e4cbb7;
-  --primary-accent: #b7ccd2;
-  --secondary-background: #b7ccd2;
-  --secondary-text: #555555;
-  --secondary-highlight: #b7ccd2;
-  --secondary-accent: #dabea6;
-  --tertiary-background: #dabea6;
-  --tertiary-text: #555555;
-  --tertiary-highlight: #dabea6;
-  --tertiary-accent: #b7ccd2;
+  --primary-background: #daad86;
+  --primary-text: #333333;
+  --primary-highlight: #bc986c;
+  --primary-accent: #659dbd;
+  --secondary-background: #bc986c;
+  --secondary-text: #fbeec1;
+  --secondary-highlight: #bc986c;
+  --secondary-accent: #659dbd;
+  --tertiary-background: #8d8741;
+  --tertiary-text: #fbeec1;
+  --tertiary-highlight: #8d8741;
+  --tertiary-accent: #659dbd;
 }
 
 body {
@@ -37,6 +37,11 @@ body {
 .main a:hover {
   background-color: var(--primary-accent);
 }
+
+.abstract {
+  border-color: var(--primary-highlight);
+}
+
 
 ul.long li a, ul.long li a:visited {
   background-color: var(--primary-background);
@@ -112,17 +117,19 @@ button, input {
   background-color: var(--neutral);
 }
 
-.gloss a, .gloss a:visited {
+/*
+.abstract a, .abstract a:visited {
   background-color: var(--primary-background)
 }
 
-.gloss p a, .gloss p a:visited {
+.abstract p a, .abstract p a:visited {
   background-color: var(--primary-highlight)
 }
 
-.gloss a:hover {
+.abstract a:hover {
   background-color: var(--primary-accent)
 }
+*/
 
 /*  Borders  */
 
@@ -244,6 +251,23 @@ nav {
   position: relative;
 }
 
+.sidebar {
+  flex: 2 1 200px;
+}
+/*
+.abstract .header {
+  display: flex;
+  width: 100%;
+}
+
+.abstract .header h4 {
+  flex: 5 1 150px;
+}
+
+.abstract .header ul {
+  flex: 2 1 100px;
+}
+*/
 .main a, .main a:visited {
   text-decoration: none;
 }
@@ -266,11 +290,15 @@ nav {
   width: 40%;
 }
 
-.gloss {
-  margin-bottom: 5rem;
+.abstract {
+  margin-bottom: 2rem;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: .5rem 1rem;
 }
 
-.gloss .topics {
+.abstract .topics {
   margin-top: -1rem;
 }
 
@@ -296,10 +324,6 @@ ul.long li, ul.long li a {
 
 .signature {
   margin-left: 2rem;
-}
-
-.sidebar {
-  flex: 2 1 200px;
 }
 
 .box {
@@ -347,10 +371,19 @@ ul.long li a:hover {
   outline: none;
 }
 
+h4 a {
+  padding: .25rem;
+}
+
+a.more {
+  float: right;
+}
+
 /*  Typography  */
 
 body {
   font-size: 1.2em;
+  font-family: sans-serif;
 }
 
 h1, h2, h3, h4, summary {
@@ -387,9 +420,13 @@ h2 {
   text-align: right;
 }
 
-.gloss .topics {
+.abstract .topics {
   font-size: 85%;
   text-align: right;
+}
+
+.abstract p {
+  font-size: 1.05rem;
 }
 
 .sidebar li {
