@@ -254,6 +254,23 @@ nav {
   position: relative;
 }
 
+.sidebar {
+  flex: 2 1 200px;
+}
+/*
+.abstract .header {
+  display: flex;
+  width: 100%;
+}
+
+.abstract .header h4 {
+  flex: 5 1 150px;
+}
+
+.abstract .header ul {
+  flex: 2 1 100px;
+}
+*/
 .main a, .main a:visited {
   text-decoration: none;
 }
@@ -310,10 +327,6 @@ ul.long li, ul.long li a {
 
 .signature {
   margin-left: 2rem;
-}
-
-.sidebar {
-  flex: 2 1 200px;
 }
 
 .box {
@@ -413,6 +426,10 @@ h2 {
 .abstract .topics {
   font-size: 85%;
   text-align: right;
+}
+
+.abstract p {
+  font-size: 1.05rem;
 }
 
 .sidebar li {
@@ -2757,8 +2774,8 @@ const makeSearch = (
 const makeMain = (content) =>
   `<h1>Recent Letters</h1>
   ${content .slice (0, 10) .map (({Title, Date, Topics, Content}) => 
-    `<div class="abstract"><h4><a href="">${Title} <span>(${shortDate(Date)})</span></a></h4>
-    <ul class="topics">${Topics .map (makeTopicListLink) .join(' ')}</ul>
+    `<div class="abstract"><div class="header"><h4><a href="">${Title} <span>(${shortDate(Date)})</span></a></h4>
+    <ul class="topics">${Topics .map (makeTopicListLink) .join(' ')}</ul></div>
     <em>${firstPara (Content) .slice (0, -4)}<a class="more" href="#/${Date}"> &hellip; more</a></em>
     </div>`
   ).join('\n')}`
