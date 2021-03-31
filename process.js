@@ -110,7 +110,8 @@ const makeOlderSidebarLetters = (
   </details>`
 
 const makeSidebarPages = (pages) =>
-  pages .map (({Title, Slug}) => `<h3><a href="#/pages/${Slug}">${Title}</a></h3>`) .join ('\n')
+  `<h2><a href="#/">Home</a></h2>
+  ${pages .map (({Title, Slug}) => `<h3><a href="#/pages/${Slug}">${Title}</a></h3>`) .join ('\n')}`
 
 const makeSidebarLetters = (
   content,
@@ -408,6 +409,8 @@ const makeSearch = (
 // Main route
 const makeMain = (content) =>
   `<h1>Recent Letters</h1>
+  <p>A history of letters to the Editor of RiverEast News written by Scott Sauyet.  More information is
+     available on the <a href="#/pages/about">About<a/> Page.</p>
   ${content .slice (0, 10) .map (({Title, Date, Topics, Content}) => 
     `<div class="abstract"><div class="header"><h4><a href="">${Title} <span>(${shortDate(Date)})</span></a></h4>
     <ul class="topics">${Topics .map (makeTopicListLink) .join(' ')}</ul></div>
