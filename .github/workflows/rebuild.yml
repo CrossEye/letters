@@ -1,5 +1,7 @@
 name: rebuild
 on: [push]
+branches:
+  - main
 jobs:
   rebuild-html:
     runs-on: ubuntu-latest
