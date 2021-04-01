@@ -188,7 +188,7 @@ header a {
 }
 
 details {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 details > details {
@@ -242,14 +242,6 @@ nav {
   flex: 2 1 200px;
 }
 
-#foo, #bar {
-  flex: 1 1 150px;
-}
-
-div.container div {
-  border: 1px solid black;
-}
-
 .abstract .header h4 {
   flex: 5 1 150px;
 }
@@ -260,6 +252,18 @@ div.container div {
 
 .main a, .main a:visited {
   text-decoration: none;
+}
+
+.main .card a, .main .card a:visited {
+  background-color: var(--primary);
+}
+
+.main .card .topics a, .main .card .topics a:visited {
+  background-color: var(--primary-highlight);
+}
+
+.main .card a:hover, .main .card a:visited:hover {
+  background-color: var(--primary-accent);
 }
 
 .main svg {
@@ -280,16 +284,8 @@ div.container div {
   width: 40%;
 }
 
-.abstract {
-  margin-bottom: 2rem;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 10px;
-  padding: .5rem 1rem;
-}
-
-.abstract .topics {
-  margin-top: -1rem;
+.card h4 {
+  margin-top: 0;
 }
 
 ul.long li, ul.long li a {
@@ -410,14 +406,23 @@ h2 {
   text-align: right;
 }
 
-.abstract .topics {
-  font-size: 85%;
-  text-align: right;
+.card h4 {
+  text-align: center;
 }
 
-.abstract p {
-  font-size: 1.05rem;
+.card em {
+  font-size: 85%;
 }
+
+
+.sidebar h3 + h3 {
+  margin-top: -1rem;
+}
+
+.sidebar h3:first-of-type {
+  margin-top: 0
+}
+
 
 .sidebar li {
   text-indent: -.5rem;
@@ -436,6 +441,15 @@ h2 {
 #search-results .snippet {
   font-style: italic;
 }
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .5rem;
+  margin: 1rem;
+  width: 50%;
+}
+
 /*  Responsiveness  */
 
 @media only screen and (max-width: 900px) {

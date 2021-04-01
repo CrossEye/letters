@@ -1,11 +1,14 @@
-// Utility Functions
 const always = (x) => () => x
 const call = (fn, ...args) => fn (args)
 const chain = (fn) => (xs) => xs .flatMap (fn)
+const chooseIndex = (xs, tot = 0) => 
+  xs .map ((x) => [x, tot += x [1]]) .findIndex (((r = tot * Math.random()) => ([, w]) => w >= r)())
 const clamp = (min, max) => (n) => Math .min (Math .max (min, n), max)
 const countBy = (fn) => (xs) =>
   xs .reduce ((a, x) => (fn (x) || []) .reduce ((a, v) => ((a[v] = (a[v] || 0) + 1), a), a), {})
 const equals = (s1) => (s2) => s1 === s2
+const excluding = (i) => (xs) => 
+  [... xs .slice (0, i), ... xs .slice (i + 1)]
 const findAllIndices = (x) => (xs, pos = 0, idx = xs .indexOf (x, pos)) =>
   idx == -1 ? [] : [idx, ...findAllIndices (x) (xs, idx + 1)]
 const firstPara = (text) => text.slice(0, text.indexOf('</p>') + 4) 
@@ -14,6 +17,7 @@ const groupBy = (fn) => (xs) => Object .entries (xs .reduce (
   (a, x) => call ((key) => ((a[key] = a[key] || []), (a [key] .push (x)), a), fn(x)), {}
 ))
 const hasId = (id) => (target) => !!target .closest (`#${id}`)
+const head = (xs) => xs[0]
 const identity = (x) => x
 const last = (xs) => xs [xs .length - 1]
 const longDate = ((months) => (ds) => 
@@ -21,18 +25,19 @@ const longDate = ((months) => (ds) =>
 ) (['January', 'February', 'March', 'April', 'May', 'June', 'July',  'August', 'September', 'October', 'November', 'December']) 
 const matches = (regex) => (str) => regex .test (str)
 const noop = () => {}
+const nRandom = (n, [x, ...xs]) =>
+  n == 0 ? [] : Math.random() < n / (xs.length + 1) ? [x, ... nRandom (n - 1, xs)] : nRandom (n, xs)
+const oxfordJoin = (xs) =>
+  xs .length == 0 ? '' : xs .length == 1 ? xs[0]: xs.length == 2 ? xs .join (' and ') : [xs.slice(0, -1).join(', '), last(xs)] .join(', and ')
 const prop = (p) => (o) => o[p]
+const pluralize = (singular, plural) => (n) => n == 1 ? singular : plural
+const randomInt = (a, b) => Math.floor((b - a) * Math.random() + a)
 const shortDate = (ds) =>  
   `${Number(ds.slice(5, 7))}/${Number(ds.slice(8,10))}/${ds.slice(2, 4)}`
+const sortBy = (fn) => (xs) => xs.sort ((a, b, aa = fn(a), bb = fn(b)) => aa < bb ? -1 : aa > bb ? 1 : 0)
 const startsWith = (prefix) => s => s .startsWith (prefix)
-const oxfordJoin = (xs) =>
-  xs .length == 0
-    ? ''
-  : xs .length == 1
-    ? xs[0]
-  : xs.length == 2
-    ? xs .join (' and ')
-  : [xs.slice(0, -1).join(', '), last(xs)] .join(', and ')
+const weightedRandom = (n) => (xs, i = chooseIndex (xs)) => 
+  n == 0 ? [] : [xs[i], ...weightedRandom (n - 1) (excluding (i) (xs))]
 
 
 // Helper functions
@@ -110,7 +115,7 @@ const makeOlderSidebarLetters = (
   </details>`
 
 const makeSidebarPages = (pages) =>
-  `<h2><a href="#/">Home</a></h2>
+  `<h3><a href="#/">Home</a></h3>
   ${pages .map (({Title, Slug}) => `<h3><a href="#/pages/${Slug}">${Title}</a></h3>`) .join ('\n')}`
 
 const makeSidebarLetters = (
@@ -143,7 +148,7 @@ const makeSidebarPeople = (
   peopleAboveFold,
   people = gather ('People', content, personSort)
 ) => 
-  `<h2><a href="#/people/">Other Letter Writers</a></h2>
+  `<h3><a href="#/people/">Other Letter Writers</a></h3>
   <ul>
     ${people .slice (0, peopleAboveFold) .map (makeLink ('person')) .join ('\n')}
   </ul>
@@ -200,17 +205,18 @@ const makeLetterNav = (
     <div id="next"${next ? `title="${shortDate (next .Date)}` : ``}">${next ? `<a href="#/${next .Date}">${next .Title} »</a>` : ``}</div>
   </nav>`
 
-const makeLetter = (lookups) => (
-  content, 
-  hash,
-  letter = lookups [hash .slice (2)],
-) => 
+const formatLetter = (content, letter) =>
   letter
     ? `${makeLetterBody (letter)}
        ${makeLetterNav (content, letter)}` 
     : `<h1>Not Found</h1>
       <p>No letter found for ${longDate(hash.slice(2))}`
 
+const makeLetter = (lookups) => (content, hash) => 
+  formatLetter (content, lookups [hash .slice (2)])
+
+const makeCurrent = (content) => 
+  formatLetter (content, content [0])
 
 // Page Route
 const makePage = (pages) => (
@@ -407,15 +413,31 @@ const makeSearch = (
 
 
 // Main route
-const makeMain = (content) =>
-  `<h1>Recent Letters</h1>
-  <p>A collection of letters to the Editor of Rivereast News written by Scott Sauyet.  More information is
+const makeMain = (config) => (
+  content,
+  hash,
+  {Title, Date, Topics, Content} = content [randomInt (config .lettersAboveFold, content .length)],
+  allTopics = gather ('Topics', content, alphaTopicSort),
+  chosenTopics = sortBy (head) (weightedRandom (config.topicsAboveFold) (allTopics)) 
+) =>
+  `<p>A collection of letters to the Editor of Rivereast News written by Scott Sauyet.  More information is
      available on the <a href="#/pages/about">About</a> page.</p>
   <div class="container">
-    <div class="card"><h3>Random Letter</h3><p>A collection of letters to the Editor of Rivereast News written by Scott Sauyet.  More information is
-    available on the</div>
-    <div class="card"><h3>Random Topics</h3><p>A collection of letters to the Editor of Rivereast News written by Scott Sauyet.  More information is
-    available on the</div>
+    <div class="card">
+      <h4>Random Letter</h4>
+      <p>There are <a href="#/letters">${content.length} letters</a> available.  Here's one:</p>
+      <p><a href="#/${Date}">${Title} (<span>${longDate (Date)}</span>)</a> <!--discussed the ${pluralize ('topic', 'topics') (Topics.length)} of 
+        ${oxfordJoin(Topics .map (topic => `<a href="#/topic/${topic .replace (/ /g, '+')}">${topic}</a>`)) }:
+      --></p>
+      <ul class="topics">${Topics .map (
+        topic => `<li><a href="#/topic/${topic .replace (/ /g, '+')}">${topic}</a></li>`).join(``)
+      }</ul>
+      <p><em>${firstPara (Content)} <a class="more" href="#/${Date}">&hellip;more</a></em></p>
+    </div>
+    <div class="card"><h4>Random Topics</h4>
+      <p>Letter here discuss <a href="#/topics">${allTopics.length} topics</a>.  Here are a few:</p>
+      <ul>${chosenTopics.map(makeLink('topic')).join('')}</ul>
+    </div>
   <div>
   `
 
@@ -457,14 +479,16 @@ const addEvents = (cfg) =>
 
 
 // Routing
-const router = (content, pages) => {
+const router = (content, pages, config) => {
   const lookups = Object .fromEntries (content .map (letter => [letter.Date, letter]))
-  const base = document .getElementById ('main') .innerHTML
 
+  // TODO: some routes shouldn't end with `/`,  `#/current/` -> `#/current`, Also topics, peoples, letters, themes
+  // Or, perhaps better, make all end with `/`  ??
   const routes = [
-    [equals      ('#/'),                      makeMain,             noop],
+    [equals      ('#/'),                      makeMain (config),    noop],
     [startsWith  ('#/pages/'),                makePage (pages),     noop],
     [matches     (/^#\/\d{4}-\d{2}-\d{2}$/),  makeLetter (lookups), noop],
+    [equals      ('#/current/'),              makeCurrent,          noop],
     [equals      ('#/topics/'),               makeTopics,           noop],
     [startsWith  ('#/topic/'),                makeTopic,            noop],
     [equals      ('#/people/'),               makePeople,           noop],
@@ -486,16 +510,17 @@ const router = (content, pages) => {
 
 // Main
 ((rawContent, rawPages, themes) => {
+  const config = {lettersAboveFold: 10, yearsAboveFold: 3, topicsAboveFold: 6, peopleAboveFold: 6}
   const content = enhanceContent (rawContent)
   const pages = enhancePages (content, rawPages)
 
-  const route = router (content, pages)
+  const route = router (content, pages, config)
  
   document .getElementById ('root') .innerHTML += makeSidebar (
     content,
     pages,
     themes,
-    {lettersAboveFold: 10, yearsAboveFold: 3, topicsAboveFold: 6, peopleAboveFold: 6}
+    config
   )
   
   addEvents ({
