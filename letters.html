@@ -1,7 +1,8 @@
 <html>
 <head>
 <title>Scott Sauyet : Letters to the Editor</title>
-<style type="text/css">/*  Colors  */
+<style type="text/css">
+/*  Colors  */
 
 :root {
   --neutral: #fbeec1;
@@ -120,19 +121,6 @@ button, input {
   background-color: var(--neutral);
 }
 
-/*
-.abstract a, .abstract a:visited {
-  background-color: var(--primary-background)
-}
-
-.abstract p a, .abstract p a:visited {
-  background-color: var(--primary-highlight)
-}
-
-.abstract a:hover {
-  background-color: var(--primary-accent)
-}
-*/
 
 /*  Borders  */
 
@@ -204,7 +192,7 @@ header a {
 }
 
 details {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 details > details {
@@ -257,11 +245,6 @@ nav {
 .sidebar {
   flex: 2 1 200px;
 }
-/*
-.abstract .header {
-  display: flex;
-  width: 100%;
-}
 
 .abstract .header h4 {
   flex: 5 1 150px;
@@ -270,9 +253,21 @@ nav {
 .abstract .header ul {
   flex: 2 1 100px;
 }
-*/
+
 .main a, .main a:visited {
   text-decoration: none;
+}
+
+.main .card a, .main .card a:visited {
+  background-color: var(--primary);
+}
+
+.main .card .topics a, .main .card .topics a:visited {
+  background-color: var(--primary-highlight);
+}
+
+.main .card a:hover, .main .card a:visited:hover {
+  background-color: var(--primary-accent);
 }
 
 .main svg {
@@ -293,16 +288,8 @@ nav {
   width: 40%;
 }
 
-.abstract {
-  margin-bottom: 2rem;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 10px;
-  padding: .5rem 1rem;
-}
-
-.abstract .topics {
-  margin-top: -1rem;
+.card h4 {
+  margin-top: 0;
 }
 
 ul.long li, ul.long li a {
@@ -423,14 +410,23 @@ h2 {
   text-align: right;
 }
 
-.abstract .topics {
-  font-size: 85%;
-  text-align: right;
+.card h4 {
+  text-align: center;
 }
 
-.abstract p {
-  font-size: 1.05rem;
+.card em {
+  font-size: 85%;
 }
+
+
+.sidebar h3 + h3 {
+  margin-top: -1rem;
+}
+
+.sidebar h3:first-of-type {
+  margin-top: 0
+}
+
 
 .sidebar li {
   text-indent: -.5rem;
@@ -449,6 +445,15 @@ h2 {
 #search-results .snippet {
   font-style: italic;
 }
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .5rem;
+  margin: 1rem;
+  width: 50%;
+}
+
 /*  Responsiveness  */
 
 @media only screen and (max-width: 900px) {
@@ -459,8 +464,11 @@ h2 {
   .box {
     margin: 0 0 1rem;
   }
-}</style>
-<script>const content = [
+}
+</style>
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDAwIDMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB4PSIwIiB5PSIwIiByeD0iMzAiIHJ5PSIzMCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIHN0eWxlPSJmaWxsOiAjZmJlZWMxOyBzdHJva2Utd2lkdGg6IDI7IHN0cm9rZTogI2NjYzsiPjwvcmVjdD48cmVjdCB4PSIyMCIgeT0iODAiIHJ4PSIxNSIgcnk9IjE1IiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjEwMCIgc3R5bGU9ImZpbGw6ICNkYWFkODY7IHN0cm9rZS13aWR0aDogMjsgc3Ryb2tlOiAjMDAwMDAwOyI+PC9yZWN0PjxyZWN0IHg9IjIwMCIgeT0iODAiIHJ4PSIxNSIgcnk9IjE1IiB3aWR0aD0iODAiIGhlaWdodD0iMTAwIiBzdHlsZT0iZmlsbDogI2JjOTg2Yzsgc3Ryb2tlLXdpZHRoOiAyOyBzdHJva2U6ICMwMDAwMDA7Ij48L3JlY3Q+PHJlY3QgeD0iMjAiIHk9IjIwIiByeD0iMTUiIHJ5PSIxNSIgd2lkdGg9IjI2MCIgaGVpZ2h0PSI0MCIgc3R5bGU9ImZpbGw6ICM4ZDg3NDE7IHN0cm9rZS13aWR0aDogMjsgc3Ryb2tlOiAjMDAwMDAwOyI+PC9yZWN0Pjwvc3ZnPg==" />
+<script>
+const content = [
   {
     "Title": "Mainstream Media",
     "Date": "2021-03-19",
@@ -982,7 +990,7 @@ h2 {
     "Content": "<p><a href=\"#/person/Joe+Stevens\">Joe Stevens</a> needs no help defending himself, not against <a href=\"#/person/Ed+Kozlowski\">Ed Kozlowski</a>, who sees\nself-aggrandizement in Mr. Steven&#39;s thoughtful analysis, or against <a href=\"#/person/Don+Denley\">Don Denley</a>,\nwho misstates statistics and mis-assigns blame. So we&#39;ll return to our old\nstandby: refuting the Randian.</p>\n<p>I&#39;ve suggested that if you want to know how liberals think, you should ask one.\nThe same goes for Democrats. <a href=\"#/person/Sam+Prentice\">Sam Prentice</a> knows little about either.</p>\n<p>If you haven&#39;t read Ayn Rand&#39;s fantasies, you might not recognize their\ninfluence on Mr. Prentice.  His latest missive seem rooted in the idea that\nEllsworth Toohey, an over-the-top caricature of a false friend, from Rand&#39;s The\nFountainhead, is the heart of every Democrat. It suggests that Wesley Mouch from\nAtlas Shrugged, an envious, incompetent buffoon with too much power, is their\nbrain.</p>\n<p>Sam Prentice really should remember that these are works of fantasy. Most\nthinking folks get over sophomoric fascinations with Ayn Rand by age 25.  It&#39;s\nunseemly in someone older.</p>\n<p>Democrats do not promote equality of outcomes.  However, they are likely to\npromote equality of opportunity, with policies designed to reduce structural\ninequalities, especially regarding children. Lately, Republicans are the\nopposite.  See the tax bill, which barely helps most people, and then only\ntemporarily, but gives large permanent cuts to the wealthy and corporations.</p>\n<p>Finally we come to the minimum wage.  Mr. Prentice repeats his 2015 assertions\nabout minimum wage hikes.  He provides no evidence because he cannot.  The best\nstudy of these issues was  done by Dube, Lester, and Reich in 2010\n(<a href=\"http://bit.ly/1HSIxMA\">http://bit.ly/1HSIxMA</a>).  An easier-to-read summary was by John Schmitt in 2013\n(<a href=\"http://bit.ly/1eWItVi\">http://bit.ly/1eWItVi</a>). The results are conclusive: there is, &quot;no statistically\nsignificant negative employment effects of the minimum wage.&quot;  Nor did minimum\nwage hikes substantially change wages higher up the pay scale.</p>\n<p>Looking at the world through Rand-colored glasses is pure fantasy.</p>\n"
   },
   {
-    "Title": "The Truth Hurst",
+    "Title": "The Truth Hurts",
     "Date": "2018-09-16",
     "Topics": [
       "Fact Checking",
@@ -2144,7 +2152,7 @@ h2 {
       "Website"
     ],
     "People": [],
-    "Content": "<p>The rumors are not true.  Andover&#39;s web site is not being shut down.  It is only\nthe status of the Website Committee which is changing.  A new state law is\nforcing towns to make radical changes to the way their websites are managed.\nSome small towns are shutting down their sites altogether.  We&#39;re going a\ndifferent route and will try to keep the site running with a committee modeled\nafter the Friends of the Library or the PTA.</p>\n<p>The new law (PA 08-3, HB 6502) says that any public agency, which includes not\nonly the Board of Selectmen and the Board of Finance, but also the\nBeautification Committee and the Memorial Day Committee, must post the record of\nany votes taken at their meeting within 48 hours and the minutes within seven\ndays of every meeting.  They must be submitted to the Town Clerk, and posted on\n&quot;such public agency&#39;s Internet web site, if available.&quot;</p>\n<p>While the Andover Website Committee does try to post minutes in a timely\nfashion, we cannot guarantee this fast a turn-around, and yet we must do so or\nrun afoul of the new law.  But the &quot;if available&quot; clause seems to imply that\ntowns without an official web site simply don&#39;t have this worry.  We&#39;re hoping\nthe General Assembly will note the unintended consequences of their action and\nalter the law soon, but for the moment we&#39;re restructuring the committee.</p>\n<p>And the committee could use some help.</p>\n<p>We&#39;re almost ready to launch an updated version of the site that we hope will be\neasier to use and more informative, but really could use extra hands to do so.\nYou don&#39;t need any particular skills to participate, just a willingness to help.\nPlease e-mail <a href=\"mailto:&#119;&#x65;&#x62;&#109;&#97;&#x73;&#116;&#x65;&#x72;&#x40;&#97;&#110;&#100;&#x6f;&#x76;&#x65;&#114;&#99;&#116;&#46;&#111;&#114;&#103;\">&#119;&#x65;&#x62;&#109;&#97;&#x73;&#116;&#x65;&#x72;&#x40;&#97;&#110;&#100;&#x6f;&#x76;&#x65;&#114;&#99;&#116;&#46;&#111;&#114;&#103;</a> if you&#39;d like to volunteer.</p>\n"
+    "Content": "<p>The rumors are not true.  Andover&#39;s web site is not being shut down.  It is only\nthe status of the Website Committee which is changing.  A new state law is\nforcing towns to make radical changes to the way their websites are managed.\nSome small towns are shutting down their sites altogether.  We&#39;re going a\ndifferent route and will try to keep the site running with a committee modeled\nafter the Friends of the Library or the PTA.</p>\n<p>The new law (PA 08-3, HB 6502) says that any public agency, which includes not\nonly the Board of Selectmen and the Board of Finance, but also the\nBeautification Committee and the Memorial Day Committee, must post the record of\nany votes taken at their meeting within 48 hours and the minutes within seven\ndays of every meeting.  They must be submitted to the Town Clerk, and posted on\n&quot;such public agency&#39;s Internet web site, if available.&quot;</p>\n<p>While the Andover Website Committee does try to post minutes in a timely\nfashion, we cannot guarantee this fast a turn-around, and yet we must do so or\nrun afoul of the new law.  But the &quot;if available&quot; clause seems to imply that\ntowns without an official web site simply don&#39;t have this worry.  We&#39;re hoping\nthe General Assembly will note the unintended consequences of their action and\nalter the law soon, but for the moment we&#39;re restructuring the committee.</p>\n<p>And the committee could use some help.</p>\n<p>We&#39;re almost ready to launch an updated version of the site that we hope will be\neasier to use and more informative, but really could use extra hands to do so.\nYou don&#39;t need any particular skills to participate, just a willingness to help.\nPlease e-mail <a href=\"mailto:&#119;&#101;&#x62;&#109;&#x61;&#x73;&#x74;&#101;&#x72;&#64;&#x61;&#x6e;&#100;&#x6f;&#x76;&#101;&#x72;&#99;&#116;&#46;&#111;&#114;&#x67;\">&#119;&#101;&#x62;&#109;&#x61;&#x73;&#x74;&#101;&#x72;&#64;&#x61;&#x6e;&#100;&#x6f;&#x76;&#101;&#x72;&#99;&#116;&#46;&#111;&#114;&#x67;</a> if you&#39;d like to volunteer.</p>\n"
   },
   {
     "Title": "Andover Responses",
@@ -2201,7 +2209,7 @@ h2 {
       "Website"
     ],
     "People": [],
-    "Content": "<p>The Andover Website Committee is looking for volunteers.  A recent letter to the\neditor noted that the Andover Website is not always updated with the latest\nminutes from meetings and the latest schedule changes.  This is quite true, and\nthe Website Committee would love help in fixing the problem.  Would you be\nwilling to spend an hour or two per month helping us out?</p>\n<p>We are looking for volunteers to help steer the direction of the town&#39;s website,\nto help update the content on the site, to help improve its usability and\nreliability, and to help organize the efforts of other volunteers.  We don&#39;t\nneed any particular skills, just a willingness to help.  Of course if you have\nany website design or development skills, we&#39;d love to have you too!</p>\n<p>The website is run entirely by volunteers.  We&#39;d like to see some significant\nimprovements to the site, but that can only be accomplished if there are people\nin town committed to helping.  Please, come join our team.  You can reach us via\nemail at <a href=\"mailto:&#x77;&#101;&#x62;&#x6d;&#97;&#115;&#116;&#x65;&#x72;&#x40;&#97;&#x6e;&#x64;&#x6f;&#x76;&#101;&#114;&#x63;&#116;&#46;&#x6f;&#x72;&#103;\">&#x77;&#101;&#x62;&#x6d;&#97;&#115;&#116;&#x65;&#x72;&#x40;&#97;&#x6e;&#x64;&#x6f;&#x76;&#101;&#114;&#x63;&#116;&#46;&#x6f;&#x72;&#103;</a>.  Or you can call Scott Sauyet at 742-9800.  Or\nsimply come to our next meeting at 7:00 on September 24 in the school library.</p>\n"
+    "Content": "<p>The Andover Website Committee is looking for volunteers.  A recent letter to the\neditor noted that the Andover Website is not always updated with the latest\nminutes from meetings and the latest schedule changes.  This is quite true, and\nthe Website Committee would love help in fixing the problem.  Would you be\nwilling to spend an hour or two per month helping us out?</p>\n<p>We are looking for volunteers to help steer the direction of the town&#39;s website,\nto help update the content on the site, to help improve its usability and\nreliability, and to help organize the efforts of other volunteers.  We don&#39;t\nneed any particular skills, just a willingness to help.  Of course if you have\nany website design or development skills, we&#39;d love to have you too!</p>\n<p>The website is run entirely by volunteers.  We&#39;d like to see some significant\nimprovements to the site, but that can only be accomplished if there are people\nin town committed to helping.  Please, come join our team.  You can reach us via\nemail at <a href=\"mailto:&#119;&#x65;&#x62;&#109;&#97;&#x73;&#116;&#101;&#x72;&#x40;&#97;&#x6e;&#100;&#111;&#x76;&#101;&#114;&#99;&#x74;&#x2e;&#x6f;&#114;&#x67;\">&#119;&#x65;&#x62;&#109;&#97;&#x73;&#116;&#101;&#x72;&#x40;&#97;&#x6e;&#100;&#111;&#x76;&#101;&#114;&#99;&#x74;&#x2e;&#x6f;&#114;&#x67;</a>.  Or you can call Scott Sauyet at 742-9800.  Or\nsimply come to our next meeting at 7:00 on September 24 in the school library.</p>\n"
   },
   {
     "Title": "Global Warming Response",
@@ -2312,16 +2320,20 @@ h2 {
     ],
     "Content": "<p>This election, Andover has the opportunity to make a real impact on the RHAM\nBoard of Education.  There are two candidates who can bring significant\nexpertise to the Board and whose experiences in the community will help Andover\nand the RHAM Board regain the mutual respect that has been lacking lately.</p>\n<p>As a member of the Andover Board of Education – and I would appreciate your vote\ntoo! – I know that overseeing a school system requires many disparate skills.\n<a href=\"#/person/Mark+Madore\">Mark Madore</a> and Daniel Holtsclaw will each bring something unique and valuable\nto the RHAM Board.</p>\n<p>Mark has been a pivotal member of the facilities committee for the Andover\nSchool System.  His expertise in the building trades has helped us improve and\nmaintain an excellent facility in a cost-effective manner.  And as a parent\ninvolved in the schools and as a sports coach, Mark has done a great deal for\nAndover&#39;s children.</p>\n<p>Danny brings unusual skills to the Board.  His profession involves risk\nmanagement for a large school system.  He brings expertise in insurance,\ncontracts, building security, and other risk-related concerns.  Each of these\nskills is hard to find in a small community; to have them all in on one\nindividual is a rare opportunity.</p>\n<p>Both Mark and Danny are congenial and even-tempered.  They will help raise the\nlevel of discourse on the Board.  Moreover they are certain to garner the\nrespect of other members and so will be able to effectively promote Andover&#39;s\ninterests.</p>\n<p>So I urge all Andover residents to split your ticket across party lines and vote\nfor <a href=\"#/person/Danny+Holtsclaw\">Danny Holtsclaw</a> and Mark Madore for the RHAM Board of Education.</p>\n"
   }
-]</script>
-<script>const pages = [
+]
+</script>
+<script>
+const pages = [
   {
     "Title": "About",
     "Slug": "about",
     "Sort Order": 1,
     "Content": "<h1 id=\"about-this-site\">About this Site</h1>\n<p>I am one of those gadflies who writes often to the local weekly paper. I&#39;ve been\ndoing it for years.  This page is collecting those letters for posterity.  At\nthe moment, the letters from 2012 to the present are included, plus a scattering\nof older ones.  I will add more as I find time (and, often, as I find the\nletters themselves.)</p>\n<!-- subtitute: currentLetter -->\n\n<h2 id=\"notes\">Notes</h2>\n<p>I&#39;m a politically-involved, progressive citizen with strong opinions. That comes\nthrough in those letters.  I have covered topics such as <a href=\"#/topic/Global+Warming\">Global Warming</a>,\nthe ideas of <a href=\"#/topic/Progressivism\">Progressivism</a>, <a href=\"#/topic/Fact+Checking\">Fact Checking</a>, the presidency of\n<a href=\"#/topic/Donald+Trump\">Donald Trump</a>, as well as <a href=\"#/topics/\">many others</a>.</p>\n<p>I do try to include a modicum of humor in many of these letters.  But please\nremember that I am serious, that I think the issues discussed are often very\nimportant, the local ones, the national ones, and the global ones.</p>\n<p>Although I have in the past served in the local government of Andover,\nConnecticut (on the Board of Education, the Capital Improvements and Planning\nCommission, the town Website Committee as well as the Democratic Town\nCommittee), all of the letters here represent my own views and not those of\nthese organizations.</p>\n<p>These are letters as submitted to the paper.  The titles are what I gave them,\nnot the headers supplied by the <em>Rivereast</em>.  The dates are the dates I\nwrote them, not the issue date in which they appeared.  A few were never\npublished, and I never did try to determine why.  There may have been mild\nediting by the <em>Rivereast</em> so that these don&#39;t exactly match what was\npublished, but that&#39;s rare, and it never changes the meaning.</p>\n<p>Feel free to <a href=\"mailto:scott@sauyet.com\">email me</a> with any comments or suggestions.</p>\n"
   }
-]</script>
-<script>const themes = ((defaultTheme = "I Feel the Earth Move", colors = {
+]
+</script>
+<script>
+const themes = ((defaultTheme = "I Feel the Earth Move", colors = {
   "I Feel the Earth Move": {
     "neutral": "#fbeec1",
     "border": "#000000",
@@ -2483,7 +2495,8 @@ h2 {
 }))()
 
 const config = JSON.parse(localStorage .getItem ('letters') || "{}")
-if (config.theme) {themes .choose (config .theme)}</script>
+if (config.theme) {themes .choose (config .theme)}
+</script>
 </head>
 <body>
   <header>
@@ -2493,57 +2506,20 @@ if (config.theme) {themes .choose (config .theme)}</script>
   </header>
   <div id="root" class="container">
     <div id="main" class="main box">
-      <h1>About this Site</h1>
-      <p>
-          I am one of those gadflies who writes often to the local weekly paper.
-          I've been doing it for years.  This page is collecting those letters 
-          for posterity.  At the moment, the letters from 2012 to the present
-          are included, plus a scattering of older ones.  I will add more as I find 
-          time (and, often, as I find the letters themselves.) 
-      </p>
-      <p id="currentLetter"></p>
-      <h2>Notes</h2>
-      <p>
-        I'm a politically-involved, progressive citizen with strong opinions.
-        That comes through in those letters.  I have covered topics such as 
-        <a href="#/topic/Global+Warming">Global Warming</a>, the ideas of 
-        <a href="#/topic/Progressivism">Progressivism</a>, 
-        <a href="#/topic/Fact+Checking">Fact Checking</a>, the presidency of 
-        <a href="#/topic/Donald+Trump">Donald Trump</a>, as well as 
-        <a href="#/topics/">many others</a>.
-      </p>
-      <p>
-        I do try to include a modicum of humor in many of these letters.  But please
-        remember that I am serious, that I think the issues discussed are often very
-        important, the local ones, the national ones, and the global ones. 
-      </p>
-      <p>
-        Although I have in the past served in the local government of Andover, Connecticut
-        (on the Board of Education, the Capital Improvements and Planning Commission,
-        the town Website Committee as well as the Democratic Town Committee), all of
-        the letters here represent my own views and not those of these organizations.
-      </p>
-      <p>
-        These are letters as submitted to the paper.  The titles are what I gave them,
-        not the headers supplied by the <em>Rivereast</em>.  The dates are the dates I 
-        wrote them, not the issue date in which they appeared.  A few were never 
-        published, and I never did try to determine why.  There may have been mild
-        editing by the <em>Rivereast</em> so that these don't exactly match what was 
-        published, but that's rare, and it never changes the meaning.
-      </p>
-      <p>Feel free to <a href="mailto:scott@sauyet.com">email me</a> with
-        any comments or suggestions.
-      </p>
     </div>
   </div>
-  <script>// Utility Functions
+  <script>
 const always = (x) => () => x
 const call = (fn, ...args) => fn (args)
 const chain = (fn) => (xs) => xs .flatMap (fn)
+const chooseIndex = (xs, tot = 0) => 
+  xs .map ((x) => [x, tot += x [1]]) .findIndex (((r = tot * Math.random()) => ([, w]) => w >= r)())
 const clamp = (min, max) => (n) => Math .min (Math .max (min, n), max)
 const countBy = (fn) => (xs) =>
   xs .reduce ((a, x) => (fn (x) || []) .reduce ((a, v) => ((a[v] = (a[v] || 0) + 1), a), a), {})
 const equals = (s1) => (s2) => s1 === s2
+const excluding = (i) => (xs) => 
+  [... xs .slice (0, i), ... xs .slice (i + 1)]
 const findAllIndices = (x) => (xs, pos = 0, idx = xs .indexOf (x, pos)) =>
   idx == -1 ? [] : [idx, ...findAllIndices (x) (xs, idx + 1)]
 const firstPara = (text) => text.slice(0, text.indexOf('</p>') + 4) 
@@ -2552,6 +2528,7 @@ const groupBy = (fn) => (xs) => Object .entries (xs .reduce (
   (a, x) => call ((key) => ((a[key] = a[key] || []), (a [key] .push (x)), a), fn(x)), {}
 ))
 const hasId = (id) => (target) => !!target .closest (`#${id}`)
+const head = (xs) => xs[0]
 const identity = (x) => x
 const last = (xs) => xs [xs .length - 1]
 const longDate = ((months) => (ds) => 
@@ -2559,18 +2536,19 @@ const longDate = ((months) => (ds) =>
 ) (['January', 'February', 'March', 'April', 'May', 'June', 'July',  'August', 'September', 'October', 'November', 'December']) 
 const matches = (regex) => (str) => regex .test (str)
 const noop = () => {}
+const nRandom = (n, [x, ...xs]) =>
+  n == 0 ? [] : Math.random() < n / (xs.length + 1) ? [x, ... nRandom (n - 1, xs)] : nRandom (n, xs)
+const oxfordJoin = (xs) =>
+  xs .length == 0 ? '' : xs .length == 1 ? xs[0]: xs.length == 2 ? xs .join (' and ') : [xs.slice(0, -1).join(', '), last(xs)] .join(', and ')
 const prop = (p) => (o) => o[p]
+const pluralize = (singular, plural) => (n) => n == 1 ? singular : plural
+const randomInt = (a, b) => Math.floor((b - a) * Math.random() + a)
 const shortDate = (ds) =>  
   `${Number(ds.slice(5, 7))}/${Number(ds.slice(8,10))}/${ds.slice(2, 4)}`
+const sortBy = (fn) => (xs) => xs.sort ((a, b, aa = fn(a), bb = fn(b)) => aa < bb ? -1 : aa > bb ? 1 : 0)
 const startsWith = (prefix) => s => s .startsWith (prefix)
-const oxfordJoin = (xs) =>
-  xs .length == 0
-    ? ''
-  : xs .length == 1
-    ? xs[0]
-  : xs.length == 2
-    ? xs .join (' and ')
-  : [xs.slice(0, -1).join(', '), last(xs)] .join(', and ')
+const weightedRandom = (n) => (xs, i = chooseIndex (xs)) => 
+  n == 0 ? [] : [xs[i], ...weightedRandom (n - 1) (excluding (i) (xs))]
 
 
 // Helper functions
@@ -2648,7 +2626,7 @@ const makeOlderSidebarLetters = (
   </details>`
 
 const makeSidebarPages = (pages) =>
-  `<h2><a href="#/">Home</a></h2>
+  `<h3><a href="#/">Home</a></h3>
   ${pages .map (({Title, Slug}) => `<h3><a href="#/pages/${Slug}">${Title}</a></h3>`) .join ('\n')}`
 
 const makeSidebarLetters = (
@@ -2681,7 +2659,7 @@ const makeSidebarPeople = (
   peopleAboveFold,
   people = gather ('People', content, personSort)
 ) => 
-  `<h2><a href="#/people/">Other Letter Writers</a></h2>
+  `<h3><a href="#/people/">Other Letter Writers</a></h3>
   <ul>
     ${people .slice (0, peopleAboveFold) .map (makeLink ('person')) .join ('\n')}
   </ul>
@@ -2738,17 +2716,18 @@ const makeLetterNav = (
     <div id="next"${next ? `title="${shortDate (next .Date)}` : ``}">${next ? `<a href="#/${next .Date}">${next .Title} »</a>` : ``}</div>
   </nav>`
 
-const makeLetter = (lookups) => (
-  content, 
-  hash,
-  letter = lookups [hash .slice (2)],
-) => 
+const formatLetter = (content, letter) =>
   letter
     ? `${makeLetterBody (letter)}
        ${makeLetterNav (content, letter)}` 
     : `<h1>Not Found</h1>
       <p>No letter found for ${longDate(hash.slice(2))}`
 
+const makeLetter = (lookups) => (content, hash) => 
+  formatLetter (content, lookups [hash .slice (2)])
+
+const makeCurrent = (content) => 
+  formatLetter (content, content [0])
 
 // Page Route
 const makePage = (pages) => (
@@ -2945,16 +2924,33 @@ const makeSearch = (
 
 
 // Main route
-const makeMain = (content) =>
-  `<h1>Recent Letters</h1>
-  <p>A history of letters to the Editor of RiverEast News written by Scott Sauyet.  More information is
+const makeMain = (config) => (
+  content,
+  hash,
+  {Title, Date, Topics, Content} = content [randomInt (config .lettersAboveFold, content .length)],
+  allTopics = gather ('Topics', content, alphaTopicSort),
+  chosenTopics = sortBy (head) (weightedRandom (config.topicsAboveFold) (allTopics)) 
+) =>
+  `<p>A collection of letters to the Editor of Rivereast News written by Scott Sauyet.  More information is
      available on the <a href="#/pages/about">About</a> page.</p>
-  ${content .slice (0, 10) .map (({Title, Date, Topics, Content}) => 
-    `<div class="abstract"><div class="header"><h4><a href="">${Title} <span>(${shortDate(Date)})</span></a></h4>
-    <ul class="topics">${Topics .map (makeTopicListLink) .join(' ')}</ul></div>
-    <em>${firstPara (Content) .slice (0, -4)}<a class="more" href="#/${Date}"> &hellip; more</a></em>
-    </div>`
-  ).join('\n')}`
+  <div class="container">
+    <div class="card">
+      <h4>Random Letter</h4>
+      <p>There are <a href="#/letters">${content.length} letters</a> available.  Here's one:</p>
+      <p><a href="#/${Date}">${Title} (<span>${longDate (Date)}</span>)</a> <!--discussed the ${pluralize ('topic', 'topics') (Topics.length)} of 
+        ${oxfordJoin(Topics .map (topic => `<a href="#/topic/${topic .replace (/ /g, '+')}">${topic}</a>`)) }:
+      --></p>
+      <ul class="topics">${Topics .map (
+        topic => `<li><a href="#/topic/${topic .replace (/ /g, '+')}">${topic}</a></li>`).join(``)
+      }</ul>
+      <p><em>${firstPara (Content)} <a class="more" href="#/${Date}">&hellip;more</a></em></p>
+    </div>
+    <div class="card"><h4>Random Topics</h4>
+      <p>Letter here discuss <a href="#/topics">${allTopics.length} topics</a>.  Here are a few:</p>
+      <ul>${chosenTopics.map(makeLink('topic')).join('')}</ul>
+    </div>
+  <div>
+  `
 
 // Setup
 const enhanceContent = (content, div = document.createElement('div')) =>  
@@ -2994,14 +2990,16 @@ const addEvents = (cfg) =>
 
 
 // Routing
-const router = (content, pages) => {
+const router = (content, pages, config) => {
   const lookups = Object .fromEntries (content .map (letter => [letter.Date, letter]))
-  const base = document .getElementById ('main') .innerHTML
 
+  // TODO: some routes shouldn't end with `/`,  `#/current/` -> `#/current`, Also topics, peoples, letters, themes
+  // Or, perhaps better, make all end with `/`  ??
   const routes = [
-    [equals      ('#/'),                      makeMain,             noop],
+    [equals      ('#/'),                      makeMain (config),    noop],
     [startsWith  ('#/pages/'),                makePage (pages),     noop],
     [matches     (/^#\/\d{4}-\d{2}-\d{2}$/),  makeLetter (lookups), noop],
+    [equals      ('#/current/'),              makeCurrent,          noop],
     [equals      ('#/topics/'),               makeTopics,           noop],
     [startsWith  ('#/topic/'),                makeTopic,            noop],
     [equals      ('#/people/'),               makePeople,           noop],
@@ -3023,16 +3021,17 @@ const router = (content, pages) => {
 
 // Main
 ((rawContent, rawPages, themes) => {
+  const config = {lettersAboveFold: 10, yearsAboveFold: 3, topicsAboveFold: 6, peopleAboveFold: 6}
   const content = enhanceContent (rawContent)
   const pages = enhancePages (content, rawPages)
 
-  const route = router (content, pages)
+  const route = router (content, pages, config)
  
   document .getElementById ('root') .innerHTML += makeSidebar (
     content,
     pages,
     themes,
-    {lettersAboveFold: 10, yearsAboveFold: 3, topicsAboveFold: 6, peopleAboveFold: 6}
+    config
   )
   
   addEvents ({

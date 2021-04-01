@@ -69,7 +69,7 @@ const combine = (content, pages) => ([index, style, themes, process]) =>
     [pages, /\<script src="pages\.js"\>\<\/script\>/, `<script>$$</script>`],
     [themes, /\<script src="themes\.js"\>\<\/script\>/, `<script>$$</script>`],
     [process, /\<script src="process\.js"\>\<\/script\>/, `<script>$$</script>`],
-  ] .reduce ((index, [c, r, h]) =>  index.replace(r, h.replace('$$', c)), index)
+  ] .reduce ((index, [c, r, h]) =>  index.replace(r, h.replace('$$', `\n${c}\n`)), index)
 
 const makeAllInOne = ([content, pages]) =>
   Promise.all (['./index.html', './style.css', './themes.js', './process.js'] .map (readFile))
