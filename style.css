@@ -117,19 +117,6 @@ button, input {
   background-color: var(--neutral);
 }
 
-/*
-.abstract a, .abstract a:visited {
-  background-color: var(--primary-background)
-}
-
-.abstract p a, .abstract p a:visited {
-  background-color: var(--primary-highlight)
-}
-
-.abstract a:hover {
-  background-color: var(--primary-accent)
-}
-*/
 
 /*  Borders  */
 
@@ -254,10 +241,13 @@ nav {
 .sidebar {
   flex: 2 1 200px;
 }
-/*
-.abstract .header {
-  display: flex;
-  width: 100%;
+
+#foo, #bar {
+  flex: 1 1 150px;
+}
+
+div.container div {
+  border: 1px solid black;
 }
 
 .abstract .header h4 {
@@ -267,7 +257,7 @@ nav {
 .abstract .header ul {
   flex: 2 1 100px;
 }
-*/
+
 .main a, .main a:visited {
   text-decoration: none;
 }

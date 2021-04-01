@@ -409,14 +409,15 @@ const makeSearch = (
 // Main route
 const makeMain = (content) =>
   `<h1>Recent Letters</h1>
-  <p>A collection of letters to the Editor of RiverEast News written by Scott Sauyet.  More information is
+  <p>A collection of letters to the Editor of Rivereast News written by Scott Sauyet.  More information is
      available on the <a href="#/pages/about">About</a> page.</p>
-  ${content .slice (0, 10) .map (({Title, Date, Topics, Content}) => 
-    `<div class="abstract"><div class="header"><h4><a href="">${Title} <span>(${shortDate(Date)})</span></a></h4>
-    <ul class="topics">${Topics .map (makeTopicListLink) .join(' ')}</ul></div>
-    <em>${firstPara (Content) .slice (0, -4)}<a class="more" href="#/${Date}"> &hellip; more</a></em>
-    </div>`
-  ).join('\n')}`
+  <div class="container">
+    <div class="card"><h3>Random Letter</h3><p>A collection of letters to the Editor of Rivereast News written by Scott Sauyet.  More information is
+    available on the</div>
+    <div class="card"><h3>Random Topics</h3><p>A collection of letters to the Editor of Rivereast News written by Scott Sauyet.  More information is
+    available on the</div>
+  <div>
+  `
 
 // Setup
 const enhanceContent = (content, div = document.createElement('div')) =>  
