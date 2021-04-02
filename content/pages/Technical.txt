@@ -1,0 +1,127 @@
+Title: Technical details
+Slug: technical
+Content:
+--------------------------------------------------------------------------------
+
+Technical Details
+=================
+
+This site is an experiment.  I'm a computer programmer, and have over the years
+sometimes specialized in building web applications, but for some time now I
+have only built web sites / web applications to the specifications of others.
+
+I was looking for a quick project to get my hands back in the entirety of web
+development, when another Rivereast letter-writer pointed to his website which
+included copies of his letters.  That sounded like the start of a good project
+for me, since I have published many dozens of letters.  This has grown from 
+that concept.
+
+
+The Code
+--------
+
+The code is stored on [GitHub][gh] and served through [GitHub Pages][gp].  A
+simple [GitHub Action][ga] rebuilds the static site.  There is no back end and
+this is one step beyond a single-page app, as it's actually able to be served as
+a single file, [letters.html][lh], although it's [usually viewed][ih] as a
+standard HTML file with links to separate CSS and JS files.
+
+The main content, the letters, are stored in the [content directory][lc] in files
+formatted like this:
+
+> <pre><code>
+> Title: A Simple Description
+> Date: 2020-10-19
+> Topics: Donald Trump, [More Topics]
+> People: [Comma-separated list of people mentioned]
+> Content:
+> ----------------------------------------------------------------------------
+> 
+> Narcissist, con artist, tax evader, pathological liar, cheat, bully, adulterer,
+> fraud, egomaniac, hate-monger, misogynist, xenophobe.
+> 
+> You don't need to know anything about me to know who I'm describing.
+> 
+> So why in the world would you consider voting for him?
+> 
+> ----------------------------------------------------------------------------
+> </code></pre>
+
+This site is built by calling [build.js][bu], which parses those files (as well as
+those in the [pages folder][pf]) turning them into `content.js` (and `pages.js`).
+These are merged alongside the CSS, the main JS, and the themes into `index.html`,
+creating that stand-alone `letters.html` file.
+
+
+Application Design
+------------------
+
+Since this is mainly for myself, I was willing to make this a JS-only site.  If
+it were to expand toward a more general static site generation tool (unlikely,
+but possible), I would have to include some server-side generation, especially
+if SEO was a real concern.  I'm simply happy not to have to do this at the
+moment.
+
+Although [`themes.js`][th] includes a little bit of code, at the moment, almost
+the entire logic is contained in [`process.js`][pr]
+
+With the exception of a few static pages, everything is generated on the fly by
+the JS, based on the data stored in [`content.js`][co].
+
+
+
+Web Design
+----------
+
+I am not a graphical designer.  Note even close.
+
+I've tried to make an aestheically pleasing site, and offer multiple color
+schemes for two reasons: one because my own tastes are probably not shared by
+many, and two, because I wanted to play around with CSS variables, which I
+haven't had the time to do recently.  The actual color schemes (except for
+*Mellow Yellow*, which I made years ago) are shamelessly ripped off from sites
+around the web.  I can't give credit as there aren't single sources for any of
+them.  I'm pretty happy with the default theme, *I Feel the Earth Move*, and
+somewhat satisfied with *Purple Haze*.  The others I have varying degrees of
+frustration with.
+
+The rest of the visual design: layout, typography, and so on, feels fairly 
+natural to me, but as I said, I am not a graphical designer.
+
+There is not much obvious interactivity here.  The only actions outside of
+"page" navigation is search and theme switching.  Search still needs a bit
+of work as it right now only finds exact matches.  I'm very happy with the
+theme switching, though, and it gave me the chance to combine theme switching
+with dynamic SVGs.
+
+
+Feedback
+--------
+
+I'd love to hear any feedback of a technical nature, suggestions for the code,
+better UX or graphical designs, or anything else.  Feel free to [email me][ss]
+or to raise a [new issue][is] or [pull request][pu].
+
+Thank you to [Mike H][mh] for helpful feedback already given!
+
+
+
+
+  [bu]: https://github.com/CrossEye/letters/blob/main/build.js
+  [co]: /content.js
+  [ga]: https://github.com/CrossEye/letters/blob/main/.github/workflows/rebuild.yml
+  [gh]: https://github.com/CrossEye/letters
+  [gp]: https://pages.github.com/
+  [ih]: https://github.com/CrossEye/letters/blob/main/index.html
+  [is]: https://github.com/CrossEye/letters/issues/new
+  [lc]: https://github.com/CrossEye/letters/tree/main/content/letters
+  [lh]: /letters.html
+  [mh]: https://github.com/buzzdecafe
+  [pf]: https://github.com/CrossEye/letters/tree/main/content/pages
+  [pr]: https://github.com/CrossEye/letters/blob/main/process.js
+  [pu]: https://github.com/CrossEye/letters/issues/new
+  [ss]: mailto:scott@sauyet.com
+  [th]: https://github.com/CrossEye/letters/blob/main/themes.js
+
+
+--------------------------------------------------------------------------------

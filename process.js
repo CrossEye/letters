@@ -116,7 +116,11 @@ const makeOlderSidebarLetters = (
 
 const makeSidebarPages = (pages) =>
   `<h3><a href="#/">Home</a></h3>
-  ${pages .map (({Title, Slug}) => `<h3><a href="#/pages/${Slug}">${Title}</a></h3>`) .join ('\n')}`
+  ${pages 
+    .filter (p => 'Sort Order' in p)
+    .sort (({'Sort Order': a}, {'Sort Order': b}) => a - b)
+    .map (({Title, Slug}) => `<h3><a href="#/pages/${Slug}">${Title}</a></h3>`) .join ('\n')
+  }`
 
 const makeSidebarLetters = (
   content,

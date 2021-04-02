@@ -414,15 +414,9 @@ h2 {
   font-size: 85%;
 }
 
-
 .sidebar h3 + h3 {
   margin-top: -1rem;
 }
-
-.sidebar h3:first-of-type {
-  margin-top: 0
-}
-
 
 .sidebar li {
   text-indent: -.5rem;

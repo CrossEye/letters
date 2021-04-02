@@ -58,7 +58,7 @@ const convertLetter = ({Topics = '', People: ps = '', Content, ...rest},
  
 const convertPage = ({Content, 'Sort Order': so, ...rest}) => ({
     ...rest,
-    ['Sort Order']: Number(so),
+    ... (so ? {['Sort Order']: Number(so)} : {}),
     Content: marked (Content)
 })
 

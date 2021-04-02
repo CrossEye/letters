@@ -42,11 +42,14 @@ published, but that's rare, and it never changes the meaning.
 
 Feel free to [email me][em] with any comments or suggestions.
 
+Details of how this is built are on the [technical page][tp].
+
   [dt]: #/topic/Donald+Trump
 	[em]: mailto:scott@sauyet.com
   [fc]: #/topic/Fact+Checking
   [gw]: #/topic/Global+Warming
   [pr]: #/topic/Progressivism
   [to]: #/topics/
+	[tp]: #/pages/technical
 
 --------------------------------------------------------------------------------
