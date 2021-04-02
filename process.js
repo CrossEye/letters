@@ -328,18 +328,14 @@ const getMatches = (
   test = query .toLowerCase ()
 ) => 
   content .map (({Title, Date, Text, TextLower}) => 
-    call ((
-      max = TextLower.length - 1
-    ) => [Title, Date, findAllIndices (test) (TextLower) .map (i => 
-      call ((
-        // TODO: Question: is this minor randomization of matches actually helpful?
-        start = clamp (0, max) (i - Math.floor (Math.random() * 50 + 50)),
-        end = clamp (0, max) (i + query.length + Math.floor (Math.random() * 50 + 50))
-      ) => 
-        `${Text .slice (start, i) .replace (/^\S*\s/, '') .replace (/\n/g, ' ')
-        }<span class="match">${Text.slice (i, i + query.length)}</span>${
-        Text .slice (i + query.length, end).replace(/\s\S*$/, '') .replace(/\n/g, ' ')}`)
-    )]) 
+    [Title, Date, findAllIndices (test) (TextLower) .map (i => {
+        const start = clamp (0, TextLower.length - 1) (i - Math.floor (Math.random() * 50 + 25))
+        const end = clamp (0, TextLower.length - 1) (i + query.length + Math.floor (Math.random() * 50 + 25))
+
+        return `${Text .slice (start, i) .replace (/^\S*\s/, '') .replace (/\n/g, ' ')
+          }<span class="match">${Text.slice (i, i + query.length)}</span>${
+          Text .slice (i + query.length, end).replace(/\s\S*$/, '') .replace(/\n/g, ' ')}`
+    })] 
   )
   .filter (([_, __, r]) => r .length > 0) 
   .map (([Title, Date, Snippets]) => ({Title, Date, Snippets}))
