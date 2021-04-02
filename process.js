@@ -2,7 +2,7 @@ const always = (x) => () => x
 const call = (fn, ...args) => fn (args)
 const chain = (fn) => (xs) => xs .flatMap (fn)
 const chooseIndex = (xs, tot = 0) => 
-  xs .map ((x) => [x, tot += x [1]]) .findIndex (((r = tot * Math.random()) => ([, w]) => w >= r)())
+  xs .map ((x) => [x, tot += x [1]]) .findIndex (((r = tot * Math .random ()) => ([, w]) => w >= r)())
 const clamp = (min, max) => (n) => Math .min (Math .max (min, n), max)
 const countBy = (fn) => (xs) =>
   xs .reduce ((a, x) => (fn (x) || []) .reduce ((a, v) => ((a[v] = (a[v] || 0) + 1), a), a), {})
@@ -57,7 +57,7 @@ const gather = (name, content, sorter=topicSort) =>
   Object.entries (countBy (prop (name)) (content)) .sort (sorter)
 
 const makeLink = (type) => ([t, c]) => 
-  `<li><a href="#/${type}/${t.replace(/ /g, '+')}">${t} <span>(${c} letter${c > 1 ? 's' : ''})</span></a></li>`
+  `<li><a href="#/${type}/${t.replace(/ /g, '+')}">${t} <span>(${c}&nbsp;letter${c > 1 ? 's' : ''})</span></a></li>`
 const letterLink = ({Date, Title}) =>
   `<li><a href="#/${Date}">${Title} <span>(${shortDate(Date)})</span></a></li>`
 const makeTopicLink = (Topic) =>
@@ -411,30 +411,36 @@ const makeSearch = (
   ${makeSearchWidget (query)}
   ${makeSearchResults (content, query.toLowerCase())}`
 
+const makeLetterAbstract = ({Title, Date, Topics, Content}) => 
+  `<h4><a href="#/${Date}">${Title}</h4><p>(<span>${longDate (Date)}</span>)</a></p>
+  <ul class="topics">${Topics .map (
+    topic => `<li><a href="#/topic/${topic .replace (/ /g, '+')}">${topic}</a></li>`).join(``)
+  }</ul>
+  <p><em>To The Editor:</em></p>
+  <p><em>${firstPara (Content)} <a class="more" href="#/${Date}">&hellip;more</a></em></p>`
 
 // Main route
 const makeMain = (config) => (
   content,
   hash,
-  {Title, Date, Topics, Content} = content [randomInt (config .lettersAboveFold, content .length)],
   allTopics = gather ('Topics', content, alphaTopicSort),
   chosenTopics = sortBy (head) (weightedRandom (config.topicsAboveFold) (allTopics)) 
 ) =>
   `<p>A collection of letters to the Editor of Rivereast News written by Scott Sauyet.  More information is
      available on the <a href="#/pages/about">About</a> page.</p>
   <div class="container">
-    <div class="card">
-      <h4>Random Letter</h4>
-      <p>There are <a href="#/letters">${content.length} letters</a> available.  Here's one:</p>
-      <p><a href="#/${Date}">${Title} (<span>${longDate (Date)}</span>)</a> <!--discussed the ${pluralize ('topic', 'topics') (Topics.length)} of 
-        ${oxfordJoin(Topics .map (topic => `<a href="#/topic/${topic .replace (/ /g, '+')}">${topic}</a>`)) }:
-      --></p>
-      <ul class="topics">${Topics .map (
-        topic => `<li><a href="#/topic/${topic .replace (/ /g, '+')}">${topic}</a></li>`).join(``)
-      }</ul>
-      <p><em>${firstPara (Content)} <a class="more" href="#/${Date}">&hellip;more</a></em></p>
+    <div class="box">
+      <header><h3>Latest Letter</h3></header>${makeLetterAbstract (content [0])}
     </div>
-    <div class="card"><h4>Random Topics</h4>
+  </div>
+  <div class="container">
+    <div class="card">
+      <header><h3>Random Letter</h3></header>
+      <p>There are currently a total of <a href="#/letters">${content.length} letters</a> available.  Here's one:</p>
+      ${makeLetterAbstract (content [randomInt (config .lettersAboveFold, content .length)])}
+    </div>
+    <div class="card">
+      <header><h3>Random Topics</h3></header>
       <p>Letter here collectively discuss <a href="#/topics">${allTopics.length} different topics</a>.  Here are a few:</p>
       <ul>${chosenTopics.map(makeLink('topic')).join('')}</ul>
     </div>
@@ -466,6 +472,15 @@ const enhancePages = (content, pages, substitutions = getSubs (content)) =>
     ...rest,
     Content: Content.replace(/\<\!\-\-\s*subtitute\:\s*(\w+)\s*\-\-\>/g, (s, k) => substitutions[k] || ``)
   }))
+
+const updateBasePage = (content, pages, config) => { // TODO -- anything else here?
+  document .getElementById ('copyright') .innerHTML = 
+    `Copyright &copy; ${
+      last (content) .Date .slice (0, 4)
+    } - ${
+      content[0] .Date .slice (0, 4)
+    }, Scott Sauyet`
+}
 
 
 // DOM Events
@@ -513,6 +528,8 @@ const router = (content, pages, config) => {
   const config = {lettersAboveFold: 10, yearsAboveFold: 3, topicsAboveFold: 6, peopleAboveFold: 6}
   const content = enhanceContent (rawContent)
   const pages = enhancePages (content, rawPages)
+
+  updateBasePage(content, pages, config)
 
   const route = router (content, pages, config)
  
