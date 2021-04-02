@@ -30,6 +30,20 @@ workflow][rb].  This calls the file [build.js][bu] which does two things:
 Then the workflow checks these generated files back into the repository, and
 this main branch will now be served by GitHub Pages.
 
+
+To Do
+-----
+
+  - [ ] Responsiveness working on mobile
+  - [ ] Make all URLs end in `/`
+  - [ ] Give series their own code
+  - [ ] Make randomness a daily (weekly?) fixed set with "more"
+  - [ ] Separate the theme data and code
+  - [ ] Clean up CSS (again!)
+  - [ ] Make a changeTheme URL, so I can share the themes directly
+  - [ ] (Possibly) add theme-builder or load-from-url mechanism
+
+
   [bu]: ./build.js
   [cn]: ./content.js
   [co]: ./content
