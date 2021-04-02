@@ -38,10 +38,17 @@ body {
   background-color: var(--primary-accent);
 }
 
-.abstract {
-  border-color: var(--primary-highlight);
+.main .card a, .main .card a:visited {
+  background-color: var(--primary);
 }
 
+.main .card .topics a, .main .card .topics a:visited {
+  background-color: var(--primary-highlight);
+}
+
+.main .card a:hover, .main .card a:visited:hover {
+  background-color: var(--primary-accent);
+}
 
 ul.long li a, ul.long li a:visited {
   background-color: var(--primary-background);
@@ -78,19 +85,19 @@ ul.long li a:hover {
   background-color: var(--secondary-accent);
 }
 
-header {
+header, footer {
   background-color: var(--tertiary-background);
   color: var(--tertiary-text);
   border-color: var(--border);
 }
 
-header a, header a:visited {
+header a, header a:visited, footer a, footer a:visited {
   background-color: var(--tertiary-highlight);
   color: var(--tertiary-text);
 }
 
-header a:hover {
-  background-color: var(--tertiary-accent);
+header a:hover, footer a:hover {
+    background-color: var(--tertiary-accent);
 }
 
 button, input {
@@ -120,7 +127,7 @@ button, input {
 
 /*  Borders  */
 
-header, .box {
+header, footer, .box {
   border-radius: 12px;
   border-width: 2px;
   border-style: solid;  
@@ -136,7 +143,7 @@ header, .box {
   border-radius: 10px;
 }
 
-.sidebar a, header a {
+.sidebar a, header a, footer a {
   text-decoration: none;
 }
 
@@ -178,12 +185,19 @@ span {
   opacity: 60%;
 }
 
-header {
+header, footer {
   padding: .5rem 1rem;
+}
+
+header {
   margin: -1rem 1rem 1rem 1rem;
 }
 
-header a {
+footer {
+  margin: 1rem;
+}
+
+header a, footer a {
   padding: .5rem 1rem;
 }
 
@@ -242,29 +256,15 @@ nav {
   flex: 2 1 200px;
 }
 
-.abstract .header h4 {
-  flex: 5 1 150px;
-}
-
-.abstract .header ul {
-  flex: 2 1 100px;
-}
-
 .main a, .main a:visited {
   text-decoration: none;
 }
 
-.main .card a, .main .card a:visited {
-  background-color: var(--primary);
+.main .card .topics a{
+  display: inline-block;
+  margin: .1rem .3rem;
 }
 
-.main .card .topics a, .main .card .topics a:visited {
-  background-color: var(--primary-highlight);
-}
-
-.main .card a:hover, .main .card a:visited:hover {
-  background-color: var(--primary-accent);
-}
 
 .main svg {
   width: 100%;
@@ -376,7 +376,7 @@ h1, h2, h3, h4, summary {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-header {
+header, footer {
   text-align: center;
 }
 

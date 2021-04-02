@@ -439,7 +439,7 @@ const makeMain = (config) => (
       <p><em>${firstPara (Content)} <a class="more" href="#/${Date}">&hellip;more</a></em></p>
     </div>
     <div class="card"><h4>Random Topics</h4>
-      <p>Letter here discuss <a href="#/topics">${allTopics.length} topics</a>.  Here are a few:</p>
+      <p>Letter here collectively discuss <a href="#/topics">${allTopics.length} different topics</a>.  Here are a few:</p>
       <ul>${chosenTopics.map(makeLink('topic')).join('')}</ul>
     </div>
   <div>
@@ -520,12 +520,7 @@ const router = (content, pages, config) => {
 
   const route = router (content, pages, config)
  
-  document .getElementById ('root') .innerHTML += makeSidebar (
-    content,
-    pages,
-    themes,
-    config
-  )
+  document .getElementById ('root') .innerHTML += makeSidebar (content, pages, themes, config)
   
   addEvents ({
     click: [
