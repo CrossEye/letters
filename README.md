@@ -35,7 +35,7 @@ To Do
 -----
 
   - [ ] Responsiveness working on mobile
-  - [ ] Make all URLs end in `/`
+  - [X] Make all URLs end in `/`
   - [ ] Give series their own code
   - [ ] Change document title on navigation
   - [ ] Make randomness a daily (weekly?) fixed set with "more"

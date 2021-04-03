@@ -119,7 +119,7 @@ const makeSidebarPages = (pages) =>
   ${pages 
     .filter (p => 'Sort Order' in p)
     .sort (({'Sort Order': a}, {'Sort Order': b}) => a - b)
-    .map (({Title, Slug}) => `<h3><a href="#/pages/${Slug}">${Title}</a></h3>`) .join ('\n')
+    .map (({Title, Slug}) => `<h3><a href="#/pages/${Slug}/">${Title}</a></h3>`) .join ('\n')
   }`
 
 const makeSidebarLetters = (
@@ -227,7 +227,7 @@ const makeCurrent = (content) =>
 const makePage = (pages) => (
   content, 
   hash,
-  slug = hash .slice (8) .replaceAll('+', ' '),
+  slug = hash .slice (8, -1) .replaceAll('+', ' '),
   {Title, Content} = pages .find (({Slug}) => Slug == slug)
 ) => Content
       
@@ -498,8 +498,6 @@ const addEvents = (cfg) =>
 const router = (content, pages, config) => {
   const lookups = Object .fromEntries (content .map (letter => [letter.Date, letter]))
 
-  // TODO: some routes shouldn't end with `/`,  `#/current/` -> `#/current`, Also topics, peoples, letters, themes
-  // Or, perhaps better, make all end with `/`  ??
   const routes = [
     [equals      ('#/'),                        makeMain (config),    noop],
     [startsWith  ('#/pages/'),                  makePage (pages),     noop],

@@ -49,6 +49,6 @@ Details of how this is built are on the [technical page][tp].
   [gw]: #/topic/Global+Warming/
   [pr]: #/topic/Progressivism/
   [to]: #/topics/
-	[tp]: #/pages/technical
+	[tp]: #/pages/technical/
 
 --------------------------------------------------------------------------------

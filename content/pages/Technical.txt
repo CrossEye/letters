@@ -89,10 +89,10 @@ The rest of the visual design: layout, typography, and so on, feels fairly
 natural to me, but as I said, I am not a graphical designer.
 
 There is not much obvious interactivity here.  The only actions outside of
-"page" navigation is search and theme switching.  Search still needs a bit
-of work as it right now only finds exact matches.  I'm very happy with the
-theme switching, though, and it gave me the chance to combine theme switching
-with dynamic SVGs.
+"page" navigation is search and theme switching.  Search still needs a bit of
+work as it right now only finds exact matches.  I'm very happy with the theme
+switching, though, and it gave me the chance to combine CSS variables with
+dynamic SVGs.
 
 
 Feedback
