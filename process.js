@@ -474,7 +474,7 @@ const enhancePages = (content, pages, substitutions = getSubs (content)) =>
     Content: Content.replace(/\<\!\-\-\s*subtitute\:\s*(\w+)\s*\-\-\>/g, (s, k) => substitutions[k] || ``)
   }))
 
-const updateBasePage = (content, pages, config) => { // TODO -- anything else here?
+const updateBasePage = (content, pages, lookups, config) => { // TODO -- anything else here?
   document .getElementById ('copyright') .innerHTML = 
     `Copyright &copy; ${
       last (content) .Date .slice (0, 4)
@@ -483,6 +483,21 @@ const updateBasePage = (content, pages, config) => { // TODO -- anything else he
     }, Scott Sauyet`
 }
 
+// TODO: add titles for About, Letters, Topics, etc.
+const changeTitle = (lookups) => (hash) =>
+  document.title = 
+    (matches (/^\d{4}-\d{2}-\d{2}$/) (hash) ? (lookups [hash] .Title + ' : ') : '') + 
+    'Scott Sauyet : Letters to the Editor'
+
+const afterNav = (content, pages, lookups, config) => ((
+  actions = [
+    [() => true, changeTitle (lookups)],
+    [startsWith ('search'),           searchFocus],
+    [startsWith ('themes'),           themesFocus],
+  ]
+) => (e, hash = e .detail .hash .slice(2, -1)) => 
+  actions .filter (([pred]) => pred (hash)) .forEach(([_, fn]) => fn (hash))
+)()
 
 // DOM Events
 const addEvents = (cfg) =>
@@ -495,29 +510,27 @@ const addEvents = (cfg) =>
 
 
 // Routing
-const router = (content, pages, config) => {
-  const lookups = Object .fromEntries (content .map (letter => [letter.Date, letter]))
-
+const router = (content, pages, lookups, config) => {
   const routes = [
-    [equals      ('#/'),                        makeMain (config),    noop],
-    [startsWith  ('#/pages/'),                  makePage (pages),     noop],
-    [matches     (/^#\/\d{4}-\d{2}-\d{2}\/$/),  makeLetter (lookups), noop],
-    [equals      ('#/current/'),                makeCurrent,          noop],
-    [equals      ('#/topics/'),                 makeTopics,           noop],
-    [startsWith  ('#/topic/'),                  makeTopic,            noop],
-    [equals      ('#/people/'),                 makePeople,           noop],
-    [startsWith  ('#/person/'),                 makePerson,           noop],
-    [equals      ('#/letters/'),                makeLetters,          noop],
-    [startsWith  ('#/search/'),                 makeSearch,           searchFocus],
-    [startsWith  ('#/themes/'),                 makeThemeSwitcher,    themesFocus],
+    [equals      ('#/'),                        makeMain (config)    ],
+    [startsWith  ('#/pages/'),                  makePage (pages)     ],
+    [matches     (/^#\/\d{4}-\d{2}-\d{2}\/$/),  makeLetter (lookups) ],
+    [equals      ('#/current/'),                makeCurrent          ],
+    [equals      ('#/topics/'),                 makeTopics           ],
+    [startsWith  ('#/topic/'),                  makeTopic            ],
+    [equals      ('#/people/'),                 makePeople           ],
+    [startsWith  ('#/person/'),                 makePerson           ],
+    [equals      ('#/letters/'),                makeLetters          ],
+    [startsWith  ('#/search/'),                 makeSearch           ],
+    [startsWith  ('#/themes/'),                 makeThemeSwitcher    ],
   ]
   return () => {
     const hash = document.location.hash
     window .scrollTo (0, 0)
-    const [_, getContent, after] = routes .find (([pred]) => pred (hash)) ||
-          [, returnHome, noop]
+    const [_, getContent] = routes .find (([pred]) => pred (hash)) ||
+          [, returnHome]
     document .getElementById ('main') .innerHTML = getContent (content, hash)
-    after () // TODO: replace these with a DOM event listener
+    window .dispatchEvent (new CustomEvent ('nav', {detail: {hash}}))
   }
 }
 
@@ -527,10 +540,12 @@ const router = (content, pages, config) => {
   const config = {lettersAboveFold: 10, yearsAboveFold: 3, topicsAboveFold: 6, peopleAboveFold: 6}
   const content = enhanceContent (rawContent)
   const pages = enhancePages (content, rawPages)
+  const lookups = Object .fromEntries (content .map (letter => [letter.Date, letter]))
 
-  updateBasePage(content, pages, config)
 
-  const route = router (content, pages, config)
+  updateBasePage(content, pages, lookups, config)
+
+  const route = router (content, pages, lookups, config)
  
   document .getElementById ('root') .innerHTML += makeSidebar (content, pages, themes, config)
   
@@ -543,6 +558,9 @@ const router = (content, pages, config) => {
     ],
     keyup: [
       [hasId ('search'), (e) => {if (e .key == 'Enter') {newSearch ()}}],
+    ],
+    nav: [
+      [() => true, afterNav (content, pages, lookups, config)]
     ]
   })
 
