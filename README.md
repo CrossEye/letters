@@ -4,7 +4,7 @@ Scott Sauyet's Letters to the Editor
 This is a small app to house my letters to the editor.
 
 I am one of those gadflies who regularly writes letters to the local weekly
-newspaper, covering mostly U.S. national policy discussions, an occasional local
+newspaper, covering mostly U.S. national policy discussions, and occasional local
 issues.
 
 They are now hosted on GitHub pages, and available at http://letters.sauyet.com/
@@ -39,6 +39,7 @@ To Do
   - [ ] Give series their own code
   - [ ] Make randomness a daily (weekly?) fixed set with "more"
   - [ ] Separate the theme data and code
+  - [ ] Simplify router by adding event and removing `after` param
   - [ ] Clean up CSS (again!)
   - [ ] Make a changeTheme URL, so I can share the themes directly
   - [ ] (Possibly) add theme-builder or load-from-url mechanism

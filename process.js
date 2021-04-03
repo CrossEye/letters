@@ -59,7 +59,7 @@ const gather = (name, content, sorter=topicSort) =>
 const makeLink = (type) => ([t, c]) => 
   `<li><a href="#/${type}/${t.replace(/ /g, '+')}">${t} <span>(${c}&nbsp;letter${c > 1 ? 's' : ''})</span></a></li>`
 const letterLink = ({Date, Title}) =>
-  `<li><a href="#/${Date}">${Title} <span>(${shortDate(Date)})</span></a></li>`
+  `<li><a href="#/${Date}/">${Title} <span>(${shortDate(Date)})</span></a></li>`
 const makeTopicLink = (Topic) =>
   `<a href="#/topic/${Topic.replace(/ /g, '+')}">${Topic}</a>`
 const makeTopicListLink = (Topic) =>
@@ -214,13 +214,14 @@ const formatLetter = (content, letter) =>
     ? `${makeLetterBody (letter)}
        ${makeLetterNav (content, letter)}` 
     : `<h1>Not Found</h1>
-      <p>No letter found for ${longDate(hash.slice(2))}`
+      <p>No letter found for ${longDate(hash.slice(2, -1))}`
 
 const makeLetter = (lookups) => (content, hash) => 
-  formatLetter (content, lookups [hash .slice (2)])
+  formatLetter (content, lookups [hash .slice (2, -1)])
 
 const makeCurrent = (content) => 
   formatLetter (content, content [0])
+
 
 // Page Route
 const makePage = (pages) => (
@@ -241,7 +242,7 @@ const makeTopic = (
   `<h1>Letters with topic "${topic}"</h1>
   <ul class="long">
     ${letters .map (({Date, Title}) => 
-      `<li><a href="#/${Date}">${Title} <span>(${shortDate (Date)})</span></a></li>`
+      `<li><a href="#/${Date}/">${Title} <span>(${shortDate (Date)})</span></a></li>`
     ) .join ('\n')}
   </ul>`
 
@@ -343,7 +344,7 @@ const getMatches = (
 
 const makeSnippet = ({Date, Title, Snippets}) =>
   `<li>
-    <a href="#/${Date}">${Title} <span>(${shortDate(Date)})</span></a>
+    <a href="#/${Date}/">${Title} <span>(${shortDate(Date)})</span></a>
     <div class="snippet">... ${Snippets .slice(0, 3).join(' ... <br/> ...')} ...</div>  
   </li>`
 
@@ -412,12 +413,12 @@ const makeSearch = (
   ${makeSearchResults (content, query.toLowerCase())}`
 
 const makeLetterAbstract = ({Title, Date, Topics, Content}) => 
-  `<h4><a href="#/${Date}">${Title}</h4><p>(<span>${longDate (Date)}</span>)</a></p>
+  `<h4><a href="#/${Date}/">${Title}</h4><p>(<span>${longDate (Date)}</span>)</a></p>
   <ul class="topics">${Topics .map (
     topic => `<li><a href="#/topic/${topic .replace (/ /g, '+')}">${topic}</a></li>`).join(``)
   }</ul>
   <p><em>To The Editor:</em></p>
-  <p><em>${firstPara (Content)} <a class="more" href="#/${Date}">&hellip;more</a></em></p>`
+  <p><em>${firstPara (Content)} <a class="more" href="#/${Date}/">&hellip;more</a></em></p>`
 
 // Main route
 const makeMain = (config) => (
@@ -459,7 +460,7 @@ const enhanceContent = (content, div = document.createElement('div')) =>
 
 const updateCurrent = ({Date, Topics, Title}) => 
   `The most recent letter, from ${longDate(Date)
-  }, is titled "<a href="#/${Date}">${Title
+  }, is titled "<a href="#/${Date}/">${Title
   }</a>", and discusses the ${Topics.length == 1 ? 'subject' : 'subjects'
   } of ${oxfordJoin (Topics .map (makeTopicLink))}.`
 
@@ -500,17 +501,17 @@ const router = (content, pages, config) => {
   // TODO: some routes shouldn't end with `/`,  `#/current/` -> `#/current`, Also topics, peoples, letters, themes
   // Or, perhaps better, make all end with `/`  ??
   const routes = [
-    [equals      ('#/'),                      makeMain (config),    noop],
-    [startsWith  ('#/pages/'),                makePage (pages),     noop],
-    [matches     (/^#\/\d{4}-\d{2}-\d{2}$/),  makeLetter (lookups), noop],
-    [equals      ('#/current/'),              makeCurrent,          noop],
-    [equals      ('#/topics/'),               makeTopics,           noop],
-    [startsWith  ('#/topic/'),                makeTopic,            noop],
-    [equals      ('#/people/'),               makePeople,           noop],
-    [startsWith  ('#/person/'),               makePerson,           noop],
-    [equals      ('#/letters/'),              makeLetters,          noop],
-    [startsWith  ('#/search/'),               makeSearch,           searchFocus],
-    [startsWith  ('#/themes/'),               makeThemeSwitcher,    themesFocus],
+    [equals      ('#/'),                        makeMain (config),    noop],
+    [startsWith  ('#/pages/'),                  makePage (pages),     noop],
+    [matches     (/^#\/\d{4}-\d{2}-\d{2}\/$/),  makeLetter (lookups), noop],
+    [equals      ('#/current/'),                makeCurrent,          noop],
+    [equals      ('#/topics/'),                 makeTopics,           noop],
+    [startsWith  ('#/topic/'),                  makeTopic,            noop],
+    [equals      ('#/people/'),                 makePeople,           noop],
+    [startsWith  ('#/person/'),                 makePerson,           noop],
+    [equals      ('#/letters/'),                makeLetters,          noop],
+    [startsWith  ('#/search/'),                 makeSearch,           searchFocus],
+    [startsWith  ('#/themes/'),                 makeThemeSwitcher,    themesFocus],
   ]
   return () => {
     const hash = document.location.hash
