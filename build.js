@@ -45,7 +45,7 @@ const parse = (file) =>
     ).pairs)
 
 const linkPeople = (People, Content) => 
-  People .reduce ((c, p) => c.replace(p, `[${p}](#/person/${p.replace(/ /g, '+')})`), Content)
+  People .reduce ((c, p) => c.replace(p, `[${p}](#/person/${p.replace(/ /g, '+')}/)`), Content)
 
 const convertLetter = ({Topics = '', People: ps = '', Content, ...rest}, 
     People = ps .trim () .split (/\,\s*/) .filter (Boolean)

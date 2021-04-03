@@ -468,10 +468,6 @@ h2 {
   text-align: right;
 }
 
-/*.card h3, .main .box h3 {
-  text-align: center;
-}*/
-
 .card h4, .main .box h4 {
   text-align: center;
 }
@@ -486,7 +482,7 @@ h2 {
 }
 
 .sidebar h3 + h3 {
-  margin-top: -1rem;
+  margin-top: -.5rem;
 }
 
 .sidebar li {

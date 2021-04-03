@@ -204,9 +204,9 @@ const makeLetterNav = (
   next = letter && contents [contents .indexOf (letter) - 1]
 ) => 
   `<nav>
-    <div id="prev"${prev ? `title="${shortDate (prev .Date)}` : ``}">${prev ? `<a href="#/${prev .Date}">« ${prev .Title}</a>` : ``}</div>
+    <div id="prev"${prev ? `title="${shortDate (prev .Date)}` : ``}">${prev ? `<a href="#/${prev .Date}/">« ${prev .Title}</a>` : ``}</div>
     <div id="home" title="Overview"><a href="#/">Home</a></div>
-    <div id="next"${next ? `title="${shortDate (next .Date)}` : ``}">${next ? `<a href="#/${next .Date}">${next .Title} »</a>` : ``}</div>
+    <div id="next"${next ? `title="${shortDate (next .Date)}` : ``}">${next ? `<a href="#/${next .Date}/">${next .Title} »</a>` : ``}</div>
   </nav>`
 
 const formatLetter = (content, letter) =>
@@ -251,7 +251,7 @@ const makeTopic = (
 const makePerson = (
   content, 
   hash,
-  person = hash .slice (9) .replaceAll('+', ' '),
+  person = hash .slice (9, -1) .replaceAll('+', ' '),
   letters = content .filter (({People}) => People .includes (person))  
 ) => 
   `<h1>Letters mentioning Rivereast letter writer ${person}</h1>
@@ -427,8 +427,8 @@ const makeMain = (config) => (
   allTopics = gather ('Topics', content, alphaTopicSort),
   chosenTopics = sortBy (head) (weightedRandom (config.topicsAboveFold) (allTopics)) 
 ) =>
-  `<p>A collection of letters to the Editor of Rivereast News written by Scott Sauyet.  More information is
-     available on the <a href="#/pages/about">About</a> page.</p>
+  `<p>Letters to the Editor of <a href="https://glcitizen.com/"> The Rivereast News Bulletin</a> 
+      written by Scott Sauyet.</p>
   <div class="container">
     <div class="box">
       <header><h3>Latest Letter</h3></header>${makeLetterAbstract (content [0])}

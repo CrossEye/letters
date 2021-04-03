@@ -37,6 +37,7 @@ To Do
   - [ ] Responsiveness working on mobile
   - [ ] Make all URLs end in `/`
   - [ ] Give series their own code
+  - [ ] Change document title on navigation
   - [ ] Make randomness a daily (weekly?) fixed set with "more"
   - [ ] Separate the theme data and code
   - [ ] Simplify router by adding event and removing `after` param
