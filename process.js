@@ -57,11 +57,11 @@ const gather = (name, content, sorter=topicSort) =>
   Object.entries (countBy (prop (name)) (content)) .sort (sorter)
 
 const makeLink = (type) => ([t, c]) => 
-  `<li><a href="#/${type}/${t.replace(/ /g, '+')}">${t} <span>(${c}&nbsp;letter${c > 1 ? 's' : ''})</span></a></li>`
+  `<li><a href="#/${type}/${t.replace(/ /g, '+')}/">${t} <span>(${c}&nbsp;letter${c > 1 ? 's' : ''})</span></a></li>`
 const letterLink = ({Date, Title}) =>
   `<li><a href="#/${Date}/">${Title} <span>(${shortDate(Date)})</span></a></li>`
 const makeTopicLink = (Topic) =>
-  `<a href="#/topic/${Topic.replace(/ /g, '+')}">${Topic}</a>`
+  `<a href="#/topic/${Topic.replace(/ /g, '+')}/">${Topic}</a>`
 const makeTopicListLink = (Topic) =>
   `<li>${makeTopicLink(Topic)}</li>`
 
@@ -186,7 +186,7 @@ const makeLetterBody = ({Title, Topics = [], Date, Content}) =>
   `<h1>${Title}</h1>
   ${Topics.length 
     ? `<ul class="topics">
-        ${Topics .map (topic => `<li><a href="#/topic/${topic .replace (/ /g, '+')}">${topic}</a></li>`) .join ('\n    ')}
+        ${Topics .map (topic => `<li><a href="#/topic/${topic .replace (/ /g, '+')}/">${topic}</a></li>`) .join ('\n    ')}
       </ul>` 
     : ``
   }
@@ -236,7 +236,7 @@ const makePage = (pages) => (
 const makeTopic = (
   content, 
   hash,
-  topic = hash .slice (8) .replaceAll('+', ' '),
+  topic = hash .slice (8, -1) .replaceAll('+', ' '),
   letters = content .filter (({Topics}) => Topics .includes (topic))
 ) => 
   `<h1>Letters with topic "${topic}"</h1>
@@ -415,7 +415,7 @@ const makeSearch = (
 const makeLetterAbstract = ({Title, Date, Topics, Content}) => 
   `<h4><a href="#/${Date}/">${Title}</h4><p>(<span>${longDate (Date)}</span>)</a></p>
   <ul class="topics">${Topics .map (
-    topic => `<li><a href="#/topic/${topic .replace (/ /g, '+')}">${topic}</a></li>`).join(``)
+    topic => `<li><a href="#/topic/${topic .replace (/ /g, '+')}/">${topic}</a></li>`).join(``)
   }</ul>
   <p><em>To The Editor:</em></p>
   <p><em>${firstPara (Content)} <a class="more" href="#/${Date}/">&hellip;more</a></em></p>`
@@ -442,7 +442,7 @@ const makeMain = (config) => (
     </div>
     <div class="card">
       <header><h3>Random Topics</h3></header>
-      <p>Letter here collectively discuss <a href="#/topics">${allTopics.length} different topics</a>.  Here are a few:</p>
+      <p>Letter here collectively discuss <a href="#/topics/">${allTopics.length} different topics</a>.  Here are a few:</p>
       <ul>${chosenTopics.map(makeLink('topic')).join('')}</ul>
     </div>
   <div>
