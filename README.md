@@ -39,6 +39,9 @@ To Do
   - [ ] Give series their own code
   - [X] Change document title on navigation
   - [ ] Make randomness a daily (weekly?) fixed set with "more"
+  - [ ] Expand search from exact phrase to partial matches, but mostly whole word
+        (E.g. "Dan" matches "Dan Armstrong" but not "dangerous".  
+        But should "democra" match "Democrats" and "democracy?  TBD)
   - [ ] Separate the theme data and code
   - [X] Simplify router by adding event and removing `after` param
   - [ ] Clean up CSS (again!)

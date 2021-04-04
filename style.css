@@ -71,8 +71,8 @@ ul.long li a:hover {
 }
 
 .main header {
-  background-color: var(--secondary-background);
-  color: var(--secondary-text);
+  background-color: var(--tertiary-background);
+  color: var(--tertiary-text);
 }
 
 

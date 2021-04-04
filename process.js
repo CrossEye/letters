@@ -300,8 +300,9 @@ const chooseTheme = (name) => {
     || '#/'
 }
 
-const themeClicked = (e) =>
+const themeClicked = (e) => {
   chooseTheme (decodeURIComponent (e .target .closest ('.themes button') .dataset .theme))
+}
 
 const themesFocus = () =>
   document .querySelector ('div.themes button') .focus()
@@ -427,9 +428,7 @@ const makeMain = (config) => (
   allTopics = gather ('Topics', content, alphaTopicSort),
   chosenTopics = sortBy (head) (weightedRandom (config.topicsAboveFold) (allTopics)) 
 ) =>
-  `<p>Letters to the Editor of <a href="https://glcitizen.com/"> The Rivereast News Bulletin</a> 
-      written by Scott Sauyet.</p>
-  <div class="container">
+  `<div class="container">
     <div class="box">
       <header><h3>Latest Letter</h3></header>${makeLetterAbstract (content [0])}
     </div>
