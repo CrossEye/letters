@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>Lorem Ipsum: The Early Years</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <style>
 body {background-color: #fbeec1;}
 .main {background-color: #daad86; color: #333; border-color: #000;}
@@ -9,17 +10,37 @@ header, footer {background-color: #8d8741; color: #fbeec1; border-color: #000;}
 header, footer, .box {border-radius: 12px; border-width: 2px; border-style: solid;  }
 header, footer {box-shadow: 2px 2px 2px #666;}
 :root {box-sizing: border-box;}
-body {padding: 1rem; max-width: 1200px; margin: 2	rem auto;}
+body {padding: 0; max-width: 1200px; margin: 0}
 header, footer {padding: .5rem 1rem;}
-header {margin: -1rem 1rem 1rem 1rem;}
-footer {margin: 1rem;}
+header {margin: -1rem .5rem .5rem .5rem;}
+footer {margin: .5rem;}
 body {font-family: sans-serif; font-size: 1rem;}
 h1, h2, h3, h4 {font-family: Verdana, Geneva, Tahoma, sans-serif;}
 header, footer {text-align: center;}
-.box {padding: 1rem; margin: 0 1rem;}
+.box {padding: 1rem; margin: .5rem;}
+
+h1 {font-size: 1.5rem}
+h2 {font-size: 1.25rem}
+
+nav.top {
+  margin: 0 0 1.5rem 0;
+  text-align: right;
+	padding: 0;
+	background-color: #bc986c; 
+	color: #fbeec1;
+	padding: .5rem 1rem;
+	border-bottom: 1px solid #000;
+}
+
+nav.top a, nav.top a:visited {
+	background-color: #bc986c;
+	color: #fbeec1;
+	text-decoration: none;
+}
 
 .container {
-  display: flex;
+	display: flex;
+	flex-direction: column;
   width: 100%;
 }
 
@@ -31,9 +52,9 @@ header, footer {text-align: center;}
   flex: 2 1 200px;
 }
 
-@media only screen and (max-width: 9rem) {
+@media only screen and (min-width: 600px) { /* in rems */
   .container {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .box {
@@ -43,10 +64,11 @@ header, footer {text-align: center;}
 </style>
 </head>
 <body>
-  <header><h1>Lorem Ipsum: The Early Years</h1></header>
+	<nav class="top"><a href="#/letter">Letters</a> | <a href="#/topics">Topics</a> | <a href="#/people">People</a> | <a href="#/menu">&#9776;</a></nav>
+  <header><h1>Mainstream Media</h1></header>
   <div id="root" class="container">
     <div class="main box">
-      <h1>Dolore Magna Aliqua</h1>
+      <h2>Mainstream Media</h2>
 			
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
