@@ -186,17 +186,53 @@ sidebar .menu li a:hover {
   z-index: 1;
   top: 0;
   left: 0;
-  padding: 2rem 1rem;
+  padding: 0 1rem;
   overflow-x: hidden;
   transition: 0.5s;
   margin-left: -4rem;
 }
 
 .sidebar.open {
-  margin-left: .5rem;
-  width: 18rem; 
+  margin: 0 0 2rem;
+  width: 95%;
 }
 
+#searchBox button, #searchWidget button {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+#searchWidget button {
+  margin-left: -.5rem;
+}
+
+#searchWidget button {
+  border: none;
+}
+
+#searchWidget button {
+  background-color: inherit;
+  color: inherit;
+}
+
+button, input {
+  background: #fbeec1;
+  color: inherit;
+}
+
+#searchWidget svg {
+  width: 3rem;
+  margin-bottom: -1rem;
+}
+
+#searchWidget {
+  margin-top: -1rem;
+  float: right;
+}
+
+button#cls {
+  font-size: 2rem;
+}
 
 @media only screen and (min-width: 600px) { /* in rems */
   .container {
