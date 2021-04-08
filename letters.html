@@ -1,528 +1,11 @@
 <html>
+
 <head>
-<title>Scott Sauyet : Letters to the Editor</title>
-<style type="text/css">
-/*  Colors  */
-
-:root {
-  --neutral: #fbeec1;
-  --border: #000000;
-  --accent: #666666;
-  --primary-background: #daad86;
-  --primary-text: #333333;
-  --primary-highlight: #bc986c;
-  --primary-accent: #659dbd;
-  --secondary-background: #bc986c;
-  --secondary-text: #fbeec1;
-  --secondary-highlight: #bc986c;
-  --secondary-accent: #659dbd;
-  --tertiary-background: #8d8741;
-  --tertiary-text: #fbeec1;
-  --tertiary-highlight: #8d8741;
-  --tertiary-accent: #659dbd;
-}
-
-body {
-  background-color: var(--neutral);
-  color: var(--primary-text); /* TODO: necessary? */
-}
-
-.main {
-  background-color: var(--primary-background);
-  color: var(--primary-text);
-  border-color: var(--border);
-}
-
-.main a, .main a:visited {
-  background-color: var(--primary-highlight);
-  color: var(--primary-text);
-}
-
-.main a:hover {
-  background-color: var(--primary-accent);
-}
-
-.main .card a, .main .card a:visited, .main .box a, .main .box a:visited  {
-  background-color: var(--primary);
-}
-
-.main .card .topics a, .main .card .topics a:visited, .main .box .topics a, .main .box .topics a:visited {
-  background-color: var(--primary-highlight);
-}
-
-.main .card a:hover, .main .card a:visited:hover, .main .box a:hover, .main .box a:visited:hover {
-  background-color: var(--primary-accent);
-}
-
-ul.long li a, ul.long li a:visited {
-  background-color: var(--primary-background);
-}
-
-ul.long li a:hover {
-  background-color: var(--primary-accent);
-}
-
-#search-results li a {
-    background-color: var(--primary-highlight);
-}
-
-#search-results li a:hover {
-    background-color: var(--primary-accent);
-}
-
-#search-results span.match {
-    background-color: var(--primary-accent);
-}
-
-.main header {
-  background-color: var(--tertiary-background);
-  color: var(--tertiary-text);
-}
-
-
-.sidebar {
-  background-color: var(--secondary-background);
-  color: var(--secondary-text);
-  border-color: var(--border);
-}
-
-.sidebar a, .sidebar a:hover {
-  background-color: var(--secondary-highlight);
-  color: var(--secondary-text);
-}
-
-.sidebar a:hover {
-  background-color: var(--secondary-accent);
-}
-
-header, footer {
-  background-color: var(--tertiary-background);
-  color: var(--tertiary-text);
-  border-color: var(--border);
-}
-
-header a, header a:visited, footer a, footer a:visited {
-  background-color: var(--tertiary-highlight);
-  color: var(--tertiary-text);
-}
-
-header a:hover, footer a:hover {
-    background-color: var(--tertiary-accent);
-}
-
-button, input {
-  background: var(--neutral);
-  color: inherit;
-}
-
-.main .themes button {
-  color: black;
-  background-color: white;
-}
-
-#searchBox button {
-  background-color: inherit;
-  color: inherit;
-}
-
-#searchWidget button {
-  background-color: inherit;
-  color: inherit;
-}
-
-#searchBox input {
-  background-color: var(--neutral);
-}
-
-
-/*  Borders  */
-
-header, footer, .box, .card {
-  border-radius: 12px;
-  border-width: 2px;
-  border-style: solid;  
-}
-
-header, footer {
-  box-shadow: 2px 2px 2px var(--accent);
-}
-
-.card, .main .box {
-  box-shadow: 1px 1px 1px var(--accent);
-}
-
-.main header {
-  border-width: 0px;
-  box-shadow: none;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-width: 1px;
-}
-
-.main .themes button {
-  border-radius: 15px;
-}
-
-.topics li a {
-  border: 1px solid;
-  border-radius: 10px;
-}
-
-.sidebar a, header a, footer a {
-  text-decoration: none;
-}
-
-#searchBox input {
-  border-radius: 18px;
-}
-
-#searchBox button {
-  border: none;
-}
-
-#searchWidget input {
-  border-radius: 10px;
-}
-
-#searchWidget button {
-  border: none;
-}
-
-.themes button:focus {
-  outline: none;
-  border: 3px solid black;
-}
-
-
-/*  Layout  */
-
-:root {
-  box-sizing: border-box; 
-}
-
-
-body {
-  padding: 1rem;
-  max-width: 1200px;
-  margin: 30px auto;
-}
-
-span {
-  opacity: 60%;
-}
-
-header, footer {
-  padding: .5rem 1rem;
-}
-
-header {
-  margin: -1rem 1rem 1rem 1rem;
-}
-
-.main header {
-  padding-bottom: .1rem;
-}
-
-.main header h3 {
-  margin-bottom: .5rem;
-}
-
-.main .box header {
-  margin: -1rem -1rem 0;
-}
-
-.main .card header {
-  margin: -.5rem -.5rem 0;
-}
-
-
-footer {
-  margin: 1rem;
-}
-
-header a, footer a {
-  padding: .5rem 1rem;
-}
-
-details {
-  margin-top: 0.5rem;
-}
-
-details > details {
-  margin-left: 1rem;
-  margin-top: .5rem;
-}
-
-details > details > details {
-  margin-left: 0;
-  margin-top: .5rem;
-}
-
-ul + details {
-  margin-left: 2rem;
-  margin-top: -.5rem;
-}
-
-details.more > ul {
-  margin-left: -2rem;
-}
-
-.container {
-  display: flex;
-  width: 100%;
-}
-
-nav {
-  display: flex;
-  width: 100%
-}
-
-#prev {
-  flex: 2 1 150px;
-}
-
-#home {
-  flex: 1 1 50px;
-  text-align: center;
-}
-
-#next {
-  flex: 2 1 150px;
-}
-
-.main {
-  flex: 5 1 200px;
-  position: relative;
-}
-
-.sidebar {
-  flex: 2 1 200px;
-}
-
-.main a, .main a:visited {
-  text-decoration: none;
-  padding: .15rem;
-}
-
-.main .card .topics a, .main .box .topics a {
-  margin: .1rem .3rem;
-  display: inline-block;
-}
-
-ul.topics {
-  text-align: center;
-  padding: 0;
-}
-
-.card {
-  padding: .5rem;
-  margin: 1rem;
-  width: 50%;
-}
-
-.card, .main .box {
-  border-width: 1px;
-}
-
-.main svg {
-  width: 100%;
-  margin: 10%;
-}
-
-.main div.themes span {
-  display: block;
-  margin-top: -2rem;
-  margin-bottom: 1rem;
-}
-
-.main .themes button {
-  padding: 0;
-  margin: .5rem;
-  display: inline-block;
-  width: 40%;
-}
-
-.card h3, .main .box h3 {
-  margin-top: 0;
-}
-
-.card h4, .main .box h4 {
-  margin-bottom: 0;
-}
-
-.card h4 + p, .main .box h4 + p {
-  margin-top: 0;
-}
-
-ul.long li, ul.long li a {
-  width: 100%
-}
-
-#search-results ul.letter li {
-  padding: .75rem 0;
-}
-
-.main li {
-  margin-top: .5rem;
-}
-
-.topics li {
-  display: inline-block;
-}
-
-.topics li a {
-  padding: .25rem;
-}
-
-.signature {
-  margin-left: 2rem;
-}
-
-.box {
-  padding: 1rem;
-  margin: 0 1rem;
-}
-
-.sidebar ul, ul.long {
-  list-style: none;
-}
-  
-#searchBox input {
-  width: 75%;
-  padding: 0 1rem;
-}
-
-#searchWidget {
-  margin-top: -1rem;
-  float: right;
-}
-
-#searchWidget input {
-  padding: 0 .5rem;
-}
-
-#searchWidget button {
-  margin-left: -.5rem;
-}
-
-#searchWidget svg {
-  width: 3rem;
-  margin-bottom: -1rem;
-}
-
-ul.long li a:hover {
-  margin: -.2rem;
-  padding: .2rem;
-}
-
-#search-results .snippet {
-  padding: 0 1rem;
-}
-
-#searchBox input:focus {
-  outline: none;
-}
-
-h4 a {
-  padding: .25rem;
-}
-
-a.more {
-  float: right;
-}
-
-/*  Typography  */
-
-body {
-  font-family: sans-serif;
-  font-size: 1rem;
-}
-
-h1, h2, h3, h4, summary {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-header, footer {
-  text-align: center;
-}
-
-h1 {
-  font-size: 1.75rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-#next {
-  text-align: right;
-}
-
-.main .themes button {
-  text-align: center;
-  font-size: 1.25rem;
-}
-
-.date {
-  text-align: right;
-}
-
-.topics ul {
-  list-style: none;
-  text-align: right;
-}
-
-.card h4, .main .box h4 {
-  text-align: center;
-}
-
-.card h4 + p, .main .box h4 + p {
-  text-align: center;
-}
-
-.card em, .main .box em {
-  font-size: 85%;
-  font-style: normal;
-}
-
-.sidebar h3 + h3 {
-  margin-top: -.5rem;
-}
-
-.sidebar li {
-  text-indent: -.5rem;
-  list-style: none;
-}
-  
-#searchBox input {
-  font-size: 1.5rem;
-}
-
-#searchBox button, #searchWidget button {
-  font-size: 3rem;
-  cursor: pointer;
-}
-
-#search-results .snippet {
-  font-style: italic;
-}
-
-
-/*  Responsiveness  */
-
-@media only screen and (max-width: 900px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .box {
-    margin: 0 0 1rem;
-  }
-}
-
-</style>
-<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDAwIDMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB4PSIwIiB5PSIwIiByeD0iMzAiIHJ5PSIzMCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIHN0eWxlPSJmaWxsOiAjZmJlZWMxOyBzdHJva2Utd2lkdGg6IDI7IHN0cm9rZTogI2NjYzsiPjwvcmVjdD48cmVjdCB4PSIyMCIgeT0iODAiIHJ4PSIxNSIgcnk9IjE1IiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjEwMCIgc3R5bGU9ImZpbGw6ICNkYWFkODY7IHN0cm9rZS13aWR0aDogMjsgc3Ryb2tlOiAjMDAwMDAwOyI+PC9yZWN0PjxyZWN0IHg9IjIwMCIgeT0iODAiIHJ4PSIxNSIgcnk9IjE1IiB3aWR0aD0iODAiIGhlaWdodD0iMTAwIiBzdHlsZT0iZmlsbDogI2JjOTg2Yzsgc3Ryb2tlLXdpZHRoOiAyOyBzdHJva2U6ICMwMDAwMDA7Ij48L3JlY3Q+PHJlY3QgeD0iMjAiIHk9IjIwIiByeD0iMTUiIHJ5PSIxNSIgd2lkdGg9IjI2MCIgaGVpZ2h0PSI0MCIgc3R5bGU9ImZpbGw6ICM4ZDg3NDE7IHN0cm9rZS13aWR0aDogMjsgc3Ryb2tlOiAjMDAwMDAwOyI+PC9yZWN0Pjwvc3ZnPg==" />
-<script>
+  <title>Scott Sauyet: Letters to the Editor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="mobile.css" />
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDAwIDMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB4PSIwIiB5PSIwIiByeD0iMzAiIHJ5PSIzMCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIHN0eWxlPSJmaWxsOiAjZmJlZWMxOyBzdHJva2Utd2lkdGg6IDI7IHN0cm9rZTogI2NjYzsiPjwvcmVjdD48cmVjdCB4PSIyMCIgeT0iODAiIHJ4PSIxNSIgcnk9IjE1IiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjEwMCIgc3R5bGU9ImZpbGw6ICNkYWFkODY7IHN0cm9rZS13aWR0aDogMjsgc3Ryb2tlOiAjMDAwMDAwOyI+PC9yZWN0PjxyZWN0IHg9IjIwMCIgeT0iODAiIHJ4PSIxNSIgcnk9IjE1IiB3aWR0aD0iODAiIGhlaWdodD0iMTAwIiBzdHlsZT0iZmlsbDogI2JjOTg2Yzsgc3Ryb2tlLXdpZHRoOiAyOyBzdHJva2U6ICMwMDAwMDA7Ij48L3JlY3Q+PHJlY3QgeD0iMjAiIHk9IjIwIiByeD0iMTUiIHJ5PSIxNSIgd2lkdGg9IjI2MCIgaGVpZ2h0PSI0MCIgc3R5bGU9ImZpbGw6ICM4ZDg3NDE7IHN0cm9rZS13aWR0aDogMjsgc3Ryb2tlOiAjMDAwMDAwOyI+PC9yZWN0Pjwvc3ZnPg==" />
+  <script>
 const content = [
   {
     "Title": "Mainstream Media",
@@ -2212,7 +1695,7 @@ const content = [
       "Website"
     ],
     "People": [],
-    "Content": "<p>The rumors are not true.  Andover&#39;s web site is not being shut down.  It is only\nthe status of the Website Committee which is changing.  A new state law is\nforcing towns to make radical changes to the way their websites are managed.\nSome small towns are shutting down their sites altogether.  We&#39;re going a\ndifferent route and will try to keep the site running with a committee modeled\nafter the Friends of the Library or the PTA.</p>\n<p>The new law (PA 08-3, HB 6502) says that any public agency, which includes not\nonly the Board of Selectmen and the Board of Finance, but also the\nBeautification Committee and the Memorial Day Committee, must post the record of\nany votes taken at their meeting within 48 hours and the minutes within seven\ndays of every meeting.  They must be submitted to the Town Clerk, and posted on\n&quot;such public agency&#39;s Internet web site, if available.&quot;</p>\n<p>While the Andover Website Committee does try to post minutes in a timely\nfashion, we cannot guarantee this fast a turn-around, and yet we must do so or\nrun afoul of the new law.  But the &quot;if available&quot; clause seems to imply that\ntowns without an official web site simply don&#39;t have this worry.  We&#39;re hoping\nthe General Assembly will note the unintended consequences of their action and\nalter the law soon, but for the moment we&#39;re restructuring the committee.</p>\n<p>And the committee could use some help.</p>\n<p>We&#39;re almost ready to launch an updated version of the site that we hope will be\neasier to use and more informative, but really could use extra hands to do so.\nYou don&#39;t need any particular skills to participate, just a willingness to help.\nPlease e-mail <a href=\"mailto:&#x77;&#x65;&#x62;&#x6d;&#97;&#115;&#116;&#x65;&#114;&#x40;&#x61;&#x6e;&#x64;&#111;&#118;&#x65;&#x72;&#x63;&#x74;&#x2e;&#111;&#114;&#103;\">&#x77;&#x65;&#x62;&#x6d;&#97;&#115;&#116;&#x65;&#114;&#x40;&#x61;&#x6e;&#x64;&#111;&#118;&#x65;&#x72;&#x63;&#x74;&#x2e;&#111;&#114;&#103;</a> if you&#39;d like to volunteer.</p>\n"
+    "Content": "<p>The rumors are not true.  Andover&#39;s web site is not being shut down.  It is only\nthe status of the Website Committee which is changing.  A new state law is\nforcing towns to make radical changes to the way their websites are managed.\nSome small towns are shutting down their sites altogether.  We&#39;re going a\ndifferent route and will try to keep the site running with a committee modeled\nafter the Friends of the Library or the PTA.</p>\n<p>The new law (PA 08-3, HB 6502) says that any public agency, which includes not\nonly the Board of Selectmen and the Board of Finance, but also the\nBeautification Committee and the Memorial Day Committee, must post the record of\nany votes taken at their meeting within 48 hours and the minutes within seven\ndays of every meeting.  They must be submitted to the Town Clerk, and posted on\n&quot;such public agency&#39;s Internet web site, if available.&quot;</p>\n<p>While the Andover Website Committee does try to post minutes in a timely\nfashion, we cannot guarantee this fast a turn-around, and yet we must do so or\nrun afoul of the new law.  But the &quot;if available&quot; clause seems to imply that\ntowns without an official web site simply don&#39;t have this worry.  We&#39;re hoping\nthe General Assembly will note the unintended consequences of their action and\nalter the law soon, but for the moment we&#39;re restructuring the committee.</p>\n<p>And the committee could use some help.</p>\n<p>We&#39;re almost ready to launch an updated version of the site that we hope will be\neasier to use and more informative, but really could use extra hands to do so.\nYou don&#39;t need any particular skills to participate, just a willingness to help.\nPlease e-mail <a href=\"mailto:&#x77;&#101;&#x62;&#109;&#x61;&#115;&#116;&#101;&#114;&#x40;&#97;&#110;&#100;&#x6f;&#118;&#101;&#114;&#99;&#116;&#x2e;&#111;&#114;&#103;\">&#x77;&#101;&#x62;&#109;&#x61;&#115;&#116;&#101;&#114;&#x40;&#97;&#110;&#100;&#x6f;&#118;&#101;&#114;&#99;&#116;&#x2e;&#111;&#114;&#103;</a> if you&#39;d like to volunteer.</p>\n"
   },
   {
     "Title": "Andover Responses",
@@ -2269,7 +1752,7 @@ const content = [
       "Website"
     ],
     "People": [],
-    "Content": "<p>The Andover Website Committee is looking for volunteers.  A recent letter to the\neditor noted that the Andover Website is not always updated with the latest\nminutes from meetings and the latest schedule changes.  This is quite true, and\nthe Website Committee would love help in fixing the problem.  Would you be\nwilling to spend an hour or two per month helping us out?</p>\n<p>We are looking for volunteers to help steer the direction of the town&#39;s website,\nto help update the content on the site, to help improve its usability and\nreliability, and to help organize the efforts of other volunteers.  We don&#39;t\nneed any particular skills, just a willingness to help.  Of course if you have\nany website design or development skills, we&#39;d love to have you too!</p>\n<p>The website is run entirely by volunteers.  We&#39;d like to see some significant\nimprovements to the site, but that can only be accomplished if there are people\nin town committed to helping.  Please, come join our team.  You can reach us via\nemail at <a href=\"mailto:&#x77;&#101;&#x62;&#x6d;&#97;&#115;&#116;&#x65;&#x72;&#64;&#x61;&#110;&#100;&#111;&#x76;&#101;&#x72;&#99;&#116;&#x2e;&#111;&#114;&#x67;\">&#x77;&#101;&#x62;&#x6d;&#97;&#115;&#116;&#x65;&#x72;&#64;&#x61;&#110;&#100;&#111;&#x76;&#101;&#x72;&#99;&#116;&#x2e;&#111;&#114;&#x67;</a>.  Or you can call Scott Sauyet at 742-9800.  Or\nsimply come to our next meeting at 7:00 on September 24 in the school library.</p>\n"
+    "Content": "<p>The Andover Website Committee is looking for volunteers.  A recent letter to the\neditor noted that the Andover Website is not always updated with the latest\nminutes from meetings and the latest schedule changes.  This is quite true, and\nthe Website Committee would love help in fixing the problem.  Would you be\nwilling to spend an hour or two per month helping us out?</p>\n<p>We are looking for volunteers to help steer the direction of the town&#39;s website,\nto help update the content on the site, to help improve its usability and\nreliability, and to help organize the efforts of other volunteers.  We don&#39;t\nneed any particular skills, just a willingness to help.  Of course if you have\nany website design or development skills, we&#39;d love to have you too!</p>\n<p>The website is run entirely by volunteers.  We&#39;d like to see some significant\nimprovements to the site, but that can only be accomplished if there are people\nin town committed to helping.  Please, come join our team.  You can reach us via\nemail at <a href=\"mailto:&#x77;&#101;&#x62;&#x6d;&#x61;&#x73;&#x74;&#x65;&#114;&#64;&#97;&#x6e;&#x64;&#111;&#x76;&#101;&#114;&#x63;&#x74;&#x2e;&#111;&#114;&#x67;\">&#x77;&#101;&#x62;&#x6d;&#x61;&#x73;&#x74;&#x65;&#114;&#64;&#97;&#x6e;&#x64;&#111;&#x76;&#101;&#114;&#x63;&#x74;&#x2e;&#111;&#114;&#x67;</a>.  Or you can call Scott Sauyet at 742-9800.  Or\nsimply come to our next meeting at 7:00 on September 24 in the school library.</p>\n"
   },
   {
     "Title": "Global Warming Response",
@@ -2382,7 +1865,7 @@ const content = [
   }
 ]
 </script>
-<script>
+  <script>
 const pages = [
   {
     "Title": "About",
@@ -2397,7 +1880,7 @@ const pages = [
   }
 ]
 </script>
-<script>
+  <script>
 const themes = ((defaultTheme = "I Feel the Earth Move", colors = {
   "I Feel the Earth Move": {
     "neutral": "#fbeec1",
@@ -2562,34 +2045,25 @@ const themes = ((defaultTheme = "I Feel the Earth Move", colors = {
 const config = JSON.parse(localStorage .getItem ('letters') || "{}")
 if (config.theme) {themes .choose (config .theme)}
 </script>
-</head>
+  </head>
+
 <body>
+  <nav class="top">
+    <a href="#/letters/">Letters</a> |
+    <a href="#/topics/">Topics</a> |
+    <a href="#/people/">People</a>
+    &nbsp; <a href="javascript:void(0)" onclick="toggleNav()">&#9776;</a>
+  </nav>
   <header>
-    <h1>
-      <a href="#/">Scott Sauyet's <em>Rivereast</em> Letters to the Editor</a>
-    </h1>
+    <h1><a href="#/">Scott Sauyet's Letters</a></h1>
+    <p>to The Rivereast News Bulletin</p>
   </header>
   <div id="root" class="container">
-    <div id="main" class="main box">
-      <h1>Oops!</h1>
-      <p>It looks as though this site is broken in your browser.</p>
-
-      <p>If it were working correctly, this page would show you well over 100 letter-to-the-editor
-         I've written over the years.
-      </p>
-      <p>Sorry about that.  Since I'm the sole developer, it must be my fault.  This is
-         expected behavior for very old browsers or for users with JavaScript disabled,
-         but if your browser is less than six or eight years old, and you have JavaScript
-         enabled, this is likely a bug.  And I'd love to know about it.
-      </p>
-      <p>Feel free to <a href="mailto:scott@sauyet.com">email me</a> to tell me I'm an idiot.</p>
-
-      <p class="signature"> -- Scott Sauyet</p>
-    </div>
+    <div id="main"></div>
   </div>
   <footer>
-    <p id="copyright">Copyright &copy; 2007 - 2021, Scott Sauyet</p>
-  </footer>  
+    <p id="copyright">Copyright &copy; 2007&nbsp;-&nbsp;2021, Scott&nbsp;Sauyet</p>
+  </footer>
   <script>
 const always = (x) => () => x
 const call = (fn, ...args) => fn (args)
@@ -2650,9 +2124,9 @@ const gather = (name, content, sorter=topicSort) =>
   Object.entries (countBy (prop (name)) (content)) .sort (sorter)
 
 const makeLink = (type) => ([t, c]) => 
-  `<li><a href="#/${type}/${t.replace(/ /g, '+')}/">${t} <span>(${c}&nbsp;letter${c > 1 ? 's' : ''})</span></a></li>`
+  `<li><a href="#/${type}/${t.replace(/ /g, '+')}/">${t} <span class="extra">(${c}&nbsp;letter${c > 1 ? 's' : ''})</span></a></li>`
 const letterLink = ({Date, Title}) =>
-  `<li><a href="#/${Date}/">${Title} <span>(${shortDate(Date)})</span></a></li>`
+  `<li><a href="#/${Date}/">${Title} <span class="extra">(${shortDate(Date)})</span></a></li>`
 const makeTopicLink = (Topic) =>
   `<a href="#/topic/${Topic.replace(/ /g, '+')}/">${Topic}</a>`
 const makeTopicListLink = (Topic) =>
@@ -2664,6 +2138,7 @@ const makeSidebarButtons = (themes) =>
   `<p id="searchWidget">
   <button id="swb" type="button" title="Search">\u2315</button>
   <button id="thm" type="button" title="Change Theme">${themes.icons[themes.defaultTheme]}</button>
+  <button id="cls" type="button" title="Close Menu" onclick="toggleNav()">×</button>
   </p>`
 
 const makeRecentSidebarLetters = (
@@ -2765,7 +2240,7 @@ const makeSidebar = (
   themes, 
   {lettersAboveFold = 5, yearsAboveFold = 3, topicsAboveFold = 8, peopleAboveFold = 4}
 ) => 
-  `<div class="sidebar box">
+  `<div id="sidebar" class="sidebar box">
     ${makeSidebarButtons (themes)}
     ${makeSidebarPages (pages)}
     ${makeSidebarLetters (content, lettersAboveFold, yearsAboveFold)}
@@ -2776,7 +2251,7 @@ const makeSidebar = (
 
 // Letter Route
 const makeLetterBody = ({Title, Topics = [], Date, Content}) =>
-  `<h1>${Title}</h1>
+  `<h2>${Title}</h2>
   ${Topics.length 
     ? `<ul class="topics">
         ${Topics .map (topic => `<li><a href="#/topic/${topic .replace (/ /g, '+')}/">${topic}</a></li>`) .join ('\n    ')}
@@ -2797,20 +2272,20 @@ const makeLetterNav = (
   next = letter && contents [contents .indexOf (letter) - 1]
 ) => 
   `<nav>
-    <div id="prev"${prev ? `title="${shortDate (prev .Date)}` : ``}">${prev ? `<a href="#/${prev .Date}/">« ${prev .Title}</a>` : ``}</div>
-    <div id="home" title="Overview"><a href="#/">Home</a></div>
-    <div id="next"${next ? `title="${shortDate (next .Date)}` : ``}">${next ? `<a href="#/${next .Date}/">${next .Title} »</a>` : ``}</div>
+    ${prev ? `<a class="prev" title="${shortDate (prev .Date)}" href="#/${prev .Date}/">◄</a>` : ``}
+    ${next ? `<a class="next" title="${shortDate (next .Date)}" href="#/${next .Date}/">►</a>` : ``}
   </nav>`
 
 const formatLetter = (content, letter) =>
   letter
-    ? `${makeLetterBody (letter)}
-       ${makeLetterNav (content, letter)}` 
-    : `<h1>Not Found</h1>
+    ? `${makeLetterNav (content, letter)}
+       ${makeLetterBody (letter)}
+       ` 
+    : `<h2>Not Found</h2>
       <p>No letter found for ${longDate(hash.slice(2, -1))}`
 
 const makeLetter = (lookups) => (content, hash) => 
-  formatLetter (content, lookups [hash .slice (2, -1)])
+  `<div class="main box">${formatLetter (content, lookups [hash .slice (2, -1)])}</div>`
 
 const makeCurrent = (content) => 
   formatLetter (content, content [0])
@@ -2820,63 +2295,66 @@ const makeCurrent = (content) =>
 const makePage = (pages) => (
   content, 
   hash,
-  slug = hash .slice (8, -1) .replaceAll('+', ' '),
+  slug = hash .slice (8, -1) .replace (/\+/g, ' '),
   {Title, Content} = pages .find (({Slug}) => Slug == slug)
-) => Content
+) => `<div class="main box">${Content}</div>`
       
 
 // Topic Route
 const makeTopic = (
   content, 
   hash,
-  topic = hash .slice (8, -1) .replaceAll('+', ' '),
+  topic = hash .slice (8, -1) .replace (/\+/g, ' '),
   letters = content .filter (({Topics}) => Topics .includes (topic))
 ) => 
-  `<h1>Letters with topic "${topic}"</h1>
+  `<div class="main box"><h1>Letters with topic "${topic}"</h1>
   <ul class="long">
     ${letters .map (({Date, Title}) => 
-      `<li><a href="#/${Date}/">${Title} <span>(${shortDate (Date)})</span></a></li>`
+      `<li><a href="#/${Date}/">${Title} <span class="extra">(${shortDate (Date)})</span></a></li>`
     ) .join ('\n')}
-  </ul>`
+  </ul></div>`
 
 
 // Person Route
 const makePerson = (
   content, 
   hash,
-  person = hash .slice (9, -1) .replaceAll('+', ' '),
+  person = hash .slice (9, -1) .replace(/\+/g, ' '),
   letters = content .filter (({People}) => People .includes (person))  
 ) => 
-  `<h1>Letters mentioning Rivereast letter writer ${person}</h1>
+  `<div class="main box"><h1>Letters mentioning ${person}</h1>
   <ul class="long">
     ${letters .map (letter => 
-      `<li><a href="#/${letter .Date}">${letter .Title} (${shortDate (letter .Date)})</a></li>`
+      `<li><a href="#/${letter .Date}/">${letter .Title} <span class="extra">(${shortDate (letter .Date)})</span></a></li>`
     ) .join ('\n')}
-  </ul>`
+  </ul></div>`
 
 
 // Topics Route
 const makeTopics = (content) => 
-  `<h1>All Topics</h1>
+  `<div class="main box"><h1>All Topics</h1>
     <ul class="long">
       ${gather ('Topics', content, alphaTopicSort) .map (makeLink ('topic')) .join ('\n')}
-    </ul>`
+    </ul></div>`
 
 
 // People Route
 const makePeople = (content) => 
-  `<h1>All Letter Writers</h1>
+  `<div class="main box"><h1>All Letter Writers</h1>
   <ul class="long">
     ${gather ('People', content, alphaPersonSort) .map (makeLink ('person')) .join ('\n')}
-  </ul>`
+  </ul></div>`
 
 
 // Letters Route
 const makeLetters = (content) => 
-  `<h1>All Letters</h1>
-  <ul class="long">
-    ${content .map (letterLink) .join ('\n        ')}
-  </ul>`
+  `<div class="main box"><h1>All Letters</h1>
+  ${groupBy (({Date}) => Date .slice (0, 4)) (content) .sort (([a], [b]) => b - a) .map (([Year, letters]) =>
+    `<h3>${Year}</h3>
+     <ul class="long">
+        ${letters .map (letterLink) .join ('\n')}
+     </ul>`  
+  ) .join('\n')}</div>`
 
 
 // Themes Route
@@ -2901,10 +2379,10 @@ const themesFocus = () =>
   document .querySelector ('div.themes button') .focus()
 
 const makeThemeSwitcher = () => 
-  `<h1>Choose Theme</h1><div class="themes">
+  `<div class="main box"><h1>Choose Theme</h1><div class="themes">
   ${Object.entries (themes .icons) .map (([name, icon]) => 
     `<button data-theme="${encodeURIComponent(name)}">${icon}<span>${name}</span></button>`
-  ) .join ('\n    ')}</div>`
+  ) .join ('\n    ')}</div></div>`
 
 
 const isThemeButton = (target) => 
@@ -2938,7 +2416,7 @@ const getMatches = (
 
 const makeSnippet = ({Date, Title, Snippets}) =>
   `<li>
-    <a href="#/${Date}/">${Title} <span>(${shortDate(Date)})</span></a>
+    <a href="#/${Date}/">${Title} <span class="extra">(${shortDate(Date)})</span></a>
     <div class="snippet">... ${Snippets .slice(0, 3).join(' ... <br/> ...')} ...</div>  
   </li>`
 
@@ -3002,43 +2480,24 @@ const makeSearch = (
   hash,
   query = decodeURIComponent (hash .slice (9).replace(/\+/g, ' ')),
 ) => 
-  `<h1>Search</h1>
+  `<div class="main box"><h1>Search</h1>
   ${makeSearchWidget (query)}
-  ${makeSearchResults (content, query.toLowerCase())}`
+  ${makeSearchResults (content, query.toLowerCase())}</div>`
 
-const makeLetterAbstract = ({Title, Date, Topics, Content}) => 
-  `<h4><a href="#/${Date}/">${Title}</h4><p>(<span>${longDate (Date)}</span>)</a></p>
-  <ul class="topics">${Topics .map (
-    topic => `<li><a href="#/topic/${topic .replace (/ /g, '+')}/">${topic}</a></li>`).join(``)
-  }</ul>
-  <p><em>To The Editor:</em></p>
-  <p><em>${firstPara (Content)} <a class="more" href="#/${Date}/">&hellip;more</a></em></p>`
 
-// Main route
-const makeMain = (config) => (
-  content,
-  hash,
-  allTopics = gather ('Topics', content, alphaTopicSort),
-  chosenTopics = sortBy (head) (weightedRandom (config.topicsAboveFold) (allTopics)) 
-) =>
-  `<div class="container">
-    <div class="box">
-      <header><h3>Latest Letter</h3></header>${makeLetterAbstract (content [0])}
-    </div>
-  </div>
-  <div class="container">
-    <div class="card">
-      <header><h3>Random Letter</h3></header>
-      <p>There are currently a total of <a href="#/letters">${content.length} letters</a> available.  Here's one:</p>
-      ${makeLetterAbstract (content [randomInt (config .lettersAboveFold, content .length)])}
-    </div>
-    <div class="card">
-      <header><h3>Random Topics</h3></header>
-      <p>Letter here collectively discuss <a href="#/topics/">${allTopics.length} different topics</a>.  Here are a few:</p>
-      <ul>${chosenTopics.map(makeLink('topic')).join('')}</ul>
-    </div>
-  <div>
-  `
+const makeAbstract = ({Title, Date, Topics, Content }) =>
+  `<div class="main box">
+     <h2><a href="#/${Date}/">${Title}</a> <span class="extra">(${shortDate (Date)})</span></h2>
+     <ul class="topics">${Topics .map (
+      topic => `<li><a href="#/topic/${topic .replace (/ /g, '+')}/">${topic}</a></li>`).join(``)
+    }</ul>
+    <p>${firstPara (Content)}</p>
+    <p class="more"><a href="#/${Date}/">&hellip;more</a></p>
+   </div>`
+
+
+const makeMain = (config) => (content, hash) => 
+  content .slice (0, 3) .map (makeAbstract) .join('\n')
 
 // Setup
 const enhanceContent = (content, div = document.createElement('div')) =>  
@@ -3070,9 +2529,9 @@ const updateBasePage = (content, pages, lookups, config) => { // TODO -- anythin
   document .getElementById ('copyright') .innerHTML = 
     `Copyright &copy; ${
       last (content) .Date .slice (0, 4)
-    } - ${
+    }&nbsp;-&nbsp;${
       content[0] .Date .slice (0, 4)
-    }, Scott Sauyet`
+    }, Scott&nbsp;Sauyet`
 }
 
 // TODO: add titles for About, Letters, Topics, etc.
@@ -3084,6 +2543,7 @@ const changeTitle = (lookups) => (hash) =>
 const afterNav = (content, pages, lookups, config) => ((
   actions = [
     [() => true, changeTitle (lookups)],
+    [() => true, () => document .getElementById ("sidebar") .classList .remove ('open')],
     [startsWith ('search'),           searchFocus],
     [startsWith ('themes'),           themesFocus],
   ]
@@ -3126,9 +2586,15 @@ const router = (content, pages, lookups, config) => {
   }
 }
 
+// TODO: move into eventing system
+const toggleNav = () => {
+  const sidebar = document .getElementById ("sidebar")
+  sidebar .classList .toggle ('open')
+  sidebar .scrollTo (0, 0)
+}
 
 // Main
-((rawContent, rawPages, themes) => {
+const main = (rawContent, rawPages, themes) => {
   const config = {lettersAboveFold: 10, yearsAboveFold: 3, topicsAboveFold: 6, peopleAboveFold: 6}
   const content = enhanceContent (rawContent)
   const pages = enhancePages (content, rawPages)
@@ -3159,10 +2625,12 @@ const router = (content, pages, lookups, config) => {
   window .addEventListener ('popstate', () => setTimeout (route, 0))
 
   route ()
-}) (content, pages, themes)
+}
+
+main (content, pages, themes)
+
 
 </script>
 </body>
+
 </html>
-
-
