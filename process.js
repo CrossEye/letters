@@ -358,7 +358,7 @@ const makeSnippet = ({Date, Title, Snippets}) =>
 const searchFocus = () =>
   (
     document .getElementById ('search-results') && 
-    document .getElementById ('search-results').focus()
+    document .getElementById ('search').blur()
   ) ||
   document .getElementById ('search') .focus ()
 
