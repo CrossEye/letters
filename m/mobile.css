@@ -1,56 +1,237 @@
-body {background-color: #fbeec1;}
-.main {background-color: #daad86; color: #333; border-color: #000;}
-.sidebar {background-color: #bc986c; color: #fbeec1; border-color: #000;}
-header, footer {background-color: #8d8741; color: #fbeec1; border-color: #000;}
-header, footer, .box {border-radius: 12px; border-width: 2px; border-style: solid;  }
-header, footer {box-shadow: 2px 2px 2px #666;}
-:root {box-sizing: border-box;}
-body {padding: 0; max-width: 1200px; margin: 0}
-header, footer {padding: .5rem 1rem;}
-header {margin: -1rem .5rem .5rem .5rem;}
-footer {margin: .5rem;}
-body {font-family: sans-serif; font-size: 1rem;}
-h1, h2, h3, h4 {font-family: Verdana, Geneva, Tahoma, sans-serif;}
-header, footer {text-align: center;}
+/*********************************************************/
+/*                        Colors                         */
+/*********************************************************/
+
+:root {
+  --neutral: #fbeec1;
+  --border: #000000;
+  --accent: #666666;
+  --primary-background: #daad86;
+  --primary-text: #333333;
+  --primary-highlight: #bc986c;
+  --primary-accent: #659dbd;
+  --secondary-background: #bc986c;
+  --secondary-text: #fbeec1;
+  --secondary-highlight: #bc986c;
+  --secondary-accent: #659dbd;
+  --tertiary-background: #8d8741;
+  --tertiary-text: #fbeec1;
+  --tertiary-highlight: #8d8741;
+  --tertiary-accent: #659dbd;
+}
+
+body {
+  background-color: var(--neutral);
+}
+
+.main {
+  background-color: var(--primary-background) ;
+  color: var(--primary-text);
+  border-color: var(--border);
+}
+
+.sidebar {
+  background-color: var(--secondary-background); 
+  color: var(--secondary-text); 
+  border-color: var(--border);
+}
+
+header, footer {
+  background-color: var(--tertiary-background);
+  color: var(--tertiary-text);
+  border-color: var(--border);
+}
+
+header h1 a, header h1 a:visited {
+  background-color: inherit;
+  color: inherit;
+}
+
+nav.top {
+	background-color: var(--primary-highlight); 
+	color: var(--secondary-text);
+}
+
+nav.top a, nav.top a:visited {
+	background-color: var(--primary-highlight);
+	color: var(--secondary-text);
+}
+
+.box a, .box a:visited {
+  background-color: var(--primary-highlight); 
+  color: var(--primary-text); 
+}
+
+.box a:hover {
+  background-color:var(--primary-accent);
+}
+
+ul.topics li a, ul.topics li a:visited {
+  background-color: var(--primary-highlight); 
+  color: var(--primary-text); 
+}
+
+.sidebar.box a {
+  background-color: var(--secondary-background); 
+  color: var(--secondary-text);
+}
+
+.sidebar.box a:hover {
+  background-color:var(--secondary-accent);
+}
+
+.sidebar .menu li a, .sidebar .menu a:visited {
+  background-color: var(--primary-background);
+  color: var(--primary-text); 
+}
+
+sidebar .menu li a:hover {
+  background-color:var(--secondary-accent);
+}
+
+.main ul.long li a, .main ul.long li a:visited {
+  background-color: var(--primary-background);
+  color: var(--primary-text); 
+}
+
+.main ul.long li a:hover {
+  background-color:var(--primary-accent);
+}
+
+.main nav a, .main nav a:visited {
+  background-color: var(--primary-background); 
+  color: var(--primary-text); 
+}
+
+#searchWidget button {
+  background-color: inherit;
+  color: inherit;
+}
+
+button, input {
+  background: var(--neutral);
+  color: inherit;
+}
+
+#searchBox button {
+  background-color: inherit;
+  color: inherit;
+}
+
+#search-results li a {
+  background-color: var(--primary-highlight);
+}
+
+#search-results span.match {
+  background-color: var(--primary-accent);
+}
+
+
+
+/*********************************************************/
+/*                        Borders                        */
+/*********************************************************/
+
+
+header, footer, .box {
+  border-radius: .75rem;
+  border-width: .125rem;
+  border-style: solid;
+}
+
+header, footer {
+  box-shadow: .125rem .125rem .125rem var(--accent);
+}
+
+ul.topics li a, ul.topics li a:visited {
+  border: .0625rem solid var(--border);
+  border-radius: .75rem;
+}
+
+.sidebar.box {
+  border: none;
+}
+
+.sidebar .menu li a, .sidebar .menu a:visited {
+  border: .0625rem solid var(--border);
+  border-radius: .75rem;
+}
+
+.main h3 {
+  border-bottom: .0625rem solid var(--primary-text);
+}
+
+#searchWidget button {
+  border: none;
+}
+
+#searchBox button {
+  border: none;
+}
+
+#searchBox input {
+  border-radius: 1rem;
+}
+
+nav.top {
+	border-bottom: .0625rem solid var(--border);
+}
+
+.themes button:focus {
+  border: 3px solid var(--border);
+}
+
+
+
+/*********************************************************/
+/*                        Layout                         */
+/*********************************************************/
+
+:root {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0; 
+  max-width: 750rem; 
+  margin: 0
+}
+
+header, footer {
+  padding: .5rem 1rem;
+}
+
+header {
+  margin: -1rem 1rem .5rem;
+}
+
+footer {
+  margin: 1rem .5rem;
+}
 
 .box {
   padding: .5rem 1rem; margin: .5rem;
   position: relative;
 }
 
-h1 {font-size: 1.5rem}
-h2 {
-  font-size: 1.25rem;
-  text-align: center;
-}
-
 header h1 {
   margin-bottom: 0;
 }
 
-header h1 a, header h1 a:visited {
-  background-color: inherit;
-  color: inherit;
-  text-decoration: none;
+.box {
+  padding: .5rem 1rem; 
+  margin: 1rem;
+  position: relative;
 }
 
 header p {
   margin-top: 0;
 }
+
 nav.top {
   margin: 0 0 1.5rem 0;
-  text-align: right;
 	padding: 0;
-	background-color: #bc986c; 
-	color: #fbeec1;
 	padding: .5rem 1rem;
-	border-bottom: 1px solid #000;
-}
-
-nav.top a, nav.top a:visited {
-	background-color: #bc986c;
-	color: #fbeec1;
-	text-decoration: none;
 }
 
 .container {
@@ -60,63 +241,31 @@ nav.top a, nav.top a:visited {
 }
 
 .main {
-  flex: 5 1 200px;
+  flex: 5 1 12.5rem;
 }
 
 .sidebar {
-  flex: 2 1 200px;
+  flex: 2 1 12.5remx;
 }
 
 ul.topics {
   text-align: center;
-  padding: 0;
 }
 
 ul.topics li {
   display: inline-block;
 }
 
-.box a, .box a:visited {
-  text-decoration: none;
-  background-color: #bc986c; 
-  color: #000; 
-}
-
-.box a:hover {
-  background-color:#659dbd;
-}
-
 ul.topics li a, ul.topics li a:visited {
-  border: 1px solid #000;
-  border-radius: .75rem;
   padding: .25rem;
   text-decoration: none;
-  background-color: #bc986c; 
-  color: #000; 
-}
-
-
-p.letter-date, p.signature, p.more {
-  text-align: right
+  margin: 0 .25rem
 }
 
 p.more {
   position: absolute;
   bottom: -.75rem;
   right: .5rem;
-}
-
-.extra {
-  opacity: 60%;
-}
-
-.sidebar.box a {
-  background-color: #bc986c; 
-  color: #fbeec1;
-}
-
-.sidebar.box a:hover {
-  background-color:#659dbd;
 }
 
 .sidebar ul.menu {
@@ -131,16 +280,7 @@ p.more {
 }
 
 .sidebar .menu li a, .sidebar .menu a:visited {
-  border: 1px solid #000;
-  border-radius: .75rem;
   padding: .25rem;
-  text-decoration: none;
-  background-color: #daad86; 
-  color: #000; 
-}
-
-sidebar .menu li a:hover {
-  background-color:#659dbd;
 }
 
 .main ul.long {
@@ -152,31 +292,12 @@ sidebar .menu li a:hover {
   list-style: none;
 }
 
-.main ul.long li a, .main ul.long li a:visited {
-  background-color: #daad86; 
-  color: #000; 
-}
-
-.main ul.long li a:hover {
-  background-color:#659dbd;
-}
-
 .main .prev {
   float: left;
 }
 
 .main .next {
   float: right;
-}
-
-.main h3 {
-  border-bottom: 1px solid #333;
-}
-
-.main nav a {
-  background-color: #daad86; 
-  color: #000;
-  font-size: 1.5rem;
 }
 
 .sidebar {
@@ -197,27 +318,8 @@ sidebar .menu li a:hover {
   width: 95%;
 }
 
-#searchBox button, #searchWidget button {
-  font-size: 3rem;
-  cursor: pointer;
-}
-
 #searchWidget button {
   margin-left: -.5rem;
-}
-
-#searchWidget button {
-  border: none;
-}
-
-#searchWidget button {
-  background-color: inherit;
-  color: inherit;
-}
-
-button, input {
-  background: #fbeec1;
-  color: inherit;
 }
 
 #searchWidget svg {
@@ -230,11 +332,123 @@ button, input {
   float: right;
 }
 
+.themes button svg {
+  margin: auto;
+  width: 100%;
+  margin: 10% 10% 0;
+}
+
+.themes button {
+  width: 45%;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-right: .5rem;
+  padding-bottom: 1rem;
+}
+
+#searchBox input {
+  width: 75%;
+}
+
+#searchBox input {
+  width: 75%;
+  padding: 0 1rem;
+}
+
+.main li {
+  margin-bottom: 1rem;
+}
+
+
+
+/*********************************************************/
+/*                      Typography                       */
+/*********************************************************/
+
+body {
+  font-family: sans-serif; 
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+header, footer {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem
+}
+
+h2 {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+nav.top {
+  text-align: right;
+}
+
+ul.topics {
+  text-align: center;
+}
+
+p.letter-date, p.signature, p.more {
+  text-align: right
+}
+
+.extra {
+  opacity: 70%;
+}
+
+.main nav a, .main nav a:visited {
+  font-size: 1.5rem;
+}
+
+#searchBox button, #searchWidget button {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
 button#cls {
   font-size: 2rem;
 }
 
-@media only screen and (min-width: 600px) { /* in rems */
+.themes button {
+  text-align: center;
+}
+
+#searchBox button {
+  font-size: 2rem;
+}
+
+#searchBox input {
+  font-size: 1.5rem;
+}
+
+#searchBox input:focus {
+  outline: none;
+}
+
+#search-results ul.topics, #search-results h2 {
+  text-align: left;
+}
+
+.themes button:focus {
+  outline: none;
+}
+
+/*********************************************************/
+/*                    Responsiveness                     */
+/*********************************************************/
+
+@media only screen and (min-width: 37.5rem) { 
   .container {
     flex-direction: row;
   }
