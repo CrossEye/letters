@@ -34,7 +34,7 @@ this main branch will now be served by GitHub Pages.
 To Do
 -----
 
-  - [ ] Responsiveness working on mobile
+  - [X] Responsiveness working on mobile
   - [X] Make all URLs end in `/`
   - [ ] Give series their own code
   - [X] Change document title on navigation
