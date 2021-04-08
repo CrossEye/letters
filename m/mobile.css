@@ -85,7 +85,7 @@ ul.topics li a, ul.topics li a:visited {
   color: var(--primary-text); 
 }
 
-sidebar .menu li a:hover {
+.sidebar .menu li a:hover {
   background-color:var(--secondary-accent);
 }
 
@@ -193,8 +193,8 @@ nav.top {
 
 body {
   padding: 0; 
-  max-width: 750rem; 
-  margin: 0
+  max-width: 1024px; 
+  margin: auto;
 }
 
 header, footer {
@@ -220,7 +220,7 @@ header h1 {
 
 .box {
   padding: .5rem 1rem; 
-  margin: 1rem;
+  margin: .5rem;
   position: relative;
 }
 
@@ -240,16 +240,9 @@ nav.top {
   width: 100%;
 }
 
-.main {
-  flex: 5 1 12.5rem;
-}
-
-.sidebar {
-  flex: 2 1 12.5remx;
-}
-
 ul.topics {
   text-align: center;
+  padding: 0;
 }
 
 ul.topics li {
@@ -448,12 +441,47 @@ button#cls {
 /*                    Responsiveness                     */
 /*********************************************************/
 
-@media only screen and (min-width: 37.5rem) { 
+@media only screen and (min-width: 48rem) { 
   .container {
     flex-direction: row;
   }
 
+  header {
+    margin-top: 1rem; 
+  }
+
+  nav.top {
+    display: none;
+  }
+
+  #main {
+    display: flex;
+    flex: 7 1 12.5rem;
+    flex-direction: row;
+  }
+
+  .sidebar {
+    flex: 2 1 12.5rem;
+    transition: none;
+  }
+
+  body {
+    transition: .5s;
+  }
+
+  .main.box {
+    flex: 1 1 12.5rem; 
+  }
+  
+  .sidebar {
+    height: auto;
+    width: auto;
+    position: relative; 
+    padding: 0 1rem;
+    margin-left: 0;
+  }
+
   .box {
-    margin: 1rem;
+    margin: .5rem;
   }
 }

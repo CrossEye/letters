@@ -462,9 +462,9 @@ const updateBasePage = (content, pages, lookups, config) => { // TODO -- anythin
   document .getElementById ('copyright') .innerHTML = 
     `Copyright &copy; ${
       last (content) .Date .slice (0, 4)
-    } - ${
+    }&nbsp;-&nbsp;${
       content[0] .Date .slice (0, 4)
-    }, Scott Sauyet`
+    }, Scott&nbsp;Sauyet`
 }
 
 // TODO: add titles for About, Letters, Topics, etc.

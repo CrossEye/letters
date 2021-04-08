@@ -1,6 +1,7 @@
 Title: We Need Julia
 Date: 2011-04-18
 Topics: Andover, Charter, Endorsement
+People: Julia Haverl, Bob Burbank, Charlene Barnett
 Content:
 --------------------------------------------------------------------------------
 
