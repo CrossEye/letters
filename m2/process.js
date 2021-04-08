@@ -57,9 +57,9 @@ const gather = (name, content, sorter=topicSort) =>
   Object.entries (countBy (prop (name)) (content)) .sort (sorter)
 
 const makeLink = (type) => ([t, c]) => 
-  `<li><a href="#/${type}/${t.replace(/ /g, '+')}/">${t} <span>(${c}&nbsp;letter${c > 1 ? 's' : ''})</span></a></li>`
+  `<li><a href="#/${type}/${t.replace(/ /g, '+')}/">${t} <span class="extra">(${c}&nbsp;letter${c > 1 ? 's' : ''})</span></a></li>`
 const letterLink = ({Date, Title}) =>
-  `<li><a href="#/${Date}/">${Title} <span>(${shortDate(Date)})</span></a></li>`
+  `<li><a href="#/${Date}/">${Title} <span class="extra">(${shortDate(Date)})</span></a></li>`
 const makeTopicLink = (Topic) =>
   `<a href="#/topic/${Topic.replace(/ /g, '+')}/">${Topic}</a>`
 const makeTopicListLink = (Topic) =>
@@ -184,7 +184,7 @@ const makeSidebar = (
 
 // Letter Route
 const makeLetterBody = ({Title, Topics = [], Date, Content}) =>
-  `<h1>${Title}</h1>
+  `<h2>${Title}</h2>
   ${Topics.length 
     ? `<ul class="topics">
         ${Topics .map (topic => `<li><a href="#/topic/${topic .replace (/ /g, '+')}/">${topic}</a></li>`) .join ('\n    ')}
@@ -205,20 +205,20 @@ const makeLetterNav = (
   next = letter && contents [contents .indexOf (letter) - 1]
 ) => 
   `<nav>
-    <div id="prev"${prev ? `title="${shortDate (prev .Date)}` : ``}">${prev ? `<a href="#/${prev .Date}/">« ${prev .Title}</a>` : ``}</div>
-    <div id="home" title="Overview"><a href="#/">Home</a></div>
-    <div id="next"${next ? `title="${shortDate (next .Date)}` : ``}">${next ? `<a href="#/${next .Date}/">${next .Title} »</a>` : ``}</div>
+    ${prev ? `<a class="prev" title="${shortDate (prev .Date)}" href="#/${prev .Date}/">◄</a>` : ``}
+    ${next ? `<a class="next" title="${shortDate (next .Date)}" href="#/${next .Date}/">►</a>` : ``}
   </nav>`
 
 const formatLetter = (content, letter) =>
   letter
-    ? `${makeLetterBody (letter)}
-       ${makeLetterNav (content, letter)}` 
-    : `<h1>Not Found</h1>
+    ? `${makeLetterNav (content, letter)}
+       ${makeLetterBody (letter)}
+       ` 
+    : `<h2>Not Found</h2>
       <p>No letter found for ${longDate(hash.slice(2, -1))}`
 
 const makeLetter = (lookups) => (content, hash) => 
-  `<div class="box">${formatLetter (content, lookups [hash .slice (2, -1)])}</div>`
+  `<div class="main box">${formatLetter (content, lookups [hash .slice (2, -1)])}</div>`
 
 const makeCurrent = (content) => 
   formatLetter (content, content [0])
@@ -230,7 +230,7 @@ const makePage = (pages) => (
   hash,
   slug = hash .slice (8, -1) .replace (/\+/g, ' '),
   {Title, Content} = pages .find (({Slug}) => Slug == slug)
-) => Content
+) => `<div class="main box">${Content}</div>`
       
 
 // Topic Route
@@ -240,10 +240,10 @@ const makeTopic = (
   topic = hash .slice (8, -1) .replace (/\+/g, ' '),
   letters = content .filter (({Topics}) => Topics .includes (topic))
 ) => 
-  `<div class="box"><h1>Letters with topic "${topic}"</h1>
+  `<div class="main box"><h1>Letters with topic "${topic}"</h1>
   <ul class="long">
     ${letters .map (({Date, Title}) => 
-      `<li><a href="#/${Date}/">${Title} <span>(${shortDate (Date)})</span></a></li>`
+      `<li><a href="#/${Date}/">${Title} <span class="extra">(${shortDate (Date)})</span></a></li>`
     ) .join ('\n')}
   </ul></div>`
 
@@ -252,39 +252,42 @@ const makeTopic = (
 const makePerson = (
   content, 
   hash,
-  person = hash .slice (9, -1) .replaceAll('+', ' '),
+  person = hash .slice (9, -1) .replace(/\+/g, ' '),
   letters = content .filter (({People}) => People .includes (person))  
 ) => 
-  `<div class="box"><h1>Letters mentioning Rivereast letter writer ${person}</h1>
+  `<div class="main box"><h1>Letters mentioning ${person}</h1>
   <ul class="long">
     ${letters .map (letter => 
-      `<li><a href="#/${letter .Date}">${letter .Title} (${shortDate (letter .Date)})</a></li>`
+      `<li><a href="#/${letter .Date}/">${letter .Title} <span class="extra">(${shortDate (letter .Date)})</span></a></li>`
     ) .join ('\n')}
   </ul></div>`
 
 
 // Topics Route
 const makeTopics = (content) => 
-  `<h1>All Topics</h1>
+  `<div class="main box"><h1>All Topics</h1>
     <ul class="long">
       ${gather ('Topics', content, alphaTopicSort) .map (makeLink ('topic')) .join ('\n')}
-    </ul>`
+    </ul></div>`
 
 
 // People Route
 const makePeople = (content) => 
-  `<h1>All Letter Writers</h1>
+  `<div class="main box"><h1>All Letter Writers</h1>
   <ul class="long">
     ${gather ('People', content, alphaPersonSort) .map (makeLink ('person')) .join ('\n')}
-  </ul>`
+  </ul></div>`
 
 
 // Letters Route
 const makeLetters = (content) => 
-  `<h1>All Letters</h1>
-  <ul class="long">
-    ${content .map (letterLink) .join ('\n        ')}
-  </ul>`
+  `<div class="main box"><h1>All Letters</h1>
+  ${groupBy (({Date}) => Date .slice (0, 4)) (content) .sort (([a], [b]) => b - a) .map (([Year, letters]) =>
+    `<h3>${Year}</h3>
+     <ul class="long">
+        ${letters .map (letterLink) .join ('\n')}
+     </ul>`  
+  ) .join('\n')}</div>`
 
 
 // Themes Route
@@ -309,10 +312,10 @@ const themesFocus = () =>
   document .querySelector ('div.themes button') .focus()
 
 const makeThemeSwitcher = () => 
-  `<h1>Choose Theme</h1><div class="themes">
+  `<div class="main box"><h1>Choose Theme</h1><div class="themes">
   ${Object.entries (themes .icons) .map (([name, icon]) => 
     `<button data-theme="${encodeURIComponent(name)}">${icon}<span>${name}</span></button>`
-  ) .join ('\n    ')}</div>`
+  ) .join ('\n    ')}</div></div>`
 
 
 const isThemeButton = (target) => 
@@ -346,7 +349,7 @@ const getMatches = (
 
 const makeSnippet = ({Date, Title, Snippets}) =>
   `<li>
-    <a href="#/${Date}/">${Title} <span>(${shortDate(Date)})</span></a>
+    <a href="#/${Date}/">${Title} <span class="extra">(${shortDate(Date)})</span></a>
     <div class="snippet">... ${Snippets .slice(0, 3).join(' ... <br/> ...')} ...</div>  
   </li>`
 
@@ -410,9 +413,9 @@ const makeSearch = (
   hash,
   query = decodeURIComponent (hash .slice (9).replace(/\+/g, ' ')),
 ) => 
-  `<h1>Search</h1>
+  `<div class="main box"><h1>Search</h1>
   ${makeSearchWidget (query)}
-  ${makeSearchResults (content, query.toLowerCase())}`
+  ${makeSearchResults (content, query.toLowerCase())}</div>`
 
 
 const makeAbstract = ({Title, Date, Topics, Content }) =>
@@ -517,8 +520,11 @@ const router = (content, pages, lookups, config) => {
 }
 
 // TODO: move into eventing system
-const toggleNav = () =>
-  document .getElementById ("sidebar") .classList .toggle ('open')
+const toggleNav = () => {
+  const sidebar = document .getElementById ("sidebar")
+  sidebar .classList .toggle ('open')
+  sidebar .scrollTo (0, 0)
+}
 
 // Main
 const main = (rawContent, rawPages, themes) => {
