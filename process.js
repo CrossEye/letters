@@ -356,6 +356,7 @@ const makeSnippet = ({Date, Title, Snippets}) =>
   </li>`
 
 const searchFocus = () =>
+  document .getElementById ('search-results') ||
   document .getElementById ('search') .focus ()
 
 const makeSearchTopicsResult = (topics) =>
