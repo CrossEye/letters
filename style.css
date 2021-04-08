@@ -1,4 +1,6 @@
-/*  Colors  */
+/*********************************************************/
+/*                        Colors                         */
+/*********************************************************/
 
 :root {
   --neutral: #fbeec1;
@@ -20,75 +22,18 @@
 
 body {
   background-color: var(--neutral);
-  color: var(--primary-text); /* TODO: necessary? */
 }
 
 .main {
-  background-color: var(--primary-background);
+  background-color: var(--primary-background) ;
   color: var(--primary-text);
   border-color: var(--border);
 }
-
-.main a, .main a:visited {
-  background-color: var(--primary-highlight);
-  color: var(--primary-text);
-}
-
-.main a:hover {
-  background-color: var(--primary-accent);
-}
-
-.main .card a, .main .card a:visited, .main .box a, .main .box a:visited  {
-  background-color: var(--primary);
-}
-
-.main .card .topics a, .main .card .topics a:visited, .main .box .topics a, .main .box .topics a:visited {
-  background-color: var(--primary-highlight);
-}
-
-.main .card a:hover, .main .card a:visited:hover, .main .box a:hover, .main .box a:visited:hover {
-  background-color: var(--primary-accent);
-}
-
-ul.long li a, ul.long li a:visited {
-  background-color: var(--primary-background);
-}
-
-ul.long li a:hover {
-  background-color: var(--primary-accent);
-}
-
-#search-results li a {
-    background-color: var(--primary-highlight);
-}
-
-#search-results li a:hover {
-    background-color: var(--primary-accent);
-}
-
-#search-results span.match {
-    background-color: var(--primary-accent);
-}
-
-.main header {
-  background-color: var(--tertiary-background);
-  color: var(--tertiary-text);
-}
-
 
 .sidebar {
-  background-color: var(--secondary-background);
-  color: var(--secondary-text);
+  background-color: var(--secondary-background); 
+  color: var(--secondary-text); 
   border-color: var(--border);
-}
-
-.sidebar a, .sidebar a:hover {
-  background-color: var(--secondary-highlight);
-  color: var(--secondary-text);
-}
-
-.sidebar a:hover {
-  background-color: var(--secondary-accent);
 }
 
 header, footer {
@@ -97,13 +42,70 @@ header, footer {
   border-color: var(--border);
 }
 
-header a, header a:visited, footer a, footer a:visited {
-  background-color: var(--tertiary-highlight);
-  color: var(--tertiary-text);
+header h1 a, header h1 a:visited {
+  background-color: inherit;
+  color: inherit;
 }
 
-header a:hover, footer a:hover {
-    background-color: var(--tertiary-accent);
+nav.top {
+	background-color: var(--primary-highlight); 
+	color: var(--secondary-text);
+}
+
+nav.top a, nav.top a:visited {
+	background-color: var(--primary-highlight);
+	color: var(--secondary-text);
+}
+
+.box a, .box a:visited {
+  background-color: var(--primary-highlight); 
+  color: var(--primary-text); 
+}
+
+.box a:hover {
+  background-color:var(--primary-accent);
+}
+
+ul.topics li a, ul.topics li a:visited {
+  background-color: var(--primary-highlight); 
+  color: var(--primary-text); 
+}
+
+.sidebar.box a {
+  background-color: var(--secondary-background); 
+  color: var(--secondary-text);
+}
+
+.sidebar.box a:hover {
+  background-color:var(--secondary-accent);
+}
+
+.sidebar .menu li a, .sidebar .menu a:visited {
+  background-color: var(--primary-background);
+  color: var(--primary-text); 
+}
+
+.sidebar .menu li a:hover {
+  background-color:var(--secondary-accent);
+}
+
+.main ul.long li a, .main ul.long li a:visited {
+  background-color: var(--primary-background);
+  color: var(--primary-text); 
+}
+
+.main ul.long li a:hover {
+  background-color:var(--primary-accent);
+}
+
+.main nav a, .main nav a:visited {
+  background-color: var(--primary-background); 
+  color: var(--primary-text); 
+}
+
+#searchWidget button {
+  background-color: inherit;
+  color: inherit;
 }
 
 button, input {
@@ -111,100 +113,88 @@ button, input {
   color: inherit;
 }
 
-.main .themes button {
-  color: black;
-  background-color: white;
-}
-
 #searchBox button {
   background-color: inherit;
   color: inherit;
 }
 
-#searchWidget button {
-  background-color: inherit;
-  color: inherit;
+#search-results li a {
+  background-color: var(--primary-highlight);
 }
 
-#searchBox input {
-  background-color: var(--neutral);
+#search-results span.match {
+  background-color: var(--primary-accent);
 }
 
 
-/*  Borders  */
 
-header, footer, .box, .card {
-  border-radius: 12px;
-  border-width: 2px;
-  border-style: solid;  
+/*********************************************************/
+/*                        Borders                        */
+/*********************************************************/
+
+
+header, footer, .box {
+  border-radius: .75rem;
+  border-width: .125rem;
+  border-style: solid;
 }
 
 header, footer {
-  box-shadow: 2px 2px 2px var(--accent);
+  box-shadow: .125rem .125rem .125rem var(--accent);
 }
 
-.card, .main .box {
-  box-shadow: 1px 1px 1px var(--accent);
+ul.topics li a, ul.topics li a:visited {
+  border: .0625rem solid var(--border);
+  border-radius: .75rem;
 }
 
-.main header {
-  border-width: 0px;
-  box-shadow: none;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-width: 1px;
-}
-
-.main .themes button {
-  border-radius: 15px;
-}
-
-.topics li a {
-  border: 1px solid;
-  border-radius: 10px;
-}
-
-.sidebar a, header a, footer a {
-  text-decoration: none;
-}
-
-#searchBox input {
-  border-radius: 18px;
-}
-
-#searchBox button {
+.sidebar.box {
   border: none;
 }
 
-#searchWidget input {
-  border-radius: 10px;
+.sidebar .menu li a, .sidebar .menu a:visited {
+  border: .0625rem solid var(--border);
+  border-radius: .75rem;
+}
+
+.main h3 {
+  border-bottom: .0625rem solid var(--primary-text);
 }
 
 #searchWidget button {
   border: none;
 }
 
+#searchBox button {
+  border: none;
+}
+
+#searchBox input {
+  border-radius: 1rem;
+}
+
+nav.top {
+	border-bottom: .0625rem solid var(--border);
+}
+
 .themes button:focus {
-  outline: none;
-  border: 3px solid black;
+  border: 3px solid var(--border);
 }
 
 
-/*  Layout  */
+
+/*********************************************************/
+/*                        Layout                         */
+/*********************************************************/
 
 :root {
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
-
 
 body {
-  padding: 1rem;
-  max-width: 1200px;
-  margin: 30px auto;
-}
-
-span {
-  opacity: 60%;
+  padding: 0; 
+  max-width: 1024px; 
+  margin: auto;
 }
 
 header, footer {
@@ -212,97 +202,42 @@ header, footer {
 }
 
 header {
-  margin: -1rem 1rem 1rem 1rem;
+  margin: -1rem 1rem .5rem;
 }
-
-.main header {
-  padding-bottom: .1rem;
-}
-
-.main header h3 {
-  margin-bottom: .5rem;
-}
-
-.main .box header {
-  margin: -1rem -1rem 0;
-}
-
-.main .card header {
-  margin: -.5rem -.5rem 0;
-}
-
 
 footer {
-  margin: 1rem;
+  margin: 1rem .5rem;
 }
 
-header a, footer a {
-  padding: .5rem 1rem;
-}
-
-details {
-  margin-top: 0.5rem;
-}
-
-details > details {
-  margin-left: 1rem;
-  margin-top: .5rem;
-}
-
-details > details > details {
-  margin-left: 0;
-  margin-top: .5rem;
-}
-
-ul + details {
-  margin-left: 2rem;
-  margin-top: -.5rem;
-}
-
-details.more > ul {
-  margin-left: -2rem;
-}
-
-.container {
-  display: flex;
-  width: 100%;
-}
-
-nav {
-  display: flex;
-  width: 100%
-}
-
-#prev {
-  flex: 2 1 150px;
-}
-
-#home {
-  flex: 1 1 50px;
-  text-align: center;
-}
-
-#next {
-  flex: 2 1 150px;
-}
-
-.main {
-  flex: 5 1 200px;
+.box {
+  padding: .5rem 1rem; margin: .5rem;
   position: relative;
 }
 
-.sidebar {
-  flex: 2 1 200px;
+header h1 {
+  margin-bottom: 0;
 }
 
-.main a, .main a:visited {
-  text-decoration: none;
-  padding: .15rem;
+.box {
+  padding: .5rem 1rem; 
+  margin: .5rem;
+  position: relative;
 }
 
-.main .card .topics a, .main .box .topics a {
-  margin: .1rem .3rem;
-  display: inline-block;
+header p {
+  margin-top: 0;
+}
+
+nav.top {
+  margin: 0 0 1.5rem 0;
+	padding: 0;
+	padding: .5rem 1rem;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+  width: 100%;
 }
 
 ul.topics {
@@ -310,91 +245,70 @@ ul.topics {
   padding: 0;
 }
 
-.card {
-  padding: .5rem;
-  margin: 1rem;
-  width: 50%;
+ul.topics li {
+  display: inline-block;
 }
 
-.card, .main .box {
-  border-width: 1px;
+ul.topics li a, ul.topics li a:visited {
+  padding: .25rem;
+  text-decoration: none;
+  margin: 0 .25rem
 }
 
-.main svg {
-  width: 100%;
-  margin: 10%;
+p.more {
+  position: absolute;
+  bottom: -.75rem;
+  right: .5rem;
 }
 
-.main div.themes span {
-  display: block;
-  margin-top: -2rem;
-  margin-bottom: 1rem;
-}
-
-.main .themes button {
+.sidebar ul.menu {
+  list-style: none;
   padding: 0;
-  margin: .5rem;
-  display: inline-block;
-  width: 40%;
 }
 
-.card h3, .main .box h3 {
-  margin-top: 0;
+.sidebar ul.menu li {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
 }
 
-.card h4, .main .box h4 {
-  margin-bottom: 0;
-}
-
-.card h4 + p, .main .box h4 + p {
-  margin-top: 0;
-}
-
-ul.long li, ul.long li a {
-  width: 100%
-}
-
-#search-results ul.letter li {
-  padding: .75rem 0;
-}
-
-.main li {
-  margin-top: .5rem;
-}
-
-.topics li {
-  display: inline-block;
-}
-
-.topics li a {
+.sidebar .menu li a, .sidebar .menu a:visited {
   padding: .25rem;
 }
 
-.signature {
-  margin-left: 2rem;
+.main ul.long {
+  padding: 0;
 }
 
-.box {
-  padding: 1rem;
-  margin: 0 1rem;
-}
-
-.sidebar ul, ul.long {
+.main ul.long li {
+  margin: .5rem 0;
   list-style: none;
 }
-  
-#searchBox input {
-  width: 75%;
-  padding: 0 1rem;
+
+.main .prev {
+  float: left;
 }
 
-#searchWidget {
-  margin-top: -1rem;
+.main .next {
   float: right;
 }
 
-#searchWidget input {
-  padding: 0 .5rem;
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed; 
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding: 0 1rem;
+  overflow-x: hidden;
+  transition: 0.5s;
+  margin-left: -4rem;
+}
+
+.sidebar.open {
+  margin: 0 0 2rem;
+  width: 95%;
 }
 
 #searchWidget button {
@@ -406,36 +320,55 @@ ul.long li, ul.long li a {
   margin-bottom: -1rem;
 }
 
-ul.long li a:hover {
-  margin: -.2rem;
-  padding: .2rem;
-}
-
-#search-results .snippet {
-  padding: 0 1rem;
-}
-
-#searchBox input:focus {
-  outline: none;
-}
-
-h4 a {
-  padding: .25rem;
-}
-
-a.more {
+#searchWidget {
+  margin-top: -1rem;
   float: right;
 }
 
-/*  Typography  */
+.themes button svg {
+  margin: auto;
+  width: 100%;
+  margin: 10% 10% 0;
+}
+
+.themes button {
+  width: 45%;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-right: .5rem;
+  padding-bottom: 1rem;
+}
+
+#searchBox input {
+  width: 75%;
+}
+
+#searchBox input {
+  width: 75%;
+  padding: 0 1rem;
+}
+
+.main li {
+  margin-bottom: 1rem;
+}
+
+
+
+/*********************************************************/
+/*                      Typography                       */
+/*********************************************************/
 
 body {
-  font-family: sans-serif;
+  font-family: sans-serif; 
   font-size: 1rem;
 }
 
-h1, h2, h3, h4, summary {
+h1, h2, h3, h4 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a, a:visited {
+  text-decoration: none;
 }
 
 header, footer {
@@ -443,54 +376,31 @@ header, footer {
 }
 
 h1 {
-  font-size: 1.75rem;
+  font-size: 1.5rem
 }
 
 h2 {
-  font-size: 1.5rem;
-}
-
-#next {
-  text-align: right;
-}
-
-.main .themes button {
-  text-align: center;
   font-size: 1.25rem;
-}
-
-.date {
-  text-align: right;
-}
-
-.topics ul {
-  list-style: none;
-  text-align: right;
-}
-
-.card h4, .main .box h4 {
   text-align: center;
 }
 
-.card h4 + p, .main .box h4 + p {
+nav.top {
+  text-align: right;
+}
+
+ul.topics {
   text-align: center;
 }
 
-.card em, .main .box em {
-  font-size: 85%;
-  font-style: normal;
+p.letter-date, p.signature, p.more {
+  text-align: right
 }
 
-.sidebar h3 + h3 {
-  margin-top: -.5rem;
+.extra {
+  opacity: 70%;
 }
 
-.sidebar li {
-  text-indent: -.5rem;
-  list-style: none;
-}
-  
-#searchBox input {
+.main nav a, .main nav a:visited {
   font-size: 1.5rem;
 }
 
@@ -499,19 +409,79 @@ h2 {
   cursor: pointer;
 }
 
-#search-results .snippet {
-  font-style: italic;
+button#cls {
+  font-size: 2rem;
 }
 
+.themes button {
+  text-align: center;
+}
 
-/*  Responsiveness  */
+#searchBox button {
+  font-size: 2rem;
+}
 
-@media only screen and (max-width: 900px) {
+#searchBox input {
+  font-size: 1.5rem;
+}
+
+#searchBox input:focus {
+  outline: none;
+}
+
+#search-results ul.topics, #search-results h2 {
+  text-align: left;
+}
+
+.themes button:focus {
+  outline: none;
+}
+
+/*********************************************************/
+/*                    Responsiveness                     */
+/*********************************************************/
+
+@media only screen and (min-width: 48rem) { 
   .container {
-    flex-direction: column;
+    flex-direction: row;
+  }
+
+  header {
+    margin-top: 1rem; 
+  }
+
+  nav.top {
+    display: none;
+  }
+
+  #main {
+    display: flex;
+    flex: 7 1 12.5rem;
+    flex-direction: row;
+  }
+
+  .sidebar {
+    flex: 2 1 12.5rem;
+    transition: none;
+  }
+
+  body {
+    transition: .5s;
+  }
+
+  .main.box {
+    flex: 1 1 12.5rem; 
+  }
+  
+  .sidebar {
+    height: auto;
+    width: auto;
+    position: relative; 
+    padding: 0 1rem;
+    margin-left: 0;
   }
 
   .box {
-    margin: 0 0 1rem;
+    margin: .5rem;
   }
 }

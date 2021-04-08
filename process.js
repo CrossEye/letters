@@ -323,10 +323,12 @@ const isThemeButton = (target) =>
 
 
 // Search
-const newSearch = () => 
+const newSearch = () => {
   document.location.href = `#/search/${
     encodeURIComponent (document .getElementById ('search') .value) .replace (/\%20/g, '+')
   }`
+  document .getElementById ('search') .blur ()
+}
 
 const getMatches = (
   content, 
