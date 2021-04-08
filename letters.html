@@ -3,7 +3,495 @@
 <head>
   <title>Scott Sauyet: Letters to the Editor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="mobile.css" />
+  <style type="text/css">
+/*********************************************************/
+/*                        Colors                         */
+/*********************************************************/
+
+:root {
+  --neutral: #fbeec1;
+  --border: #000000;
+  --accent: #666666;
+  --primary-background: #daad86;
+  --primary-text: #333333;
+  --primary-highlight: #bc986c;
+  --primary-accent: #659dbd;
+  --secondary-background: #bc986c;
+  --secondary-text: #fbeec1;
+  --secondary-highlight: #bc986c;
+  --secondary-accent: #659dbd;
+  --tertiary-background: #8d8741;
+  --tertiary-text: #fbeec1;
+  --tertiary-highlight: #8d8741;
+  --tertiary-accent: #659dbd;
+}
+
+body {
+  background-color: var(--neutral);
+}
+
+.main {
+  background-color: var(--primary-background) ;
+  color: var(--primary-text);
+  border-color: var(--border);
+}
+
+.sidebar {
+  background-color: var(--secondary-background); 
+  color: var(--secondary-text); 
+  border-color: var(--border);
+}
+
+header, footer {
+  background-color: var(--tertiary-background);
+  color: var(--tertiary-text);
+  border-color: var(--border);
+}
+
+header h1 a, header h1 a:visited {
+  background-color: inherit;
+  color: inherit;
+}
+
+nav.top {
+	background-color: var(--primary-highlight); 
+	color: var(--secondary-text);
+}
+
+nav.top a, nav.top a:visited {
+	background-color: var(--primary-highlight);
+	color: var(--secondary-text);
+}
+
+.box a, .box a:visited {
+  background-color: var(--primary-highlight); 
+  color: var(--primary-text); 
+}
+
+.box a:hover {
+  background-color:var(--primary-accent);
+}
+
+ul.topics li a, ul.topics li a:visited {
+  background-color: var(--primary-highlight); 
+  color: var(--primary-text); 
+}
+
+.sidebar.box a {
+  background-color: var(--secondary-background); 
+  color: var(--secondary-text);
+}
+
+.sidebar.box a:hover {
+  background-color:var(--secondary-accent);
+}
+
+.sidebar .menu li a, .sidebar .menu a:visited {
+  background-color: var(--primary-background);
+  color: var(--primary-text); 
+}
+
+.sidebar .menu li a:hover {
+  background-color:var(--secondary-accent);
+}
+
+.main ul.long li a, .main ul.long li a:visited {
+  background-color: var(--primary-background);
+  color: var(--primary-text); 
+}
+
+.main ul.long li a:hover {
+  background-color:var(--primary-accent);
+}
+
+.main nav a, .main nav a:visited {
+  background-color: var(--primary-background); 
+  color: var(--primary-text); 
+}
+
+#searchWidget button {
+  background-color: inherit;
+  color: inherit;
+}
+
+button, input {
+  background: var(--neutral);
+  color: inherit;
+}
+
+#searchBox button {
+  background-color: inherit;
+  color: inherit;
+}
+
+#search-results li a {
+  background-color: var(--primary-highlight);
+}
+
+#search-results span.match {
+  background-color: var(--primary-accent);
+}
+
+
+
+/*********************************************************/
+/*                        Borders                        */
+/*********************************************************/
+
+
+header, footer, .box {
+  border-radius: .75rem;
+  border-width: .125rem;
+  border-style: solid;
+}
+
+header, footer {
+  box-shadow: .125rem .125rem .125rem var(--accent);
+}
+
+ul.topics li a, ul.topics li a:visited {
+  border: .0625rem solid var(--border);
+  border-radius: .75rem;
+}
+
+.sidebar.box {
+  border: none;
+}
+
+.sidebar .menu li a, .sidebar .menu a:visited {
+  border: .0625rem solid var(--border);
+  border-radius: .75rem;
+}
+
+.main h3 {
+  border-bottom: .0625rem solid var(--primary-text);
+}
+
+#searchWidget button {
+  border: none;
+}
+
+#searchBox button {
+  border: none;
+}
+
+#searchBox input {
+  border-radius: 1rem;
+}
+
+nav.top {
+	border-bottom: .0625rem solid var(--border);
+}
+
+.themes button:focus {
+  border: 3px solid var(--border);
+}
+
+
+
+/*********************************************************/
+/*                        Layout                         */
+/*********************************************************/
+
+:root {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0; 
+  max-width: 1024px; 
+  margin: auto;
+}
+
+header, footer {
+  padding: .5rem 1rem;
+}
+
+header {
+  margin: -1rem 1rem .5rem;
+}
+
+footer {
+  margin: 1rem .5rem;
+}
+
+.box {
+  padding: .5rem 1rem; margin: .5rem;
+  position: relative;
+}
+
+header h1 {
+  margin-bottom: 0;
+}
+
+.box {
+  padding: .5rem 1rem; 
+  margin: .5rem;
+  position: relative;
+}
+
+header p {
+  margin-top: 0;
+}
+
+nav.top {
+  margin: 0 0 1.5rem 0;
+	padding: 0;
+	padding: .5rem 1rem;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+  width: 100%;
+}
+
+ul.topics {
+  text-align: center;
+  padding: 0;
+}
+
+ul.topics li {
+  display: inline-block;
+}
+
+ul.topics li a, ul.topics li a:visited {
+  padding: .25rem;
+  text-decoration: none;
+  margin: 0 .25rem
+}
+
+p.more {
+  position: absolute;
+  bottom: -.75rem;
+  right: .5rem;
+}
+
+.sidebar ul.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul.menu li {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.sidebar .menu li a, .sidebar .menu a:visited {
+  padding: .25rem;
+}
+
+.main ul.long {
+  padding: 0;
+}
+
+.main ul.long li {
+  margin: .5rem 0;
+  list-style: none;
+}
+
+.main .prev {
+  float: left;
+}
+
+.main .next {
+  float: right;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed; 
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding: 0 1rem;
+  overflow-x: hidden;
+  transition: 0.5s;
+  margin-left: -4rem;
+}
+
+.sidebar.open {
+  margin: 0 0 2rem;
+  width: 95%;
+}
+
+#searchWidget button {
+  margin-left: -.5rem;
+}
+
+#searchWidget svg {
+  width: 3rem;
+  margin-bottom: -1rem;
+}
+
+#searchWidget {
+  margin-top: -1rem;
+  float: right;
+}
+
+.themes button svg {
+  margin: auto;
+  width: 100%;
+  margin: 10% 10% 0;
+}
+
+.themes button {
+  width: 45%;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-right: .5rem;
+  padding-bottom: 1rem;
+}
+
+#searchBox input {
+  width: 75%;
+}
+
+#searchBox input {
+  width: 75%;
+  padding: 0 1rem;
+}
+
+.main li {
+  margin-bottom: 1rem;
+}
+
+
+
+/*********************************************************/
+/*                      Typography                       */
+/*********************************************************/
+
+body {
+  font-family: sans-serif; 
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+header, footer {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem
+}
+
+h2 {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+nav.top {
+  text-align: right;
+}
+
+ul.topics {
+  text-align: center;
+}
+
+p.letter-date, p.signature, p.more {
+  text-align: right
+}
+
+.extra {
+  opacity: 70%;
+}
+
+.main nav a, .main nav a:visited {
+  font-size: 1.5rem;
+}
+
+#searchBox button, #searchWidget button {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+button#cls {
+  font-size: 2rem;
+}
+
+.themes button {
+  text-align: center;
+}
+
+#searchBox button {
+  font-size: 2rem;
+}
+
+#searchBox input {
+  font-size: 1.5rem;
+}
+
+#searchBox input:focus {
+  outline: none;
+}
+
+#search-results ul.topics, #search-results h2 {
+  text-align: left;
+}
+
+.themes button:focus {
+  outline: none;
+}
+
+/*********************************************************/
+/*                    Responsiveness                     */
+/*********************************************************/
+
+@media only screen and (min-width: 48rem) { 
+  .container {
+    flex-direction: row;
+  }
+
+  header {
+    margin-top: 1rem; 
+  }
+
+  nav.top {
+    display: none;
+  }
+
+  #main {
+    display: flex;
+    flex: 7 1 12.5rem;
+    flex-direction: row;
+  }
+
+  .sidebar {
+    flex: 2 1 12.5rem;
+    transition: none;
+  }
+
+  body {
+    transition: .5s;
+  }
+
+  .main.box {
+    flex: 1 1 12.5rem; 
+  }
+  
+  .sidebar {
+    height: auto;
+    width: auto;
+    position: relative; 
+    padding: 0 1rem;
+    margin-left: 0;
+  }
+
+  .box {
+    margin: .5rem;
+  }
+}
+</style>
   <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDAwIDMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB4PSIwIiB5PSIwIiByeD0iMzAiIHJ5PSIzMCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIHN0eWxlPSJmaWxsOiAjZmJlZWMxOyBzdHJva2Utd2lkdGg6IDI7IHN0cm9rZTogI2NjYzsiPjwvcmVjdD48cmVjdCB4PSIyMCIgeT0iODAiIHJ4PSIxNSIgcnk9IjE1IiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjEwMCIgc3R5bGU9ImZpbGw6ICNkYWFkODY7IHN0cm9rZS13aWR0aDogMjsgc3Ryb2tlOiAjMDAwMDAwOyI+PC9yZWN0PjxyZWN0IHg9IjIwMCIgeT0iODAiIHJ4PSIxNSIgcnk9IjE1IiB3aWR0aD0iODAiIGhlaWdodD0iMTAwIiBzdHlsZT0iZmlsbDogI2JjOTg2Yzsgc3Ryb2tlLXdpZHRoOiAyOyBzdHJva2U6ICMwMDAwMDA7Ij48L3JlY3Q+PHJlY3QgeD0iMjAiIHk9IjIwIiByeD0iMTUiIHJ5PSIxNSIgd2lkdGg9IjI2MCIgaGVpZ2h0PSI0MCIgc3R5bGU9ImZpbGw6ICM4ZDg3NDE7IHN0cm9rZS13aWR0aDogMjsgc3Ryb2tlOiAjMDAwMDAwOyI+PC9yZWN0Pjwvc3ZnPg==" />
   <script>
 const content = [
@@ -1695,7 +2183,7 @@ const content = [
       "Website"
     ],
     "People": [],
-    "Content": "<p>The rumors are not true.  Andover&#39;s web site is not being shut down.  It is only\nthe status of the Website Committee which is changing.  A new state law is\nforcing towns to make radical changes to the way their websites are managed.\nSome small towns are shutting down their sites altogether.  We&#39;re going a\ndifferent route and will try to keep the site running with a committee modeled\nafter the Friends of the Library or the PTA.</p>\n<p>The new law (PA 08-3, HB 6502) says that any public agency, which includes not\nonly the Board of Selectmen and the Board of Finance, but also the\nBeautification Committee and the Memorial Day Committee, must post the record of\nany votes taken at their meeting within 48 hours and the minutes within seven\ndays of every meeting.  They must be submitted to the Town Clerk, and posted on\n&quot;such public agency&#39;s Internet web site, if available.&quot;</p>\n<p>While the Andover Website Committee does try to post minutes in a timely\nfashion, we cannot guarantee this fast a turn-around, and yet we must do so or\nrun afoul of the new law.  But the &quot;if available&quot; clause seems to imply that\ntowns without an official web site simply don&#39;t have this worry.  We&#39;re hoping\nthe General Assembly will note the unintended consequences of their action and\nalter the law soon, but for the moment we&#39;re restructuring the committee.</p>\n<p>And the committee could use some help.</p>\n<p>We&#39;re almost ready to launch an updated version of the site that we hope will be\neasier to use and more informative, but really could use extra hands to do so.\nYou don&#39;t need any particular skills to participate, just a willingness to help.\nPlease e-mail <a href=\"mailto:&#x77;&#101;&#x62;&#109;&#x61;&#115;&#116;&#101;&#114;&#x40;&#97;&#110;&#100;&#x6f;&#118;&#101;&#114;&#99;&#116;&#x2e;&#111;&#114;&#103;\">&#x77;&#101;&#x62;&#109;&#x61;&#115;&#116;&#101;&#114;&#x40;&#97;&#110;&#100;&#x6f;&#118;&#101;&#114;&#99;&#116;&#x2e;&#111;&#114;&#103;</a> if you&#39;d like to volunteer.</p>\n"
+    "Content": "<p>The rumors are not true.  Andover&#39;s web site is not being shut down.  It is only\nthe status of the Website Committee which is changing.  A new state law is\nforcing towns to make radical changes to the way their websites are managed.\nSome small towns are shutting down their sites altogether.  We&#39;re going a\ndifferent route and will try to keep the site running with a committee modeled\nafter the Friends of the Library or the PTA.</p>\n<p>The new law (PA 08-3, HB 6502) says that any public agency, which includes not\nonly the Board of Selectmen and the Board of Finance, but also the\nBeautification Committee and the Memorial Day Committee, must post the record of\nany votes taken at their meeting within 48 hours and the minutes within seven\ndays of every meeting.  They must be submitted to the Town Clerk, and posted on\n&quot;such public agency&#39;s Internet web site, if available.&quot;</p>\n<p>While the Andover Website Committee does try to post minutes in a timely\nfashion, we cannot guarantee this fast a turn-around, and yet we must do so or\nrun afoul of the new law.  But the &quot;if available&quot; clause seems to imply that\ntowns without an official web site simply don&#39;t have this worry.  We&#39;re hoping\nthe General Assembly will note the unintended consequences of their action and\nalter the law soon, but for the moment we&#39;re restructuring the committee.</p>\n<p>And the committee could use some help.</p>\n<p>We&#39;re almost ready to launch an updated version of the site that we hope will be\neasier to use and more informative, but really could use extra hands to do so.\nYou don&#39;t need any particular skills to participate, just a willingness to help.\nPlease e-mail <a href=\"mailto:&#x77;&#101;&#98;&#109;&#97;&#115;&#116;&#x65;&#x72;&#x40;&#97;&#x6e;&#x64;&#111;&#118;&#x65;&#x72;&#x63;&#116;&#46;&#x6f;&#x72;&#x67;\">&#x77;&#101;&#98;&#109;&#97;&#115;&#116;&#x65;&#x72;&#x40;&#97;&#x6e;&#x64;&#111;&#118;&#x65;&#x72;&#x63;&#116;&#46;&#x6f;&#x72;&#x67;</a> if you&#39;d like to volunteer.</p>\n"
   },
   {
     "Title": "Andover Responses",
@@ -1752,7 +2240,7 @@ const content = [
       "Website"
     ],
     "People": [],
-    "Content": "<p>The Andover Website Committee is looking for volunteers.  A recent letter to the\neditor noted that the Andover Website is not always updated with the latest\nminutes from meetings and the latest schedule changes.  This is quite true, and\nthe Website Committee would love help in fixing the problem.  Would you be\nwilling to spend an hour or two per month helping us out?</p>\n<p>We are looking for volunteers to help steer the direction of the town&#39;s website,\nto help update the content on the site, to help improve its usability and\nreliability, and to help organize the efforts of other volunteers.  We don&#39;t\nneed any particular skills, just a willingness to help.  Of course if you have\nany website design or development skills, we&#39;d love to have you too!</p>\n<p>The website is run entirely by volunteers.  We&#39;d like to see some significant\nimprovements to the site, but that can only be accomplished if there are people\nin town committed to helping.  Please, come join our team.  You can reach us via\nemail at <a href=\"mailto:&#x77;&#101;&#x62;&#x6d;&#x61;&#x73;&#x74;&#x65;&#114;&#64;&#97;&#x6e;&#x64;&#111;&#x76;&#101;&#114;&#x63;&#x74;&#x2e;&#111;&#114;&#x67;\">&#x77;&#101;&#x62;&#x6d;&#x61;&#x73;&#x74;&#x65;&#114;&#64;&#97;&#x6e;&#x64;&#111;&#x76;&#101;&#114;&#x63;&#x74;&#x2e;&#111;&#114;&#x67;</a>.  Or you can call Scott Sauyet at 742-9800.  Or\nsimply come to our next meeting at 7:00 on September 24 in the school library.</p>\n"
+    "Content": "<p>The Andover Website Committee is looking for volunteers.  A recent letter to the\neditor noted that the Andover Website is not always updated with the latest\nminutes from meetings and the latest schedule changes.  This is quite true, and\nthe Website Committee would love help in fixing the problem.  Would you be\nwilling to spend an hour or two per month helping us out?</p>\n<p>We are looking for volunteers to help steer the direction of the town&#39;s website,\nto help update the content on the site, to help improve its usability and\nreliability, and to help organize the efforts of other volunteers.  We don&#39;t\nneed any particular skills, just a willingness to help.  Of course if you have\nany website design or development skills, we&#39;d love to have you too!</p>\n<p>The website is run entirely by volunteers.  We&#39;d like to see some significant\nimprovements to the site, but that can only be accomplished if there are people\nin town committed to helping.  Please, come join our team.  You can reach us via\nemail at <a href=\"mailto:&#x77;&#101;&#x62;&#109;&#x61;&#115;&#116;&#x65;&#114;&#x40;&#97;&#110;&#100;&#111;&#118;&#x65;&#114;&#99;&#116;&#x2e;&#x6f;&#x72;&#103;\">&#x77;&#101;&#x62;&#109;&#x61;&#115;&#116;&#x65;&#114;&#x40;&#97;&#110;&#100;&#111;&#118;&#x65;&#114;&#99;&#116;&#x2e;&#x6f;&#x72;&#103;</a>.  Or you can call Scott Sauyet at 742-9800.  Or\nsimply come to our next meeting at 7:00 on September 24 in the school library.</p>\n"
   },
   {
     "Title": "Global Warming Response",
@@ -2390,10 +2878,12 @@ const isThemeButton = (target) =>
 
 
 // Search
-const newSearch = () => 
+const newSearch = () => {
   document.location.href = `#/search/${
     encodeURIComponent (document .getElementById ('search') .value) .replace (/\%20/g, '+')
   }`
+  document .getElementById ('search') .blur ()
+}
 
 const getMatches = (
   content, 
