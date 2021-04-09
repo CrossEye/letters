@@ -73,7 +73,7 @@ the JS, based on the data stored in [`content.js`][co].
 Web Design
 ----------
 
-I am not a graphical designer.  Note even close.
+I am not a graphical designer.  Not even close.
 
 I've tried to make an aestheically pleasing site, and offer multiple color
 schemes for two reasons: one because my own tastes are probably not shared by

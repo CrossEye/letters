@@ -434,9 +434,40 @@ const makeAbstract = ({Title, Date, Topics, Content }) =>
     <p class="more"><a href="#/${Date}/">&hellip;more</a></p>
    </div>`
 
+const makeRandomLetter = (
+  config,
+  content,
+  {Title, Date, Topics, Content} = content [randomInt (config .lettersAboveFold, content .length)],
+) => 
+  `<h2>Random Letter</h2>
+  <p>There are <a href="#/letters/">${content.length} letters</a> available.  Here's one:</p>
+  <p><a href="#/${Date}/">${Title} (<span>${longDate (Date)}</span>)</a> discussed the ${pluralize ('topic', 'topics') (Topics.length)} of 
+  <!--${oxfordJoin(Topics .map (topic => `<a href="#/topic/${topic .replace (/ /g, '+')}/">${topic}</a>`)) }.-->
+    ${oxfordJoin(Topics .map (topic => `"${topic}"`))}.
+  </p>`
 
-const makeMain = (config) => (content, hash) => 
-  content .slice (0, 3) .map (makeAbstract) .join('\n')
+const makeRandomTopics = (
+  config, 
+  content,
+  allTopics = gather ('Topics', content, alphaTopicSort),
+  chosenTopics = sortBy (head) (weightedRandom (config.topicsAboveFold) (allTopics)) 
+) => 
+  `<h2>Random Topics</h2>
+   <p>Letter here discuss <a href="#/topics/">${allTopics.length} topics</a>.  Here are a few:</p>
+   <ul>${chosenTopics.map(makeLink('topic')).join('')}</ul>`
+
+const makeMain = (config) => (
+  content, 
+) =>
+  `<div id="leader">
+    ${content .slice (0, 2) .map (makeAbstract) .join('\n')}
+   </div>
+   <div id="follower">
+     ${makeAbstract(content[3])}
+     <div id="random" class="main box">
+     ${makeRandomLetter(config, content)}
+     ${makeRandomTopics(config, content)}
+   <div>`
 
 // Setup
 const enhanceContent = (content, div = document.createElement('div')) =>  

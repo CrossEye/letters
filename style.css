@@ -202,7 +202,7 @@ header, footer {
 }
 
 header {
-  margin: -1rem 1rem .5rem;
+  margin: -1rem .5rem .5rem;
 }
 
 footer {
@@ -306,6 +306,17 @@ p.more {
   margin-left: -4rem;
 }
 
+#leader {
+  display: flex;
+  flex-direction: column;
+}
+
+#follower {
+  display: flex;
+  flex-direction: column;
+}
+
+
 .sidebar.open {
   margin: 0 0 2rem;
   width: 95%;
@@ -317,11 +328,12 @@ p.more {
 
 #searchWidget svg {
   width: 3rem;
-  margin-bottom: -1rem;
+  margin-bottom: -.75rem;
 }
 
 #searchWidget {
-  margin-top: -1rem;
+  margin-top: -1.5rem;
+  padding-top: 1rem;
   float: right;
 }
 
@@ -337,6 +349,11 @@ p.more {
   margin-bottom: 1rem;
   margin-right: .5rem;
   padding-bottom: 1rem;
+}
+
+.themes button span {
+  display: inline-block;
+  height: 2rem;
 }
 
 #searchBox input {
@@ -411,6 +428,7 @@ p.letter-date, p.signature, p.more {
 
 button#cls {
   font-size: 2rem;
+  margin-left: -1.25rem
 }
 
 .themes button {
@@ -457,12 +475,24 @@ button#cls {
   #main {
     display: flex;
     flex: 7 1 12.5rem;
+    flex-direction: column;
+  }
+
+  #leader {
+    flex-direction: row;
+  }
+
+  #follower {
     flex-direction: row;
   }
 
   .sidebar {
     flex: 2 1 12.5rem;
     transition: none;
+  }
+
+  #cls {
+    display: none;
   }
 
   body {
