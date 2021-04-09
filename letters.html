@@ -208,7 +208,7 @@ header, footer {
 }
 
 header {
-  margin: -1rem 1rem .5rem;
+  margin: -1rem .5rem .5rem;
 }
 
 footer {
@@ -312,6 +312,17 @@ p.more {
   margin-left: -4rem;
 }
 
+#leader {
+  display: flex;
+  flex-direction: column;
+}
+
+#follower {
+  display: flex;
+  flex-direction: column;
+}
+
+
 .sidebar.open {
   margin: 0 0 2rem;
   width: 95%;
@@ -323,11 +334,12 @@ p.more {
 
 #searchWidget svg {
   width: 3rem;
-  margin-bottom: -1rem;
+  margin-bottom: -.75rem;
 }
 
 #searchWidget {
-  margin-top: -1rem;
+  margin-top: -1.5rem;
+  padding-top: 1rem;
   float: right;
 }
 
@@ -343,6 +355,11 @@ p.more {
   margin-bottom: 1rem;
   margin-right: .5rem;
   padding-bottom: 1rem;
+}
+
+.themes button span {
+  display: inline-block;
+  height: 2rem;
 }
 
 #searchBox input {
@@ -417,6 +434,7 @@ p.letter-date, p.signature, p.more {
 
 button#cls {
   font-size: 2rem;
+  margin-left: -1.25rem
 }
 
 .themes button {
@@ -463,12 +481,24 @@ button#cls {
   #main {
     display: flex;
     flex: 7 1 12.5rem;
+    flex-direction: column;
+  }
+
+  #leader {
+    flex-direction: row;
+  }
+
+  #follower {
     flex-direction: row;
   }
 
   .sidebar {
     flex: 2 1 12.5rem;
     transition: none;
+  }
+
+  #cls {
+    display: none;
   }
 
   body {
@@ -2183,7 +2213,7 @@ const content = [
       "Website"
     ],
     "People": [],
-    "Content": "<p>The rumors are not true.  Andover&#39;s web site is not being shut down.  It is only\nthe status of the Website Committee which is changing.  A new state law is\nforcing towns to make radical changes to the way their websites are managed.\nSome small towns are shutting down their sites altogether.  We&#39;re going a\ndifferent route and will try to keep the site running with a committee modeled\nafter the Friends of the Library or the PTA.</p>\n<p>The new law (PA 08-3, HB 6502) says that any public agency, which includes not\nonly the Board of Selectmen and the Board of Finance, but also the\nBeautification Committee and the Memorial Day Committee, must post the record of\nany votes taken at their meeting within 48 hours and the minutes within seven\ndays of every meeting.  They must be submitted to the Town Clerk, and posted on\n&quot;such public agency&#39;s Internet web site, if available.&quot;</p>\n<p>While the Andover Website Committee does try to post minutes in a timely\nfashion, we cannot guarantee this fast a turn-around, and yet we must do so or\nrun afoul of the new law.  But the &quot;if available&quot; clause seems to imply that\ntowns without an official web site simply don&#39;t have this worry.  We&#39;re hoping\nthe General Assembly will note the unintended consequences of their action and\nalter the law soon, but for the moment we&#39;re restructuring the committee.</p>\n<p>And the committee could use some help.</p>\n<p>We&#39;re almost ready to launch an updated version of the site that we hope will be\neasier to use and more informative, but really could use extra hands to do so.\nYou don&#39;t need any particular skills to participate, just a willingness to help.\nPlease e-mail <a href=\"mailto:&#x77;&#101;&#x62;&#x6d;&#97;&#115;&#116;&#101;&#114;&#x40;&#x61;&#x6e;&#x64;&#x6f;&#x76;&#x65;&#x72;&#99;&#116;&#x2e;&#x6f;&#114;&#x67;\">&#x77;&#101;&#x62;&#x6d;&#97;&#115;&#116;&#101;&#114;&#x40;&#x61;&#x6e;&#x64;&#x6f;&#x76;&#x65;&#x72;&#99;&#116;&#x2e;&#x6f;&#114;&#x67;</a> if you&#39;d like to volunteer.</p>\n"
+    "Content": "<p>The rumors are not true.  Andover&#39;s web site is not being shut down.  It is only\nthe status of the Website Committee which is changing.  A new state law is\nforcing towns to make radical changes to the way their websites are managed.\nSome small towns are shutting down their sites altogether.  We&#39;re going a\ndifferent route and will try to keep the site running with a committee modeled\nafter the Friends of the Library or the PTA.</p>\n<p>The new law (PA 08-3, HB 6502) says that any public agency, which includes not\nonly the Board of Selectmen and the Board of Finance, but also the\nBeautification Committee and the Memorial Day Committee, must post the record of\nany votes taken at their meeting within 48 hours and the minutes within seven\ndays of every meeting.  They must be submitted to the Town Clerk, and posted on\n&quot;such public agency&#39;s Internet web site, if available.&quot;</p>\n<p>While the Andover Website Committee does try to post minutes in a timely\nfashion, we cannot guarantee this fast a turn-around, and yet we must do so or\nrun afoul of the new law.  But the &quot;if available&quot; clause seems to imply that\ntowns without an official web site simply don&#39;t have this worry.  We&#39;re hoping\nthe General Assembly will note the unintended consequences of their action and\nalter the law soon, but for the moment we&#39;re restructuring the committee.</p>\n<p>And the committee could use some help.</p>\n<p>We&#39;re almost ready to launch an updated version of the site that we hope will be\neasier to use and more informative, but really could use extra hands to do so.\nYou don&#39;t need any particular skills to participate, just a willingness to help.\nPlease e-mail <a href=\"mailto:&#x77;&#x65;&#x62;&#109;&#x61;&#115;&#x74;&#x65;&#114;&#x40;&#97;&#x6e;&#x64;&#x6f;&#118;&#101;&#114;&#x63;&#x74;&#x2e;&#x6f;&#114;&#103;\">&#x77;&#x65;&#x62;&#109;&#x61;&#115;&#x74;&#x65;&#114;&#x40;&#97;&#x6e;&#x64;&#x6f;&#118;&#101;&#114;&#x63;&#x74;&#x2e;&#x6f;&#114;&#103;</a> if you&#39;d like to volunteer.</p>\n"
   },
   {
     "Title": "Andover Responses",
@@ -2240,7 +2270,7 @@ const content = [
       "Website"
     ],
     "People": [],
-    "Content": "<p>The Andover Website Committee is looking for volunteers.  A recent letter to the\neditor noted that the Andover Website is not always updated with the latest\nminutes from meetings and the latest schedule changes.  This is quite true, and\nthe Website Committee would love help in fixing the problem.  Would you be\nwilling to spend an hour or two per month helping us out?</p>\n<p>We are looking for volunteers to help steer the direction of the town&#39;s website,\nto help update the content on the site, to help improve its usability and\nreliability, and to help organize the efforts of other volunteers.  We don&#39;t\nneed any particular skills, just a willingness to help.  Of course if you have\nany website design or development skills, we&#39;d love to have you too!</p>\n<p>The website is run entirely by volunteers.  We&#39;d like to see some significant\nimprovements to the site, but that can only be accomplished if there are people\nin town committed to helping.  Please, come join our team.  You can reach us via\nemail at <a href=\"mailto:&#x77;&#x65;&#98;&#x6d;&#x61;&#115;&#116;&#x65;&#x72;&#x40;&#x61;&#110;&#100;&#111;&#x76;&#x65;&#x72;&#x63;&#116;&#x2e;&#x6f;&#x72;&#103;\">&#x77;&#x65;&#98;&#x6d;&#x61;&#115;&#116;&#x65;&#x72;&#x40;&#x61;&#110;&#100;&#111;&#x76;&#x65;&#x72;&#x63;&#116;&#x2e;&#x6f;&#x72;&#103;</a>.  Or you can call Scott Sauyet at 742-9800.  Or\nsimply come to our next meeting at 7:00 on September 24 in the school library.</p>\n"
+    "Content": "<p>The Andover Website Committee is looking for volunteers.  A recent letter to the\neditor noted that the Andover Website is not always updated with the latest\nminutes from meetings and the latest schedule changes.  This is quite true, and\nthe Website Committee would love help in fixing the problem.  Would you be\nwilling to spend an hour or two per month helping us out?</p>\n<p>We are looking for volunteers to help steer the direction of the town&#39;s website,\nto help update the content on the site, to help improve its usability and\nreliability, and to help organize the efforts of other volunteers.  We don&#39;t\nneed any particular skills, just a willingness to help.  Of course if you have\nany website design or development skills, we&#39;d love to have you too!</p>\n<p>The website is run entirely by volunteers.  We&#39;d like to see some significant\nimprovements to the site, but that can only be accomplished if there are people\nin town committed to helping.  Please, come join our team.  You can reach us via\nemail at <a href=\"mailto:&#119;&#x65;&#x62;&#x6d;&#97;&#x73;&#116;&#x65;&#x72;&#64;&#x61;&#x6e;&#100;&#x6f;&#x76;&#101;&#114;&#x63;&#x74;&#46;&#111;&#114;&#103;\">&#119;&#x65;&#x62;&#x6d;&#97;&#x73;&#116;&#x65;&#x72;&#64;&#x61;&#x6e;&#100;&#x6f;&#x76;&#101;&#114;&#x63;&#x74;&#46;&#111;&#114;&#103;</a>.  Or you can call Scott Sauyet at 742-9800.  Or\nsimply come to our next meeting at 7:00 on September 24 in the school library.</p>\n"
   },
   {
     "Title": "Global Warming Response",
@@ -2364,7 +2394,7 @@ const pages = [
   {
     "Title": "Technical details",
     "Slug": "technical",
-    "Content": "<h1 id=\"technical-details\">Technical Details</h1>\n<p>This site is an experiment.  I&#39;m a computer programmer, and have over the years\nsometimes specialized in building web applications, but for some time now I\nhave only built web sites / web applications to the specifications of others.</p>\n<p>I was looking for a quick project to get my hands back in the entirety of web\ndevelopment, when another Rivereast letter-writer pointed to his website which\nincluded copies of his letters.  That sounded like the start of a good project\nfor me, since I have published many dozens of letters.  This has grown from\nthat concept.</p>\n<h2 id=\"the-code\">The Code</h2>\n<p>The code is stored on <a href=\"https://github.com/CrossEye/letters\">GitHub</a> and served through <a href=\"https://pages.github.com/\">GitHub Pages</a>.  A\nsimple <a href=\"https://github.com/CrossEye/letters/blob/main/.github/workflows/rebuild.yml\">GitHub Action</a> rebuilds the static site.  There is no back end and\nthis is one step beyond a single-page app, as it&#39;s actually able to be served as\na single file, <a href=\"/letters.html\">letters.html</a>, although it&#39;s <a href=\"https://github.com/CrossEye/letters/blob/main/index.html\">usually viewed</a> as a\nstandard HTML file with links to separate CSS and JS files.</p>\n<p>The main content, the letters, are stored in the <a href=\"https://github.com/CrossEye/letters/tree/main/content/letters\">content directory</a> in files\nformatted like this:</p>\n<blockquote>\n<pre><code>\nTitle: A Simple Description\nDate: 2020-10-19\nTopics: Donald Trump, [More Topics]\nPeople: [Comma-separated list of people mentioned]\nContent:\n----------------------------------------------------------------------------\n\nNarcissist, con artist, tax evader, pathological liar, cheat, bully, adulterer,\nfraud, egomaniac, hate-monger, misogynist, xenophobe.\n\nYou don't need to know anything about me to know who I'm describing.\n\nSo why in the world would you consider voting for him?\n\n----------------------------------------------------------------------------\n</code></pre>\n</blockquote>\n<p>This site is built by calling <a href=\"https://github.com/CrossEye/letters/blob/main/build.js\">build.js</a>, which parses those files (as well as\nthose in the <a href=\"https://github.com/CrossEye/letters/tree/main/content/pages\">pages folder</a>) turning them into <code>content.js</code> (and <code>pages.js</code>).\nThese are merged alongside the CSS, the main JS, and the themes into <code>index.html</code>,\ncreating that stand-alone <code>letters.html</code> file.</p>\n<h2 id=\"application-design\">Application Design</h2>\n<p>Since this is mainly for myself, I was willing to make this a JS-only site.  If\nit were to expand toward a more general static site generation tool (unlikely,\nbut possible), I would have to include some server-side generation, especially\nif SEO was a real concern.  I&#39;m simply happy not to have to do this at the\nmoment.</p>\n<p>Although <a href=\"https://github.com/CrossEye/letters/blob/main/themes.js\"><code>themes.js</code></a> includes a little bit of code, at the moment, almost\nthe entire logic is contained in <a href=\"https://github.com/CrossEye/letters/blob/main/process.js\"><code>process.js</code></a></p>\n<p>With the exception of a few static pages, everything is generated on the fly by\nthe JS, based on the data stored in <a href=\"/content.js\"><code>content.js</code></a>.</p>\n<h2 id=\"web-design\">Web Design</h2>\n<p>I am not a graphical designer.  Note even close.</p>\n<p>I&#39;ve tried to make an aestheically pleasing site, and offer multiple color\nschemes for two reasons: one because my own tastes are probably not shared by\nmany, and two, because I wanted to play around with CSS variables, which I\nhaven&#39;t had the time to do recently.  The actual color schemes (except for\n<em>Mellow Yellow</em>, which I made years ago) are shamelessly ripped off from sites\naround the web.  I can&#39;t give credit as there aren&#39;t single sources for any of\nthem.  I&#39;m pretty happy with the default theme, <em>I Feel the Earth Move</em>, and\nsomewhat satisfied with <em>Purple Haze</em>.  The others I have varying degrees of\nfrustration with.</p>\n<p>The rest of the visual design: layout, typography, and so on, feels fairly\nnatural to me, but as I said, I am not a graphical designer.</p>\n<p>There is not much obvious interactivity here.  The only actions outside of\n&quot;page&quot; navigation is search and theme switching.  Search still needs a bit of\nwork as it right now only finds exact matches.  I&#39;m very happy with the theme\nswitching, though, and it gave me the chance to combine CSS variables with\ndynamic SVGs.</p>\n<h2 id=\"feedback\">Feedback</h2>\n<p>I&#39;d love to hear any feedback of a technical nature, suggestions for the code,\nbetter UX or graphical designs, or anything else.  Feel free to <a href=\"mailto:scott@sauyet.com\">email me</a>\nor to raise a <a href=\"https://github.com/CrossEye/letters/issues/new\">new issue</a> or <a href=\"https://github.com/CrossEye/letters/issues/new\">pull request</a>.</p>\n<p>Thank you to <a href=\"https://github.com/buzzdecafe\">Mike H</a> for helpful feedback already given!</p>\n"
+    "Content": "<h1 id=\"technical-details\">Technical Details</h1>\n<p>This site is an experiment.  I&#39;m a computer programmer, and have over the years\nsometimes specialized in building web applications, but for some time now I\nhave only built web sites / web applications to the specifications of others.</p>\n<p>I was looking for a quick project to get my hands back in the entirety of web\ndevelopment, when another Rivereast letter-writer pointed to his website which\nincluded copies of his letters.  That sounded like the start of a good project\nfor me, since I have published many dozens of letters.  This has grown from\nthat concept.</p>\n<h2 id=\"the-code\">The Code</h2>\n<p>The code is stored on <a href=\"https://github.com/CrossEye/letters\">GitHub</a> and served through <a href=\"https://pages.github.com/\">GitHub Pages</a>.  A\nsimple <a href=\"https://github.com/CrossEye/letters/blob/main/.github/workflows/rebuild.yml\">GitHub Action</a> rebuilds the static site.  There is no back end and\nthis is one step beyond a single-page app, as it&#39;s actually able to be served as\na single file, <a href=\"/letters.html\">letters.html</a>, although it&#39;s <a href=\"https://github.com/CrossEye/letters/blob/main/index.html\">usually viewed</a> as a\nstandard HTML file with links to separate CSS and JS files.</p>\n<p>The main content, the letters, are stored in the <a href=\"https://github.com/CrossEye/letters/tree/main/content/letters\">content directory</a> in files\nformatted like this:</p>\n<blockquote>\n<pre><code>\nTitle: A Simple Description\nDate: 2020-10-19\nTopics: Donald Trump, [More Topics]\nPeople: [Comma-separated list of people mentioned]\nContent:\n----------------------------------------------------------------------------\n\nNarcissist, con artist, tax evader, pathological liar, cheat, bully, adulterer,\nfraud, egomaniac, hate-monger, misogynist, xenophobe.\n\nYou don't need to know anything about me to know who I'm describing.\n\nSo why in the world would you consider voting for him?\n\n----------------------------------------------------------------------------\n</code></pre>\n</blockquote>\n<p>This site is built by calling <a href=\"https://github.com/CrossEye/letters/blob/main/build.js\">build.js</a>, which parses those files (as well as\nthose in the <a href=\"https://github.com/CrossEye/letters/tree/main/content/pages\">pages folder</a>) turning them into <code>content.js</code> (and <code>pages.js</code>).\nThese are merged alongside the CSS, the main JS, and the themes into <code>index.html</code>,\ncreating that stand-alone <code>letters.html</code> file.</p>\n<h2 id=\"application-design\">Application Design</h2>\n<p>Since this is mainly for myself, I was willing to make this a JS-only site.  If\nit were to expand toward a more general static site generation tool (unlikely,\nbut possible), I would have to include some server-side generation, especially\nif SEO was a real concern.  I&#39;m simply happy not to have to do this at the\nmoment.</p>\n<p>Although <a href=\"https://github.com/CrossEye/letters/blob/main/themes.js\"><code>themes.js</code></a> includes a little bit of code, at the moment, almost\nthe entire logic is contained in <a href=\"https://github.com/CrossEye/letters/blob/main/process.js\"><code>process.js</code></a></p>\n<p>With the exception of a few static pages, everything is generated on the fly by\nthe JS, based on the data stored in <a href=\"/content.js\"><code>content.js</code></a>.</p>\n<h2 id=\"web-design\">Web Design</h2>\n<p>I am not a graphical designer.  Not even close.</p>\n<p>I&#39;ve tried to make an aestheically pleasing site, and offer multiple color\nschemes for two reasons: one because my own tastes are probably not shared by\nmany, and two, because I wanted to play around with CSS variables, which I\nhaven&#39;t had the time to do recently.  The actual color schemes (except for\n<em>Mellow Yellow</em>, which I made years ago) are shamelessly ripped off from sites\naround the web.  I can&#39;t give credit as there aren&#39;t single sources for any of\nthem.  I&#39;m pretty happy with the default theme, <em>I Feel the Earth Move</em>, and\nsomewhat satisfied with <em>Purple Haze</em>.  The others I have varying degrees of\nfrustration with.</p>\n<p>The rest of the visual design: layout, typography, and so on, feels fairly\nnatural to me, but as I said, I am not a graphical designer.</p>\n<p>There is not much obvious interactivity here.  The only actions outside of\n&quot;page&quot; navigation is search and theme switching.  Search still needs a bit of\nwork as it right now only finds exact matches.  I&#39;m very happy with the theme\nswitching, though, and it gave me the chance to combine CSS variables with\ndynamic SVGs.</p>\n<h2 id=\"feedback\">Feedback</h2>\n<p>I&#39;d love to hear any feedback of a technical nature, suggestions for the code,\nbetter UX or graphical designs, or anything else.  Feel free to <a href=\"mailto:scott@sauyet.com\">email me</a>\nor to raise a <a href=\"https://github.com/CrossEye/letters/issues/new\">new issue</a> or <a href=\"https://github.com/CrossEye/letters/issues/new\">pull request</a>.</p>\n<p>Thank you to <a href=\"https://github.com/buzzdecafe\">Mike H</a> for helpful feedback already given!</p>\n"
   }
 ]
 </script>
@@ -2989,9 +3019,40 @@ const makeAbstract = ({Title, Date, Topics, Content }) =>
     <p class="more"><a href="#/${Date}/">&hellip;more</a></p>
    </div>`
 
+const makeRandomLetter = (
+  config,
+  content,
+  {Title, Date, Topics, Content} = content [randomInt (config .lettersAboveFold, content .length)],
+) => 
+  `<h2>Random Letter</h2>
+  <p>There are <a href="#/letters/">${content.length} letters</a> available.  Here's one:</p>
+  <p><a href="#/${Date}/">${Title} (<span>${longDate (Date)}</span>)</a> discussed the ${pluralize ('topic', 'topics') (Topics.length)} of 
+  <!--${oxfordJoin(Topics .map (topic => `<a href="#/topic/${topic .replace (/ /g, '+')}/">${topic}</a>`)) }.-->
+    ${oxfordJoin(Topics .map (topic => `"${topic}"`))}.
+  </p>`
 
-const makeMain = (config) => (content, hash) => 
-  content .slice (0, 3) .map (makeAbstract) .join('\n')
+const makeRandomTopics = (
+  config, 
+  content,
+  allTopics = gather ('Topics', content, alphaTopicSort),
+  chosenTopics = sortBy (head) (weightedRandom (config.topicsAboveFold) (allTopics)) 
+) => 
+  `<h2>Random Topics</h2>
+   <p>Letter here discuss <a href="#/topics/">${allTopics.length} topics</a>.  Here are a few:</p>
+   <ul>${chosenTopics.map(makeLink('topic')).join('')}</ul>`
+
+const makeMain = (config) => (
+  content, 
+) =>
+  `<div id="leader">
+    ${content .slice (0, 2) .map (makeAbstract) .join('\n')}
+   </div>
+   <div id="follower">
+     ${makeAbstract(content[3])}
+     <div id="random" class="main box">
+     ${makeRandomLetter(config, content)}
+     ${makeRandomTopics(config, content)}
+   <div>`
 
 // Setup
 const enhanceContent = (content, div = document.createElement('div')) =>  
