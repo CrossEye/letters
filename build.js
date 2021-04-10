@@ -47,13 +47,14 @@ const parse = (file) =>
 const linkPeople = (People, Content) => 
   People .reduce ((c, p) => c.replace(p, `[${p}](#/person/${p.replace(/ /g, '+')}/)`), Content)
 
-const convertLetter = ({Topics = '', People: ps = '', Content, ...rest}, 
+const convertLetter = ({Topics = '', People: ps = '', Content, Note = '', ...rest}, 
     People = ps .trim () .split (/\,\s*/) .filter (Boolean)
 ) => ({
     ...rest,
     Topics: Topics .trim () .split (/\,\s*/),
     People,
-    Content: marked (linkPeople (People, Content))
+    Content: marked (linkPeople (People, Content)),
+    ...(Note.length ? {Note: marked (linkPeople (People, Note))} : {})
 })
  
 const convertPage = ({Content, 'Sort Order': so, ...rest}) => ({

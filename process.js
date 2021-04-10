@@ -1,3 +1,4 @@
+// Utility functions
 const always = (x) => () => x
 const call = (fn, ...args) => fn (args)
 const chain = (fn) => (xs) => xs .flatMap (fn)
@@ -35,7 +36,12 @@ const randomInt = (a, b) => Math.floor((b - a) * Math.random() + a)
 const shortDate = (ds) =>  
   `${Number(ds.slice(5, 7))}/${Number(ds.slice(8,10))}/${ds.slice(2, 4)}`
 const sortBy = (fn) => (xs) => xs.sort ((a, b, aa = fn(a), bb = fn(b)) => aa < bb ? -1 : aa > bb ? 1 : 0)
+const split = (sep) => (s) => s.split(sep)
 const startsWith = (prefix) => s => s .startsWith (prefix)
+const today = (date = new Date()) => `${
+  String(date .getFullYear ()) .padStart (4, '0')}-${
+  String(date .getMonth () + 1) .padStart (2, '0')}-${
+  String(date .getDate ()) .padStart (2, '0')}`
 const weightedRandom = (n) => (xs, i = chooseIndex (xs)) => 
   n == 0 ? [] : [xs[i], ...weightedRandom (n - 1) (excluding (i) (xs))]
 
@@ -209,11 +215,15 @@ const makeLetterNav = (
     ${next ? `<a class="next" title="${shortDate (next .Date)}" href="#/${next .Date}/">►</a>` : ``}
   </nav>`
 
+const makeLetterNote = ({Note = ''}) =>
+  Note ? `<div class="note"><h4>Note</h4>${Note}</div>` : ``
+
 const formatLetter = (content, letter) =>
   letter
     ? `${makeLetterNav (content, letter)}
        ${makeLetterBody (letter)}
-       ` 
+       ${makeLetterNote (letter)}
+    ` 
     : `<h2>Not Found</h2>
       <p>No letter found for ${longDate(hash.slice(2, -1))}`
 
@@ -470,8 +480,9 @@ const makeMain = (config) => (
    <div>`
 
 // Setup
-const enhanceContent = (content, div = document.createElement('div')) =>  
-  content .map ((letter) => (
+const enhanceContent = (content, config, div = document.createElement('div'), now = today()) =>  
+  content.filter(config.showAll ? () => true : ({Date}) => Date <= now) // for prepublication
+    .map ((letter) => (
     (div .innerHTML = letter .Content), ({
       ...letter,
       Text: div .textContent,
@@ -563,10 +574,20 @@ const toggleNav = () => {
   sidebar .scrollTo (0, 0)
 }
 
+const parseQuery = () => 
+  Object .fromEntries (
+    document .location .search 
+      .slice (1) .split ('&') .map (split('='))
+      .map (([k, v]) => v == "true" ? [k ,true] : v == "false" ? [k, false] : [k, v])
+      .map (([k, v]) => /^\d+$/ .test (v) ? [k, Number(v)] : [k, v])
+  )
+
+
 // Main
 const main = (rawContent, rawPages, themes) => {
-  const config = {lettersAboveFold: 10, yearsAboveFold: 3, topicsAboveFold: 6, peopleAboveFold: 6}
-  const content = enhanceContent (rawContent)
+  const config = {lettersAboveFold: 10, yearsAboveFold: 3, topicsAboveFold: 6, peopleAboveFold: 6, ...parseQuery()}
+  console .log (config)
+  const content = enhanceContent (rawContent, config)
   const pages = enhancePages (content, rawPages)
   const lookups = Object .fromEntries (content .map (letter => [letter.Date, letter]))
 

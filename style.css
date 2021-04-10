@@ -103,6 +103,10 @@ ul.topics a, ul.topics a:visited {
   color: var(--primary-text); 
 }
 
+.note {
+  border-top: .0625rem solid var(--border);
+}
+
 #searchWidget button {
   background-color: inherit;
   color: inherit;
@@ -159,6 +163,10 @@ ul.topics li a, ul.topics li a:visited {
 
 .main h3 {
   border-bottom: .0625rem solid var(--primary-text);
+}
+
+.note {
+  font-style: italic;
 }
 
 #searchWidget button {
