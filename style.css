@@ -62,11 +62,11 @@ nav.top a, nav.top a:visited {
   color: var(--primary-text); 
 }
 
-.box a:hover {
+.box a:hover, .box ul.topics a:hover {
   background-color:var(--primary-accent);
 }
 
-ul.topics li a, ul.topics li a:visited {
+ul.topics a, ul.topics a:visited {
   background-color: var(--primary-highlight); 
   color: var(--primary-text); 
 }
