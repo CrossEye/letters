@@ -69,7 +69,7 @@ const parseThemes = (txt) =>
   txt .split ('\n') .filter (line => line .trim () != '')
     .reduce (({curr, all}, line) => 
       call (([k, v] = line .trim() .split (/:\s*/)) =>
-        ((line .startsWith (' ') ? curr [k] = v : all [line .trim ()] = curr = {}
+        ((line .startsWith (' ') ? curr [k] = v : all [line. slice (0, -1) .trim ()] = curr = {}
       ), {curr, all})), {all: {}}
     ) .all
 

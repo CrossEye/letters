@@ -1,5 +1,5 @@
 const colors = {
-  "I Feel the Earth Move:": {
+  "I Feel the Earth Move": {
     "neutral": "#fbeec1",
     "border": "#000000",
     "accent": "#666666",
@@ -16,7 +16,7 @@ const colors = {
     "tertiary-highlight": "#8d8741",
     "tertiary-accent": "#659dbd"
   },
-  "Rockaway Beach:": {
+  "Rockaway Beach": {
     "neutral": "#d7e3e5",
     "border": "#aa938f",
     "accent": "#666666",
@@ -33,7 +33,7 @@ const colors = {
     "tertiary-highlight": "#dabea6",
     "tertiary-accent": "#b7ccd2"
   },
-  "Songs from the Woods:": {
+  "Songs from the Woods": {
     "neutral": "#D9ED92",
     "border": "#333333",
     "accent": "#52B69A",
@@ -50,7 +50,7 @@ const colors = {
     "tertiary-highlight": "#1A759F",
     "tertiary-accent": "#1E6091"
   },
-  "Purple Haze:": {
+  "Purple Haze": {
     "neutral": "#e5eaf5",
     "border": "#000000",
     "accent": "#666666",
@@ -66,7 +66,7 @@ const colors = {
     "tertiary-text": "#e5eaf5",
     "tertiary-highlight": "#8458b3"
   },
-  "Radioactive:": {
+  "Radioactive": {
     "neutral": "#333333",
     "border": "#dddddd",
     "accent": "#eeeeee",
@@ -83,7 +83,7 @@ const colors = {
     "tertiary-highlight": "#283747",
     "tertiary-accent": "#3c1874"
   },
-  "Tangled Up in Blue:": {
+  "Tangled Up in Blue": {
     "neutral": "#DDDDDD",
     "border": "#000000",
     "accent": "#666666",
@@ -100,7 +100,7 @@ const colors = {
     "tertiary-highlight": "#7ED5EA",
     "tertiary-accent": "#3778C2"
   },
-  "Mellow Yellow:": {
+  "Mellow Yellow": {
     "neutral": "#f8f8f8",
     "border": "#000000",
     "accent": "#666666",
@@ -117,7 +117,7 @@ const colors = {
     "tertiary-highlight": "#a6a600",
     "tertiary-accent": "#bfbf30"
   },
-  "Sunday Papers:": {
+  "Sunday Papers": {
     "neutral": "#ece5f4",
     "border": "#98b8c6",
     "accent": "#666666",
