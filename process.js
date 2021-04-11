@@ -73,10 +73,10 @@ const makeTopicListLink = (Topic) =>
 
 
 // Sidebar Setup
-const makeSidebarButtons = (themes) =>
+const makeSidebarButtons = (themes, chosenTheme) =>
   `<p id="searchWidget">
   <button id="swb" type="button" title="Search">\u2315</button>
-  <button id="thm" type="button" title="Change Theme">${themes.icons[themes.defaultTheme]}</button>
+  <button id="thm" type="button" title="Change Theme">${themes.icons[chosenTheme]}</button>
   <button id="cls" type="button" title="Close Menu" onclick="toggleNav()">×</button>
   </p>`
 
@@ -177,10 +177,10 @@ const makeSidebar = (
   content,
   pages,
   themes, 
-  {lettersAboveFold = 5, yearsAboveFold = 3, topicsAboveFold = 8, peopleAboveFold = 4}
+  {lettersAboveFold = 5, yearsAboveFold = 3, topicsAboveFold = 8, peopleAboveFold = 4, theme, defaultTheme}
 ) => 
   `<div id="sidebar" class="sidebar box">
-    ${makeSidebarButtons (themes)}
+    ${makeSidebarButtons (themes, theme || defaultTheme)}
     ${makeSidebarPages (pages)}
     ${makeSidebarLetters (content, lettersAboveFold, yearsAboveFold)}
     ${makeSidebarTopics (content, topicsAboveFold)}
@@ -301,7 +301,7 @@ const makeLetters = (content) =>
 
 
 // Themes Route
-const chooseTheme = (name) => {
+const chooseTheme = (themes) => (name) => {
   themes .choose (name);
   localStorage .setItem (
     'letters', 
@@ -314,14 +314,14 @@ const chooseTheme = (name) => {
     || '#/'
 }
 
-const themeClicked = (e) => {
-  chooseTheme (decodeURIComponent (e .target .closest ('.themes button') .dataset .theme))
+const themeClicked = (themes) => (e) => {
+  chooseTheme (themes) (decodeURIComponent (e .target .closest ('.themes button') .dataset .theme))
 }
 
 const themesFocus = () =>
   document .querySelector ('div.themes button') .focus()
 
-const makeThemeSwitcher = () => 
+const makeThemeSwitcher = (themes) => () => 
   `<div class="main box"><h1>Choose Theme</h1><div class="themes">
   ${Object.entries (themes .icons) .map (([name, icon]) => 
     `<button data-theme="${encodeURIComponent(name)}">${icon}<span>${name}</span></button>`
@@ -521,6 +521,31 @@ const changeTitle = (lookups) => (hash) =>
     (matches (/^\d{4}-\d{2}-\d{2}$/) (hash) ? (lookups [hash] .Title + ' : ') : '') + 
     'Scott Sauyet : Letters to the Editor'
 
+const buildThemes = (colors, {defaultTheme}) => ({
+  colors,
+  icons: Object .fromEntries (
+    Object .entries (colors) .map (
+      ([k, {neutral, 'primary-background': primary, 'secondary-background': secondary, 'tertiary-background': tertiary, border}]) => 
+      [k, 
+  `<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" rx="30" ry="30" width="300" height="200"
+        style="fill: ${neutral}; stroke-width: 2; stroke: #ccc;"/>
+      <rect x="20" y="80" rx="15" ry="15" width="160" height="100"
+        style="fill: ${primary}; stroke-width: 2; stroke: ${border};"/>
+      <rect x="200" y="80" rx="15" ry="15" width="80" height="100"
+        style="fill: ${secondary}; stroke-width: 2; stroke: ${border};"/>
+      <rect x="20" y="20" rx="15" ry="15" width="260" height="40"
+        style="fill: ${tertiary}; stroke-width: 2; stroke: ${border};"/>
+  </svg>`])),
+  choose: (name) => {
+    const style = document.querySelector(':root').style
+    Object.entries(colors[name] || {}) .forEach (
+      ([key, value]) => style .setProperty(`--${key}`, value)
+    )  
+  },
+  defaultTheme
+})
+
 const afterNav = (content, pages, lookups, config) => ((
   actions = [
     [() => true, changeTitle (lookups)],
@@ -543,20 +568,21 @@ const addEvents = (cfg) =>
 
 
 // Routing
-const router = (content, pages, lookups, config) => {
+const router = (content, pages, lookups, themes, config) => {
   const routes = [
-    [equals      ('#/'),                        makeMain (config)    ],
-    [startsWith  ('#/pages/'),                  makePage (pages)     ],
-    [matches     (/^#\/\d{4}-\d{2}-\d{2}\/$/),  makeLetter (lookups) ],
-    [equals      ('#/current/'),                makeCurrent          ],
-    [equals      ('#/topics/'),                 makeTopics           ],
-    [startsWith  ('#/topic/'),                  makeTopic            ],
-    [equals      ('#/people/'),                 makePeople           ],
-    [startsWith  ('#/person/'),                 makePerson           ],
-    [equals      ('#/letters/'),                makeLetters          ],
-    [startsWith  ('#/search/'),                 makeSearch           ],
-    [startsWith  ('#/themes/'),                 makeThemeSwitcher    ],
+    [equals      ('#/'),                        makeMain (config)           ],
+    [startsWith  ('#/pages/'),                  makePage (pages)            ],
+    [matches     (/^#\/\d{4}-\d{2}-\d{2}\/$/),  makeLetter (lookups)        ],
+    [equals      ('#/current/'),                makeCurrent                 ],
+    [equals      ('#/topics/'),                 makeTopics                  ],
+    [startsWith  ('#/topic/'),                  makeTopic                   ],
+    [equals      ('#/people/'),                 makePeople                  ],
+    [startsWith  ('#/person/'),                 makePerson                  ],
+    [equals      ('#/letters/'),                makeLetters                 ],
+    [startsWith  ('#/search/'),                 makeSearch                  ],
+    [startsWith  ('#/themes/'),                 makeThemeSwitcher (themes)  ],
   ]
+
   return () => {
     const hash = document.location.hash
     window .scrollTo (0, 0)
@@ -587,17 +613,24 @@ const removeSearch = (loc = window.location, newurl = loc .protocol + "//" + loc
 
 
 // Main
-const main = (rawContent, rawPages, themes) => {
-  const config = {lettersAboveFold: 10, yearsAboveFold: 3, topicsAboveFold: 6, peopleAboveFold: 6, ...parseSearch()}
-  removeSearch ()
+const main = (rawContent, rawPages, colors) => {
+  const config = {
+    // TODO ? move these to separate file?
+    lettersAboveFold: 10, yearsAboveFold: 3, topicsAboveFold: 6, peopleAboveFold: 6,
+    defaultTheme: 'I Feel the Earth Move',
+    ... JSON .parse (localStorage .getItem ('letters') || "{}"),
+    ... parseSearch()
+  }
   const content = enhanceContent (rawContent, config)
   const pages = enhancePages (content, rawPages)
+  const themes = buildThemes (colors, config)
+  themes .choose (config .theme || config .defaultTheme)
   const lookups = Object .fromEntries (content .map (letter => [letter.Date, letter]))
 
 
   updateBasePage(content, pages, lookups, config)
 
-  const route = router (content, pages, lookups, config)
+  const route = router (content, pages, lookups, themes, config)
  
   document .getElementById ('root') .innerHTML += makeSidebar (content, pages, themes, config)
   
@@ -606,7 +639,7 @@ const main = (rawContent, rawPages, themes) => {
       [hasId ('swb'), (e) => document.location.href = '#/search/'],
       [hasId ('thm'), (e) => document.location.href = '#/themes/' + document.location.hash],
       [hasId ('sbb'), newSearch],
-      [isThemeButton, themeClicked],
+      [isThemeButton, themeClicked (themes)],
     ],
     keyup: [
       [hasId ('search'), (e) => {if (e .key == 'Enter') {newSearch ()}}],
@@ -621,5 +654,5 @@ const main = (rawContent, rawPages, themes) => {
   route ()
 }
 
-main (content, pages, themes)
+main (content, pages, colors)
 

@@ -42,11 +42,11 @@ To Do
   - [ ] Expand search from exact phrase to partial matches, but mostly whole word
         (E.g. "Dan" matches "Dan Armstrong" but not "dangerous".  
         But should "democra" match "Democrats" and "democracy?  TBD)
-  - [ ] Separate the theme data and code
+  - [X] Separate the theme data and code
   - [X] Simplify router by adding event and removing `after` param
   - [ ] Clean up CSS (again!)
   - [ ] Make a changeTheme URL, so I can share the themes directly
-  - [ ] (Possibly) add theme-builder or load-from-url mechanism
+  - [ ] <del>(Possibly) add theme-builder or load-from-url mechanism</del>
 
 
   [bu]: ./build.js

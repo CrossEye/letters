@@ -1,5 +1,5 @@
-const themes = ((defaultTheme = "I Feel the Earth Move", colors = {
-  "I Feel the Earth Move": {
+const colors = {
+  "I Feel the Earth Move:": {
     "neutral": "#fbeec1",
     "border": "#000000",
     "accent": "#666666",
@@ -16,7 +16,7 @@ const themes = ((defaultTheme = "I Feel the Earth Move", colors = {
     "tertiary-highlight": "#8d8741",
     "tertiary-accent": "#659dbd"
   },
-  "Rockaway Beach": {
+  "Rockaway Beach:": {
     "neutral": "#d7e3e5",
     "border": "#aa938f",
     "accent": "#666666",
@@ -33,7 +33,7 @@ const themes = ((defaultTheme = "I Feel the Earth Move", colors = {
     "tertiary-highlight": "#dabea6",
     "tertiary-accent": "#b7ccd2"
   },
-  "Songs from the Woods": {
+  "Songs from the Woods:": {
     "neutral": "#D9ED92",
     "border": "#333333",
     "accent": "#52B69A",
@@ -50,7 +50,7 @@ const themes = ((defaultTheme = "I Feel the Earth Move", colors = {
     "tertiary-highlight": "#1A759F",
     "tertiary-accent": "#1E6091"
   },
-  "Purple Haze": {
+  "Purple Haze:": {
     "neutral": "#e5eaf5",
     "border": "#000000",
     "accent": "#666666",
@@ -64,9 +64,9 @@ const themes = ((defaultTheme = "I Feel the Earth Move", colors = {
     "secondary-accent": "#af8ad3",
     "tertiary-background": "#8458b3",
     "tertiary-text": "#e5eaf5",
-    "tertiary-highlight": "#8458b3",
+    "tertiary-highlight": "#8458b3"
   },
-  "Radioactive": {
+  "Radioactive:": {
     "neutral": "#333333",
     "border": "#dddddd",
     "accent": "#eeeeee",
@@ -83,7 +83,7 @@ const themes = ((defaultTheme = "I Feel the Earth Move", colors = {
     "tertiary-highlight": "#283747",
     "tertiary-accent": "#3c1874"
   },
-  "Tangled Up in Blue": {
+  "Tangled Up in Blue:": {
     "neutral": "#DDDDDD",
     "border": "#000000",
     "accent": "#666666",
@@ -100,7 +100,7 @@ const themes = ((defaultTheme = "I Feel the Earth Move", colors = {
     "tertiary-highlight": "#7ED5EA",
     "tertiary-accent": "#3778C2"
   },
-  "Mellow Yellow": {
+  "Mellow Yellow:": {
     "neutral": "#f8f8f8",
     "border": "#000000",
     "accent": "#666666",
@@ -117,7 +117,7 @@ const themes = ((defaultTheme = "I Feel the Earth Move", colors = {
     "tertiary-highlight": "#a6a600",
     "tertiary-accent": "#bfbf30"
   },
-  "Sunday Papers": {
+  "Sunday Papers:": {
     "neutral": "#ece5f4",
     "border": "#98b8c6",
     "accent": "#666666",
@@ -133,31 +133,5 @@ const themes = ((defaultTheme = "I Feel the Earth Move", colors = {
     "tertiary-text": "#444444",
     "tertiary-highlight": "#d9b5c2",
     "tertiary-accent": "#c1d7e1"
-  },
-}) => ({
-    colors,
-    icons: Object .fromEntries (
-        Object .entries (colors) .map (
-            ([k, {neutral, 'primary-background': primary, 'secondary-background': secondary, 'tertiary-background': tertiary, border}]) => 
-      [k, 
-`<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-    <rect x="0" y="0" rx="30" ry="30" width="300" height="200"
-      style="fill: ${neutral}; stroke-width: 2; stroke: #ccc;"/>
-    <rect x="20" y="80" rx="15" ry="15" width="160" height="100"
-      style="fill: ${primary}; stroke-width: 2; stroke: ${border};"/>
-    <rect x="200" y="80" rx="15" ry="15" width="80" height="100"
-      style="fill: ${secondary}; stroke-width: 2; stroke: ${border};"/>
-    <rect x="20" y="20" rx="15" ry="15" width="260" height="40"
-      style="fill: ${tertiary}; stroke-width: 2; stroke: ${border};"/>
-</svg>`])),
-    choose: (name) => {
-        const style = document.querySelector(':root').style
-        Object.entries(colors[name] || {}) .forEach (
-          ([key, value]) => style .setProperty(`--${key}`, value)
-        )  
-    },
-    defaultTheme
-}))()
-
-const config = JSON.parse(localStorage .getItem ('letters') || "{}")
-if (config.theme) {themes .choose (config .theme)}
+  }
+}

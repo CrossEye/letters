@@ -12,12 +12,14 @@ const tap = (fn) => (x) => ((fn (x)), x)
 const map = (fn) => (xs) => xs .map (x => fn (x))
 const prop = (p) => (o) => o [p]
 const prepend = (s1) => (s2) => s1 + s2
+const call = (fn, ...args) => fn (...args)
 const sort = (fn, dir = 'ascending') => (xs) => 
   xs.sort ((a, b, aa = fn (a), bb = fn (b)) => 
     (dir == 'descending' ? -1 : 1) * (aa < bb ? -1 : aa > bb ? 1 : 0))
 
 const showSavedLetters = () => console .log ('content.js written')
 const showSavedPages = () => console .log ('pages.js written')
+const showSavedThemes = () => console .log ('themes.js written')
 const showSavedWrapper = () => console .log ('letters.html written')
 const warnOfError = (err) => console .warn (`Error: ${err}`)
 
@@ -63,7 +65,15 @@ const convertPage = ({Content, 'Sort Order': so, ...rest}) => ({
     Content: marked (Content)
 })
 
-const combine = (content, pages) => ([index, style, themes, process]) =>
+const parseThemes = (txt) =>
+  txt .split ('\n') .filter (line => line .trim () != '')
+    .reduce (({curr, all}, line) => 
+      call (([k, v] = line .trim() .split (/:\s*/)) =>
+        ((line .startsWith (' ') ? curr [k] = v : all [line .trim ()] = curr = {}
+      ), {curr, all})), {all: {}}
+    ) .all
+
+const combine = (content, pages, themes) => ([index, style, process]) =>
   [
     [style, /\<link rel="stylesheet" href="style\.css" \/\>/, `<style type="text/css">$$</style>`],
     [content, /\<script src="content\.js"\>\<\/script\>/, `<script>$$</script>`],
@@ -72,9 +82,9 @@ const combine = (content, pages) => ([index, style, themes, process]) =>
     [process, /\<script src="process\.js"\>\<\/script\>/, `<script>$$</script>`],
   ] .reduce ((index, [c, r, h]) =>  index.replace(r, h.replace('$$', `\n${c}\n`)), index)
 
-const makeAllInOne = ([content, pages]) =>
-  Promise.all (['./index.html', './style.css', './themes.js', './process.js'] .map (readFile))
-    .then (combine (content, pages))
+const makeAllInOne = ([content, pages, themes]) =>
+  Promise.all (['./index.html', './style.css', './process.js'] .map (readFile))
+    .then (combine (content, pages, themes))
     .then (writeFile ('./letters.html'))
 
 const makeLetters = () =>
@@ -106,8 +116,17 @@ const makePages = () =>
     .then (tap (writeFile ('pages.js')))
     .then (tap (showSavedPages))
 
+const makeThemes = () =>
+  readFile ('./content/themes.yml')
+    .then (parseThemes)
+    .then (stringify (null, 2))  
+    //.then (stringify ())
+    .then (prepend ('const colors = '))
+    .then (tap (writeFile ('themes.js')))
+    .then (tap (showSavedThemes))
 
-Promise.all ([makeLetters(), makePages()])
+
+Promise.all ([makeLetters(), makePages(), makeThemes()])
   .then (tap (makeAllInOne))
   .then (tap (showSavedWrapper))
   .catch (warnOfError)
