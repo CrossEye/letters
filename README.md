@@ -38,15 +38,15 @@ To Do
   - [X] Make all URLs end in `/`
   - [ ] Give series their own code
   - [X] Change document title on navigation
-  - [ ] Make randomness a daily (weekly?) fixed set with "more"
   - [ ] Expand search from exact phrase to partial matches, but mostly whole word
         (E.g. "Dan" matches "Dan Armstrong" but not "dangerous".  
         But should "democra" match "Democrats" and "democracy?  TBD)
   - [X] Separate the theme data and code
   - [X] Simplify router by adding event and removing `after` param
   - [ ] Clean up CSS (again!)
-  - [ ] Make a changeTheme URL, so I can share the themes directly
-  - [ ] <del>(Possibly) add theme-builder or load-from-url mechanism</del>
+  - [ ] <del>Make a changeTheme URL, so I can share the themes directly</del> Covered by url query params
+  - [ ] <del>(Possibly) add theme-builder or load-from-url mechanism</del> Not necessary for now
+  - [ ] <del>Make randomness a daily (weekly?) fixed set with "more"</del> Naah
 
 
   [bu]: ./build.js
