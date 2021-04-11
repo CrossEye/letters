@@ -73,10 +73,10 @@ const makeTopicListLink = (Topic) =>
 
 
 // Sidebar Setup
-const makeSidebarButtons = (themes, chosenTheme) =>
+const makeSidebarButtons = (themes, theme, defaultTheme) =>
   `<p id="searchWidget">
   <button id="swb" type="button" title="Search">\u2315</button>
-  <button id="thm" type="button" title="Change Theme">${themes.icons[chosenTheme]}</button>
+  <button id="thm" type="button" title="Change Theme">${themes.icons[theme] || themes.icons[defaultTheme]}</button>
   <button id="cls" type="button" title="Close Menu" onclick="toggleNav()">×</button>
   </p>`
 
@@ -180,7 +180,7 @@ const makeSidebar = (
   {lettersAboveFold = 5, yearsAboveFold = 3, topicsAboveFold = 8, peopleAboveFold = 4, theme, defaultTheme}
 ) => 
   `<div id="sidebar" class="sidebar box">
-    ${makeSidebarButtons (themes, theme || defaultTheme)}
+    ${makeSidebarButtons (themes, theme, defaultTheme)}
     ${makeSidebarPages (pages)}
     ${makeSidebarLetters (content, lettersAboveFold, yearsAboveFold)}
     ${makeSidebarTopics (content, topicsAboveFold)}
@@ -602,7 +602,7 @@ const toggleNav = () => {
 
 const parseSearch = () => 
   Object .fromEntries (
-    document .location .search 
+    decodeURIComponent (document .location .search) 
       .slice (1) .split ('&') .map (split('='))
       .map (([k, v]) => v == "true" ? [k ,true] : v == "false" ? [k, false] : [k, v])
       .map (([k, v]) => /^\d+$/ .test (v) ? [k, Number(v)] : [k, v])
@@ -621,6 +621,8 @@ const main = (rawContent, rawPages, colors) => {
     ... JSON .parse (localStorage .getItem ('letters') || "{}"),
     ... parseSearch()
   }
+
+  removeSearch()
   const content = enhanceContent (rawContent, config)
   const pages = enhancePages (content, rawPages)
   const themes = buildThemes (colors, config)
