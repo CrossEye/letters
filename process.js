@@ -451,9 +451,9 @@ const makeRandomLetter = (
 ) => 
   `<h2>Random Letter</h2>
   <p>There are <a href="#/letters/">${content.length} letters</a> available.  Here's one:</p>
-  <p><a href="#/${Date}/">${Title} (<span>${longDate (Date)}</span>)</a> discussed the ${pluralize ('topic', 'topics') (Topics.length)} of 
-  <!--${oxfordJoin(Topics .map (topic => `<a href="#/topic/${topic .replace (/ /g, '+')}/">${topic}</a>`)) }.-->
-    ${oxfordJoin(Topics .map (topic => `"${topic}"`))}.
+  <p><a href="#/${Date}/">${Title} (<span>${longDate (Date)}</span>)</a> discussed the ${
+    pluralize ('topic', 'topics') (Topics.length)
+  } of ${oxfordJoin(Topics .map (topic => `"${topic}"`))}.
   </p>`
 
 const makeRandomTopics = (
@@ -574,7 +574,7 @@ const toggleNav = () => {
   sidebar .scrollTo (0, 0)
 }
 
-const parseQuery = () => 
+const parseSearch = () => 
   Object .fromEntries (
     document .location .search 
       .slice (1) .split ('&') .map (split('='))
@@ -582,11 +582,14 @@ const parseQuery = () =>
       .map (([k, v]) => /^\d+$/ .test (v) ? [k, Number(v)] : [k, v])
   )
 
+const removeSearch = (loc = window.location, newurl = loc .protocol + "//" + loc .host +  loc.pathname + loc .hash) =>
+  window .history .pushState ({path: newurl}, '', newurl);
+
 
 // Main
 const main = (rawContent, rawPages, themes) => {
-  const config = {lettersAboveFold: 10, yearsAboveFold: 3, topicsAboveFold: 6, peopleAboveFold: 6, ...parseQuery()}
-  console .log (config)
+  const config = {lettersAboveFold: 10, yearsAboveFold: 3, topicsAboveFold: 6, peopleAboveFold: 6, ...parseSearch()}
+  removeSearch ()
   const content = enhanceContent (rawContent, config)
   const pages = enhancePages (content, rawPages)
   const lookups = Object .fromEntries (content .map (letter => [letter.Date, letter]))
