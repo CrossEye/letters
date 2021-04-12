@@ -138,6 +138,15 @@ const makeSidebarLetters = (
   ${makeRecentSidebarLetters(content, lettersAboveFold)}
   ${makeOlderSidebarLetters(content, lettersAboveFold, yearsAboveFold)}`
 
+const makeSidebarSeries = (
+  content,
+  series = [... new Set (content .map (prop ('Series')) .filter (Boolean))]
+) => console .log (series) ||
+  `<h3><a href="#/series/">Series</a></h3>
+   <ul>
+     ${series .map (s => `<li><a href="#/series/${s .replace (/ /g, '+')}/">${s}</a></li>`) .join ('\n')}
+   </ul>`
+
 makeSidebarTopics = (
   content,
   topicsAboveFold,
@@ -183,14 +192,16 @@ const makeSidebar = (
     ${makeSidebarButtons (themes, theme, defaultTheme)}
     ${makeSidebarPages (pages)}
     ${makeSidebarLetters (content, lettersAboveFold, yearsAboveFold)}
+    ${makeSidebarSeries (content)}
     ${makeSidebarTopics (content, topicsAboveFold)}
     ${makeSidebarPeople (content, peopleAboveFold)}
   </div>`
 
 
 // Letter Route
-const makeLetterBody = ({Title, Topics = [], Date, Content}) =>
+const makeLetterBody = ({Title, Topics = [], Date, Content, Series = ''}) =>
   `<h2>${Title}</h2>
+  ${Series ? `<p class="series">(Part of the series "<a href="#/series/${Series .replace (/ /g, '+')}/">${Series}</a>")</p>` : ``}
   ${Topics.length 
     ? `<ul class="topics">
         ${Topics .map (topic => `<li><a href="#/topic/${topic .replace (/ /g, '+')}/">${topic}</a></li>`) .join ('\n    ')}
@@ -300,6 +311,31 @@ const makeLetters = (content) =>
   ) .join('\n')}</div>`
 
 
+// Series Route
+const makeSeries = (
+  content,
+  hash,
+  series = groupBy (prop ('Series')) (content .filter (({Series = ''}) => Series))
+) =>
+  `<div class="main box">
+    <h1>Letter Series</h1>${series .map (([Series, letters]) => 
+      `<h3>${Series}</h3>
+       <ul class="long">
+         ${letters .reverse () .map (letterLink) .join ('\n')}
+       </ul>`)}
+    </div>`
+
+const makeSingleSeries = (
+  content,
+  hash,
+  series = hash .slice (9, -1) .replace (/\+/g, ' '),
+  letters = content .filter (({Series}) => Series == series)
+) =>
+  `<div class="main box">
+     <h1>Series "${series}"</h1> 
+     ${letters .reverse () .map (letterLink) .join ('\n')}
+   </div>`
+    
 // Themes Route
 const chooseTheme = (themes) => (name) => {
   themes .choose (name);
@@ -506,7 +542,7 @@ const enhancePages = (content, pages, substitutions = getSubs (content)) =>
     Content: Content.replace(/\<\!\-\-\s*subtitute\:\s*(\w+)\s*\-\-\>/g, (s, k) => substitutions[k] || ``)
   }))
 
-const updateBasePage = (content, pages, lookups, config) => { // TODO -- anything else here?
+const updateBasePage = (content) => { // TODO -- anything else here?
   document .getElementById ('copyright') .innerHTML = 
     `Copyright &copy; ${
       last (content) .Date .slice (0, 4)
@@ -566,33 +602,6 @@ const addEvents = (cfg) =>
     )
   )
 
-
-// Routing
-const router = (content, pages, lookups, themes, config) => {
-  const routes = [
-    [equals      ('#/'),                        makeMain (config)           ],
-    [startsWith  ('#/pages/'),                  makePage (pages)            ],
-    [matches     (/^#\/\d{4}-\d{2}-\d{2}\/$/),  makeLetter (lookups)        ],
-    [equals      ('#/current/'),                makeCurrent                 ],
-    [equals      ('#/topics/'),                 makeTopics                  ],
-    [startsWith  ('#/topic/'),                  makeTopic                   ],
-    [equals      ('#/people/'),                 makePeople                  ],
-    [startsWith  ('#/person/'),                 makePerson                  ],
-    [equals      ('#/letters/'),                makeLetters                 ],
-    [startsWith  ('#/search/'),                 makeSearch                  ],
-    [startsWith  ('#/themes/'),                 makeThemeSwitcher (themes)  ],
-  ]
-
-  return () => {
-    const hash = document.location.hash
-    window .scrollTo (0, 0)
-    const [_, getContent] = routes .find (([pred]) => pred (hash)) ||
-          [, returnHome]
-    document .getElementById ('main') .innerHTML = getContent (content, hash)
-    window .dispatchEvent (new CustomEvent ('nav', {detail: {hash}}))
-  }
-}
-
 // TODO: move into eventing system
 const toggleNav = () => {
   const sidebar = document .getElementById ("sidebar")
@@ -611,11 +620,37 @@ const parseSearch = () =>
 const removeSearch = (loc = window.location, newurl = loc .protocol + "//" + loc .host +  loc.pathname + loc .hash) =>
   window .history .pushState ({path: newurl}, '', newurl);
 
+// Routing
+const router = (content, pages, lookups, themes, config) => {
+  const routes = [
+    [equals      ('#/'),                        makeMain (config)           ],
+    [startsWith  ('#/pages/'),                  makePage (pages)            ],
+    [matches     (/^#\/\d{4}-\d{2}-\d{2}\/$/),  makeLetter (lookups)        ],
+    [equals      ('#/current/'),                makeCurrent                 ],
+    [equals      ('#/topics/'),                 makeTopics                  ],
+    [startsWith  ('#/topic/'),                  makeTopic                   ],
+    [equals      ('#/people/'),                 makePeople                  ],
+    [startsWith  ('#/person/'),                 makePerson                  ],
+    [equals      ('#/letters/'),                makeLetters                 ],
+    [startsWith  ('#/search/'),                 makeSearch                  ],
+    [startsWith  ('#/themes/'),                 makeThemeSwitcher (themes)  ],
+    [equals      ('#/series/'),                 makeSeries                  ],
+    [startsWith  ('#/series/'),                 makeSingleSeries            ],
+  ]
+
+  return () => {
+    const hash = document.location.hash
+    window .scrollTo (0, 0)
+    const [_, getContent] = routes .find (([pred]) => pred (hash)) ||
+          [, returnHome]
+    document .getElementById ('main') .innerHTML = getContent (content, hash)
+    window .dispatchEvent (new CustomEvent ('nav', {detail: {hash}}))
+  }
+}
 
 // Main
 const main = (rawContent, rawPages, colors) => {
   const config = {
-    // TODO ? move these to separate file?
     lettersAboveFold: 10, yearsAboveFold: 3, topicsAboveFold: 6, peopleAboveFold: 6,
     defaultTheme: 'I Feel the Earth Move',
     ... JSON .parse (localStorage .getItem ('letters') || "{}"),
@@ -629,8 +664,7 @@ const main = (rawContent, rawPages, colors) => {
   themes .choose (config .theme || config .defaultTheme)
   const lookups = Object .fromEntries (content .map (letter => [letter.Date, letter]))
 
-
-  updateBasePage(content, pages, lookups, config)
+  updateBasePage (content)
 
   const route = router (content, pages, lookups, themes, config)
  

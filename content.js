@@ -302,9 +302,9 @@ const content = [
   {
     "Title": "Science and Scientists, Part 4",
     "Date": "2019-09-20",
+    "Series": "Science and Scientists",
     "Topics": [
-      "Global Warming",
-      "Series - Science and Scientists"
+      "Global Warming"
     ],
     "People": [
       "Dan Armstrong"
@@ -314,9 +314,9 @@ const content = [
   {
     "Title": "Science and Scientists, Part 3",
     "Date": "2019-09-14",
+    "Series": "Science and Scientists",
     "Topics": [
-      "Global Warming",
-      "Series - Science and Scientists"
+      "Global Warming"
     ],
     "People": [
       "Dan Armstrong"
@@ -326,9 +326,9 @@ const content = [
   {
     "Title": "Science and Scientists, Part 2",
     "Date": "2019-09-08",
+    "Series": "Science and Scientists",
     "Topics": [
-      "Global Warming",
-      "Series - Science and Scientists"
+      "Global Warming"
     ],
     "People": [
       "Dan Armstrong"
@@ -338,9 +338,9 @@ const content = [
   {
     "Title": "Science and Scientists, Part 1",
     "Date": "2019-09-03",
+    "Series": "Science and Scientists",
     "Topics": [
-      "Global Warming",
-      "Series - Science and Scientists"
+      "Global Warming"
     ],
     "People": [
       "Dan Armstrong"
@@ -1255,9 +1255,9 @@ const content = [
   {
     "Title": "Progressivism from the Source, Responses",
     "Date": "2016-02-14",
+    "Series": "Progressivism from the Source",
     "Topics": [
-      "Progressivism",
-      "Series - Progressivism from the Source"
+      "Progressivism"
     ],
     "People": [
       "Daniel Colby",
@@ -1271,10 +1271,10 @@ const content = [
   {
     "Title": "Progressivism from the Source, Part 5",
     "Date": "2016-02-05",
+    "Series": "Progressivism from the Source",
     "Topics": [
       "Progressivism",
-      "Teddy Roosevelt",
-      "Series - Progressivism from the Source"
+      "Teddy Roosevelt"
     ],
     "People": [],
     "Content": "<p>Fifth and final in a series discussing what progressives actually believe. Last\ntime: corporate power.</p>\n<p>Perhaps a fitting way to end this is to quote from one of the most famous\nprogressives in American history. Theodore Roosevelt helped shape the twentieth\ncentury progressive movement, and his words from a century ago still ring true:</p>\n<p>&quot;I believe in pure democracy. With Lincoln, I hold that &#39;this country, with its\ninstitutions, belongs to the people who inhabit it.. Whenever they shall grow\nweary of the existing government, they can exercise their constitutional right\nof amending it.&#39;</p>\n<p>&quot;We Progressives believe that the people have the right, the power, and the duty\nto protect themselves and their own welfare; that human rights are supreme over\nall other rights; that wealth should be the servant, not the master, of the\npeople.</p>\n<p>&quot;We believe that unless representative government does absolutely represent the\npeople it is not representative government at all.</p>\n<p>&quot;We test the worth of any men and all measures by asking how they contribute to\nthe welfare of the men, women, and children of whom this nation is composed.</p>\n<p>&quot;We are engaged in one of the great battles of the age-long contest waged\nagainst privilege on behalf of the common welfare.&quot;</p>\n<p>Roosevelt&#39;s battle continues to this day, and it&#39;s progressives who are waging\nit.</p>\n"
@@ -1282,10 +1282,10 @@ const content = [
   {
     "Title": "Progressivism from the Source, Part 4",
     "Date": "2016-01-29",
+    "Series": "Progressivism from the Source",
     "Topics": [
       "Progressivism",
-      "Corporations",
-      "Series - Progressivism from the Source"
+      "Corporations"
     ],
     "People": [],
     "Content": "<p>Fourth in a series discussing what progressives actually believe. Last time:\nkeeping the government in check.</p>\n<p>Government and the rich are not the only sources of corrosive power that worry\nliberals. Large corporations easily gain unwarranted power as well. Currently\nAmerican society has a laissez-faire attitude towards its corporations. That was\na major factor in the global economic meltdown and the Great Recession. Liberals\never worry about the control such corporations gain over our day-to-day lives\nand the power they clearly already maintain over our politics.</p>\n<p>Corporations are not people. Regardless of what Congress and the courts say,\ncorporations don&#39;t bleed when you cut them. They don&#39;t feel anger or fear,\nhunger or love. They allow individual benefits without individual\nresponsibility. (Or when did you last see a stockholder go to jail because of a\ncompany&#39;s illegal activity?) Corporations are constructs made of laws and\ncontracts. They exist by public sufferance and should only be tolerated if on\nbalance they improve the public interest. Liberals recognize that corporations\nhave a lot of good to offer, but will not accept the ridiculous notion that\nregulations are inherently anti-business, anti-American. Corporations are\ntolerated because they are good for society; when they become a burden, they\nmust be altered or removed.</p>\n<p>There&#39;s a theme here. We noted that the rich, left unchecked, will run roughshod\nover everyone else. We noted that governments, left unchecked, will start\nabusing the rights of its citizenry. We noted that large corporations, left\nunchecked, will tend toward anti-consumer behavior. Progressivism is about\nproviding checks on these abuses of power.</p>\n<p>In the end, progressivism is a simple concept: it&#39;s best to band together to\nprotect the weak from abuse by the strong so that everyone gets a fair chance at\nthe good things in life.</p>\n<p>Next time: Teddy Roosevelt.</p>\n"
@@ -1293,10 +1293,10 @@ const content = [
   {
     "Title": "Progressivism from the Source, Part 3",
     "Date": "2016-01-22",
+    "Series": "Progressivism from the Source",
     "Topics": [
       "Progressivism",
-      "Government",
-      "Series - Progressivism from the Source"
+      "Government"
     ],
     "People": [],
     "Content": "<p>Third in a series discussing what progressives actually believe. Last time: how\ngovernment helps level the playing field between rich and poor children.</p>\n<p>A competing philosophy proclaims that a smaller government is always a better\ngovernment. Those preaching this don&#39;t really believe it. The proof: ask if they\nwould support eliminating our military, jails, and police in order to reduce the\nsize of the government. If not, they don&#39;t truly believe smaller is always\nbetter. Then one can actually discuss competing priorities for what government\nshould do. If they argue that the military, the courts, and the police are the\ncentral functions of government, ask how they respond to someone who sees\neducation and environmental protections as central. Why are their issues more\nimportant? Just because they say so?</p>\n<p>Progressives recognize that government can and does overstep its mandate. It\nenforces biases of the majority on everyone, even in places where it has no\nbusiness, such as the Jim Crow laws or statutes forbidding gay marriage.\nThankfully, the force of history is generally with liberalism; over time society\ngrows more tolerant, more liberal, more accepting of differences. Government\neventually follows.</p>\n<p>Sometimes the government does the wrong thing, and it becomes our duty to change\nit. This has happened often: the Dred Scott decision, Japanese internment camps,\nMcCarthy witch-hunts, anti-miscegenation laws, the recently fallen laws against\ngay marriage.</p>\n<p>We must be ever-vigilant. A current issue is the NSA&#39;s domestic spying. To\nliberals, this is intolerable. Our government has claimed rights far beyond what\nsociety is willing to grant. This must stop. We are glad to have conservative\nand libertarian allies in this battle, but are suspicious of their motivation.\nSupporters of the USA PATRIOT now upset by the powers the government claims are\nhypocritical.</p>\n<p>Next time: The power of corporations.</p>\n"
@@ -1304,11 +1304,11 @@ const content = [
   {
     "Title": "Progressivism from the Source, Part 2",
     "Date": "2016-01-15",
+    "Series": "Progressivism from the Source",
     "Topics": [
       "Progressivism",
       "Children",
-      "Government",
-      "Series - Progressivism from the Source"
+      "Government"
     ],
     "People": [],
     "Content": "<p>Second in a series discussing what progressives actually believe. Last time: how\nthe rich are tilting the playing field in favor of their children.</p>\n<p>This is not how our democracy is supposed to work. Everyone wants to help their\nchildren and do what&#39;s best for them, but something has gone fundamentally wrong\nwhen the rich and powerful can exclude everyone else, when the gap in\nopportunity between the children of the very wealthy and the children of\neveryone else is so large. Progressives believe that society must work to reduce\nthat gap.</p>\n<p>The best way is to ensure that all children get a good start. So liberals\nbelieve in supporting quality public education, in ensuring that the children of\nthe poor have enough to eat, that there is adequate medical care for those in\nneed. It implies a society that offers a hand up the ladder of success.</p>\n<p>This contradicts the mythos promoted by small-government conservatives. They\nlike to gush about rugged individualism and the self-made entrepreneurs, Such\nfolks have had a hand in our history, but ours is also a history of cooperation,\nof mutual striving. Our most enduring colonial era story is that of sharing the\nfirst Thanksgiving.</p>\n<p>Progressives believe government is not the enemy. How could it be? Government is\nyou and me. Government is people banding together for mutual benefit, especially\nto protect the weak from abuses by the strong. Government can, and too\nfrequently does, overstep its bounds and become a source of problems. The only\ndefense is constant vigilance. But since government is the people ourselves, a\nhatred of the government is a hatred of oneself. Paranoia over the government is\nparanoia over the neighbors. Hostility towards the government is hostility\ntowards our brothers and sisters.</p>\n<p>Next time: Keeping the government in check.</p>\n"
@@ -1316,10 +1316,10 @@ const content = [
   {
     "Title": "Progressivism from the Source, Part 1",
     "Date": "2016-01-12",
+    "Series": "Progressivism from the Source",
     "Topics": [
       "Progressivism",
-      "The Wealthy",
-      "Series - Progressivism from the Source"
+      "The Wealthy"
     ],
     "People": [],
     "Content": "<p>Far too often, letters here talk about Progressivism in scary terms. Those\nletters are ill-informed and can&#39;t tell you what progressives actually believe.\nTheir caricatures are absurd and might be insulting if they weren&#39;t so\nlaughable. It&#39;s time to set the record straight. In this letter and a few\nfollow-ups, I will try to explain what it is that progressives believe. I cannot\nspeak for anyone other than myself, but I believe these views are common among\nprogressives. I also believe they will help show that progressive thought is\nmainstream American thought -- that the right-wing is out of touch. But that&#39;s\nnot the main goal. The main goal is simply for a liberal to explain what\nliberalism actually is.</p>\n<p>Progressives believe in children. We believe children should be given an equal\nshot at all the good things in life. This sounds simple, but it has a lot of\nimportant consequences.</p>\n<p>Over the past thirty-five years, the gains in equal opportunity made since World\nWar II have been rolled back; the rich have rigged the system to make things\neasier for them and harder for everyone else. Worse, they&#39;ve rigged it to\nbenefit their own children at the expense of other children.</p>\n<p>The children of the rich are more likely to rise to the positions of power\nacross our society. Although one might debate the real political skills in the\nKennedy or Bush clans, it&#39;s easy to see how in both families the money, the\nprestige, and the power of each generation helped impel the following one to\nsuccess as Senators, Governors, and Presidents. The same is true in industry and\ncommerce. The number of top executives of large companies whose parents were\nalso leaders of industry demonstrate a developing plutocracy.</p>\n<p>Next time: Reducing the gap in opportunity.</p>\n"
@@ -1703,7 +1703,7 @@ const content = [
       "Website"
     ],
     "People": [],
-    "Content": "<p>The rumors are not true.  Andover&#39;s web site is not being shut down.  It is only\nthe status of the Website Committee which is changing.  A new state law is\nforcing towns to make radical changes to the way their websites are managed.\nSome small towns are shutting down their sites altogether.  We&#39;re going a\ndifferent route and will try to keep the site running with a committee modeled\nafter the Friends of the Library or the PTA.</p>\n<p>The new law (PA 08-3, HB 6502) says that any public agency, which includes not\nonly the Board of Selectmen and the Board of Finance, but also the\nBeautification Committee and the Memorial Day Committee, must post the record of\nany votes taken at their meeting within 48 hours and the minutes within seven\ndays of every meeting.  They must be submitted to the Town Clerk, and posted on\n&quot;such public agency&#39;s Internet web site, if available.&quot;</p>\n<p>While the Andover Website Committee does try to post minutes in a timely\nfashion, we cannot guarantee this fast a turn-around, and yet we must do so or\nrun afoul of the new law.  But the &quot;if available&quot; clause seems to imply that\ntowns without an official web site simply don&#39;t have this worry.  We&#39;re hoping\nthe General Assembly will note the unintended consequences of their action and\nalter the law soon, but for the moment we&#39;re restructuring the committee.</p>\n<p>And the committee could use some help.</p>\n<p>We&#39;re almost ready to launch an updated version of the site that we hope will be\neasier to use and more informative, but really could use extra hands to do so.\nYou don&#39;t need any particular skills to participate, just a willingness to help.\nPlease e-mail <a href=\"mailto:&#119;&#101;&#x62;&#109;&#97;&#x73;&#116;&#x65;&#x72;&#x40;&#97;&#x6e;&#100;&#x6f;&#x76;&#x65;&#114;&#x63;&#x74;&#x2e;&#111;&#114;&#103;\">&#119;&#101;&#x62;&#109;&#97;&#x73;&#116;&#x65;&#x72;&#x40;&#97;&#x6e;&#100;&#x6f;&#x76;&#x65;&#114;&#x63;&#x74;&#x2e;&#111;&#114;&#103;</a> if you&#39;d like to volunteer.</p>\n"
+    "Content": "<p>The rumors are not true.  Andover&#39;s web site is not being shut down.  It is only\nthe status of the Website Committee which is changing.  A new state law is\nforcing towns to make radical changes to the way their websites are managed.\nSome small towns are shutting down their sites altogether.  We&#39;re going a\ndifferent route and will try to keep the site running with a committee modeled\nafter the Friends of the Library or the PTA.</p>\n<p>The new law (PA 08-3, HB 6502) says that any public agency, which includes not\nonly the Board of Selectmen and the Board of Finance, but also the\nBeautification Committee and the Memorial Day Committee, must post the record of\nany votes taken at their meeting within 48 hours and the minutes within seven\ndays of every meeting.  They must be submitted to the Town Clerk, and posted on\n&quot;such public agency&#39;s Internet web site, if available.&quot;</p>\n<p>While the Andover Website Committee does try to post minutes in a timely\nfashion, we cannot guarantee this fast a turn-around, and yet we must do so or\nrun afoul of the new law.  But the &quot;if available&quot; clause seems to imply that\ntowns without an official web site simply don&#39;t have this worry.  We&#39;re hoping\nthe General Assembly will note the unintended consequences of their action and\nalter the law soon, but for the moment we&#39;re restructuring the committee.</p>\n<p>And the committee could use some help.</p>\n<p>We&#39;re almost ready to launch an updated version of the site that we hope will be\neasier to use and more informative, but really could use extra hands to do so.\nYou don&#39;t need any particular skills to participate, just a willingness to help.\nPlease e-mail <a href=\"mailto:&#x77;&#101;&#x62;&#x6d;&#97;&#x73;&#x74;&#x65;&#114;&#x40;&#97;&#110;&#100;&#x6f;&#x76;&#101;&#114;&#99;&#x74;&#46;&#x6f;&#114;&#x67;\">&#x77;&#101;&#x62;&#x6d;&#97;&#x73;&#x74;&#x65;&#114;&#x40;&#97;&#110;&#100;&#x6f;&#x76;&#101;&#114;&#99;&#x74;&#46;&#x6f;&#114;&#x67;</a> if you&#39;d like to volunteer.</p>\n"
   },
   {
     "Title": "Andover Responses",
@@ -1760,7 +1760,7 @@ const content = [
       "Website"
     ],
     "People": [],
-    "Content": "<p>The Andover Website Committee is looking for volunteers.  A recent letter to the\neditor noted that the Andover Website is not always updated with the latest\nminutes from meetings and the latest schedule changes.  This is quite true, and\nthe Website Committee would love help in fixing the problem.  Would you be\nwilling to spend an hour or two per month helping us out?</p>\n<p>We are looking for volunteers to help steer the direction of the town&#39;s website,\nto help update the content on the site, to help improve its usability and\nreliability, and to help organize the efforts of other volunteers.  We don&#39;t\nneed any particular skills, just a willingness to help.  Of course if you have\nany website design or development skills, we&#39;d love to have you too!</p>\n<p>The website is run entirely by volunteers.  We&#39;d like to see some significant\nimprovements to the site, but that can only be accomplished if there are people\nin town committed to helping.  Please, come join our team.  You can reach us via\nemail at <a href=\"mailto:&#119;&#x65;&#98;&#x6d;&#x61;&#115;&#116;&#101;&#x72;&#x40;&#97;&#x6e;&#100;&#x6f;&#118;&#x65;&#114;&#x63;&#116;&#x2e;&#x6f;&#114;&#103;\">&#119;&#x65;&#98;&#x6d;&#x61;&#115;&#116;&#101;&#x72;&#x40;&#97;&#x6e;&#100;&#x6f;&#118;&#x65;&#114;&#x63;&#116;&#x2e;&#x6f;&#114;&#103;</a>.  Or you can call Scott Sauyet at 742-9800.  Or\nsimply come to our next meeting at 7:00 on September 24 in the school library.</p>\n"
+    "Content": "<p>The Andover Website Committee is looking for volunteers.  A recent letter to the\neditor noted that the Andover Website is not always updated with the latest\nminutes from meetings and the latest schedule changes.  This is quite true, and\nthe Website Committee would love help in fixing the problem.  Would you be\nwilling to spend an hour or two per month helping us out?</p>\n<p>We are looking for volunteers to help steer the direction of the town&#39;s website,\nto help update the content on the site, to help improve its usability and\nreliability, and to help organize the efforts of other volunteers.  We don&#39;t\nneed any particular skills, just a willingness to help.  Of course if you have\nany website design or development skills, we&#39;d love to have you too!</p>\n<p>The website is run entirely by volunteers.  We&#39;d like to see some significant\nimprovements to the site, but that can only be accomplished if there are people\nin town committed to helping.  Please, come join our team.  You can reach us via\nemail at <a href=\"mailto:&#x77;&#x65;&#x62;&#109;&#97;&#115;&#x74;&#x65;&#x72;&#64;&#x61;&#x6e;&#x64;&#x6f;&#118;&#x65;&#x72;&#99;&#x74;&#x2e;&#111;&#x72;&#103;\">&#x77;&#x65;&#x62;&#109;&#97;&#115;&#x74;&#x65;&#x72;&#64;&#x61;&#x6e;&#x64;&#x6f;&#118;&#x65;&#x72;&#99;&#x74;&#x2e;&#111;&#x72;&#103;</a>.  Or you can call Scott Sauyet at 742-9800.  Or\nsimply come to our next meeting at 7:00 on September 24 in the school library.</p>\n"
   },
   {
     "Title": "Global Warming Response",

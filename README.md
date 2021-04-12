@@ -36,7 +36,7 @@ To Do
 
   - [X] Responsiveness working on mobile
   - [X] Make all URLs end in `/`
-  - [ ] Give series their own code
+  - [X] Give series their own code
   - [X] Change document title on navigation
   - [ ] Expand search from exact phrase to partial matches, but mostly whole word
         (E.g. "Dan" matches "Dan Armstrong" but not "dangerous".  

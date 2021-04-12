@@ -463,6 +463,12 @@ button#cls {
   outline: none;
 }
 
+p.series {
+  margin-top: -1em;
+  text-align: center;
+  font-style: italic;
+}
+
 /*********************************************************/
 /*                    Responsiveness                     */
 /*********************************************************/
