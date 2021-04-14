@@ -23,6 +23,8 @@ const showSavedThemes = () => console .log ('themes.js written')
 const showSavedWrapper = () => console .log ('letters.html written')
 const warnOfError = (err) => console .warn (`Error: ${err}`)
 
+const WARNING = "// Auto-generated content.  Do not edit.\n\n"
+
 const parse = (file) =>
   Object.fromEntries(file 
     .split (/\r?\n/) 
@@ -98,6 +100,7 @@ const makeLetters = () =>
     .then (stringify (null, 2))  
     //.then (stringify ())
     .then (prepend ('const content = '))
+    .then (prepend (WARNING))
     .then (tap (writeFile ('content.js')))
     .then (tap (showSavedLetters))
 
@@ -113,6 +116,7 @@ const makePages = () =>
     .then (stringify (null, 2))  
     //.then (stringify ())
     .then (prepend ('const pages = '))
+    .then (prepend (WARNING))
     .then (tap (writeFile ('pages.js')))
     .then (tap (showSavedPages))
 
@@ -122,6 +126,7 @@ const makeThemes = () =>
     .then (stringify (null, 2))  
     //.then (stringify ())
     .then (prepend ('const colors = '))
+    .then (prepend (WARNING))
     .then (tap (writeFile ('themes.js')))
     .then (tap (showSavedThemes))
 

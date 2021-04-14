@@ -1,3 +1,5 @@
+// Auto-generated content.  Do not edit.
+
 const colors = {
   "I Feel the Earth Move": {
     "neutral": "#fbeec1",

@@ -1,3 +1,5 @@
+// Auto-generated content.  Do not edit.
+
 const pages = [
   {
     "Title": "About",

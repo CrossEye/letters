@@ -43,7 +43,8 @@ To Do
         But should "democra" match "Democrats" and "democracy"?  TBD)
   - [X] Separate the theme data and code
   - [X] Simplify router by adding event and removing `after` param
-  - [ ] Move base configuration (defaultTheme, lettersAboveFold, etc) into a separate file.
+  - [ ] Move base configuration (defaultTheme, lettersAboveFold, etc) into a separate file
+  - [ ] Reorg JS into separate utils script and main script in call-down fashion
   - [ ] Clean up CSS (again!)
   - [ ] <del>Make a changeTheme URL, so I can share the themes directly</del> Covered by url query params
   - [ ] <del>(Possibly) add theme-builder or load-from-url mechanism</del> Not necessary for now
