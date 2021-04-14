@@ -604,7 +604,7 @@ const parseSearch = () =>
     decodeURIComponent (document .location .search) 
       .slice (1) .split ('&') .map (split('='))
       .map (([k, v]) => v == "true" ? [k ,true] : v == "false" ? [k, false] : [k, v])
-      .map (([k, v]) => /^\d+$/ .test (v) ? [k, Number(v)] : [k, v.replace(/\+/g, ' ')])
+      .map (([k, v]) => /^\d+$/ .test (v) ? [k, Number(v)] : [k, (v || '').replace(/\+/g, ' ')])
   )
 
 const removeSearch = (loc = window.location, newurl = loc .protocol + "//" + loc .host +  loc.pathname + loc .hash) =>

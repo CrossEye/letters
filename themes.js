@@ -135,5 +135,22 @@ const colors = {
     "tertiary-text": "#444444",
     "tertiary-highlight": "#d9b5c2",
     "tertiary-accent": "#c1d7e1"
+  },
+  "Whiter Shade of Pale": {
+    "neutral": "#faf0e6",
+    "border": "#d9b99b",
+    "accent": "#e4d5b7",
+    "primary-background": "#fff0db",
+    "primary-text": "#666666",
+    "primary-highlight": "#eed9c4",
+    "primary-accent": "#e4d5b7",
+    "secondary-background": "#eed9c4",
+    "secondary-text": "#666666",
+    "secondary-highlight": "#eed9c4",
+    "secondary-accent": "#e4d5b7",
+    "tertiary-background": "#e4d5b7",
+    "tertiary-text": "#666666",
+    "tertiary-highlight": "#e4d5b7",
+    "tertiary-accent": "#faf0e6"
   }
 }

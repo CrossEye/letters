@@ -47,6 +47,10 @@ header h1 a, header h1 a:visited {
   color: inherit;
 }
 
+header h1 a:hover {
+  background-color: var(--tertiary-accent)
+}
+
 nav.top {
 	background-color: var(--primary-highlight); 
 	color: var(--secondary-text);
