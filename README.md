@@ -40,9 +40,10 @@ To Do
   - [X] Change document title on navigation
   - [ ] Expand search from exact phrase to partial matches, but mostly whole word
         (E.g. "Dan" matches "Dan Armstrong" but not "dangerous".  
-        But should "democra" match "Democrats" and "democracy?  TBD)
+        But should "democra" match "Democrats" and "democracy"?  TBD)
   - [X] Separate the theme data and code
   - [X] Simplify router by adding event and removing `after` param
+  - [ ] Move base configuration (defaultTheme, lettersAboveFold, etc) into a separate file.
   - [ ] Clean up CSS (again!)
   - [ ] <del>Make a changeTheme URL, so I can share the themes directly</del> Covered by url query params
   - [ ] <del>(Possibly) add theme-builder or load-from-url mechanism</del> Not necessary for now

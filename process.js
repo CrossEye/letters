@@ -77,7 +77,7 @@ const makeSidebarButtons = (themes, theme, defaultTheme) =>
   `<p id="searchWidget">
   <button id="swb" type="button" title="Search">\u2315</button>
   <button id="thm" type="button" title="Change Theme">${themes.icons[theme] || themes.icons[defaultTheme]}</button>
-  <button id="cls" type="button" title="Close Menu" onclick="toggleNav()">×</button>
+  <button id="cls" type="button" title="Close Menu">×</button>
   </p>`
 
 const makeRecentSidebarLetters = (
@@ -141,7 +141,7 @@ const makeSidebarLetters = (
 const makeSidebarSeries = (
   content,
   series = [... new Set (content .map (prop ('Series')) .filter (Boolean))]
-) => console .log (series) ||
+) =>
   `<h3><a href="#/series/">Series</a></h3>
    <ul>
      ${series .map (s => `<li><a href="#/series/${s .replace (/ /g, '+')}/">${s}</a></li>`) .join ('\n')}
@@ -229,7 +229,7 @@ const makeLetterNav = (
 const makeLetterNote = ({Note = ''}) =>
   Note ? `<div class="note"><h4>Note</h4>${Note}</div>` : ``
 
-const formatLetter = (content, letter) =>
+const formatLetter = (content, hash, letter) =>
   letter
     ? `${makeLetterNav (content, letter)}
        ${makeLetterBody (letter)}
@@ -239,7 +239,7 @@ const formatLetter = (content, letter) =>
       <p>No letter found for ${longDate(hash.slice(2, -1))}`
 
 const makeLetter = (lookups) => (content, hash) => 
-  `<div class="main box">${formatLetter (content, lookups [hash .slice (2, -1)])}</div>`
+  `<div class="main box">${formatLetter (content, hash, lookups [hash .slice (2, -1)])}</div>`
 
 const makeCurrent = (content) => 
   formatLetter (content, content [0])
@@ -593,16 +593,6 @@ const afterNav = (content, pages, lookups, config) => ((
   actions .filter (([pred]) => pred (hash)) .forEach(([_, fn]) => fn (hash))
 )()
 
-// DOM Events
-const addEvents = (cfg) =>
-  Object .entries (cfg) .forEach (
-    ([name, actions]) => window .addEventListener (
-      name, 
-      (e) => (actions .find (([pred]) => pred (e.target)) || [, noop]) [1] (e)
-    )
-  )
-
-// TODO: move into eventing system
 const toggleNav = () => {
   const sidebar = document .getElementById ("sidebar")
   sidebar .classList .toggle ('open')
@@ -614,11 +604,35 @@ const parseSearch = () =>
     decodeURIComponent (document .location .search) 
       .slice (1) .split ('&') .map (split('='))
       .map (([k, v]) => v == "true" ? [k ,true] : v == "false" ? [k, false] : [k, v])
-      .map (([k, v]) => /^\d+$/ .test (v) ? [k, Number(v)] : [k, v])
+      .map (([k, v]) => /^\d+$/ .test (v) ? [k, Number(v)] : [k, v.replace(/\+/g, ' ')])
   )
 
 const removeSearch = (loc = window.location, newurl = loc .protocol + "//" + loc .host +  loc.pathname + loc .hash) =>
   window .history .pushState ({path: newurl}, '', newurl);
+
+  // DOM Events
+const addEvents = (content, pages, lookups, themes, config) => ((cfg = {
+  click: [
+    [hasId ('swb'), (e) => document.location.href = '#/search/'],
+    [hasId ('thm'), (e) => document.location.href = '#/themes/' + document.location.hash],
+    [hasId ('sbb'), newSearch],
+    [hasId ('cls'), toggleNav],
+    [hasId ('opn'), toggleNav],
+    [isThemeButton, themeClicked (themes)],
+  ],
+  keyup: [
+    [hasId ('search'), (e) => {if (e .key == 'Enter') {newSearch ()}}],
+  ],
+  nav: [
+    [() => true, afterNav (content, pages, lookups, config)]
+  ]
+}) => 
+  Object .entries (cfg) .forEach (
+    ([name, actions]) => window .addEventListener (
+      name, 
+      (e) => (actions .find (([pred]) => pred (e.target)) || [, noop]) [1] (e)
+    )
+  ))()
 
 // Routing
 const router = (content, pages, lookups, themes, config) => {
@@ -665,28 +679,12 @@ const main = (rawContent, rawPages, colors) => {
   const lookups = Object .fromEntries (content .map (letter => [letter.Date, letter]))
 
   updateBasePage (content)
+  document .getElementById ('root') .innerHTML += makeSidebar (content, pages, themes, config) 
+
+  addEvents (content, pages, lookups, themes, config)
 
   const route = router (content, pages, lookups, themes, config)
- 
-  document .getElementById ('root') .innerHTML += makeSidebar (content, pages, themes, config)
-  
-  addEvents ({
-    click: [
-      [hasId ('swb'), (e) => document.location.href = '#/search/'],
-      [hasId ('thm'), (e) => document.location.href = '#/themes/' + document.location.hash],
-      [hasId ('sbb'), newSearch],
-      [isThemeButton, themeClicked (themes)],
-    ],
-    keyup: [
-      [hasId ('search'), (e) => {if (e .key == 'Enter') {newSearch ()}}],
-    ],
-    nav: [
-      [() => true, afterNav (content, pages, lookups, config)]
-    ]
-  })
-
   window .addEventListener ('popstate', () => setTimeout (route, 0))
-
   route ()
 }
 
