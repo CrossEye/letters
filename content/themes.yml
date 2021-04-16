@@ -65,7 +65,7 @@ Purple Haze:
     tertiary-text: #e5eaf5
     tertiary-highlight: #8458b3
 
-Radioactive:
+Back in Black:
     neutral: #333333
     border: #dddddd
     accent: #eeeeee
@@ -133,7 +133,6 @@ Sunday Papers:
     tertiary-highlight: #d9b5c2
     tertiary-accent: #c1d7e1
 
-
 Whiter Shade of Pale:
     neutral: #faf0e6
     border: #d9b99b
@@ -150,3 +149,20 @@ Whiter Shade of Pale:
     tertiary-text: #666666
     tertiary-highlight: #e4d5b7
     tertiary-accent: #faf0e6 
+
+Aqualung:
+    neutral: #dbeaca
+    border: #63c19d
+    accent: #8cd0ac
+    primary-background: #bbdba7
+    primary-text: #444444
+    primary-highlight: #a2ddac
+    primary-accent: #63c19d
+    secondary-background: #a2ddac
+    secondary-text: #444444
+    secondary-highlight: #a2ddac
+    secondary-accent: #63c19d
+    tertiary-background: #8cd0ac
+    tertiary-text: #444444
+    tertiary-highlight: #8cd0ac
+    tertiary-accent: #bbdba7

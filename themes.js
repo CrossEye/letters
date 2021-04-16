@@ -68,7 +68,7 @@ const colors = {
     "tertiary-text": "#e5eaf5",
     "tertiary-highlight": "#8458b3"
   },
-  "Radioactive": {
+  "Back in Black": {
     "neutral": "#333333",
     "border": "#dddddd",
     "accent": "#eeeeee",
@@ -152,5 +152,22 @@ const colors = {
     "tertiary-text": "#666666",
     "tertiary-highlight": "#e4d5b7",
     "tertiary-accent": "#faf0e6"
+  },
+  "Aqualung": {
+    "neutral": "#dbeaca",
+    "border": "#63c19d",
+    "accent": "#8cd0ac",
+    "primary-background": "#bbdba7",
+    "primary-text": "#444444",
+    "primary-highlight": "#a2ddac",
+    "primary-accent": "#63c19d",
+    "secondary-background": "#a2ddac",
+    "secondary-text": "#444444",
+    "secondary-highlight": "#a2ddac",
+    "secondary-accent": "#63c19d",
+    "tertiary-background": "#8cd0ac",
+    "tertiary-text": "#444444",
+    "tertiary-highlight": "#8cd0ac",
+    "tertiary-accent": "#bbdba7"
   }
 }

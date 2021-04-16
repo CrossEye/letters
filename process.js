@@ -563,7 +563,7 @@ const buildThemes = (colors, {defaultTheme}) => ({
     Object .entries (colors) .map (
       ([k, {neutral, 'primary-background': primary, 'secondary-background': secondary, 'tertiary-background': tertiary, border}]) => 
       [k, 
-  `<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
       <rect x="0" y="0" rx="30" ry="30" width="300" height="200"
         style="fill: ${neutral}; stroke-width: 2; stroke: #ccc;"/>
       <rect x="20" y="80" rx="15" ry="15" width="160" height="100"
@@ -614,7 +614,7 @@ const removeSearch = (loc = window.location, newurl = loc .protocol + "//" + loc
 const addEvents = (content, pages, lookups, themes, config) => ((cfg = {
   click: [
     [hasId ('swb'), (e) => document.location.href = '#/search/'],
-    [hasId ('thm'), (e) => document.location.href = '#/themes/' + document.location.hash],
+    [hasId ('thm'), (e) => document.location.href = '#/themes/' + document.location.hash.replace('#/themes/', '')],
     [hasId ('sbb'), newSearch],
     [hasId ('cls'), toggleNav],
     [hasId ('opn'), toggleNav],
