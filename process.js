@@ -208,7 +208,7 @@ const makeLetterBody = ({Title, Topics = [], Date, Content, Series = ''}) =>
       </ul>` 
     : ``
   }
-  <p class="date">${longDate(Date)}</p>
+  <p class="letter-date">${longDate(Date)}</p>
   <p class="salutation">
     To The Editor:
   </p>
