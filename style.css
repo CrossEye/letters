@@ -147,17 +147,13 @@ header, footer, .box {
   border-style: solid;
 }
 
-header, footer {
+header, footer, .main.box, .sidebar.box {
   box-shadow: .125rem .125rem .125rem var(--accent);
 }
 
 ul.topics li a, ul.topics li a:visited {
   border: .0625rem solid var(--border);
   border-radius: .75rem;
-}
-
-.sidebar.box {
-  border: none;
 }
 
 .sidebar .menu li a, .sidebar .menu a:visited {
