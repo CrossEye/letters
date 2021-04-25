@@ -509,7 +509,7 @@ const makeMain = (config) => (
     ${content .slice (0, 2) .map (makeAbstract) .join('\n')}
    </div>
    <div id="follower">
-     ${makeAbstract(content[3])}
+     ${makeAbstract(content[2])}
      <div id="random" class="main box">
      ${makeRandomLetter(config, content)}
      ${makeRandomTopics(config, content)}
