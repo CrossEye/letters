@@ -1,6 +1,7 @@
 Title: Another American Party
 Date: 2019-03-11
 Topics: Republicans
+TeaserParagraphs: 2
 Content:
 --------------------------------------------------------------------------------
 

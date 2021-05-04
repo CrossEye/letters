@@ -2,7 +2,7 @@ Title: A Clear Demonstration
 Date: 2021-04-30
 Topics: BLM Protests, Media, Journalism, Ashli Babbitt
 People: Sam Prentice
-TeaserParas: 3
+TeaserParagraphs: 3
 Content:
 --------------------------------------------------------------------------------
 

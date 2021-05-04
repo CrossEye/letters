@@ -1,6 +1,7 @@
 Title: Trump world
 Date: 2018-06-18
 Topics: Donald Trump
+TeaserParagraphs: 3
 Content:
 --------------------------------------------------------------------------------
 

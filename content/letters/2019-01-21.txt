@@ -1,6 +1,7 @@
 Title: Two Years of Trump
 Date: 2019-01-21
 Topics: Donald Trump
+TeaserParagraphs: 2
 Content:
 --------------------------------------------------------------------------------
 

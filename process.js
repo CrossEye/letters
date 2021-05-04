@@ -12,7 +12,8 @@ const excluding = (i) => (xs) =>
   [... xs .slice (0, i), ... xs .slice (i + 1)]
 const findAllIndices = (x) => (xs, pos = 0, idx = xs .indexOf (x, pos)) =>
   idx == -1 ? [] : [idx, ...findAllIndices (x) (xs, idx + 1)]
-const firstPara = (text) => text.slice(0, text.indexOf('</p>') + 4) 
+const firstParas = (text, TeaserParagraphs = 1) => 
+  text.slice(0, nthIndexOf (Number(TeaserParagraphs), '</p>')(text) + 4) 
 const getYear = ({Date}) => Date .slice (0, 4)
 const groupBy = (fn) => (xs) => Object .entries (xs .reduce (
   (a, x) => call ((key) => ((a[key] = a[key] || []), (a [key] .push (x)), a), fn(x)), {}
@@ -28,6 +29,8 @@ const matches = (regex) => (str) => regex .test (str)
 const noop = () => {}
 const nRandom = (n, [x, ...xs]) =>
   n == 0 ? [] : Math.random() < n / (xs.length + 1) ? [x, ... nRandom (n - 1, xs)] : nRandom (n, xs)
+const nthIndexOf = (n, sub) => (s, idx = s .indexOf (sub)) =>
+  n <= 1 ? idx : nthIndexOf (n - 1, sub) (s.slice(idx + sub.length)) + idx 
 const oxfordJoin = (xs) =>
   xs .length == 0 ? '' : xs .length == 1 ? xs[0]: xs.length == 2 ? xs .join (' and ') : [xs.slice(0, -1).join(', '), last(xs)] .join(', and ')
 const prop = (p) => (o) => o[p]
@@ -470,13 +473,13 @@ const makeSearch = (
   ${makeSearchResults (content, query.toLowerCase())}</div>`
 
 
-const makeAbstract = ({Title, Date, Topics, Content }) =>
+const makeAbstract = ({Title, Date, Topics, Content, TeaserParagraphs}) =>
   `<div class="main box">
      <h2><a href="#/${Date}/">${Title}</a> <span class="extra">(${shortDate (Date)})</span></h2>
      <ul class="topics">${Topics .map (
       topic => `<li><a href="#/topic/${topic .replace (/ /g, '+')}/">${topic}</a></li>`).join(``)
     }</ul>
-    <p>${firstPara (Content)}</p>
+    <p>${firstParas (Content, TeaserParagraphs)}</p>
     <p class="more"><a href="#/${Date}/">&hellip;more</a></p>
    </div>`
 

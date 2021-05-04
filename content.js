@@ -10,15 +10,15 @@ const content = [
       "Journalism"
     ],
     "People": [
-      "Peter Kushkowski",
+      "Peter Kushowski",
       "Victor Bonanno"
     ],
-    "Content": "<p>I have to admit I find it rather amusing. <a href=\"#/person/Peter+Kushkowski/\">Peter Kushkowski</a> claims the media was\npushing a fake reality of mostly peaceful protests and ignoring what he saw as\nthe reality of anarchist looting and burning. When I reply that the research\nbacks up these &quot;fake reality&quot; accounts, <a href=\"#/person/Victor+Bonanno/\">Victor Bonanno</a> chides me for not noting\nthe media&#39;s depictions of violence.</p>\n<p>They need to get their story straight. What I&#39;m hearing is that the media is\npresenting a violent, destructive, mostly peaceful movement. Hmmm.</p>\n<p>Mr. Bonanno does get one thing right: I do not own a TV. (Technically I do, but\nwith no antenna or cable, it&#39;s just a device for playing DVDs, streaming\nNetflix, etc.) I get my news from newspapers, magazines, radio, and the\nInternet. What I learned from these sources was that this was the most\nwidespread protest movement in US history; that the movement was a sincere\nattempt to change a culture of police brutality, especially towards black men;\nthat there were numerous incidents of violence, looting, and burning; that a\nfrightening amount of the violence was perpetrated by the police on unarmed\nprotesters; that another significant portion of it was created by\ncounter-protesters; that the total property damage was high; that the former guy\nin the White House and allies tried to spin this as an anarchist, violent\nmovement; that perhaps six percent of the events had any associated violence or\nproperty damage.</p>\n<p>There were around forty protests in Connecticut during this time. The only\nincident of violence I recall was when a car drove into the crowd of protesters\nand some protesters confronted the driver about it. Of course we saw the\nviolence across the country, and of course there was a lot of it, but it\ninvolved a small fraction of the overall movement.</p>\n"
+    "Content": "<p>I have to admit I find it rather amusing. <a href=\"#/person/Peter+Kushowski/\">Peter Kushowski</a> claims the media was\npushing a fake reality of mostly peaceful protests and ignoring what he saw as\nthe reality of anarchist looting and burning. When I reply that the research\nbacks up these &quot;fake reality&quot; accounts, <a href=\"#/person/Victor+Bonanno/\">Victor Bonanno</a> chides me for not noting\nthe media&#39;s depictions of violence.</p>\n<p>They need to get their story straight. What I&#39;m hearing is that the media is\npresenting a violent, destructive, mostly peaceful movement. Hmmm.</p>\n<p>Mr. Bonanno does get one thing right: I do not own a TV. (Technically I do, but\nwith no antenna or cable, it&#39;s just a device for playing DVDs, streaming\nNetflix, etc.) I get my news from newspapers, magazines, radio, and the\nInternet. What I learned from these sources was that this was the most\nwidespread protest movement in US history; that the movement was a sincere\nattempt to change a culture of police brutality, especially towards black men;\nthat there were numerous incidents of violence, looting, and burning; that a\nfrightening amount of the violence was perpetrated by the police on unarmed\nprotesters; that another significant portion of it was created by\ncounter-protesters; that the total property damage was high; that the former guy\nin the White House and allies tried to spin this as an anarchist, violent\nmovement; that perhaps six percent of the events had any associated violence or\nproperty damage.</p>\n<p>There were around forty protests in Connecticut during this time. The only\nincident of violence I recall was when a car drove into the crowd of protesters\nand some protesters confronted the driver about it. Of course we saw the\nviolence across the country, and of course there was a lot of it, but it\ninvolved a small fraction of the overall movement.</p>\n"
   },
   {
     "Title": "A Clear Demonstration",
     "Date": "2021-04-30",
-    "TeaserParas": "3",
+    "TeaserParagraphs": "3",
     "Topics": [
       "BLM Protests",
       "Media",
@@ -150,6 +150,7 @@ const content = [
   {
     "Title": "A Simple Description",
     "Date": "2020-10-19",
+    "TeaserParagraphs": "3",
     "Topics": [
       "Donald Trump"
     ],
@@ -196,6 +197,7 @@ const content = [
   {
     "Title": "Party History",
     "Date": "2020-07-26",
+    "TeaserParagraphs": "2",
     "Topics": [
       "Racism",
       "Elections",
@@ -210,6 +212,7 @@ const content = [
   {
     "Title": "Right Wing Propaganda",
     "Date": "2020-06-29",
+    "TeaserParagraphs": "2",
     "Topics": [
       "Covid",
       "Police",
@@ -227,6 +230,7 @@ const content = [
   {
     "Title": "Not All Conservatives",
     "Date": "2020-06-07",
+    "TeaserParagraphs": "2",
     "Topics": [
       "Covid",
       "Apology",
@@ -311,6 +315,7 @@ const content = [
   {
     "Title": "Pound the Table",
     "Date": "2019-10-28",
+    "TeaserParagraphs": "2",
     "Topics": [
       "Science",
       "Environment",
@@ -325,6 +330,7 @@ const content = [
   {
     "Title": "Science and Scientists, Responses",
     "Date": "2019-10-06",
+    "TeaserParagraphs": "2",
     "Topics": [
       "Global Warming",
       "Series - Science and Scientists"
@@ -348,6 +354,7 @@ const content = [
     "Title": "Science and Scientists, Part 4",
     "Date": "2019-09-20",
     "Series": "Science and Scientists",
+    "TeaserParagraphs": "2",
     "Topics": [
       "Global Warming"
     ],
@@ -360,6 +367,7 @@ const content = [
     "Title": "Science and Scientists, Part 3",
     "Date": "2019-09-14",
     "Series": "Science and Scientists",
+    "TeaserParagraphs": "3",
     "Topics": [
       "Global Warming"
     ],
@@ -372,6 +380,7 @@ const content = [
     "Title": "Science and Scientists, Part 2",
     "Date": "2019-09-08",
     "Series": "Science and Scientists",
+    "TeaserParagraphs": "2",
     "Topics": [
       "Global Warming"
     ],
@@ -395,6 +404,7 @@ const content = [
   {
     "Title": "Absurdist Fantasies",
     "Date": "2019-08-25",
+    "TeaserParagraphs": "3",
     "Topics": [
       "Donald Trump"
     ],
@@ -440,6 +450,7 @@ const content = [
   {
     "Title": "What Kind of Leader",
     "Date": "2019-06-16",
+    "TeaserParagraphs": "2",
     "Topics": [
       "Donald Trump",
       "Leadership"
@@ -450,6 +461,7 @@ const content = [
   {
     "Title": "Trust The Sentries",
     "Date": "2019-06-09",
+    "TeaserParagraphs": "2",
     "Topics": [
       "Global Warming",
       "Science",
@@ -497,6 +509,7 @@ const content = [
   {
     "Title": "Another American Party",
     "Date": "2019-03-11",
+    "TeaserParagraphs": "2",
     "Topics": [
       "Republicans"
     ],
@@ -506,6 +519,7 @@ const content = [
   {
     "Title": "Remember The Context",
     "Date": "2019-02-23",
+    "TeaserParagraphs": "3",
     "Topics": [
       "Economy",
       "Stock Market",
@@ -543,6 +557,7 @@ const content = [
   {
     "Title": "Two Years of Trump",
     "Date": "2019-01-21",
+    "TeaserParagraphs": "2",
     "Topics": [
       "Donald Trump"
     ],
@@ -552,6 +567,7 @@ const content = [
   {
     "Title": "Evidence Not Theories",
     "Date": "2019-01-05",
+    "TeaserParagraphs": "2",
     "Topics": [
       "Economy",
       "Minimum Wage",
@@ -583,6 +599,7 @@ const content = [
   {
     "Title": "The Truth Hurts",
     "Date": "2018-09-16",
+    "TeaserParagraphs": "2",
     "Topics": [
       "Fact Checking",
       "Fox News",
@@ -628,6 +645,7 @@ const content = [
   {
     "Title": "Trump world",
     "Date": "2018-06-18",
+    "TeaserParagraphs": "3",
     "Topics": [
       "Donald Trump"
     ],
@@ -637,6 +655,7 @@ const content = [
   {
     "Title": "Conspiracy, Anyone?",
     "Date": "2018-05-29",
+    "TeaserParagraphs": "2",
     "Topics": [
       "Donald Trump",
       "Taxes",
@@ -655,6 +674,7 @@ const content = [
   {
     "Title": "No More Taxes",
     "Date": "2018-05-12",
+    "TeaserParagraphs": "2",
     "Topics": [
       "Taxes",
       "Government"
@@ -667,6 +687,7 @@ const content = [
   {
     "Title": "Spinning the Facts",
     "Date": "2018-03-13",
+    "TeaserParagraphs": "2",
     "Topics": [
       "Democrats",
       "Republicans"
@@ -703,6 +724,7 @@ const content = [
   {
     "Title": "Political Sociopathy",
     "Date": "2018-01-14",
+    "TeaserParagraphs": "5",
     "Topics": [
       "Republicans"
     ],
@@ -726,6 +748,7 @@ const content = [
   {
     "Title": "Actual Fact-Checking",
     "Date": "2017-12-02",
+    "TeaserParagraphs": "2",
     "Topics": [
       "Fact Checking",
       "Elizabeth Warren",
@@ -740,6 +763,7 @@ const content = [
   {
     "Title": "Time to Return",
     "Date": "2017-10-01",
+    "TeaserParagraphs": "2",
     "Topics": [
       "Global Warming",
       "Progressivism",
@@ -1748,7 +1772,7 @@ const content = [
       "Website"
     ],
     "People": [],
-    "Content": "<p>The rumors are not true.  Andover&#39;s web site is not being shut down.  It is only\nthe status of the Website Committee which is changing.  A new state law is\nforcing towns to make radical changes to the way their websites are managed.\nSome small towns are shutting down their sites altogether.  We&#39;re going a\ndifferent route and will try to keep the site running with a committee modeled\nafter the Friends of the Library or the PTA.</p>\n<p>The new law (PA 08-3, HB 6502) says that any public agency, which includes not\nonly the Board of Selectmen and the Board of Finance, but also the\nBeautification Committee and the Memorial Day Committee, must post the record of\nany votes taken at their meeting within 48 hours and the minutes within seven\ndays of every meeting.  They must be submitted to the Town Clerk, and posted on\n&quot;such public agency&#39;s Internet web site, if available.&quot;</p>\n<p>While the Andover Website Committee does try to post minutes in a timely\nfashion, we cannot guarantee this fast a turn-around, and yet we must do so or\nrun afoul of the new law.  But the &quot;if available&quot; clause seems to imply that\ntowns without an official web site simply don&#39;t have this worry.  We&#39;re hoping\nthe General Assembly will note the unintended consequences of their action and\nalter the law soon, but for the moment we&#39;re restructuring the committee.</p>\n<p>And the committee could use some help.</p>\n<p>We&#39;re almost ready to launch an updated version of the site that we hope will be\neasier to use and more informative, but really could use extra hands to do so.\nYou don&#39;t need any particular skills to participate, just a willingness to help.\nPlease e-mail <a href=\"mailto:&#119;&#101;&#98;&#x6d;&#x61;&#x73;&#x74;&#x65;&#114;&#x40;&#x61;&#x6e;&#x64;&#111;&#x76;&#x65;&#x72;&#99;&#x74;&#x2e;&#x6f;&#x72;&#x67;\">&#119;&#101;&#98;&#x6d;&#x61;&#x73;&#x74;&#x65;&#114;&#x40;&#x61;&#x6e;&#x64;&#111;&#x76;&#x65;&#x72;&#99;&#x74;&#x2e;&#x6f;&#x72;&#x67;</a> if you&#39;d like to volunteer.</p>\n"
+    "Content": "<p>The rumors are not true.  Andover&#39;s web site is not being shut down.  It is only\nthe status of the Website Committee which is changing.  A new state law is\nforcing towns to make radical changes to the way their websites are managed.\nSome small towns are shutting down their sites altogether.  We&#39;re going a\ndifferent route and will try to keep the site running with a committee modeled\nafter the Friends of the Library or the PTA.</p>\n<p>The new law (PA 08-3, HB 6502) says that any public agency, which includes not\nonly the Board of Selectmen and the Board of Finance, but also the\nBeautification Committee and the Memorial Day Committee, must post the record of\nany votes taken at their meeting within 48 hours and the minutes within seven\ndays of every meeting.  They must be submitted to the Town Clerk, and posted on\n&quot;such public agency&#39;s Internet web site, if available.&quot;</p>\n<p>While the Andover Website Committee does try to post minutes in a timely\nfashion, we cannot guarantee this fast a turn-around, and yet we must do so or\nrun afoul of the new law.  But the &quot;if available&quot; clause seems to imply that\ntowns without an official web site simply don&#39;t have this worry.  We&#39;re hoping\nthe General Assembly will note the unintended consequences of their action and\nalter the law soon, but for the moment we&#39;re restructuring the committee.</p>\n<p>And the committee could use some help.</p>\n<p>We&#39;re almost ready to launch an updated version of the site that we hope will be\neasier to use and more informative, but really could use extra hands to do so.\nYou don&#39;t need any particular skills to participate, just a willingness to help.\nPlease e-mail <a href=\"mailto:&#x77;&#x65;&#98;&#109;&#x61;&#115;&#x74;&#101;&#x72;&#64;&#97;&#110;&#x64;&#111;&#x76;&#x65;&#x72;&#x63;&#x74;&#46;&#x6f;&#114;&#x67;\">&#x77;&#x65;&#98;&#109;&#x61;&#115;&#x74;&#101;&#x72;&#64;&#97;&#110;&#x64;&#111;&#x76;&#x65;&#x72;&#x63;&#x74;&#46;&#x6f;&#114;&#x67;</a> if you&#39;d like to volunteer.</p>\n"
   },
   {
     "Title": "Andover Responses",
@@ -1805,7 +1829,7 @@ const content = [
       "Website"
     ],
     "People": [],
-    "Content": "<p>The Andover Website Committee is looking for volunteers.  A recent letter to the\neditor noted that the Andover Website is not always updated with the latest\nminutes from meetings and the latest schedule changes.  This is quite true, and\nthe Website Committee would love help in fixing the problem.  Would you be\nwilling to spend an hour or two per month helping us out?</p>\n<p>We are looking for volunteers to help steer the direction of the town&#39;s website,\nto help update the content on the site, to help improve its usability and\nreliability, and to help organize the efforts of other volunteers.  We don&#39;t\nneed any particular skills, just a willingness to help.  Of course if you have\nany website design or development skills, we&#39;d love to have you too!</p>\n<p>The website is run entirely by volunteers.  We&#39;d like to see some significant\nimprovements to the site, but that can only be accomplished if there are people\nin town committed to helping.  Please, come join our team.  You can reach us via\nemail at <a href=\"mailto:&#119;&#101;&#x62;&#109;&#x61;&#115;&#x74;&#101;&#114;&#64;&#97;&#x6e;&#100;&#x6f;&#118;&#101;&#114;&#x63;&#x74;&#x2e;&#111;&#114;&#103;\">&#119;&#101;&#x62;&#109;&#x61;&#115;&#x74;&#101;&#114;&#64;&#97;&#x6e;&#100;&#x6f;&#118;&#101;&#114;&#x63;&#x74;&#x2e;&#111;&#114;&#103;</a>.  Or you can call Scott Sauyet at 742-9800.  Or\nsimply come to our next meeting at 7:00 on September 24 in the school library.</p>\n"
+    "Content": "<p>The Andover Website Committee is looking for volunteers.  A recent letter to the\neditor noted that the Andover Website is not always updated with the latest\nminutes from meetings and the latest schedule changes.  This is quite true, and\nthe Website Committee would love help in fixing the problem.  Would you be\nwilling to spend an hour or two per month helping us out?</p>\n<p>We are looking for volunteers to help steer the direction of the town&#39;s website,\nto help update the content on the site, to help improve its usability and\nreliability, and to help organize the efforts of other volunteers.  We don&#39;t\nneed any particular skills, just a willingness to help.  Of course if you have\nany website design or development skills, we&#39;d love to have you too!</p>\n<p>The website is run entirely by volunteers.  We&#39;d like to see some significant\nimprovements to the site, but that can only be accomplished if there are people\nin town committed to helping.  Please, come join our team.  You can reach us via\nemail at <a href=\"mailto:&#x77;&#x65;&#x62;&#x6d;&#97;&#115;&#x74;&#101;&#114;&#64;&#x61;&#110;&#x64;&#x6f;&#x76;&#101;&#114;&#99;&#116;&#x2e;&#111;&#114;&#x67;\">&#x77;&#x65;&#x62;&#x6d;&#97;&#115;&#x74;&#101;&#114;&#64;&#x61;&#110;&#x64;&#x6f;&#x76;&#101;&#114;&#99;&#116;&#x2e;&#111;&#114;&#x67;</a>.  Or you can call Scott Sauyet at 742-9800.  Or\nsimply come to our next meeting at 7:00 on September 24 in the school library.</p>\n"
   },
   {
     "Title": "Global Warming Response",
