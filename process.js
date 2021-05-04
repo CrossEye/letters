@@ -560,9 +560,9 @@ const changeTitle = (lookups) => (hash) =>
     (matches (/^\d{4}-\d{2}-\d{2}$/) (hash) ? (lookups [hash] .Title + ' : ') : '') + 
     'Scott Sauyet : Letters to the Editor'
 
-const buildThemes = (colors, {defaultTheme}) => ({
-  colors,
-  icons: Object .fromEntries (
+const buildThemes = (colors, {defaultTheme}) => {
+  
+  const icons= Object .fromEntries (
     Object .entries (colors) .map (
       ([k, {neutral, 'primary-background': primary, 'secondary-background': secondary, 'tertiary-background': tertiary, border}]) => 
       [k, 
@@ -575,15 +575,22 @@ const buildThemes = (colors, {defaultTheme}) => ({
         style="fill: ${secondary}; stroke-width: 2; stroke: ${border};"/>
       <rect x="20" y="20" rx="15" ry="15" width="260" height="40"
         style="fill: ${tertiary}; stroke-width: 2; stroke: ${border};"/>
-  </svg>`])),
-  choose: (name) => {
-    const style = document.querySelector(':root').style
-    Object.entries(colors[name] || {}) .forEach (
-      ([key, value]) => style .setProperty(`--${key}`, value)
-    )  
-  },
-  defaultTheme
-})
+  </svg>`]))
+  return {
+    colors,
+    icons,
+    choose: (name) => {
+      const style = document.querySelector(':root').style
+      Object.entries(colors[name] || {}) .forEach (
+        ([key, value]) => style .setProperty(`--${key}`, value)
+      )
+      if (colors[name]) {
+        document .getElementById ('favicon') .href = `data:image/svg+xml;base64,${btoa(icons[name])}`
+      }  
+    },
+    defaultTheme
+  }
+}
 
 const afterNav = (content, pages, lookups, config) => ((
   actions = [
