@@ -20,6 +20,7 @@ const sort = (fn, dir = 'ascending') => (xs) =>
 const showSavedLetters = () => console .log ('content.js written')
 const showSavedPages = () => console .log ('pages.js written')
 const showSavedThemes = () => console .log ('themes.js written')
+const showSavedAliases = () => console .log ('aliases.js written')
 const showSavedWrapper = () => console .log ('letters.html written')
 const warnOfError = (err) => console .warn (`Error: ${err}`)
 
@@ -48,16 +49,17 @@ const parse = (file) =>
       , {pairs: [], state: 'meta'}
     ).pairs)
 
-const linkPeople = (People, Content) => 
-  People .reduce ((c, p) => c.replace(p, `[${p}](#/person/${p.replace(/ /g, '+')}/)`), Content)
+const linkPeople = (People, Content, aliases) => 
+  // console .log (aliases) ||
+  People .reduce ((c, p) => c .replace (new RegExp (`(${[p, ...((aliases ||{}) [p] || [])].join('|')})`), (s, t) => `[${t}](#/person/${p.replace(/ /g, '+')}/)`), Content)
 
-const convertLetter = ({Topics = '', People: ps = '', Content, Note = '', ...rest}, 
+const convertLetter = (aliases) => ({Topics = '', People: ps = '', Content, Note = '', ...rest}, 
     People = ps .trim () .split (/\,\s*/) .filter (Boolean)
 ) => ({
     ...rest,
     Topics: Topics .trim () .split (/\,\s*/),
     People,
-    Content: marked (linkPeople (People, Content)),
+    Content: marked (linkPeople (People, Content, aliases)),
     ...(Note.length ? {Note: marked (linkPeople (People, Note))} : {})
 })
  
@@ -67,6 +69,7 @@ const convertPage = ({Content, 'Sort Order': so, ...rest}) => ({
     Content: marked (Content)
 })
 
+// TODO: use real yml processor?
 const parseThemes = (txt) =>
   txt .split ('\n') .filter (line => line .trim () != '')
     .reduce (({curr, all}, line) => 
@@ -75,27 +78,40 @@ const parseThemes = (txt) =>
       ), {curr, all})), {all: {}}
     ) .all
 
-const combine = (content, pages, themes) => ([index, style, process]) =>
+// TODO: use real yml processor?
+const parseAliases = (txt) =>
+  txt .split ('\n') 
+    .filter (Boolean)
+    .map (l => l.replace (/\s*:\s*$/, ''))
+    .reduce (
+      ({all, curr}, line) => line .startsWith (' ')
+        ? {all: {...all, [curr]: [...all[curr], line.trim()]}, curr}
+        : {all: {...all, [line]: []}, curr: line},
+      {all: {}, curr: ''}
+    ) .all
+
+const combine = (content, pages, themes, aliases) => ([index, style, process]) =>
   [
     [style, /\<link rel="stylesheet" href="style\.css" \/\>/, `<style type="text/css">$$</style>`],
     [content, /\<script src="content\.js"\>\<\/script\>/, `<script>$$</script>`],
     [pages, /\<script src="pages\.js"\>\<\/script\>/, `<script>$$</script>`],
     [themes, /\<script src="themes\.js"\>\<\/script\>/, `<script>$$</script>`],
+    [aliases, /\<script src="aliases\.js"\>\<\/script\>/, `<script>$$</script>`],
     [process, /\<script src="process\.js"\>\<\/script\>/, `<script>$$</script>`],
   ] .reduce ((index, [c, r, h]) =>  index.replace(r, h.replace('$$', `\n${c}\n`)), index)
 
-const makeAllInOne = ([content, pages, themes]) =>
+const makeAllInOne = ([content, pages, themes, aliases]) =>
   Promise.all (['./index.html', './style.css', './process.js'] .map (readFile))
-    .then (combine (content, pages, themes))
+    .then (combine (content, pages, themes, aliases))
     .then (writeFile ('./letters.html'))
 
-const makeLetters = () =>
+const makeLetters = (aliases) =>
   readdir ('./content/letters') 
     .then (map (combinePaths ('./content/letters')))
     .then (map (readFile))
     .then (allPromises)
     .then (map (parse))
-    .then (map (convertLetter))
+    .then (map (convertLetter (aliases)))
     .then (sort (prop ('Date'), 'descending'))
     .then (stringify (null, 2))  
     //.then (stringify ())
@@ -130,8 +146,24 @@ const makeThemes = () =>
     .then (tap (writeFile ('themes.js')))
     .then (tap (showSavedThemes))
 
+const makeAliases = () =>
+  readFile ('./content/aliases.yml')
+    .then (parseAliases)
+    // .then (tap (aliases => console .log ({msg: 'creation', aliases})))
 
-Promise.all ([makeLetters(), makePages(), makeThemes()])
-  .then (tap (makeAllInOne))
-  .then (tap (showSavedWrapper))
-  .catch (warnOfError)
+const saveAliases = (aliases) =>
+  Promise.resolve (aliases)
+    .then (stringify (null, 2))  
+    //.then (stringify ())
+    .then (prepend ('const aliases = '))
+    .then (prepend (WARNING))
+    .then (tap (writeFile ('aliases.js')))
+    .then (tap (showSavedAliases))
+
+makeAliases() 
+  .then (
+    aliases => Promise.all ([makeLetters (aliases), makePages (), makeThemes (), saveAliases(aliases)])
+      .then (tap (makeAllInOne))
+      .then (tap (showSavedWrapper))
+  )
+//  .catch (warnOfError)

@@ -150,7 +150,7 @@ const makeSidebarSeries = (
      ${series .map (s => `<li><a href="#/series/${s .replace (/ /g, '+')}/">${s}</a></li>`) .join ('\n')}
    </ul>`
 
-makeSidebarTopics = (
+const makeSidebarTopics = (
   content,
   topicsAboveFold,
   topics = gather ('Topics', content, topicSort)
