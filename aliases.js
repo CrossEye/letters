@@ -5,7 +5,6 @@ const aliases = {
     "Edmund Smith"
   ],
   "Don Denley": [
-    "Donald Denley",
-    "Donald Duck"
+    "Donald Denley"
   ]
 }
