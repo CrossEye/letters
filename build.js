@@ -63,10 +63,12 @@ const convertLetter = (aliases) => ({Topics = '', People: ps = '', Content, Note
     ...(Note.length ? {Note: marked (linkPeople (People, Note))} : {})
 })
  
-const convertPage = ({Content, 'Sort Order': so, ...rest}) => ({
+const convertPage = ({Content, 'Sort Order': so, People: ps = '', ...rest},
+  People = ps .trim () .split (/\,\s*/) .filter (Boolean)
+) => ({
     ...rest,
     ... (so ? {['Sort Order']: Number(so)} : {}),
-    Content: marked (Content)
+    Content: marked (linkPeople (People, Content))
 })
 
 // TODO: use real yml processor?
