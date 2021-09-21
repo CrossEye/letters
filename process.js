@@ -277,14 +277,21 @@ const makePerson = (
   content, 
   hash,
   person = hash .slice (9, -1) .replace(/\+/g, ' '),
-  letters = content .filter (({People}) => People .includes (person))  
+  letters = content .filter (({People}) => People .includes (person)),
+  pgs = pages .filter (({People = []}) => People .includes (person))
 ) => 
-  `<div class="main box"><h1>Letters mentioning ${person}</h1>
+  `<div class="main box"><h1>${letters.length == 0 ? 'No ' : ''}Letters mentioning ${person}</h1>
   <ul class="long">
     ${letters .map (letter => 
       `<li><a href="#/${letter .Date}/">${letter .Title} <span class="extra">(${shortDate (letter .Date)})</span></a></li>`
     ) .join ('\n')}
-  </ul></div>`
+  </ul>
+  ${pages .length ? 
+  `<h1>Pages mentioning ${person}</h1>
+  <ul class="long">${pgs .map (page => 
+    `<li><a href="#/pages/${page .Slug}/">${page .Title}</a></li>`      
+  )}</ul>` : ``}
+  </div>`
 
 
 // Topics Route
@@ -593,6 +600,9 @@ const buildThemes = (colors, {defaultTheme}) => {
   }
 }
 
+const toPage = (slug) => () =>
+  setTimeout (() => document .location .hash = `#/pages/${slug}/`, 10)
+
 const afterNav = (content, pages, lookups, config) => ((
   actions = [
     [() => true, changeTitle (lookups)],
@@ -656,8 +666,10 @@ const addEvents = (content, pages, lookups, themes, config) => ((cfg = {
 const router = (content, pages, lookups, themes, config) => {
   const routes = [
     [equals      ('#/'),                        makeMain (config)           ],
-    [startsWith  ('#/pages/'),                  makePage (pages)            ],
     [matches     (/^#\/\d{4}-\d{2}-\d{2}\/$/),  makeLetter (lookups)        ],
+    [startsWith  ('#/pages/'),                  makePage (pages)            ],
+    [equals      ('#/covid'),                   toPage ('covid')            ],
+    [equals      ('#/covid/'),                  toPage ('covid')            ],
     [equals      ('#/current/'),                makeCurrent                 ],
     [equals      ('#/topics/'),                 makeTopics                  ],
     [startsWith  ('#/topic/'),                  makeTopic                   ],

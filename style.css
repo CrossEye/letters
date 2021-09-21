@@ -141,7 +141,7 @@ button, input {
 /*********************************************************/
 
 
-header, footer, .box {
+header, footer, .box, blockquote {
   border-radius: .75rem;
   border-width: .125rem;
   border-style: solid;
@@ -191,6 +191,7 @@ nav.top {
 
 
 
+
 /*********************************************************/
 /*                        Layout                         */
 /*********************************************************/
@@ -205,7 +206,7 @@ body {
   margin: auto;
 }
 
-header, footer {
+header, footer, blockquote {
   padding: .5rem 1rem;
 }
 

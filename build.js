@@ -68,6 +68,7 @@ const convertPage = ({Content, 'Sort Order': so, People: ps = '', ...rest},
 ) => ({
     ...rest,
     ... (so ? {['Sort Order']: Number(so)} : {}),
+    People,
     Content: marked (linkPeople (People, Content))
 })
 

@@ -1,9 +1,12 @@
 Title: Covid Facts
 Slug: covid
 Sort Order: 2
-People: Don Denley, Gary Gile, Sam Prentice
+People: Gary Gile, Sam Prentice, Carol Johnson
 Content:
 --------------------------------------------------------------------------------
+
+Covid Facts
+===========
 
 Many _RiverEast_ letters are spreading misinformation about Covid. After seeing
 this over and over, I thought it time to collect some actual facts with clear
@@ -21,22 +24,111 @@ to denying various truths.  (See also: global warming, tobacco, gun safety.)
 While I may eventually try to add some structure to this, right now it's just a
 simple list of the lies and their corrections.
 
-Let's start with this:
+----------
 
 ### False Treatments ###
 
-#### Lie ####
+#### Claim ####
+
+Writers are claiming that Ivermectin is an effective treatment for Covid:
 
 > "If [Hydroxychloroquine and Ivermectin] had been rightfully approved as 
 > effective treatments, thousands of lives could've been saved and the
 > 'pandemic' would've been easily subdued."
 >
-> _Don Denley, 9/17/2021_
+> _Sam Prentice, 9/17/2021_
+
+> "Ivermectin, by the way, won a Pulitzer<sup>1</sup> and has 
+> long been used to treat humans as well as livestock.  It appears to be safe 
+> with no drug interaction. In 20 randomized trials it showed significantly 
+> large benefits in treating COVID-19."
+> 
+> _Carol Johnson, 9/17/2021_
+> 
+> ----------
+> <sup>1</sup>**Note**: presumably she's referring to the 2015 Nobel Prize 
+> in Physiology or Medicine for Ivermectin's creators.
+
 
 #### Truth ####
 
-sd oiu  oasdi Her ajy kasdlf  asdf . Tha iadsl adl;kj u 
+Ivermectin is considered something of a wonder-drug... in the treatment of
+parasites such as worms and mites.  Studies have been done, and some are
+ongoing, on its potential effectiveness against the SARS-CoV-2 virus, which
+causes Covid.  Some early clinical evidence offered hope that this might be a
+useful therapy.  But the clinical trials have not bourne this out.  The dosages
+that would be required to help -- even if the in-vitro minor effect is not
+simply a chimera -- are far too high for the human body, with neurologic and
+other significant side effects.
 
+The best scientific overview seems to be by [Popp, Stegemann, _et. al._][ps].
+Their conclusion is that 
+
+> "[T]he reliable evidence available does not support the use of ivermectin 
+> for treatment or prevention of COVID‐19 outside of well‐designed randomized
+> controlled trials."
+
+The developer and manufacturer of Ivermectin, Merck, has of course been looking
+into this.  With their own vaccine research halted and no promising therapeutics
+in their pipeline, they would love to have this medicine repurposed.  But [their
+statement][me] says
+
+> [O]ur analysis has identified:
+>
+>  - No scientific basis for a potential therapeutic effect against COVID-19 from
+>  pre-clinical studies; 
+>
+>  - No meaningful evidence for clinical activity or clinical efficacy in
+>  patients with COVID-19 disease, and; 
+>  
+>  - A concerning lack of safety data in the majority of studies.
+
+
+As usual, the [Wikipedia article][wi] is a good starting place to gather
+additional information.
+
+
+### Lethality ###
+
+#### Claim ####
+
+We've seen this one a few times now:
+
+> The [Covid] virus is no more deadly than the yearly flu
+>
+> _Gary Gile, 9/17/2021_
+
+
+#### Truth ####
+
+Since March, 2020, more than one in every five hundred Americans has died from
+Covid.  There have been over 675,000 deaths out of 42 million cases.  The case 
+fatality rate in the US is around 1.6%.  The best source of such information is 
+probably the Johns Hopkins [Coronavirus Resarch Center][jh].  The 
+[Mortality Analysis][ma] page captures these statistics per country.
+
+
+U.S. Flu deaths, by contrast, [average about][fd] 36,000 per year out of roughly
+30 million cases each year, implying a case fatality rate of 0.12%.
+
+The Lancet published an [interesting study][la] on the differences in outcomes
+for hospitalized patients with Covid and the Flu, which, while not as drastic 
+in details as the full numbers above, points out that
+
+> Therefore, the number of observed deaths was considerably higher than what would
+> be expected if the COVID-19 population had the same probability of dying as the
+> influenza population. 
+
+
+
+
+  [fd]: https://www.cdc.gov/flu/about/burden/index.html
+  [jh]: https://coronavirus.jhu.edu/
+  [la]: https://www.thelancet.com/article/S2213-2600(20)30527-0/fulltext
+  [ma]: https://coronavirus.jhu.edu/data/mortality
+  [me]: https://www.merck.com/news/merck-statement-on-ivermectin-use-during-the-covid-19-pandemic/
   [mm]: #/2021-03-19/
+  [ps]: https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD015017.pub2/full
+  [wi]: https://en.wikipedia.org/wiki/COVID-19_drug_repurposing_research#Ivermectin
 
 --------------------------------------------------------------------------------
