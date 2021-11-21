@@ -1,6 +1,7 @@
 Title: Science and Scientists, Responses
 Date: 2019-10-06
-Topics: Global Warming, Series - Science and Scientists
+Topics: Global Warming
+Series: Science and Scientists
 People: Dan Armstrong
 TeaserParagraphs: 2
 Content:
