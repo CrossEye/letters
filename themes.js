@@ -169,5 +169,22 @@ const colors = {
     "tertiary-text": "#444444",
     "tertiary-highlight": "#8cd0ac",
     "tertiary-accent": "#bbdba7"
+  },
+  "Green River": {
+    "neutral": "#c2d2da",
+    "border": "#0f2c11",
+    "accent": "#36503b",
+    "primary-background": "#61887f",
+    "primary-text": "#c2d2da",
+    "primary-highlight": "#1f6485",
+    "primary-accent": "#4a624c",
+    "secondary-background": "#1f6485",
+    "secondary-text": "#c2d2da",
+    "secondary-highlight": "#4a624c",
+    "secondary-accent": "#616c55",
+    "tertiary-background": "#164960",
+    "tertiary-text": "#c2d2da",
+    "tertiary-highlight": "#a7ae88",
+    "tertiary-accent": "#36503b"
   }
 }
