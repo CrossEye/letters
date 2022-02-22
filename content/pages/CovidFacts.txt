@@ -1,6 +1,5 @@
 Title: Covid Facts
 Slug: covid
-Sort Order: 2
 People: Gary Gile, Sam Prentice, Carol Johnson
 Content:
 --------------------------------------------------------------------------------

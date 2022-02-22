@@ -382,6 +382,10 @@ p.more {
   margin-bottom: 1rem;
 }
 
+summary h3 {
+  display: inline;
+}
+
 
 
 /*********************************************************/

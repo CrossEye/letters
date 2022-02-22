@@ -130,7 +130,14 @@ const makeSidebarPages = (pages) =>
     .filter (p => 'Sort Order' in p)
     .sort (({'Sort Order': a}, {'Sort Order': b}) => a - b)
     .map (({Title, Slug}) => `<h3><a href="#/pages/${Slug}/">${Title}</a></h3>`) .join ('\n')
-  }`
+  }
+  <details><summary><h3>Other Pages</h3></summary><ul>
+  ${pages 
+    .filter (p => !('Sort Order' in p))
+    .map (({Title, Slug}) => `<li><a href="#/pages/${Slug}/">${Title}</a></li>`) .join ('\n')
+  }
+  </ul></details>
+  `
 
 const makeSidebarLetters = (
   content,
@@ -290,7 +297,7 @@ const makePerson = (
   `<h1>Pages mentioning ${person}</h1>
   <ul class="long">${pgs .map (page => 
     `<li><a href="#/pages/${page .Slug}/">${page .Title}</a></li>`      
-  )}</ul>` : ``}
+  ) .join ('\n')}</ul>` : ``}
   </div>`
 
 

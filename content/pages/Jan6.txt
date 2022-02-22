@@ -1,0 +1,39 @@
+Title: January 6<sup>th</sup> Attacks
+Slug: jan6
+People: Sam Prentice
+Content:
+--------------------------------------------------------------------------------
+
+January 6<sup>th</sup> Attacks on the Capitol
+================================
+
+As I've started to do with the [Covid page][co], I'm collecting information here
+about the January 6, 2021 attack on the U.S. Capitol building.  Much
+misinformation is regularly sent in Rivereast letters.  This will try to post
+actual facts, epecially as they counter lies promoted in those letters.
+
+----------
+
+### "It was a minor incident" ###
+
+#### Claim ###
+
+First up, Sam Prentice's claim in his letter in the February 18, 2022 issue that 
+says that it was "little more than a disruption at the Golden Corral".
+
+
+#### Fact ####
+
+This 40-minute [Days Of Rage][dr] mini-documentary from the New York Times
+consists of footage from that day.  It forcefully demonstrates that this is
+nonsense.  It was an organized, deadly attempt to prevent Congress from
+performing its duties, with threats to the lives of numerous members of the
+House and Senate, as well as the Vice President.
+
+<iframe title="New York Times Video - Embed Player" width="480" height="321" frameborder="0" scrolling="no" allowfullscreen="true" marginheight="0" marginwidth="0" id="nyt_video_player" src="https://www.nytimes.com/video/players/offsite/index.html?videoId=100000007606996"></iframe>
+
+
+  [co]: /#/pages/covid
+  [dr]: https://nyti.ms/34VsZ3p
+  
+--------------------------------------------------------------------------------
