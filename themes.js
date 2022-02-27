@@ -171,13 +171,13 @@ const colors = {
     "tertiary-accent": "#bbdba7"
   },
   "Green River": {
-    "neutral": "#c2d2da",
+    "neutral": "#0f2c11",
     "border": "#0f2c11",
     "accent": "#36503b",
     "primary-background": "#61887f",
     "primary-text": "#c2d2da",
-    "primary-highlight": "#1f6485",
-    "primary-accent": "#4a624c",
+    "primary-highlight": "#4a624c",
+    "primary-accent": "#1f6485",
     "secondary-background": "#1f6485",
     "secondary-text": "#c2d2da",
     "secondary-highlight": "#4a624c",
