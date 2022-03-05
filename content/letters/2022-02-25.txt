@@ -36,4 +36,14 @@ as little about the entertainers' political opinions as I do about Mr.
 Kozlowski's parroted right-wing conspiracy theories.  Almost.
 
 --------------------------------------------------------------------------------
- 
+
+Note: 
+--------------------------------------------------------------------------------
+
+An earlier version of this letter had bad links to two of the references.  The
+ones pointing to my site, `link.sauyet.com`, were written with `https://...`
+instead of `http://...`.  They are corrected now.  I've never bothered paying
+for SSL certificates for my personal low volume site, but am investigating
+doing so now so that this won't happen again. 
+
+--------------------------------------------------------------------------------
