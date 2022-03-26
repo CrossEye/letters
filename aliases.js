@@ -6,5 +6,8 @@ const aliases = {
   ],
   "Don Denley": [
     "Donald Denley"
+  ],
+  "Danny Holtsclaw": [
+    "Daniel Holtsclaw"
   ]
 }
