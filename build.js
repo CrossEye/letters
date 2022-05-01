@@ -50,7 +50,7 @@ const parse = (file) =>
     ).pairs)
 
 const linkPeople = (People, Content, aliases) => 
-  // console .log (aliases) ||
+  console .log (aliases) ||
   People .reduce ((c, p) => c .replace (new RegExp (`(${[p, ...((aliases ||{}) [p] || [])].join('|')})`), (s, t) => `[${t}](#/person/${p.replace(/ /g, '+')}/)`), Content)
 
 const convertLetter = (aliases) => ({Topics = '', People: ps = '', Content, Note = '', ...rest}, 
