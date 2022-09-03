@@ -1,0 +1,56 @@
+Title: Response to Tony Heller
+Slug: heller-shetland
+People: Sam Prentice
+Content:
+--------------------------------------------------------------------------------
+
+RealClimateScience
+==================
+
+Letters to the Rivereast promote [Tony Heller's website][rcs] as a counter to
+the antrhopogenic global warming consensus. This site has [terrible
+ratings][mbfc] on media analysts sites, and I've seen it to contain barely
+researched climate articles mixed in with various right-wing content. Reading it
+today, the first climate article was
+https://realclimatescience.com/2022/09/leaders-in-the-race-to-net-zero/.
+
+I added a comment to its nonsense; I don't know if the modertor will approve.
+It's included below.
+
+For context, the article was incredibly brief, saying only
+
+> On March 21, 2022 the Shetland Islands were *leaders in the race to net zero*.
+> By April 2023, ninety-six percent of the population will be in fuel poverty.
+
+and then linking to the following two articles, quoting the first two paragraphs
+of each directly:
+
+  - https://www.euronews.com/green/2022/03/02/the-remote-shetland-islands-are-a-surprising-leader-in-the-race-to-net-zero
+  - https://www.euronews.com/green/2022/09/01/fuel-poverty-could-hit-anyone-earning-under-120k-on-these-remote-uk-islands?dicbo=v2-dfe8ddef87cb6d67c0e3327dfa8f0dba
+
+My comment follows:
+
+> Do you really expect people to see those two headlines and conclude that 
+> moving toward net-zero is causing the Shetland’s fuel poverty? Do you believe
+> your audience is really that stupid? Do they not read the linked articles? Do
+> you?
+> 
+> Because if you did, you would learn from the first one that the Shetland 
+> Islands are already — and have long been — among the most fuel-poor in 
+> Britain, despite the long history of oil extraction in their region.
+> 
+> You would further learn that the wind farms in development for a decade and
+> due to come online in 2024 are expected to radically change this situation,
+> that the islands are investing in innovative hydrogen extraction technologies
+> in part to use some of their excess energy because they will be generating
+> more wind energy than they can use and more than the current infrastructure
+> will allow them to export.
+> 
+> So the question is simple: do you actually believe the things you’re implying
+> in the face of the very evidence you supply, or are you trying to manipulate
+> what you see as a stupid audience into believing a lie?
+
+  [mbfc]: https://mediabiasfactcheck.com/real-climate-science/
+  [rcs]: https://realclimatescience.com
+
+--------------------------------------------------------------------------------
