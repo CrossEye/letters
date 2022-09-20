@@ -50,8 +50,8 @@ const parse = (file) =>
     ).pairs)
 
 const linkPeople = (People, Content, aliases) => 
-  People .reduce ((c, p) => c .replace (new RegExp (`(${[p, ...((aliases ||{}) [p] || [])].join('|')})`), (s, t) => `[${t}](#/person/${p.replace(/ /g, '+')}/)`), Content)
-
+  People .reduce ((c, p) => c .replace (new RegExp (`(${[p, ...((aliases ||{}) [p] || [])].map(n => n .replace (/\s/g, '[\\s]+')).join('|')})`), (s, t) => `[${t}](#/person/${p.replace(/ /g, '+')}/)`), Content)
+  
 const convertLetter = (aliases) => ({Topics = '', People: ps = '', Content, Note = '', ...rest}, 
     People = ps .trim () .split (/\,\s*/) .filter (Boolean)
 ) => ({
