@@ -1,0 +1,123 @@
+Title: Hit a Nerve
+Date: 2022-09-23
+Topics: Global Warming, Science, Fact-checking
+People: Sam Prentice
+Content:
+--------------------------------------------------------------------------------
+
+(My first draft ran over 1000 words. I knew I could not cut enough; I've posted
+the [slightly shortened] original alongside this version at
+http://letters.sauyet.com/#/2022-09-23/.)
+
+I hit a nerve for Sam Prentice. He suggests I don't do my own research, adopting
+the consensus view because I am a sheep or because of sinister motives. Then he
+tells us water vapor absorbs on two of the bands that CO2 does and therefore
+must dwarf the effect of the relatively small amount of CO2 in the atmosphere.
+
+I really want to know how did Mr. Prentice, a champion of independent thinking,
+calculate the absorption bands for CO2 and water? What equipment did he use?
+What were the experimental controls? What was his mathematical model?
+
+When he tells us "humans only produce about 4% of annual atmospheric CO2
+volumes", what does he mean to suggest? Is he saying 4% of total atmospheric CO2
+is due to human activity? Or that 4% of the annual *increase* is anthropogenic?
+Something else? And how did he calculate this? What is his test grid
+granularity? Did he travel the world to collect samples? How did he collect the
+higher altitude ones, or did he use some projection? How does his model account
+for land use change and decreasing water solubility at higher temperatures? What
+other factors does he use? Does his model incorporate specific solar radiation
+changes, or does it smooth them over?
+
+I'm 99.9+% certain Mr. Prentice is not a scientist and did not derive this
+information himself.
+
+Did he accept all this information on the authority of someone else? Did he get
+it from a source he found that avoids information "contrary to his biased
+narrative?" Can he provide any reason to trust his source over the consensus
+ones? Quackery (yes, quackery:
+https://mediabiasfactcheck.com/real-climate-science/) sites don't count.
+
+--------------------------------------------------------------------------------
+Note:
+--------------------------------------------------------------------------------
+
+*(This is the more complete version, not as tightly edited as usual.)*
+
+I guess I hit a nerve for Sam Prentice. He suggests that I don't do enough of my
+own research and am just adopting the consensus view because I am a sheep, or
+because sinister motivea push me to reduce fossil fuel consumption. Then he
+tells us -- incorrectly -- that water vapor absorbs on two of the bands that CO2
+does and therefore must dwarf the effect of the relatively small amount of CO2
+in the atmosphere.
+
+Before we get to the actual facts, I really want to know Mr. Prentice, how did
+you, a champion of independent thinking, calculate the absorption bands for CO2
+and water? What equipment did you use? What were the experimental controls? What
+was your mathematical model? I'm at least 99.9% certain that you are not a
+scientist and did not derive this information yourself. So did you get it from a
+source you found that avoids information "contrary to your biased narrative?"
+
+Similarly, when you tell us that "humans only produce about 4% of annual
+atmospheric CO2 volumes", what do you mean to suggest? Are you saying that 4% of
+total atmospheric CO2 is due to human activity? Or that 4% of the annual
+*increase* is anthropogenic? And how did you calculate this? What is the
+granularity of your test grid? Did you have to travel all over the world to
+collect your samples? How did you collect the higher altitude ones, or did you
+use some sort of interpolation? And in your model, how do you account for land
+use change and decreasing water solubility at higher temparatures? What other
+factors are in your model? Does it involve solar radiation changes, or do you
+smooth them over?
+
+In fact, water vapor absorbs in bands around 71, 6.3, 2.7, 1.87 and 1.38
+micrometers, where CO2 aborbs bands 15, 4.3, 2.7, and 2 micrometers. Notice that
+there is only one overlap, not two (the bands around 1.87 and 2 are too narrow
+to overlap.) It is in the 15 and 4.3 bands that CO2 really shines. But, before
+you ask, how do I know this, since I'm not a scientist either? Well, I knew from
+previous reading that there was an overlapping band, but like any sensible
+layperson, I searched the web to find what they were. I did go deeper, finding a
+few likely articles, and checking their citation counts, before settling on one
+from the National Library of Medicine (http://link.sauyet.com/63 - Warning: this
+is slow going and not for the mathematically faint-at-heart.) You see, I
+actually believe in the process of science, and I look to see what scientists
+have discovered.
+
+He keeps trying to promote Tony Heller's website as a source of truth on this
+matter... without providing evidence that there's any reason to trust Heller
+over the consensus view. But as I pointed out in June, again in July, and again
+in August, this site has been rated
+(https://mediabiasfactcheck.com/real-climate-science/) as purely
+conspiracy-pseudoscience. Of course when he hears this, Sam Prentice turns his
+ire on the fact-checkers, saying I simply seek out sympathetic positions. No. I
+mostly use four of the most trusted fact-checking sites around:
+https://snopes.com for urban legends, https://factcheck.org and
+https://politifact.com/ for politics, and https://mediabiasfactcheck.com/ for
+media analysis. These are all well-known, highly respected sites. If Mr.
+Prentice wants to suggest a different unbiased fact-checker, I'm all ears.
+Meanwhile I have spent some time reading his preferred site. A response to some
+of its threads is at http://letters.sauyet.com/#/pages/heller-shetland/.
+
+He discusses water vapor's greeenhouse effect. Here he's on more solid ground.
+Water vapor is a substantial source of warming. But you know why the atmosphere
+is becoming able to hold more of water vapor? Because it's being heated up by
+gases like CO2 and methane. Increasing water vapor would be spiraling out of
+control if it wasn't checked. But it is, by a mechanism even Sam must have heard
+of: this little meterological process known as *rain*. There is no real
+equivalent for CO2. The natural equilibrium involving ocean, soil, and plant
+storage of C02 is simply not able to extend to the additional amounts human
+activity is pumping out.
+
+He claims that the attempt to reduce CO2 generation is pushing us toward
+"Economic collapse, ecological calamaty, and untold human misery." Although I
+disagree with them, I know the argument for economic collapse and hence for
+human misery. But how in the world will stopping the digging of fossil fuels
+cause an ecological calamity? This sounds absurd, and I'd be quite curious to
+hear the justification.
+
+Finally, let's note the changing arguments of the global warming Deniers.
+Fifteen years ago, they claimed that the Earth was not heating up. Ten years
+ago, they said, ok, it is, but human activity doesn't substantially contribute.
+Now they're accepting human causes but claiming that increasing CO2 is *good*
+for us. It's clear they're arguing not from any evidence, but just on what will
+best support their predecided political viewpoint.
+
+--------------------------------------------------------------------------------
