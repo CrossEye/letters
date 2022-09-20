@@ -50,7 +50,6 @@ const parse = (file) =>
     ).pairs)
 
 const linkPeople = (People, Content, aliases) => 
-  console .log (aliases) ||
   People .reduce ((c, p) => c .replace (new RegExp (`(${[p, ...((aliases ||{}) [p] || [])].join('|')})`), (s, t) => `[${t}](#/person/${p.replace(/ /g, '+')}/)`), Content)
 
 const convertLetter = (aliases) => ({Topics = '', People: ps = '', Content, Note = '', ...rest}, 
@@ -111,9 +110,11 @@ const makeAllInOne = ([content, pages, themes, aliases]) =>
 const makeLetters = (aliases) =>
   readdir ('./content/letters') 
     .then (map (combinePaths ('./content/letters')))
+    .then (tap (console .log))
     .then (map (readFile))
     .then (allPromises)
     .then (map (parse))
+    // .then (tap (console .log))
     .then (map (convertLetter (aliases)))
     .then (sort (prop ('Date'), 'descending'))
     .then (stringify (null, 2))  
