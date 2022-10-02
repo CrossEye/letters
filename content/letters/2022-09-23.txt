@@ -2,12 +2,11 @@ Title: Hit a Nerve
 Date: 2022-09-23
 Topics: Global Warming, Science, Fact-checking
 People: Sam Prentice
+TeaserParagraphs: 2
 Content:
 --------------------------------------------------------------------------------
 
-(My first draft ran over 1000 words. I knew I could not cut enough; I've posted
-the [slightly shortened] original alongside this version at
-http://letters.sauyet.com/#/2022-09-23/.)
+*(My first draft ran over 1000 words. I've posted the [slightly shortened] original below.)*
 
 I hit a nerve for Sam Prentice. He suggests I don't do my own research, adopting
 the consensus view because I am a sheep or because of sinister motives. Then he
@@ -94,7 +93,7 @@ https://politifact.com/ for politics, and https://mediabiasfactcheck.com/ for
 media analysis. These are all well-known, highly respected sites. If Mr.
 Prentice wants to suggest a different unbiased fact-checker, I'm all ears.
 Meanwhile I have spent some time reading his preferred site. A response to some
-of its threads is at http://letters.sauyet.com/#/pages/heller-shetland/.
+of its threads is at [http://letters.sauyet.com/#/pages/heller-shetland/][hs].
 
 He discusses water vapor's greeenhouse effect. Here he's on more solid ground.
 Water vapor is a substantial source of warming. But you know why the atmosphere
@@ -113,11 +112,15 @@ human misery. But how in the world will stopping the digging of fossil fuels
 cause an ecological calamity? This sounds absurd, and I'd be quite curious to
 hear the justification.
 
-Finally, let's note the changing arguments of the global warming Deniers.
+Finally, let's note the changing arguments of the global warming deniers.
 Fifteen years ago, they claimed that the Earth was not heating up. Ten years
 ago, they said, ok, it is, but human activity doesn't substantially contribute.
 Now they're accepting human causes but claiming that increasing CO2 is *good*
 for us. It's clear they're arguing not from any evidence, but just on what will
 best support their predecided political viewpoint.
 
+  [hs]: #/pages/heller-shetland/
+
 --------------------------------------------------------------------------------
+
+
