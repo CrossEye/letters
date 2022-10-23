@@ -1,7 +1,7 @@
 Title: No Republican Votes
 Date: 2022-10-28
 Topics: Republicans, Donald Trump
-People: 
+TeaserParagraphs: 2
 Content:
 --------------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ Negro", Pat Buchanan, George W. Bush, Karl Rove, "Swift Boat Veterans for
 Truth", Dick Cheney, Trent Lott, Sonny Perdue, Saxby Chambliss, Scooter Libby,
 John Cornyn, Donald Rumsfeld, the Club for Growth, the Heritage Foundation, Fox
 News, Jack Abramoff, Mitch McConnell, Mark Foley, Ralph Reed, Birthers, Louis
-Gohmert, Sean Hannity, Joe Arpiao, Kellyanne Conway, Sarah Palin, Glenn Beck,
+Gohmert, Sean Hannity, Joe Arpaio, Kellyanne Conway, Sarah Palin, Glenn Beck,
 Cliven and Ammon Bundy.
 
 Rand Paul, Steve King, "Death Panels", Trey Gowdy, Darrell Issa, Jim (Gym)
@@ -40,9 +40,9 @@ Richard Burr, The Proud Boys, Oath Keepers, Mark Meadows.
 And of course Donald Trump.
 
 --------------------------------------------------------------------------------
-
 Note:
 --------------------------------------------------------------------------------
+
 Even after self-censoring as I wrote the initial list, I still had to cut for
 space.  These were also on my original list:
 
