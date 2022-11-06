@@ -8,7 +8,7 @@ Content:
 
 Some report cards on recent letters.
 
-**Student: Colin McNamara, Subject: Rhetoric, Grade: C-.**
+*Student: Colin McNamara, Subject: Rhetoric, Grade: C-.*
 
 Colin improved substantially this quarter. He uses actual facts and figures.
 While some of them are suspect, they might serve as the basis for an actual
@@ -16,8 +16,7 @@ argument. However, he never gets around to making his argument; his essays are
 unconvincing innuendo. He doesn't dig any further than the headlines. He has a
 long way to go.
 
-
-**Student: Ed Kozlowski, Subject: Remedial Writing, Grade B-.**
+*Student: Ed Kozlowski, Subject: Remedial Writing, Grade B-.*
 
 We're all so proud of Eddie. After his struggles with persuasive writing, his
 confusion between cause and effect, and his inability to grasp basic logic,
@@ -28,7 +27,7 @@ few parallels. Still, this is a genuine parody. We're hoping that with a few
 months of intensive work, he can make one that's actually funny.
 
 
-**Student: C. Anne Johnson, Subject: Current Affairs, Grade: F.**
+*Student: C. Anne Johnson, Subject: Current Affairs, Grade: F.*
 
 We recently discussed limiting Annie's exposure to propaganda such as Breitbart,
 Daily Caller and Fox News. This clearly hasn't happened yet. She is still
@@ -37,8 +36,7 @@ terrorism, the FBI, Jan 6, censorship, and much more. Please, parents, you need
 to give her a diet of actual news. And she needs to review the Fact-Checking
 unit.
 
-
-**Student: Aravis Pasha, Subject: History, Grade: C.**
+*Student: Aravis Pasha, Subject: History, Grade: C.*
 
 Aravis' recent project started out well, including facts about human migration
 to the Americas. But it quickly became muddled, showing no understanding of the
