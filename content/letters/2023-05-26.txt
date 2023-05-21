@@ -1,0 +1,58 @@
+Title: Charlatans and Evidence
+Date: 2023-05-16
+People: Sam Prentice
+Topics: Donald Trump, Tony Heller, Evidence, URLs, Presidential rankings
+Content:
+--------------------------------------------------------------------------------
+
+Sam Prentice defends Tony Heller from charges of being a charlatan.  Heller runs
+the blog https://realclimatescience.com/, rated Conspiracy-Pseudoscience and
+Quakery (https://mediabiasfactcheck.com/real-climate-science/).  It's possible
+Heller is not a charlatan.  If he believes the nonsense he's peddling, he's not
+a charlatan, only a badly informed menace.  Still, he convinces the gullible
+that he understands NASA's and NOAA's data better than NASA and NOAA; he
+*sounds* like a charlatan. 
+
+Mr. Prentice says I never back up my claims and in the next sentence complains
+about URLs I post.  Sam, those *are* evidence backing up my claims!  I use
+easy-to-type URLS in my letters.  For instance, I created a link to the
+fact-check above.  Now you can type just http://link.sauyet.com/77.  If you
+don't trust these, you can now append "/preview" to them.  Visiting
+http://link.sauyet.com/77/preview, you'll see the actual URL and can decide
+whether to click the link.
+
+Prentice's letter -- falsely chiding me for not providing evidence -- itself
+provides no evidence.  Don't you love irony?  Let's examine one of his claims:
+that Joe Biden is the worst president in history.  This is opinion, but there
+are actual experts who rank presidents.  I know only one poll covering Biden,
+from Sienna College in 2022 (overview: http://link.sauyet.com/78, data:
+http://link.sauyet.com/79), ranking Biden number 19, in the top half.  Trump, by
+contrast, is 43rd out of 45.  The other surveys covering Trump place him 41st,
+42nd, and last.  (Details: http://letters.sauyet.com/#/2023-05-26).  While Sam
+Prentice sees Biden as the worst, experts see him as above average and see Trump
+among the worst.  Evidence!
+
+I respond to Prentice's ridiculous outbursts on climate because this is today's
+defining crisis.  I want my grandchildren to inherit a livable world.  We're on
+a path away from that.  The nonsense that Heller promotes and Prentice parrots
+could keep us from finding a better path.
+
+
+--------------------------------------------------------------------------------
+Note:
+--------------------------------------------------------------------------------
+
+Three more presidential ranking polls:
+
+  * [New York Times, 2018][nyt]
+  * Sienna College, 2018, [overview][sc18o], and [data][sc18d]
+  * [C-Span, 2021][csp]
+
+These are all I could find from reputable sources.  There may be others.
+
+  [csp]: https://www.c-span.org/presidentsurvey2021/?page=overall
+  [nyt]: https://www.nytimes.com/interactive/2018/02/19/opinion/how-does-trump-stack-up-against-the-best-and-worst-presidents.html
+  [sc18o]: https://scri.siena.edu/wp-content/uploads/2019/02/2019_Release_2018_Final.pdf
+  [sc18d]: https://scri.siena.edu/wp-content/uploads/2019/02/Presidents-2018-Rank-by-Category.pdf
+
+--------------------------------------------------------------------------------
