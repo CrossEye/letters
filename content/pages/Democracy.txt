@@ -1,0 +1,57 @@
+Title: A Democracy and a Republic
+Slug: democracy
+People: Sam Prentice
+Content:
+--------------------------------------------------------------------------------
+
+The United States is a Democracy and a Republic
+===============================================
+
+Writers to the Rivereast regularly repeat a false refrain.  They tell us that
+"The U.S. is not a democracy; it is a republic."  This is entirely wrong.  In
+fact, the U.S. is both a republic and a democracy."
+
+We are a republic because we have no monarch.  We are a democracy because we
+regularly elect out lawmakers.  It really is that simple.
+
+The false dichotomy has been very prominent lately as conservatives want to
+promote the status quo in opposition to popular will.  They'll cite founders who
+were very nervous about democracy and the tyranny of the majority.  They are
+right; founders such as Hamilton and Adams were skeptical.  But others such as
+Paine and Jefferson were more enthusiastic. (Note that the party created by
+Jefferson and Madison was initially known as the Democratic-Republicans.)
+
+But much more important is the country we are now.  You might notice some
+changes over the years, including enfranchisement of women, former slaves,
+other people of color, and adults as young as 18.  We've started direct 
+election of Senators, added presidential electors for the District of
+Columbia, and banned the poll tax.  We've overturned Jim Crow restrictions.
+
+Over the years, we've gradually come closer to Lincoln's description: "a
+government of the people, by the peopls and for the people."
+
+
+Webster's definitions
+=====================
+
+  - [*Democracy*][dd]: a government in which the supreme power is vested in the
+  people and exercised by them directly or indirectly through a system of
+  representation usually involving periodically held free elections 
+
+  - [*Republic*][dr]: a government having a chief of state who is not a monarch
+  and who in modern times is usually a president
+
+Letters discussing this
+-----------------------
+
+  - [An Actual Democracy][ad], *November 7, 2020* 
+  - [How to Pretend to Win an Argument][pw], *Novever 20, 2020*
+  - [Founders' Morality][fm], *April 7, 2023*
+
+  [ad]: #/2020-11-07/
+  [dd]: https://www.merriam-webster.com/dictionary/democracy
+  [dr]: https://www.merriam-webster.com/dictionary/republic
+  [pw]: #/2020-11-20/
+  [fm]: #/2023-04-07/
+  
+--------------------------------------------------------------------------------
