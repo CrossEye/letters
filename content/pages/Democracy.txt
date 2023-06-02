@@ -9,7 +9,7 @@ The United States is a Democracy and a Republic
 
 Writers to the Rivereast regularly repeat a false refrain.  They tell us that
 "The U.S. is not a democracy; it is a republic."  This is entirely wrong.  In
-fact, the U.S. is both a republic and a democracy."
+fact, the U.S. is both a republic and a democracy.
 
 We are a republic because we have no monarch.  We are a democracy because we
 regularly elect out lawmakers.  It really is that simple.
@@ -28,7 +28,7 @@ election of Senators, added presidential electors for the District of
 Columbia, and banned the poll tax.  We've overturned Jim Crow restrictions.
 
 Over the years, we've gradually come closer to Lincoln's description: "a
-government of the people, by the peopls and for the people."
+government of the people, by the people, and for the people."
 
 
 Webster's definitions
@@ -47,11 +47,13 @@ Letters discussing this
   - [An Actual Democracy][ad], *November 7, 2020* 
   - [How to Pretend to Win an Argument][pw], *Novever 20, 2020*
   - [Founders' Morality][fm], *April 7, 2023*
+  - [Trumpian Lessons][tl], *June 2, 2023*
 
   [ad]: #/2020-11-07/
   [dd]: https://www.merriam-webster.com/dictionary/democracy
   [dr]: https://www.merriam-webster.com/dictionary/republic
-  [pw]: #/2020-11-20/
   [fm]: #/2023-04-07/
+  [pw]: #/2020-11-20/
+  [tl]: #/2023-06-02/
   
 --------------------------------------------------------------------------------

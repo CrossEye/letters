@@ -259,7 +259,7 @@ const makeCurrent = (content) =>
 const makePage = (pages) => (
   content, 
   hash,
-  slug = hash .slice (8, -1) .replace (/\+/g, ' '),
+  slug = hash .slice (8, hash .endsWith ('/') ? -1 : Infinity) .replace (/\+/g, ' '),
   {Title, Content} = pages .find (({Slug}) => Slug == slug)
 ) => `<div class="main box">${Content}</div>`
       
@@ -268,7 +268,7 @@ const makePage = (pages) => (
 const makeTopic = (
   content, 
   hash,
-  topic = hash .slice (8, -1) .replace (/\+/g, ' '),
+  topic = hash .slice (8, hash .endsWith ('/') ? - 1 : Infinity) .replace (/\+/g, ' '),
   letters = content .filter (({Topics}) => Topics .includes (topic))
 ) => 
   `<div class="main box"><h1>Letters with topic "${topic}"</h1>
@@ -283,7 +283,7 @@ const makeTopic = (
 const makePerson = (
   content, 
   hash,
-  person = hash .slice (9, -1) .replace(/\+/g, ' '),
+  person = hash .slice (9, hash .endsWith ('/') ? - 1 : Infinity) .replace(/\+/g, ' '),
   letters = content .filter (({People}) => People .includes (person)),
   pgs = pages .filter (({People = []}) => People .includes (person))
 ) => 
