@@ -1,0 +1,53 @@
+Title: Disastrous Party
+Date: 2023-11-17
+Topics: Republicans
+Content:
+--------------------------------------------------------------------------------
+
+It's no secret that the Republican party is a mess.  This is clear in the
+important issues of our time but also obvious in the small details.
+
+Let's start small.  The Republicans hung a banner near Andover's recent
+election.  Alongside traditional Republican logos and slogans, it quoted Thomas
+Jefferson: "A government big enough to give you everything you want, is big
+enough to take away everything you have."  Sure, a traditional small-government
+slogan, aligned perhaps with what the party stood for... once upon a time.
+
+Except, Thomas Jefferson never said that.
+
+It's very easy to check these things.  I pasted the first ten words of the quote
+into popular search engines; the first hits -- including ones from the
+definitive Jefferson source, https://www.monticello.org/ -- make it clear that
+Jefferson never wrote this.  It's a small thing, to be sure.  But this is a
+reusable banner presumably meant to hang at many events.  You'd think they'd
+take care before falsely attributing their propaganda to one of our country's
+Founders.
+
+If Republican problem were limited to such minor peccadilloes, it would be fine.
+But it's not.  The House Republicans recently voted to send $14 billion in aid
+to Israel.  To offset the cost, they want to cut funding to the IRS.
+
+We don't need analysis of the Israeli-Palestinian situation to see how
+ridiculous this is.  The nonpartisan Congressional Budget Office's data says
+that this would *increase* the deficit by about $14 billion, because without
+enforcement, tax cheats simply get away with it.  Think of the moral
+implications: The Republican party says, "Yes, we'll help out one of our closest
+allies, but only if you let us make a political point that will worsen our debt
+and help rich tax cheats."
+
+What a disaster!
+
+--------------------------------------------------------------------------------
+Note:
+--------------------------------------------------------------------------------
+#### Sources ####
+
+* [Non-Jefferson quote][nj]
+* I haven't found a CBO score for this particular bill, but [recent ones][cb] 
+  are found to increase the deficit by about the same amount as the cut.  Bigger
+  cuts would have even higher relative impacts.
+    
+
+  [nj]: https://www.monticello.org/research-education/thomas-jefferson-encyclopedia/government-big-enough-give-you-everything-you-wantspurious-quotation/
+  [cb]: https://www.budget.senate.gov/chairman/newsroom/press/memorandum-cuts-to-irs-tax-enforcement-would-increase-the-deficit
+--------------------------------------------------------------------------------
