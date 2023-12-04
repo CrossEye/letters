@@ -2,7 +2,7 @@ Title: MAGA Meaning
 Date: 2023-12-08 
 Topics: MAGA, Donald Trump
 People: Ken Hjulstrom
-TeaserParagraps: 2
+TeaserParagraphs: 2
 Content:
 --------------------------------------------------------------------------------
 Ken Hjulstrom is probably not naive enough to believe "MAGA" is an innocent
