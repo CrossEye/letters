@@ -42,12 +42,21 @@ Note:
 --------------------------------------------------------------------------------
 #### References ####
 
-  * Trump disqualification: https://www.snopes.com/news/2023/12/29/trump-disqualification-questions/
+  * Trump disqualification:
+  https://www.snopes.com/news/2023/12/29/trump-disqualification-questions/
   * Manufacturing Employment: https://fred.stlouisfed.org/series/MANEMP
   * All Emloyment: https://fred.stlouisfed.org/series/PAYEMS
-  * Federal debt: https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny (comparing all years of Trump to first 9 quarters of Biden, using values from 2017-09-19 [just before Trump's first budget], 2021-09-30 [end of Trump's last budget], and 2023-12-29 [end of FY2023-Q1, one quarter of the way through Biden's third budget]. Trump, over 16 quarters: 40.4251% increase, 8.8582% annually; Biden, over 9 quarters:  19.6011$ increase, 8.2805% annually)
-  * Net oil imports/exports: https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=MTTNTUS2&f=M
-  * Per-capita GDP: https://www.macrotrends.net/countries/USA/united-states/gdp-per-capita
+  * Federal debt:
+  https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny
+  (comparing all years of Trump to first 9 quarters of Biden, using values from
+  2017-09-19 [just before Trump's first budget], 2021-09-30 [end of Trump's last
+  budget], and 2023-12-29 [end of FY2023-Q1, one quarter of the way through
+  Biden's third budget]. Trump, over 16 quarters: 40.4251% increase, 8.8582%
+  annually; Biden, over 9 quarters:  19.6011$ increase, 8.2805% annually)
+  * Net oil imports/exports:
+  https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=MTTNTUS2&f=M
+  * Per-capita GDP:
+  https://www.macrotrends.net/countries/USA/united-states/gdp-per-capita
 
 --------------------------------------------------------------------------------
 
