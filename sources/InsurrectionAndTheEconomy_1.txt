@@ -1,0 +1,24 @@
+Michael Chotkowski: "What has Trump done to be excluded from ballots in various states?"
+
+It's very simple: he incited an insurrection, ending the USA's unbroken, 240-year streak of peaceful transitions of presidential power.  The 14th Amendment is clear: "No person shall [ ... ] hold any office, civil or military, under the United States, [ ... ], who, having previously taken an oath [ ... ] as an officer of the United States [ ... ] to support the Constitution of the United States, shall have engaged in insurrection or rebellion against the same, or given aid or comfort to the enemies thereof."  Note there is no mention of conviction in there, and when it was used to exclude Confederate leaders, few had been convicted.
+
+Ken Hjulstrom: The Trump economy was better than the Biden economy.
+
+Trump *lost* 2.67 million jobs, including 170,000 manufacturing ones.  Biden has *gained* 14.3 million jobs in three years, including 790,000 manufacturing ones.  Before you credit the COVID recovery, note that total employment under Biden is 4.89 million jobs higher than Trump's pre-Covid maximum, including 160,000 more manufacturing jobs.  This is partly because under Biden, we've passed an Infrastructure bill, the CHIPs act, and poorly named (thanks, Manchin!) "Inflation Reduction Act", mostly a climate and green manufacturing bill.  Remember the ongoing joke under Trump about every week going to be Infrastructure Week?  Under Biden, it actually happened.
+
+The right is whining about the debt, which grew at 8.9% per year under Trump, and at a slghtly lower 8.3% per year under Biden.  They crow about energy independence, but really need to check their facts.  Our green energy creation is on a steady rise; net oil imports have been falling steadily since 2006, and are much lower than they ever were during the Trump administration.  We've averaged a net *export* of 877,000 barrels per month under Biden (for better or for worse, when it comes to the environment.)  Per-capita GDP rose at 1.5% per year under Trump and at an astounding 10.0% under Biden.
+
+I'll take the current economy, thank you.  And I'll definitely take a President who believes in our democracy.  Sorry, Mr. Trump.
+
+(References at http://letters.sauyet.com/#/2024-01-12/)
+
+
+
+References:
+  
+  * Trump disqualification: https://www.snopes.com/news/2023/12/29/trump-disqualification-questions/
+  * Manufacturing Employment: https://fred.stlouisfed.org/series/MANEMP
+  * All Emloyment: https://fred.stlouisfed.org/series/PAYEMS
+  * Federal debt: https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny (comparing all years of Trump to first 9 quarters of Biden, using values from 2017-09-19 [just before Trump's first budget], 2021-09-30 [end of Trump's last budget], and 2023-12-29 [end of FY2023-Q1, one quarter of the way through Biden's third budget]. Trump, over 16 quarters: 40.4251% increase, 8.8582% annually; Biden, over 9 quarters:  19.6011$ increase, 8.2805% annually)
+  * Net oil imports/exports: https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=MTTNTUS2&f=M
+  * Per-capita GDP: https://www.macrotrends.net/countries/USA/united-states/gdp-per-capita
