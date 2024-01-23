@@ -15,7 +15,7 @@ math degrees.
 
 Second, we need to explain something to those who don't understand math... or
 economics... or government... or much else:  A president's first budget takes
-effect October 1st.  Earlier economic effects are the result of their
+effect October 1<sup>st</sup>.  Earlier economic effects are the result of their
 predecessor or of factors outside Presidential control.  Perhaps the fairest
 comparison is between the 27 months starting with those Octobers.  Including
 the mishandled pandemic period would be infinitely worse for Trump. 
