@@ -1,0 +1,40 @@
+C. Anne Johnson has again failed Fact-Checking 101.
+
+The case recently argued before the Supreme Court was about the recent decision from the notorious 5th Circuit Court, *Murthy vs. Missouri*.  The Supreme Court seems likely to overturn it, as the effect of that decision is forbid most government contact with social media providers.  The ostensible problem it was solving was that the government was asking sites like Facebook and Twitter to stop promoting false and dangerous misinformation about topics like Covid and elections.
+
+The 5th Circuit accepted the ridiculous notion that this is censorship.  Both platforms -- and I assume others like Instagram and TikTok as well -- had policies of not promoting clear falsehoods that threatened public harm.  All the government was doing was noting certain posts that qualified.  This very rarely involved taking down these posts; usually it meant avoiding algorithmically promoting such posts and/or adding a warning label.  Generally the only ones removed were those specifically advocating violence.
+
+This is not censorship.  Censorship is when the government prevents individuals from speaking their mind.  Helping social media companies identify dangerous, false posts, is not censorship.  The First Amendment does not grant you the right to publish whatever you want on a social media site... unless you own it.  (Hello, Elon!)  It doesn't even grant you the right to publish letters in *The Rivereast*.  That's up to its editors and owners.  Facebook and Twitter CEO's actually asked Congress for regulations.
+
+HR-4310 - a bipartisan bill, by the way -- does not promote propoganda inside the US.  Reputable fact-checkers have already debunked this, which Ms. Johnson could easily have found out if she'd bothered checking.  All the relevant section does is to allow Voice of America, which broadcasts overseas to promote freedom and democracy, to make its materials available for a reasonable fee to domestic organizations that want to publish them.  Voice of America is not authorized to broadcast in the U.S.
+
+
+References: http://letters.sauyet.com/#/2024-03-29/
+
+
+
+References
+==========
+
+5th Circuit Decision:
+  * https://s3.documentcloud.org/documents/23867628/preliminary-injunction-against-biden-admin-re-social-media.pdf
+
+Media Analysis of SCOTUS arguments:
+  * https://www.cnn.com/2024/03/18/politics/supreme-court-signals-skepticism-of-states-arguments-in-social-media-case/index.html
+  * https://www.npr.org/2024/03/18/1238122337/supreme-court-social-media-disinformation-first-amendment
+  * https://www.foxnews.com/politics/supreme-court-debates-biden-administration-outreach-digital-platforms-over-controversial-posts?gate-email=scott%40sauyet.com&gate-email-submit=Continue
+  * https://www.scotusblog.com/2024/03/supreme-court-seems-skeptical-of-restricting-government-communications-with-social-media-companies/
+
+Twitter and Facebook *ask* for regulations:
+  * https://www.bnnbloomberg.ca/twitter-ceo-dorsey-joins-zuckerberg-s-call-for-new-internet-regulations-1.1238602
+
+Fact-checkers on HR-4310 sec. 1078:
+  * https://www.politifact.com/factchecks/2019/aug/23/facebook-posts/no-obama-didnt-make-it-legal-media-outlets-purpose/
+  * https://checkyourfact.com/2020/10/29/fact-check-barack-obama-law-media-purposely-lie-american-people/
+  * https://www.factcheck.org/2019/10/obama-didnt-authorize-lying-by-the-media/
+
+The bill:
+  * https://www.congress.gov/bill/112th-congress/house-bill/4310
+
+The subequent law:
+  * https://www.law.cornell.edu/uscode/text/22/chapter-18/subchapter-V

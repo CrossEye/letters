@@ -1,0 +1,67 @@
+Title: First Amendment Fact-Check
+Date: 2024-03-08
+Topics: Fact-checking, First Amendment
+People: C. Anne Johnson
+Content:
+--------------------------------------------------------------------------------
+C. Anne Johnson has again failed Fact-Checking 101.
+
+The recent case before the Supreme Court is *Murthy vs. Missouri*.  The Court
+seems likely to overturn it, as the effect of that decision is forbid most
+government contact with social media companies.  The ostensible problem it was
+solving was that the government was asking companies like Facebook and Twitter
+to stop promoting false and dangerous misinformation about topics like Covid and
+elections.
+
+The 5th Circuit accepted the ridiculous notion that this is censorship.  Both
+platforms -- and I assume others like Instagram and TikTok as well -- had
+policies of not promoting clear falsehoods that threatened public harm.  All the
+government was doing was calling attention to such content.  This rarely
+involved taking down these posts; usually it meant adding warning labels and/or
+avoiding oversharing such posts.  Generally, only posts specifically advocating
+violence are removed.
+
+This is not censorship.  Censorship is *the government* preventing people from
+speaking their minds.  Helping social media companies identify dangerous, false
+posts is not censorship.  The First Amendment doesn't grant you the right to
+publish whatever you want on a social media site... unless you own one.  It
+doesn't even grant you the right to publish letters in *The Rivereast*.  That's
+up to its editors and owners.  Facebook and Twitter CEOs actually *asked*
+Congress for regulations.
+
+HR-4310 -- a bipartisan bill, by the way -- does not promote propaganda inside
+the US.  Reputable fact-checkers have already debunked this, which Ms. Johnson
+could easily have found out if she'd bothered looking.  All Section 1078 says is
+that the Voice of America, which broadcasts overseas to promote freedom and
+democracy, can make its materials available for a reasonable fee to domestic
+publishing organizations.  Voice of America is not authorized to broadcast in
+the U.S.
+
+--------------------------------------------------------------------------------
+Notes:
+--------------------------------------------------------------------------------
+## References ##
+
+5th Circuit Decision:
+  * https://s3.documentcloud.org/documents/23867628/preliminary-injunction-against-biden-admin-re-social-media.pdf
+
+Media Analysis of SCOTUS arguments:
+  * https://www.cnn.com/2024/03/18/politics/supreme-court-signals-skepticism-of-states-arguments-in-social-media-case/index.html
+  * https://www.npr.org/2024/03/18/1238122337/supreme-court-social-media-disinformation-first-amendment
+  * https://www.foxnews.com/politics/supreme-court-debates-biden-administration-outreach-digital-platforms-over-controversial-posts?gate-email=scott%40sauyet.com&gate-email-submit=Continue
+  * https://www.scotusblog.com/2024/03/supreme-court-seems-skeptical-of-restricting-government-communications-with-social-media-companies/
+
+Twitter and Facebook *ask* for regulations:
+  * https://www.bnnbloomberg.ca/twitter-ceo-dorsey-joins-zuckerberg-s-call-for-new-internet-regulations-1.1238602
+
+Fact-checkers on HR-4310 sec. 1078:
+  * https://www.politifact.com/factchecks/2019/aug/23/facebook-posts/no-obama-didnt-make-it-legal-media-outlets-purpose/
+  * https://checkyourfact.com/2020/10/29/fact-check-barack-obama-law-media-purposely-lie-american-people/
+  * https://www.factcheck.org/2019/10/obama-didnt-authorize-lying-by-the-media/
+
+The bill:
+  * https://www.congress.gov/bill/112th-congress/house-bill/4310
+
+The subequent law:
+  * https://www.law.cornell.edu/uscode/text/22/chapter-18/subchapter-V
+--------------------------------------------------------------------------------
