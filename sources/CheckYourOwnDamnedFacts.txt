@@ -1,0 +1,26 @@
+What is it with conservative writers?  Why are they so allergic to checking the facts before submitting their letters?  Last week it was C. Anne Johnson.  This week it's Colin McNamara.  Please folks, check your own damned facts.  I'm getting tired of doing it for you!
+
+Mr. McNamara claims that the CDC released an entirely redacted, 148-page report on the the relationship of a Covid vaccine and myocarditis.  Snopes says, "False".  Yes, there was an entirely redacted document, but it was not such a report.  Instead, it was a collection of inter- and intra-agency communications exempt from Freedom of Information requests.
+
+He claims that the Covid vaccine inserts are entirely blank.  AP News says, "False."  Instead, for the duration of the vaccine's emergency use authorization, with information changing quickly, the inserts simply pointed to the up-do-date information online.
+
+And he claims that Pfizer petitioned the court to keep their COVID vaccine trial data secret for 75 years.  Again, false.  Snopes explains that the FDA (not Pfizer) responded to a Freedom of Information Act request with their standard schedule of releasing 500 pages per month.  But because the request was so broad -- over 300,000 pages -- it would take decades to complete.  A judge ruled that they must go much faster, completing in eight months.
+
+It only took me a few minutes to look these things up, read the articles, and understand that Mr. McNamara was putting his faith in untrustworthy sources.  Why couldn't he check this on his own?  Why couldn't Ms. Johnson?  Why can't so many regular conservative writers?  If you don't want to look idiotic, check your own damned facts before publishing them!
+
+(References: http://letters.sauyet.com/#2024-04-05/)
+
+References
+----------
+
+Redacted CDC FOIA response: 
+    https://www.snopes.com/fact-check/cdc-redacts-myocarditis-study/
+
+Vaccine Inserts:
+    https://apnews.com/article/fact-checking-956865924140
+
+Vaccine Data Release Schedule:
+    https://www.snopes.com/news/2021/11/19/fda-2076-vaccine-data/
+
+Judge's Ruling on that Release Schedule: 
+    https://www.reuters.com/legal/government/paramount-importance-judge-orders-fda-hasten-release-pfizer-vaccine-docs-2022-01-07/
