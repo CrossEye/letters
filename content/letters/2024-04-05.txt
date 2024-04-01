@@ -45,10 +45,11 @@ Redacted CDC FOIA response:
   * https://www.snopes.com/fact-check/cdc-redacts-myocarditis-study/
 
 Vaccine Inserts:
-* https://apnews.com/article/fact-checking-956865924140
+  * https://apnews.com/article/fact-checking-956865924140
 
 Vaccine Data Release Schedule:
-* https://www.snopes.com/news/2021/11/19/fda-2076-vaccine-data/
+  * https://www.snopes.com/news/2021/11/19/fda-2076-vaccine-data/
 
 Judge's Ruling on that Release Schedule: 
-* https://www.reuters.com/legal/government/paramount-importance-judge-orders-fda-hasten-release-pfizer-vaccine-docs-2022-01-07/
+  * https://www.reuters.com/legal/government/paramount-importance-judge-orders-fda-hasten-release-pfizer-vaccine-docs-2022-01-07/
+--------------------------------------------------------------------------------
