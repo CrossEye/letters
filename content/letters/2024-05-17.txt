@@ -1,7 +1,7 @@
 Title: Recent News
 Date: 2024-05-17
 Topics: Donald Trump, Joe Biden
-TeaserParagraphs: 2
+TeaserParagraphs: 4
 Content:
 --------------------------------------------------------------------------------
 
@@ -43,5 +43,12 @@ Note:
 --------------------------------------------------------------------------------
 ## References ##
 
-  * 
+  * https://www.vanityfair.com/news/story/stormy-daniels-trump-trial-testimony
+  * https://slate.com/technology/2024/04/donald-trump-sleep-courtroom-apnea-science.html
+  * https://www.cnn.com/interactive/2024/05/annotated-biden-speech-holocaust-memorial-dg/
+  * https://www.nytimes.com/2024/05/08/us/politics/biden-data-center-wisconsin.html
+  * https://www.politico.com/news/2024/05/09/trump-asks-oil-executives-campaign-finance-00157131
+  * https://apnews.com/article/israel-weapons-shipment-us-eed365ebef0477ba74bf9848cacae4f4
+  * https://www.usatoday.com/story/news/politics/elections/2024/05/13/donald-trump-hannibal-lecter-new-jersey-rally/73668610007/
+  * https://www.reuters.com/world/us/takeaways-six-big-moments-michael-cohens-trump-trial-testimony-2024-05-15/
 --------------------------------------------------------------------------------
