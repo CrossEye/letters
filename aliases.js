@@ -9,5 +9,8 @@ const aliases = {
   ],
   "Danny Holtsclaw": [
     "Daniel Holtsclaw"
+  ],
+  "Amanda Veneziano": [
+    "Amanda V"
   ]
 }
