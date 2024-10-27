@@ -52,11 +52,12 @@ const parse = (file) =>
 const linkPeople = (People, Content, aliases) => 
   People .reduce ((c, p) => c .replace (new RegExp (`(${[p, ...((aliases ||{}) [p] || [])].map(n => n .replace (/\s/g, '[\\s]+')).join('|')})`), (s, t) => `[${t}](#/person/${p.replace(/ /g, '+')}/)`), Content)
   
-const convertLetter = (aliases) => ({Topics = '', People: ps = '', Content, Note = '', ...rest}, 
+const convertLetter = (aliases) => ({Topics = '', Authors='Scott Sauyet', People: ps = '', Content, Note = '', ...rest}, 
     People = ps .trim () .split (/\,\s*/) .filter (Boolean)
 ) => ({
     ...rest,
     Topics: Topics .trim () .split (/\,\s*/),
+    Authors: Authors .trim() .split(/\,\s*/),
     People,
     Content: marked (linkPeople (People, Content, aliases)),
     ...(Note.length ? {Note: marked (linkPeople (People, Note))} : {})

@@ -209,7 +209,7 @@ const makeSidebar = (
 
 
 // Letter Route
-const makeLetterBody = ({Title, Topics = [], Date, Content, Series = ''}) =>
+const makeLetterBody = ({Title, Topics = [], Date, Content, Authors = ['Scott Sauyet'], Series = ''}) =>
   `<h2>${Title}</h2>
   ${Series ? `<p class="series">(Part of the series "<a href="#/series/${Series .replace (/ /g, '+')}/">${Series}</a>")</p>` : ``}
   ${Topics.length 
@@ -223,7 +223,8 @@ const makeLetterBody = ({Title, Topics = [], Date, Content, Series = ''}) =>
     To The Editor:
   </p>
   ${Content}
-  <p class="signature"> -- Scott Sauyet</p>`
+  <p class="signature"> &ndash; ${Authors[0] + (Authors.length > 1 ? ',' : '')}</p>
+  ${Authors.slice(1).map ((Author, i, a) => `<p class="signature"> ${Author + (i < a.length - 1 ? ',' : '')}</p>\n`)}`
 
 const makeLetterNav = (
   contents,
