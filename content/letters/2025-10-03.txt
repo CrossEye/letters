@@ -54,3 +54,19 @@ will be my own first Republican vote in the Trump era.
 Let's not add obstacles to the already difficult task of responsible budgeting.
 We need Board members who support our schools, not undermine them.
 --------------------------------------------------------------------------------
+Note:
+--------------------------------------------------------------------------------
+## References ##
+
+* Ms. Miner's letters are linked to in the text.
+
+* Much more detail on [per-pupil expenditures][ppe], with its own references is
+  on the [flyer analysis site][fa].
+
+* [The Dual Roles and Responsibilities of Local and Regional Boards of Education][dr]
+
+  [fa]: https://flyer.andoverct.info/
+  [dr]: https://cga.ct.gov/2023/rpt/pdf/2023-R-0097.pdf
+  [ppe]: https://flyer.andoverct.info/#Per-Pupil%20Expenditure
+  
+--------------------------------------------------------------------------------
