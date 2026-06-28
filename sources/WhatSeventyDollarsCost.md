@@ -1,0 +1,23 @@
+Andover No voters, I understand the impulse.  Budgets keep climbing, paychecks and pensions don't; a referendum is one remaining place we can plant a foot and say "enough."  But let's discuss what the vote bought, and what it cost.
+
+Between the first budget and the last, the school budget dropped $224,261.  Discount $5,000 for two extra referendums, spread it across 3,150 residents: we save $69.61 each.  Call it seventy bucks.  Real money, yes, but the bill landed directly on the children.
+
+To close the gap, the Board was forced to cut:
+
+  * Two paraprofessionals, the extra hands for kids who need a boost.  Gone.
+
+  * The Spanish program. Not Cervantes yet, but the second-most spoken language in the country, during the years a young ear picks it up easily.  Adiós, Spanish.
+
+  * Stipends for teachers who stay past the bell: curriculum work, robotics coach, yearbook, Jazz Club.  All gone.
+
+  * And the library.  They eliminated the librarian, with nothing left even for new books.  The room is still there, and the shelves.  The person who turns it into something a child loves is not.
+
+Let me say that again, because I can't get past it:  We cut the school library.
+
+Let me tell you about Mrs. Hatch.  At Great Plains Elementary, the best part of school was this mystical, magical room called The Library.  Mrs. Hatch ruled the roost.  She read us stories when we were small; as we grew, she taught us to read those stories to the littler ones.  She showed us how to research, how to branch out to new kinds of books.  She taught us to care for a book, to never abuse one.  And she taught one little boy a lifelong love for reading.  Mrs. Hatch may have been 50, but to a third-grader that was as old as the hills, with wisdom to match.
+
+We've decided our schoolchildren don't need a Mrs. Hatch.  We're terribly wrong.  In today's faster, more distracted world, there's nothing a child needs more than someone to hand them the right book at the right moment.
+
+I keep coming back to those seventy dollars.  Who among us would trade a child's library for seventy dollars?  And the fight isn't over: the same needs return next year, only now one year of a child's reading life has vanished.
+
+When you spend your seventy dollars, spare a thought for what it cost.
